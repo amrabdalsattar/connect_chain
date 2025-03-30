@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/theming/themes_helper.dart';
@@ -10,10 +12,13 @@ class ConnectChainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(390, 844),
       builder: (_, child) => MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: const Locale("ar"),
         debugShowCheckedModeBanner: false,
-        title: 'Connect Chain',
+        title: 'ConnectChain',
         theme: ThemesHelper.lightTheme,
         onGenerateRoute: AppRouter.generateRoute,
         initialRoute: Routes.loginScreen,

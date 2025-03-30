@@ -1,4 +1,5 @@
 import 'package:connect_chain/core/helpers/setup_manager.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +17,15 @@ void main() async {
   await SharedPreferencesHelper.init();
   await TokenHelper.checkIfUserIsLoggedIn();
 
+  await EasyLocalization.ensureInitialized();
+
   await ScreenUtil.ensureScreenSize();
-  runApp(const ConnectChainApp());
+  runApp(EasyLocalization(
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('ar'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('ar'),
+      child: const ConnectChainApp()));
 }
