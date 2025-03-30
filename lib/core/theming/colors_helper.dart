@@ -7,6 +7,8 @@ class ColorsHelper {
   static const Color red = Colors.red;
   static const Color green = Colors.green;
 
+  static const Color primaryColor = Color(0xFFF28D23);
+
   static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
   static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);
 }
