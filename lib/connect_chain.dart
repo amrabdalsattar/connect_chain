@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/routing/app_router.dart';
-import 'package:connect_chain/core/routing/routes.dart';
-import 'package:connect_chain/core/theming/themes_helper.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
+import 'core/theming/themes_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
