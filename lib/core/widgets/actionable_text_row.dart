@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/theming/app_text_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -20,10 +21,11 @@ class ActionableTextRow extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: "$text ",
-          ),
+              text: "$text ",
+              style: AppTextStyles.cairoSemiOpacityBlackRegular16),
           TextSpan(
             text: actionText,
+            style: AppTextStyles.cairoPrimaryBold16,
             recognizer: TapGestureRecognizer()..onTap = onTap,
           ),
         ],

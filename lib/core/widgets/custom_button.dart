@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.25),
+              color: Colors.black.withOpacity(elevation == 0 ? 0 : 0.25),
               blurRadius: elevation,
               spreadRadius: 1,
               offset: Offset(0, elevation / 2),
@@ -37,7 +37,7 @@ class CustomButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: AppTextStyles.fontWhiteBold16,
+            style: AppTextStyles.cairoWhiteBold16,
           ),
         ),
       ),
