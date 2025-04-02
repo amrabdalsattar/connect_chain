@@ -22,7 +22,7 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(EasyLocalization(
       supportedLocales: const [
-        Locale('en', 'US'),
+        Locale('en'),
         Locale('ar'),
       ],
       path: 'assets/translations',

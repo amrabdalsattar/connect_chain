@@ -9,6 +9,9 @@ class ColorsHelper {
 
   static const Color primaryColor = Color(0xFFF28D23);
 
+  static Color fadedBlack = Colors.black.withOpacity(0.65);
+  static Color fadedGray = Colors.black.withOpacity(0.1);
+
   static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
   static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);
 }
