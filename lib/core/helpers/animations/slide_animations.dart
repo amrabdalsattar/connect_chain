@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NavigationAnimations {
-  /// Building a slide animation
+class CustomAnimationsBuilder {
   static PageRouteBuilder buildSlideRoute({
     required Widget screen,
     required RouteSettings settings,
@@ -27,23 +26,32 @@ class NavigationAnimations {
     );
   }
 
-  static PageRouteBuilder slideFromRight(
-      Widget screen, RouteSettings settings) {
-    return buildSlideRoute(
-      screen: screen,
-      settings: settings,
-      beginOffset: const Offset(1.0, 0.0),
-    );
-  }
-
-  static PageRouteBuilder slideFromLeft(
-    Widget screen,
-    RouteSettings settings,
-  ) {
+  static PageRouteBuilder slideFromLeft({
+    required Widget screen,
+    required RouteSettings settings,
+  }) {
     return buildSlideRoute(
       screen: screen,
       settings: settings,
       beginOffset: const Offset(-1.0, 0.0),
+    );
+  }
+
+  static PageRouteBuilder buildFadeTransition({
+    required Widget screen,
+    required RouteSettings settings,
+    Duration duration = const Duration(milliseconds: 400),
+  }) {
+    return PageRouteBuilder(
+      settings: settings,
+      pageBuilder: (context, animation, secondaryAnimation) => screen,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      },
+      transitionDuration: duration,
     );
   }
 }

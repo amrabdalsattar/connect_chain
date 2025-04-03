@@ -33,7 +33,7 @@ class OnboardingCubit extends Cubit<int> {
     if (state < 2) {
       emit(state + 1);
     } else {
-      context.pushNamed(Routes.loginScreen);
+      context.pushReplacementNamed(Routes.loginScreen);
     }
   }
 }

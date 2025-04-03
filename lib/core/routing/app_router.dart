@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/animations/navigation_animations.dart';
+import 'package:connect_chain/core/helpers/animations/slide_animations.dart';
 import 'package:connect_chain/features/onboarding/logic/cubit/onboarding_cubit.dart';
 import 'package:connect_chain/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,17 +14,18 @@ class AppRouter {
 
     switch (settings.name) {
       case Routes.loginScreen:
-        return NavigationAnimations.slideFromLeft(
-          const LoginScreen(),
-          settings,
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const LoginScreen(),
+          settings: settings,
         );
 
       case Routes.onboarding:
-        return MaterialPageRoute(
-          builder: (_) => BlocProvider(
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: BlocProvider(
             create: (context) => OnboardingCubit(),
             child: const OnboardingScreen(),
           ),
+          settings: settings,
         );
 
       default:
