@@ -1,6 +1,6 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
 import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/features/login/ui/login_screen.dart';
+import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/features/onboarding/data/models/onboarding_page_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +33,7 @@ class OnboardingCubit extends Cubit<int> {
     if (state < 2) {
       emit(state + 1);
     } else {
-      context.pushReplacementWithSlide(const LoginScreen());
+      context.pushNamed(Routes.loginScreen);
     }
   }
 }
