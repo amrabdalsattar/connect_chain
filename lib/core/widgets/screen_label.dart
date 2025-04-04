@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../helpers/spacing.dart';
+import '../theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ScreenLabel extends StatelessWidget {

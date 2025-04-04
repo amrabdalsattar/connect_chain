@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/login/logic/login_cubit.dart';
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/colors_helper.dart';
+import '../../logic/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

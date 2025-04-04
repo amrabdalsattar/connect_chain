@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/login/data/datasources/login_datasource.dart';
-import 'package:connect_chain/features/login/data/repos/login_repo.dart';
+import '../../features/login/data/datasources/login_datasource.dart';
+import '../../features/login/data/repos/login_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 

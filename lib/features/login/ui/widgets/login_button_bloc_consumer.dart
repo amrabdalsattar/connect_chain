@@ -1,12 +1,12 @@
-import 'package:connect_chain/core/helpers/dialogs_helper.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/routing/routes.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
-import 'package:connect_chain/features/login/logic/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helpers/dialogs_helper.dart';
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/widgets/custom_button.dart';
 import '../../logic/login_cubit.dart';
+import '../../logic/login_state.dart';
 
 class LoginButtonBlocConsumer extends StatelessWidget {
   const LoginButtonBlocConsumer({super.key});

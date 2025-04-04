@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/features/login/data/datasources/login_datasource.dart';
-import 'package:connect_chain/features/login/data/models/login_response_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../datasources/login_datasource.dart';
+import '../models/login_response_model.dart';
 
 import '../../../../core/networking/api_result.dart';
 

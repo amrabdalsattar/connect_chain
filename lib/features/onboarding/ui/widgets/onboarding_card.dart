@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/widgets/logo.dart';
-import 'package:connect_chain/features/onboarding/data/models/onboarding_page_model.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/widgets/logo.dart';
+import '../../data/models/onboarding_page_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

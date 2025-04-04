@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/theming/font_weight_helper.dart';
+import 'colors_helper.dart';
+import 'font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

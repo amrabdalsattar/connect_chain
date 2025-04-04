@@ -1,10 +1,9 @@
-import 'package:connect_chain/features/login/ui/widgets/login_button_bloc_consumer.dart';
+import 'widgets/login_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/widgets/actionable_text_row.dart';
-import '../../../core/widgets/custom_button.dart';
 import '../../../core/widgets/logo.dart';
 import '../../../core/widgets/screen_label.dart';
 import '../../../core/widgets/social_media_registration_widgets.dart';
