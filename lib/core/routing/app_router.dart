@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/animations/slide_animations.dart';
+import 'package:connect_chain/core/helpers/animations/custom_animations_builder.dart';
 import 'package:connect_chain/features/onboarding/logic/cubit/onboarding_cubit.dart';
 import 'package:connect_chain/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';

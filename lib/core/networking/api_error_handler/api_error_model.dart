@@ -1,6 +1,9 @@
 class ApiErrorModel {
-  final String? message;
-  final int? code;
+  int? errorCode;
+  String message;
 
-  ApiErrorModel({this.message, this.code});
+  ApiErrorModel({
+    this.errorCode,
+    required this.message,
+  });
 }
