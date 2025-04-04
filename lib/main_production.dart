@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/setup_manager.dart';
+import 'core/helpers/setup_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +22,7 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(EasyLocalization(
       supportedLocales: const [
-        Locale('en', 'US'),
+        Locale('en'),
         Locale('ar'),
       ],
       path: 'assets/translations',

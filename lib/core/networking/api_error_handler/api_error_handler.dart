@@ -33,7 +33,7 @@ ApiErrorModel _handleError(dynamic data) {
   try {
     return ApiErrorModel(
       message: data['message'] ?? 'Unknown error occurred',
-      code: data['code'],
+      errorCode: data['errorCode'],
     );
   } catch (e) {
     return ApiErrorModel(

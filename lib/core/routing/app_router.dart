@@ -1,4 +1,11 @@
+import '../di/dependency_injection.dart';
+import '../helpers/animations/custom_animations_builder.dart';
+import '../../features/home/ui/home_screen.dart';
+import '../../features/login/logic/login_cubit.dart';
+import '../../features/onboarding/logic/cubit/onboarding_cubit.dart';
+import '../../features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../features/login/ui/login_screen.dart';
 import 'routes.dart';
@@ -9,9 +16,28 @@ class AppRouter {
     final arguments = settings.arguments;
 
     switch (settings.name) {
-      case Routes.loginScreen:
-        return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+      case Routes.loginRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) => LoginCubit(getIt()),
+            child: const LoginScreen(),
+          ),
+          settings: settings,
+        );
+
+      case Routes.onboardingRoute:
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: BlocProvider(
+            create: (context) => OnboardingCubit(),
+            child: const OnboardingScreen(),
+          ),
+          settings: settings,
+        );
+
+      case Routes.homeRoute:
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: const HomeScreen(),
+          settings: settings,
         );
 
       default:

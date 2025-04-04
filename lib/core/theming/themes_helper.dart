@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import 'colors_helper.dart';
 import 'package:flutter/material.dart';
 
 class ThemesHelper {
