@@ -1,9 +1,9 @@
 class ApiErrorModel {
   int? errorCode;
-  String message;
+  String? message;
 
   ApiErrorModel({
     this.errorCode,
-    required this.message,
+    this.message = "خطأ غير معروف",
   });
 }

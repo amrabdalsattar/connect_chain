@@ -3,17 +3,22 @@ import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'loading_indicator.dart';
+
 class CustomButton extends StatelessWidget {
   final String title;
   final void Function()? onTap;
   final double width;
   final double elevation;
-  const CustomButton(
-      {super.key,
-      required this.title,
-      this.onTap,
-      required this.width,
-      this.elevation = 0});
+  final bool isLoading;
+  const CustomButton({
+    super.key,
+    required this.title,
+    this.onTap,
+    required this.width,
+    this.elevation = 0,
+    this.isLoading = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +39,20 @@ class CustomButton extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            title,
-            style: AppTextStyles.cairoWhiteBold16,
-          ),
-        ),
+        child: isLoading
+            ? SizedBox(
+                height: 30.h,
+                width: 30.w,
+                child: const LoadingIndicator(
+                  color: ColorsHelper.white,
+                ),
+              )
+            : Center(
+                child: Text(
+                  title,
+                  style: AppTextStyles.cairoWhiteBold16,
+                ),
+              ),
       ),
     );
   }
