@@ -21,7 +21,7 @@ class ConnectChainApp extends StatelessWidget {
         title: 'ConnectChain',
         theme: ThemesHelper.lightTheme,
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: Routes.onboarding,
+        initialRoute: Routes.onboardingRoute,
       ),
     );
   }

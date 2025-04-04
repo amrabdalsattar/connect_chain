@@ -1,26 +1,19 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/widgets/actionable_text_row.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
-import 'package:connect_chain/core/widgets/screen_label.dart';
-import 'package:connect_chain/core/widgets/social_media_registration_widgets.dart';
-import 'package:connect_chain/features/login/ui/widgets/login_form.dart';
+import 'package:connect_chain/features/login/ui/widgets/login_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/helpers/spacing.dart';
+import '../../../core/widgets/actionable_text_row.dart';
+import '../../../core/widgets/custom_button.dart';
 import '../../../core/widgets/logo.dart';
+import '../../../core/widgets/screen_label.dart';
+import '../../../core/widgets/social_media_registration_widgets.dart';
+import 'widgets/forgot_password_text_button.dart';
+import 'widgets/login_form.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,31 +34,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   subTitle: 'ادخل لحسابك وابدأ رحلتك معنا !',
                 ),
                 verticalSpace(48),
-                LoginForm(
-                    formKey: formKey,
-                    emailController: emailController,
-                    passwordController: passwordController),
-                Align(
-                  alignment: const AlignmentDirectional(1, 1),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "نسيت كلمة السر؟",
-                      style: AppTextStyles.tajawalPrimaryMedium15,
-                    ),
-                  ),
-                ),
+                const LoginForm(),
+                const ForgotPasswordTextButton(),
                 verticalSpace(40),
-                const CustomButton(
-                    title: 'تسجيل الدخول', width: double.infinity),
+                const LoginButtonBlocConsumer(),
                 verticalSpace(24),
                 const SocialMediaRegistrationWidgets(),
                 verticalSpace(24),
-                const Align(
-                  alignment: Alignment.center,
-                  child: ActionableTextRow(
-                      text: 'ليس لديك حساب؟', actionText: 'سجل الآن'),
-                )
+                const ActionableTextRow(
+                  text: 'ليس لديك حساب؟',
+                  actionText: 'سجل الآن',
+                ),
               ],
             ),
           ),
