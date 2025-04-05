@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/forgot_password_screen.dart';
+
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
 import '../../features/home/ui/home_screen.dart';
@@ -37,6 +39,12 @@ class AppRouter {
       case Routes.homeRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
           screen: const HomeScreen(),
+          settings: settings,
+        );
+
+      case Routes.forgotPassword:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const ForgotPasswordScreen(),
           settings: settings,
         );
 
