@@ -1,5 +1,6 @@
 import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/forgot_password_screen.dart';
 
+import '../../features/reset_password/ui/otp_verification_ui/otp_verification_screen.dart';
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
 import '../../features/home/ui/home_screen.dart';
@@ -45,6 +46,13 @@ class AppRouter {
       case Routes.forgotPassword:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ForgotPasswordScreen(),
+          settings: settings,
+        );
+      case Routes.otpVerification:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: OtpVerificationScreen(
+            email: arguments as String,
+          ),
           settings: settings,
         );
 
