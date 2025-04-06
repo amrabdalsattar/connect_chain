@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/signup/signup_screen.dart';
+
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
 import '../../features/home/ui/home_screen.dart';
@@ -37,6 +39,11 @@ class AppRouter {
       case Routes.homeRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
           screen: const HomeScreen(),
+          settings: settings,
+        );
+      case Routes.signUpRoute:
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: const SignupScreen(),
           settings: settings,
         );
 
