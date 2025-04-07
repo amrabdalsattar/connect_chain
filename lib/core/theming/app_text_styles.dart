@@ -41,6 +41,12 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.regular,
   );
 
+  static TextStyle cairoDarkGrayBold16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.darkGray,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
   static TextStyle cairoPrimaryBold16 = TextStyle(
     fontSize: 16.sp,
     color: ColorsHelper.primaryColor,
