@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import '../../../../core/theming/app_text_styles.dart';
 
 class ForgotPasswordTextButton extends StatelessWidget {
-  const ForgotPasswordTextButton({super.key});
+  final void Function()? onPressed;
+  const ForgotPasswordTextButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

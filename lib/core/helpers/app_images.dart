@@ -10,6 +10,8 @@ class AppImages {
   static const String forgetPassword = "assets/images/forget_password.png";
   static const String otpImage = "assets/images/otp.png";
 
+  static const String forgotPassword = "assets/images/forgot_password.png";
+  static const String otpVerification = "assets/images/otp_verification.png";
   // SVG
   static const String emailIcon = "assets/svgs/email_icon.svg";
   static const String lockIcon = "assets/svgs/lock.svg";

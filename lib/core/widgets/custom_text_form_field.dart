@@ -31,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       validator: (value) => validator(value),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.only(top: 16.h, bottom: 16.h),
+        contentPadding: EdgeInsets.only(top: 14.h, bottom: 14.h),
         prefixIcon: SvgPicture.asset(
           prefixIconPath,
           fit: BoxFit.scaleDown,
