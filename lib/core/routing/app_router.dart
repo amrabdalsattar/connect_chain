@@ -1,7 +1,7 @@
 import 'package:connect_chain/features/reset_password/ui/forget_passowrd_screen.dart';
 import 'package:connect_chain/features/reset_password/ui/otp_screen.dart';
 import 'package:connect_chain/features/reset_password/ui/reset_password_screen.dart';
-import 'package:connect_chain/features/signup/signup_screen.dart';
+import 'package:connect_chain/features/signup/ui/signup_screen.dart';
 
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';

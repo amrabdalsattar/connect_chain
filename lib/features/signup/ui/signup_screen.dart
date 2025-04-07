@@ -10,20 +10,9 @@ import 'package:connect_chain/features/signup/ui/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignupScreen extends StatefulWidget {
+class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
-  @override
-  State<SignupScreen> createState() => _SignupScreenState();
-}
-
-class _SignupScreenState extends State<SignupScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController rePassword = TextEditingController();
-  TextEditingController fullName = TextEditingController();
-  TextEditingController phoneNumber = TextEditingController();
-  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,13 +33,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   subTitle: 'سجّل حسابك وابدأ إدارة طلباتك بكل سهولة  !',
                 ),
                 verticalSpace(48),
-                SignupForm(
-                    formKey: formKey,
-                    emailController: emailController,
-                    passwordController: passwordController,
-                    fullName: fullName,
-                    phoneNumber: phoneNumber,
-                    rePassword: rePassword),
+                const SignupForm(),
                 verticalSpace(40),
                 const CustomButton(
                     title: 'تسجيل الدخول', width: double.infinity),

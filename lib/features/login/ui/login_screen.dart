@@ -1,3 +1,6 @@
+import 'package:connect_chain/core/helpers/extensions.dart';
+import 'package:connect_chain/core/routing/routes.dart';
+
 import 'widgets/login_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +43,10 @@ class LoginScreen extends StatelessWidget {
                 verticalSpace(24),
                 const SocialMediaRegistrationWidgets(),
                 verticalSpace(24),
-                const ActionableTextRow(
+                ActionableTextRow(
+                  onTap: () {
+                    context.pushNamed(Routes.signUpRoute);
+                  },
                   text: 'ليس لديك حساب؟',
                   actionText: 'سجل الآن',
                 ),
