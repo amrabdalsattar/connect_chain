@@ -1,15 +1,15 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/app_regex.dart';
 import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/routing/routes.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
-import 'package:connect_chain/core/widgets/custom_text_form_field.dart';
-import 'package:connect_chain/core/widgets/screen_label.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../core/widgets/screen_label.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({super.key});

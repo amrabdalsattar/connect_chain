@@ -16,7 +16,8 @@ class ResetPasswordRepo {
     }
   }
 
-  Future<ApiResult<String>> verifyOtp(String email, String otp) async {
+  Future<ApiResult<String>> verifyOtp(
+      {required String email, required String otp}) async {
     try {
       await _dataSource.verifyOtp(email, otp);
       return const ApiResult.success('OTP verified successfully');

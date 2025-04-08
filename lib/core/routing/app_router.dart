@@ -1,6 +1,6 @@
-import 'package:connect_chain/features/reset_password/ui/forget_passowrd_screen.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_screen.dart';
-import 'package:connect_chain/features/reset_password/ui/reset_password_screen.dart';
+import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';
+import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/otp_screen.dart';
+import 'package:connect_chain/features/reset_password/ui/reset_password_ui/reset_password_screen.dart';
 import 'package:connect_chain/features/signup/ui/signup_screen.dart';
 
 import '../../features/signup/logic/cubit/signup_cubit.dart';

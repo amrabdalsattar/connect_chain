@@ -4,8 +4,8 @@ import 'package:connect_chain/core/helpers/spacing.dart';
 import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:connect_chain/core/widgets/screen_label.dart';
-import 'package:connect_chain/features/reset_password/ui/widgets/otp_form.dart';
-import 'package:connect_chain/features/reset_password/ui/widgets/resend_otp_row.dart';
+import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/otp_form.dart';
+import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/resend_otp_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

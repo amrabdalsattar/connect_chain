@@ -5,8 +5,8 @@ class ResetPasswordForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _passowrdController = TextEditingController();
-    final TextEditingController _confirmPasswordController =
+    final TextEditingController passowrdController = TextEditingController();
+    final TextEditingController confirmPasswordController =
         TextEditingController();
     return Form(
         child: Column(
@@ -17,7 +17,7 @@ class ResetPasswordForm extends StatelessWidget {
         verticalSpace(8),
         CustomTextFormField(
             hintText: 'أدخل كلمة المرور ',
-            controller: _passowrdController,
+            controller: passowrdController,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -32,12 +32,12 @@ class ResetPasswordForm extends StatelessWidget {
         verticalSpace(8),
         CustomTextFormField(
             hintText: 'أعد إدخال  كلمة المرور',
-            controller: _confirmPasswordController,
+            controller: confirmPasswordController,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'من فضلك أدخل كلمة مرور صالحة';
               }
-              if (value != _passowrdController.text) {
+              if (value != passowrdController.text) {
                 return 'كلمة السر غير متطابقة';
               }
             },
