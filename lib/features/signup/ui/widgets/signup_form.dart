@@ -1,28 +1,15 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
+import 'package:connect_chain/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 
 class SignupForm extends StatefulWidget {
-  final GlobalKey formKey;
-  final TextEditingController emailController;
-  final TextEditingController fullName;
-  final TextEditingController phoneNumber;
-  final TextEditingController passwordController;
-  final TextEditingController rePassword;
-
-  const SignupForm({
-    super.key,
-    required this.formKey,
-    required this.emailController,
-    required this.passwordController,
-    required this.fullName,
-    required this.phoneNumber,
-    required this.rePassword,
-  });
+  const SignupForm({super.key});
 
   @override
   State<SignupForm> createState() => _SignUpFormState();
@@ -34,26 +21,36 @@ class _SignUpFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: widget.formKey,
+      key: context.read<SignupCubit>().formKey,
       child: Column(
         children: [
           CustomTextFormField(
-            hintText: 'الاسم بالكامل',
-            controller: widget.fullName,
+            hintText: 'الاسم الأول',
+            controller: context.read<SignupCubit>().firstNameController,
             validator: (value) {
-              if (value == null ||
-                  value.isEmpty ||
-                  !AppRegex.hasNumber(value)) {
+              if (value == null || value.isEmpty || AppRegex.hasNumber(value)) {
                 return 'لا يمكن ان يحتوي علي رموز او ارقام';
               }
             },
             prefixIconPath: AppImages.personIcon,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.name,
+          ),
+          verticalSpace(24),
+          CustomTextFormField(
+            hintText: 'الاسم الأخير',
+            controller: context.read<SignupCubit>().lastNameController,
+            validator: (value) {
+              if (value == null || value.isEmpty || AppRegex.hasNumber(value)) {
+                return 'لا يمكن ان يحتوي علي رموز او ارقام';
+              }
+            },
+            prefixIconPath: AppImages.personIcon,
+            keyboardType: TextInputType.name,
           ),
           verticalSpace(24),
           CustomTextFormField(
             hintText: 'البريد الالكتروني',
-            controller: widget.emailController,
+            controller: context.read<SignupCubit>().emailController,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -66,7 +63,32 @@ class _SignUpFormState extends State<SignupForm> {
           ),
           verticalSpace(24),
           CustomTextFormField(
-            controller: widget.passwordController,
+            hintText: 'رقم الهاتف',
+            controller: context.read<SignupCubit>().phoneNumberController,
+            validator: (value) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isPhoneNumberValid(value)) {
+                return 'من فضلك ادخل رقم هاتف صحيح';
+              }
+            },
+            prefixIconPath: AppImages.phoneIcon,
+            keyboardType: TextInputType.phone,
+          ),
+          verticalSpace(24),
+          CustomTextFormField(
+            hintText: 'العنوان',
+            controller: context.read<SignupCubit>().addressController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'هذه الخانة مطلوبة';
+              }
+            },
+            prefixIconPath: AppImages.addressIcon,
+          ),
+          verticalSpace(24),
+          CustomTextFormField(
+            controller: context.read<SignupCubit>().passwordController,
             hintText: 'كلمة السر',
             prefixIconPath: AppImages.lockIcon,
             isObscure: isPassObscure,
@@ -87,13 +109,13 @@ class _SignUpFormState extends State<SignupForm> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty || value.length < 8) {
-                return 'Please enter a valid password';
+                return 'يرجى إدخال كلمة مرور صالحة';
               }
             },
           ),
           verticalSpace(24),
           CustomTextFormField(
-            controller: widget.rePassword,
+            controller: context.read<SignupCubit>().confirmPasswordController,
             hintText: ' تاكيد كلمة السر',
             prefixIconPath: AppImages.lockIcon,
             isObscure: isRepassObscure,
@@ -113,11 +135,12 @@ class _SignUpFormState extends State<SignupForm> {
                   : const Icon(Icons.visibility, color: ColorsHelper.darkBlue),
             ),
             validator: (value) {
-              if (value == null || value.isEmpty || value.length < 8) {
-                return 'Please enter a valid password';
+              if (value == null || value.isEmpty) {
+                return 'يرجى تأكيد كلمة المرور';
               }
-              if (value != widget.passwordController.text) {
-                return 'Passwords do not match';
+              if (value !=
+                  context.read<SignupCubit>().passwordController.text) {
+                return 'كلمات المرور غير متوافقة، حاول مرة أخرى.';
               }
             },
           ),

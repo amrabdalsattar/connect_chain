@@ -3,6 +3,7 @@ import 'package:connect_chain/features/reset_password/ui/otp_screen.dart';
 import 'package:connect_chain/features/reset_password/ui/reset_password_screen.dart';
 import 'package:connect_chain/features/signup/ui/signup_screen.dart';
 
+import '../../features/signup/logic/cubit/signup_cubit.dart';
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
 import '../../features/home/ui/home_screen.dart';
@@ -46,13 +47,16 @@ class AppRouter {
         );
       case Routes.signUpRoute:
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const SignupScreen(),
+          screen: BlocProvider(
+            create: (context) => SignupCubit(getIt()),
+            child: const SignupScreen(),
+          ),
           settings: settings,
         );
 
-      case Routes.forgetPasswordRoute:
+      case Routes.forgetPasswordScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const ForgetPassowrdScreen(),
+          screen: const ForgetPasswordScreen(),
           settings: settings,
         );
       case Routes.otpScreenRoute:
