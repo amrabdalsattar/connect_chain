@@ -51,7 +51,7 @@ class ForgetPassowrdScreen extends StatelessWidget {
                   title: 'إرسال الرمز',
                   width: 326.w,
                   onTap: () {
-                    context.pushNamed(Routes.otpScreen);
+                    context.pushNamed(Routes.otpScreenRoute);
                   },
                 )
               ],

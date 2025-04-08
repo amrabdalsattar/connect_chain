@@ -14,7 +14,7 @@ class ForgotPasswordTextButton extends StatelessWidget {
       alignment: const AlignmentDirectional(1, 1),
       child: TextButton(
         onPressed: () {
-          context.pushNamed(Routes.forgetPasswordRoute);
+          context.pushNamed(Routes.forgetPasswordScreenRoute);
         },
         child: Text(
           "نسيت كلمة السر؟",

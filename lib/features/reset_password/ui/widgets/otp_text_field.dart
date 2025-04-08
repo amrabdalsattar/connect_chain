@@ -29,6 +29,7 @@ class OtpTextField extends StatelessWidget {
           if (value == null || value.isEmpty) {
             return '';
           }
+          return null;
         },
         decoration: InputDecoration(
           counterText: '',
