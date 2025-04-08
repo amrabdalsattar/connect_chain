@@ -1,9 +1,19 @@
+import 'package:connect_chain/core/helpers/extensions.dart';
+
 class ApiErrorModel {
-  int? errorCode;
-  String? message;
+  final int? errorCode;
+  final String? message;
+  final List<dynamic>? errors;
 
   ApiErrorModel({
     this.errorCode,
-    this.message = "خطأ غير معروف",
+    this.message,
+    this.errors,
   });
+
+  String? getErrorMessages() {
+    return errors.isNullOrEmpty()
+        ? (message ?? "خطأ غير معروف")
+        : errors!.join('\n');
+  }
 }

@@ -11,8 +11,8 @@ import 'package:connect_chain/core/widgets/screen_label.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ForgetPassowrdScreen extends StatelessWidget {
-  const ForgetPassowrdScreen({super.key});
+class ForgetPasswordScreen extends StatelessWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,17 +1,38 @@
 import 'package:connect_chain/core/helpers/extensions.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/core/widgets/actionable_text_row.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:connect_chain/core/widgets/logo.dart';
 import 'package:connect_chain/core/widgets/screen_label.dart';
 import 'package:connect_chain/core/widgets/social_media_registration_widgets.dart';
+import 'package:connect_chain/features/signup/logic/cubit/signup_cubit.dart';
+import 'package:connect_chain/features/signup/ui/widgets/signup_button_bloc_consumer.dart';
 import 'package:connect_chain/features/signup/ui/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignupScreen extends StatelessWidget {
+class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
+
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  late SignupCubit _signupCubit;
+
+  @override
+  void initState() {
+    _signupCubit = context.read<SignupCubit>();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _signupCubit.disposeControllers();
+    _signupCubit.close();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,30 +54,18 @@ class SignupScreen extends StatelessWidget {
                   subTitle: 'سجّل حسابك وابدأ إدارة طلباتك بكل سهولة  !',
                 ),
                 verticalSpace(48),
-                SignupForm(
-                  formKey: GlobalKey(),
-                  emailController: TextEditingController(),
-                  fullName: TextEditingController(),
-                  passwordController: TextEditingController(),
-                  phoneNumber: TextEditingController(),
-                  rePassword: TextEditingController(),
-                ),
+                const SignupForm(),
                 verticalSpace(40),
-                const CustomButton(
-                    title: 'تسجيل الدخول', width: double.infinity),
+                const SignupButtonBlocConsumer(),
                 verticalSpace(24),
                 const SocialMediaRegistrationWidgets(),
                 verticalSpace(24),
-                Align(
-                  alignment: Alignment.center,
-                  child: ActionableTextRow(
-                      onTap: () {
-                        context.pushNamedAndRemoveUntil(Routes.loginRoute,
-                            predicate: (Route<dynamic> route) => (false));
-                      },
-                      text: ' لديك حساب ؟ ',
-                      actionText: 'تسجيل الدخول'),
-                )
+                ActionableTextRow(
+                    onTap: () {
+                      context.pop();
+                    },
+                    text: ' لديك حساب ؟ ',
+                    actionText: 'تسجيل الدخول')
               ],
             ),
           ),
