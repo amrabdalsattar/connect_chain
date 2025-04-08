@@ -47,7 +47,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                       title: 'إرسال الرمز',
                       width: double.infinity,
                       onTap: () => context.pushNamed(
-                        Routes.otpVerification,
+                        Routes.otpScreenRoute,
                         arguments: 'email',
                       ),
                     ),

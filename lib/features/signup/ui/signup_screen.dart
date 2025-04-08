@@ -33,7 +33,14 @@ class SignupScreen extends StatelessWidget {
                   subTitle: 'سجّل حسابك وابدأ إدارة طلباتك بكل سهولة  !',
                 ),
                 verticalSpace(48),
-                const SignupForm(),
+                SignupForm(
+                  formKey: GlobalKey(),
+                  emailController: TextEditingController(),
+                  fullName: TextEditingController(),
+                  passwordController: TextEditingController(),
+                  phoneNumber: TextEditingController(),
+                  rePassword: TextEditingController(),
+                ),
                 verticalSpace(40),
                 const CustomButton(
                     title: 'تسجيل الدخول', width: double.infinity),

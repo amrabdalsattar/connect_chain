@@ -37,7 +37,7 @@ class OtpScreen extends StatelessWidget {
                 title: 'تحقق',
                 width: 322.w,
                 onTap: () {
-                  context.pushNamed(Routes.resetPasswordScreen);
+                  context.pushNamed(Routes.resetPasswordScreenRoute);
                 },
               )
             ],

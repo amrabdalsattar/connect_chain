@@ -55,12 +55,12 @@ class AppRouter {
           screen: const ForgetPassowrdScreen(),
           settings: settings,
         );
-      case Routes.otpScreen:
+      case Routes.otpScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const OtpScreen(),
           settings: settings,
         );
-      case Routes.resetPasswordScreen:
+      case Routes.resetPasswordScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ResetPasswordScreen(),
           settings: settings,
