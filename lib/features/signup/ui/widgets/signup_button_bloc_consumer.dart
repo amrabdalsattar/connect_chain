@@ -13,29 +13,31 @@ class SignupButtonBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<SignupCubit, SignupState>(
       bloc: context.read<SignupCubit>(),
-      listenWhen: (previous, current) =>
-          current is SignupLoadingState ||
-          current is SignupSuccessState ||
-          current is SignupErrorState,
+      listenWhen:
+          (previous, current) =>
+              current is SignupLoadingState ||
+              current is SignupSuccessState ||
+              current is SignupErrorState,
       listener: (context, state) {
         state.whenOrNull(
-          error: (apiErrorModel) => DialogsHelper.showErrorDialog(
-              context, apiErrorModel.getErrorMessages() ?? 'خطأ غير معروف'),
+          error:
+              (apiErrorModel) => DialogsHelper.showErrorDialog(
+                context,
+                apiErrorModel.getErrorMessages() ?? 'خطأ غير معروف',
+              ),
           success: (confirmationMessage) {
             Navigator.of(context).pop();
-            DialogsHelper.showSnackBar(
-              context,
-              confirmationMessage,
-            );
+            DialogsHelper.showSnackBar(context, confirmationMessage);
           },
         );
       },
-      builder: (context, state) => CustomButton(
-        title: 'سجل الآن',
-        width: double.infinity,
-        onTap: () => context.read<SignupCubit>().emitSignupStates(),
-        isLoading: state is SignupLoadingState,
-      ),
+      builder:
+          (context, state) => CustomButton(
+            title: 'سجل الآن',
+            width: double.infinity,
+            onTap: () => context.read<SignupCubit>().emitSignupStates(),
+            isLoading: state is SignupLoadingState,
+          ),
     );
   }
 }
