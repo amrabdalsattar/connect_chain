@@ -40,6 +40,7 @@ class LoginScreen extends StatelessWidget {
                 ForgotPasswordTextButton(
                   onPressed: () => context.pushNamed(
                     Routes.forgetPasswordScreenRoute,
+
                   ),
                 ),
                 verticalSpace(40),

@@ -4,6 +4,7 @@ class Routes {
   static const String homeRoute = "/home";
   static const String signUpRoute = "/signUpScreen";
   static const String forgetPasswordScreenRoute = "/forgetPassword";
+
   static const String otpScreenRoute = "/otpScreen";
   static const String resetPasswordScreenRoute = "/resetPasswordScreen";
 }
