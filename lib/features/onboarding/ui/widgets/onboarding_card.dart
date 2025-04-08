@@ -14,7 +14,7 @@ class OnboardingCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(onboardingPageModel.imagePath),
+        Image.asset(onboardingPageModel.imagePath), 
         verticalSpace(35),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
