@@ -1,6 +1,7 @@
-import 'package:connect_chain/features/reset_password/ui/forget_passowrd_screen.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_screen.dart';
-import 'package:connect_chain/features/reset_password/ui/reset_password_screen.dart';
+import 'package:connect_chain/features/reset_password/logic/cubit/reset_password_cubit.dart';
+import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';
+import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/otp_screen.dart';
+import 'package:connect_chain/features/reset_password/ui/reset_password_ui/reset_password_screen.dart';
 import 'package:connect_chain/features/signup/ui/signup_screen.dart';
 
 import '../../features/signup/logic/cubit/signup_cubit.dart';
@@ -56,17 +57,28 @@ class AppRouter {
 
       case Routes.forgetPasswordScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const ForgetPasswordScreen(),
+          screen: BlocProvider(
+            create: (context) => ResetPasswordCubit(getIt()),
+            child: const ForgetPasswordScreen(),
+          ),
           settings: settings,
         );
       case Routes.otpScreenRoute:
+        final resetPasswordCubit = arguments as ResetPasswordCubit;
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const OtpScreen(),
+          screen: BlocProvider.value(
+            value: resetPasswordCubit,
+            child: const OtpScreen(),
+          ),
           settings: settings,
         );
       case Routes.resetPasswordScreenRoute:
+        final resetPasswordCubit = arguments as ResetPasswordCubit;
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const ResetPasswordScreen(),
+          screen: BlocProvider.value(
+            value: resetPasswordCubit,
+            child: const ResetPasswordScreen(),
+          ),
           settings: settings,
         );
 
