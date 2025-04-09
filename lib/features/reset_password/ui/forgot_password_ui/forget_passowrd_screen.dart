@@ -1,13 +1,13 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
+import 'package:connect_chain/features/reset_password/logic/cubit/reset_password_cubit.dart';
+import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/widgets/forget_password_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_text_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../core/widgets/screen_label.dart';
 
@@ -35,25 +35,23 @@ class ForgetPasswordScreen extends StatelessWidget {
                 Text('البريد الإلكتروني',
                     style: AppTextStyles.cairoDarkGrayBold16),
                 verticalSpace(8),
-                CustomTextFormField(
-                    hintText: 'البريد الإلكتروني',
-                    controller: TextEditingController(),
-                    validator: (value) {
-                      if (value == null ||
-                          value.isEmpty ||
-                          AppRegex.isEmailValid(value)) {
-                        return 'من فضلك ادخل البريد الإلكتروني صحيح';
-                      }
-                    },
-                    prefixIconPath: AppImages.emailIcon),
+                Form(
+                  key: context.read<ResetPasswordCubit>().forgetPasswordFormKey,
+                  child: CustomTextFormField(
+                      hintText: 'البريد الإلكتروني',
+                      controller:
+                          context.read<ResetPasswordCubit>().emailController,
+                      validator: (value) {
+                        if (value == null ||
+                            value.isEmpty ||
+                            !AppRegex.isEmailValid(value)) {
+                          return 'من فضلك ادخل البريد الإلكتروني صحيح';
+                        }
+                      },
+                      prefixIconPath: AppImages.emailIcon),
+                ),
                 verticalSpace(32),
-                CustomButton(
-                  title: 'إرسال الرمز',
-                  width: 326.w,
-                  onTap: () {
-                    context.pushNamed(Routes.otpScreenRoute);
-                  },
-                )
+                const ForgetPasswordButtonBlocConsumer()
               ],
             ),
           ),

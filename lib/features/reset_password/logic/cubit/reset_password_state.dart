@@ -9,25 +9,25 @@ class ResetPasswordState with _$ResetPasswordState {
 
   // Forget password states
   const factory ResetPasswordState.forgetPasswordLoading() =
-      _ForgetPasswordLoadingState;
+      ForgetPasswordLoadingState;
   const factory ResetPasswordState.forgetPasswordSuccess(String message) =
-      _ForgotPasswordSuccessState;
+      ForgetPasswordSuccessState;
   const factory ResetPasswordState.forgetPasswordError(
-      ApiErrorModel apiErrorModel) = _ForgotPasswordErrorState;
+      ApiErrorModel apiErrorModel) = ForgetPasswordErrorState;
 
   // Otp verification states
   const factory ResetPasswordState.otpVerificationLoading() =
-      _OtpVerificationLoadingState;
+      OtpVerificationLoadingState;
   const factory ResetPasswordState.otpVerificationSuccess(String message) =
-      _OtpVerificationSuccessState;
+      OtpVerificationSuccessState;
   const factory ResetPasswordState.otpVerificationError(
-      ApiErrorModel apiErrorModel) = _OtpVerificationErrorState;
+      ApiErrorModel apiErrorModel) = OtpVerificationErrorState;
 
   // Reset password states
   const factory ResetPasswordState.resetPasswordLoading() =
-      _ResetPasswordLoadingState;
+      ResetPasswordLoadingState;
   const factory ResetPasswordState.resetPasswordSuccess(String message) =
-      _ResetPasswordSuccessState;
+      ResetPasswordSuccessState;
   const factory ResetPasswordState.resetPasswordError(
-      ApiErrorModel apiErrorModel) = _ResetPasswordErrorState;
+      ApiErrorModel apiErrorModel) = ResetPasswordErrorState;
 }

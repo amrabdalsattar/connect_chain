@@ -30,7 +30,7 @@ class ResetPasswordDataSource {
 
   Future<void> resetPassword(
       ResetPasswordRequestModel resetPasswordRequestModel) async {
-    await _apiHelper.post(
+    await _apiHelper.put(
       ApiRequestModel(
         endPoint: ApiConstants.resetPasswordEP,
         body: resetPasswordRequestModel.toJson(),

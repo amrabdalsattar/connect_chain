@@ -12,6 +12,14 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
   final otpVerificationFormKey = GlobalKey<FormState>();
   final resetPasswordFormKey = GlobalKey<FormState>();
 
+  List<TextEditingController> otpControllers =
+      List.generate(4, (index) => TextEditingController());
+  String getOtpCode() {
+    return otpControllers.reversed
+        .map((controller) => controller.text.trim())
+        .join();
+  }
+
   final emailController = TextEditingController();
   final newPasswordController = TextEditingController();
   final newPasswordConfirmationController = TextEditingController();
@@ -28,11 +36,11 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
     }
   }
 
-  void emitOtpVerificationStates(String otp) async {
+  void emitOtpVerificationStates() async {
     if (otpVerificationFormKey.currentState!.validate()) {
       emit(const ResetPasswordState.otpVerificationLoading());
       final result =
-          await _repo.verifyOtp(email: emailController.text, otp: otp);
+          await _repo.verifyOtp(email: emailController.text, otp: getOtpCode());
       result.when(
         success: (message) =>
             emit(ResetPasswordState.otpVerificationSuccess(message)),
