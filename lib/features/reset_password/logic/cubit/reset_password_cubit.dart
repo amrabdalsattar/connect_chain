@@ -1,28 +1,32 @@
-import 'package:connect_chain/features/reset_password/data/models/reset_password_request_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/models/reset_password_request_model.dart';
 import '../../data/repos/reset_password_repo.dart';
 import 'reset_password_state.dart';
 
 class ResetPasswordCubit extends Cubit<ResetPasswordState> {
   final ResetPasswordRepo _repo;
   ResetPasswordCubit(this._repo) : super(const ResetPasswordState.initial());
+
+  // Form keys
   final forgetPasswordFormKey = GlobalKey<FormState>();
   final otpVerificationFormKey = GlobalKey<FormState>();
   final resetPasswordFormKey = GlobalKey<FormState>();
 
+  // Controllers
   List<TextEditingController> otpControllers =
       List.generate(4, (index) => TextEditingController());
+
+  final emailController = TextEditingController();
+  final newPasswordController = TextEditingController();
+  final newPasswordConfirmationController = TextEditingController();
+
   String getOtpCode() {
     return otpControllers.reversed
         .map((controller) => controller.text.trim())
         .join();
   }
-
-  final emailController = TextEditingController();
-  final newPasswordController = TextEditingController();
-  final newPasswordConfirmationController = TextEditingController();
 
   void emitForgetPasswordStates() async {
     if (forgetPasswordFormKey.currentState!.validate()) {
@@ -66,5 +70,16 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
             emit(ResetPasswordState.resetPasswordError(apiErrorModel)),
       );
     }
+  }
+
+  @override
+  Future<void> close() {
+    emailController.dispose();
+    newPasswordController.dispose();
+    newPasswordConfirmationController.dispose();
+    for (final controller in otpControllers) {
+      controller.dispose();
+    }
+    return super.close();
   }
 }

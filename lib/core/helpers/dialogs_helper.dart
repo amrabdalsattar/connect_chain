@@ -1,7 +1,7 @@
-import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 
 import '../theming/app_text_styles.dart';
+import '../theming/colors_helper.dart';
 import '../widgets/loading_indicator.dart';
 import 'extensions.dart';
 

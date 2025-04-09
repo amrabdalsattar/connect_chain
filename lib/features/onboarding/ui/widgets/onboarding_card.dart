@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/widgets/logo.dart';
 import '../../data/models/onboarding_page_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingCard extends StatelessWidget {
   final OnboardingPageModel onboardingPageModel;
@@ -14,7 +15,7 @@ class OnboardingCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(onboardingPageModel.imagePath), 
+        Image.asset(onboardingPageModel.imagePath),
         verticalSpace(35),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

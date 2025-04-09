@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../helpers/spacing.dart';
 import '../theming/app_text_styles.dart';
-import 'package:flutter/material.dart';
 
 class ScreenLabel extends StatelessWidget {
   final String title;

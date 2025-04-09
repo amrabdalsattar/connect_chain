@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/reset_password/data/datasources/reset_password_data_source.dart';
-import 'package:connect_chain/features/signup/data/datasources/signup_data_source.dart';
+import '../../features/reset_password/data/datasources/reset_password_data_source.dart';
+import '../../features/signup/data/datasources/signup_data_source.dart';
 
 import '../../features/login/data/datasources/login_datasource.dart';
 import '../../features/login/data/repos/login_repo.dart';

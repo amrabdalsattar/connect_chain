@@ -1,46 +1,27 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/widgets/actionable_text_row.dart';
-import 'package:connect_chain/core/widgets/logo.dart';
-import 'package:connect_chain/core/widgets/screen_label.dart';
-import 'package:connect_chain/core/widgets/social_media_registration_widgets.dart';
-import 'package:connect_chain/features/signup/logic/cubit/signup_cubit.dart';
-import 'package:connect_chain/features/signup/ui/widgets/signup_button_bloc_consumer.dart';
-import 'package:connect_chain/features/signup/ui/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignupScreen extends StatefulWidget {
+import '../../../core/helpers/extensions.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../../core/widgets/actionable_text_row.dart';
+import '../../../core/widgets/logo.dart';
+import '../../../core/widgets/screen_label.dart';
+import '../../../core/widgets/social_media_registration_widgets.dart';
+import 'widgets/signup_button_bloc_consumer.dart';
+import 'widgets/signup_form.dart';
+
+class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
-
-  @override
-  State<SignupScreen> createState() => _SignupScreenState();
-}
-
-class _SignupScreenState extends State<SignupScreen> {
-  late SignupCubit _signupCubit;
-
-  @override
-  void initState() {
-    _signupCubit = context.read<SignupCubit>();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _signupCubit.disposeControllers();
-    _signupCubit.close();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 32.w, right: 32.w, top: 30.h),
+          padding:
+              EdgeInsets.only(left: 32.w, right: 32.w, top: 30.h, bottom: 24.h),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

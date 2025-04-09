@@ -1,3 +1,5 @@
+import '../../../../core/helpers/constant_string.dart';
+
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors_helper.dart';
@@ -41,7 +43,7 @@ class _LoginFormState extends State<LoginForm> {
           verticalSpace(24),
           CustomTextFormField(
             controller: context.read<LoginCubit>().passwordController,
-            hintText: 'كلمة السر',
+            hintText: ConstantString.password,
             prefixIconPath: AppImages.lockIcon,
             isObscure: isObscureText,
             suffixIcon: InkWell(
