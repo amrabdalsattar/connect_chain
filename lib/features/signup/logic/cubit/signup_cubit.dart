@@ -44,7 +44,8 @@ class SignupCubit extends Cubit<SignupState> {
     }
   }
 
-  void disposeControllers() {
+  @override
+  Future<void> close() {
     emailController.dispose();
     passwordController.dispose();
     confirmPasswordController.dispose();
@@ -52,5 +53,6 @@ class SignupCubit extends Cubit<SignupState> {
     lastNameController.dispose();
     phoneNumberController.dispose();
     addressController.dispose();
+    return super.close();
   }
 }

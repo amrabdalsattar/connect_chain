@@ -21,7 +21,7 @@ class SignupButtonBlocConsumer extends StatelessWidget {
         state.whenOrNull(
           error: (apiErrorModel) => DialogsHelper.showErrorDialog(
             context,
-            apiErrorModel.getErrorMessages() ?? 'خطأ غير معروف',
+            apiErrorModel.getErrorMessages()!,
           ),
           success: (confirmationMessage) {
             Navigator.of(context).pop();

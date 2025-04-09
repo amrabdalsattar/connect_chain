@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:connect_chain/features/reset_password/logic/cubit/reset_password_cubit.dart';
 import 'package:connect_chain/features/reset_password/ui/forgot_password_ui/widgets/forget_password_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
@@ -27,18 +28,18 @@ class ForgetPasswordScreen extends StatelessWidget {
                 verticalSpace(27),
                 Image.asset(AppImages.forgetPassword),
                 const ScreenLabel(
-                  title: 'نسيت كلمة السر؟',
+                  title: ConstantString.forgetPassword,
                   subTitle:
                       'لا تقلق! فقط ادخل عنوان بريدك الإلكتروني أدناه وسنرسل لك رمز التحقق لإعادة تعيين كلمة المرور',
                 ),
                 verticalSpace(24),
-                Text('البريد الإلكتروني',
+                Text(ConstantString.email,
                     style: AppTextStyles.cairoDarkGrayBold16),
                 verticalSpace(8),
                 Form(
                   key: context.read<ResetPasswordCubit>().forgetPasswordFormKey,
                   child: CustomTextFormField(
-                      hintText: 'البريد الإلكتروني',
+                      hintText: ConstantString.email,
                       controller:
                           context.read<ResetPasswordCubit>().emailController,
                       validator: (value) {

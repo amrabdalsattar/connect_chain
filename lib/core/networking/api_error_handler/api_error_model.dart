@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:connect_chain/core/helpers/extensions.dart';
 
 class ApiErrorModel {
@@ -13,7 +14,7 @@ class ApiErrorModel {
 
   String? getErrorMessages() {
     return errors.isNullOrEmpty()
-        ? (message ?? "خطأ غير معروف")
+        ? (message ?? ConstantString.unknownError)
         : errors!.join('\n');
   }
 }

@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:dio/dio.dart';
 
 import 'api_error_model.dart';
@@ -13,7 +14,7 @@ class ApiErrorHandler {
         case DioExceptionType.connectionTimeout:
           return ApiErrorModel(message: 'Connection timed out');
         case DioExceptionType.unknown:
-          return ApiErrorModel(message: 'Unknown error occurred');
+          return ApiErrorModel(message: ConstantString.unknownError);
         case DioExceptionType.receiveTimeout:
           return ApiErrorModel(message: 'Failed to receive data');
         case DioExceptionType.badResponse:

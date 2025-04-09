@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:connect_chain/core/helpers/extensions.dart';
 import 'package:connect_chain/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class ForgotPasswordTextButton extends StatelessWidget {
           context.pushNamed(Routes.forgetPasswordScreenRoute);
         },
         child: Text(
-          "نسيت كلمة السر؟",
+          ConstantString.forgetPassword,
           style: AppTextStyles.tajawalPrimaryMedium15,
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/features/signup/logic/cubit/signup_cubit.dart';
@@ -49,7 +50,7 @@ class _SignUpFormState extends State<SignupForm> {
           ),
           verticalSpace(24),
           CustomTextFormField(
-            hintText: 'البريد الالكتروني',
+            hintText: ConstantString.email,
             controller: context.read<SignupCubit>().emailController,
             validator: (value) {
               if (value == null ||
@@ -89,12 +90,10 @@ class _SignUpFormState extends State<SignupForm> {
           verticalSpace(24),
           CustomTextFormField(
             controller: context.read<SignupCubit>().passwordController,
-            hintText: 'كلمة السر',
+            hintText: ConstantString.password,
             prefixIconPath: AppImages.lockIcon,
             isObscure: isPassObscure,
-            suffixIcon: InkWell(
-              overlayColor:
-                  const WidgetStatePropertyAll(ColorsHelper.transparent),
+            suffixIcon: GestureDetector(
               onTap: () {
                 setState(() {
                   isPassObscure = !isPassObscure;
@@ -116,7 +115,7 @@ class _SignUpFormState extends State<SignupForm> {
           verticalSpace(24),
           CustomTextFormField(
             controller: context.read<SignupCubit>().confirmPasswordController,
-            hintText: ' تاكيد كلمة السر',
+            hintText: ConstantString.confirmPassword,
             prefixIconPath: AppImages.lockIcon,
             isObscure: isRepassObscure,
             suffixIcon: InkWell(
