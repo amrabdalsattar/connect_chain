@@ -42,4 +42,20 @@ class DialogsHelper {
       ),
     );
   }
+
+  static void showSnackBar(BuildContext context, String message,
+      {Color? backgroundColor}) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+        ),
+        content: Text(message),
+        backgroundColor: backgroundColor ?? ColorsHelper.green,
+        behavior: SnackBarBehavior.fixed,
+        duration: const Duration(seconds: 3),
+      ),
+    );
+  }
 }

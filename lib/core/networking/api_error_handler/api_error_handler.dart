@@ -31,13 +31,21 @@ class ApiErrorHandler {
 
 ApiErrorModel _handleError(dynamic data) {
   try {
+    // Check if 'data' is a map and has 'message' and 'errors'
+    final message = data['message'];
+    final errorCode = data['errorCode'];
+    final errors =
+        data['errors'] is List ? List<String>.from(data['errors']) : null;
+
     return ApiErrorModel(
-      message: data['message'] ?? 'Unknown error occurred',
-      errorCode: data['errorCode'],
+      message: message,
+      errorCode: errorCode,
+      errors: errors,
     );
   } catch (e) {
     return ApiErrorModel(
-      message: data['message'] ?? 'Unknown error occurred',
+      message: 'An error occurred while parsing the error response.',
+      errors: [],
     );
   }
 }
