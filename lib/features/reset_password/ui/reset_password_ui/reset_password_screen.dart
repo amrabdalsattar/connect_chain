@@ -20,34 +20,29 @@ class ResetPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ResetPasswordCubit resetPasswordCubit =
-        ModalRoute.of(context)!.settings.arguments as ResetPasswordCubit;
-    return BlocProvider.value(
-      value: resetPasswordCubit,
-      child: Scaffold(
-        body: SafeArea(
-            child: Padding(
-          padding: EdgeInsets.only(left: 28.w, right: 28.w, top: 30.h),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                verticalSpace(27),
-                Logo(width: 51.w, height: 61.h),
-                verticalSpace(16),
-                const ScreenLabel(
-                    title: 'إنشاء كلمة مرور جديدة',
-                    subTitle:
-                        'قم بإدخال كلمة مرور جديدة لحسابك . تأكد من أن كلمة المرور قوية وسهلة التذكر'),
-                verticalSpace(33),
-                const ResetPasswordForm(),
-                verticalSpace(40),
-                const ResetPasswordBlocConsumerButton()
-              ],
-            ),
+    return Scaffold(
+      body: SafeArea(
+          child: Padding(
+        padding: EdgeInsets.only(left: 28.w, right: 28.w, top: 30.h),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              verticalSpace(27),
+              Logo(width: 51.w, height: 61.h),
+              verticalSpace(16),
+              const ScreenLabel(
+                  title: 'إنشاء كلمة مرور جديدة',
+                  subTitle:
+                      'قم بإدخال كلمة مرور جديدة لحسابك . تأكد من أن كلمة المرور قوية وسهلة التذكر'),
+              verticalSpace(33),
+              const ResetPasswordForm(),
+              verticalSpace(40),
+              const ResetPasswordBlocConsumerButton()
+            ],
           ),
-        )),
-      ),
+        ),
+      )),
     );
   }
 }

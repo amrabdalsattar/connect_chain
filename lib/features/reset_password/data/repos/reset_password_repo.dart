@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/constant_string.dart';
 import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
 import 'package:connect_chain/core/networking/api_result.dart';
 import 'package:connect_chain/features/reset_password/data/datasources/reset_password_data_source.dart';
@@ -10,7 +11,7 @@ class ResetPasswordRepo {
   Future<ApiResult<String>> forgetPassword(String email) async {
     try {
       await _dataSource.forgetPassword(email);
-      return const ApiResult.success('Password reset link sent to your email');
+      return const ApiResult.success(ConstantString.otpSentMessage);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }
@@ -20,7 +21,7 @@ class ResetPasswordRepo {
       {required String email, required String otp}) async {
     try {
       await _dataSource.verifyOtp(email, otp);
-      return const ApiResult.success('OTP verified successfully');
+      return const ApiResult.success(ConstantString.otpVerified);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }
@@ -30,7 +31,7 @@ class ResetPasswordRepo {
       ResetPasswordRequestModel resetPasswordRequestModel) async {
     try {
       await _dataSource.resetPassword(resetPasswordRequestModel);
-      return const ApiResult.success('Password reset successfully');
+      return const ApiResult.success(ConstantString.passwordResetMessage);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }
