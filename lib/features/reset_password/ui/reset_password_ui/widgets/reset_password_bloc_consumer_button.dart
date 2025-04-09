@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/helpers/extensions.dart';
+import 'package:connect_chain/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,6 +24,8 @@ class ResetPasswordBlocConsumerButton extends StatelessWidget {
               context, apiErrorModel.getErrorMessages()!),
           resetPasswordSuccess: (message) {
             DialogsHelper.showSnackBar(context, message);
+            context.pushNamedAndRemoveUntil(Routes.loginRoute,
+                predicate: (route) => false);
           },
         );
       },
