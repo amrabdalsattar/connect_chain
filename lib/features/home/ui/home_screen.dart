@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('يا مرحب بالناس الزينة'),
+        child: Text('Home Screen'),
       ),
     );
   }

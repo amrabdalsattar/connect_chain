@@ -28,6 +28,9 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      textCapitalization: keyboardType == TextInputType.name
+          ? TextCapitalization.words
+          : TextCapitalization.none,
       keyboardType: keyboardType,
       validator: (value) => validator(value),
       decoration: InputDecoration(

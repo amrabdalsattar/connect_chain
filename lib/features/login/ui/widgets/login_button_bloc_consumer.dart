@@ -22,7 +22,7 @@ class LoginButtonBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           error: (apiErrorModel) => DialogsHelper.showErrorDialog(
-              context, apiErrorModel.getErrorMessages() ?? "خطأ غير معروف"),
+              context, apiErrorModel.getErrorMessages()!),
           success: (loginResponseModel) =>
               context.pushReplacementNamed(Routes.homeRoute),
         );

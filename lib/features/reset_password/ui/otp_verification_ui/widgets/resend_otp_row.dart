@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/font_weight_helper.dart';
+import '../../../../../core/theming/app_text_styles.dart';
+import '../../../../../core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 
 part 'resend_otp_button.dart';

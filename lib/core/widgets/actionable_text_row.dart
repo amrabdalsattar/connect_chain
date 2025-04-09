@@ -1,6 +1,7 @@
-import '../theming/app_text_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import '../theming/app_text_styles.dart';
 
 class ActionableTextRow extends StatelessWidget {
   final String text;

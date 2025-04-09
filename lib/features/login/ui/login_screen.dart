@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/routing/routes.dart';
+import '../../../core/helpers/extensions.dart';
+import '../../../core/routing/routes.dart';
 
 import 'widgets/login_button_bloc_consumer.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +40,6 @@ class LoginScreen extends StatelessWidget {
                 ForgotPasswordTextButton(
                   onPressed: () => context.pushNamed(
                     Routes.forgetPasswordScreenRoute,
-
                   ),
                 ),
                 verticalSpace(40),

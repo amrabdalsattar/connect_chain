@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'reset_password_state.freezed.dart';

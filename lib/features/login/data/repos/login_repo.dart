@@ -1,8 +1,7 @@
 import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
 import '../datasources/login_datasource.dart';
 import '../models/login_response_model.dart';
-
-import '../../../../core/networking/api_result.dart';
 
 class LoginRepo {
   final LoginDatasource _loginDatasource;

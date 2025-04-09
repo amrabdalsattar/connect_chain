@@ -18,7 +18,8 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // First Textfield
-            Text('كلمة السر ', style: AppTextStyles.cairoDarkGrayBold16),
+            Text(ConstantString.password,
+                style: AppTextStyles.cairoDarkGrayBold16),
             verticalSpace(8),
             CustomTextFormField(
               controller:
@@ -44,13 +45,14 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'من فضلك ادخل كلمة السر';
+                  return ConstantString.enterPassword;
                 }
               },
             ),
             verticalSpace(24),
             // Second Textfield
-            Text('تأكيد كلمة السر ', style: AppTextStyles.cairoDarkGrayBold16),
+            Text(ConstantString.password,
+                style: AppTextStyles.cairoDarkGrayBold16),
             verticalSpace(8),
             CustomTextFormField(
               controller: context
