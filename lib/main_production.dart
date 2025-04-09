@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'connect_chain.dart';
 import 'core/di/dependency_injection.dart';
-import 'core/helpers/shared_preferences/shared_preferences_helper.dart';
+import 'core/helpers/cache/shared_preferences_helper.dart';
 import 'core/helpers/token_helper.dart';
 
 void main() async {

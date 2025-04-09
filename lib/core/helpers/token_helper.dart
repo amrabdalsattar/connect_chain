@@ -1,6 +1,6 @@
 import 'extensions.dart';
-import 'shared_preferences/secured_storage_helper.dart';
-import 'shared_preferences/shared_preferences_keys.dart';
+import 'cache/secured_storage_helper.dart';
+import 'cache/shared_preferences_keys.dart';
 
 bool isLoggedIn = false;
 
