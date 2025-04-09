@@ -1,13 +1,14 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/widgets/actionable_text_row.dart';
-import 'package:connect_chain/core/widgets/logo.dart';
-import 'package:connect_chain/core/widgets/screen_label.dart';
-import 'package:connect_chain/core/widgets/social_media_registration_widgets.dart';
-import 'package:connect_chain/features/signup/ui/widgets/signup_button_bloc_consumer.dart';
-import 'package:connect_chain/features/signup/ui/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/helpers/extensions.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../../core/widgets/actionable_text_row.dart';
+import '../../../core/widgets/logo.dart';
+import '../../../core/widgets/screen_label.dart';
+import '../../../core/widgets/social_media_registration_widgets.dart';
+import 'widgets/signup_button_bloc_consumer.dart';
+import 'widgets/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

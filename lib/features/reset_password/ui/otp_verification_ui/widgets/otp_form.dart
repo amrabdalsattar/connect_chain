@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/reset_password/logic/cubit/reset_password_cubit.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/otp_text_field.dart';
+import '../../../logic/cubit/reset_password_cubit.dart';
+import 'otp_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

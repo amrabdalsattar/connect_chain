@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/constant_string.dart';
+import '../../helpers/constant_string.dart';
 import 'package:dio/dio.dart';
 
 import 'api_error_model.dart';

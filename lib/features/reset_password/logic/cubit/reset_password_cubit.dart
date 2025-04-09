@@ -1,7 +1,7 @@
-import 'package:connect_chain/features/reset_password/data/models/reset_password_request_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/models/reset_password_request_model.dart';
 import '../../data/repos/reset_password_repo.dart';
 import 'reset_password_state.dart';
 

@@ -1,8 +1,8 @@
-import 'package:connect_chain/features/signup/data/models/signup_request_model.dart';
-import 'package:connect_chain/features/signup/data/repos/signup_repo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/models/signup_request_model.dart';
+import '../../data/repos/signup_repo.dart';
 import 'signup_state.dart';
 
 class SignupCubit extends Cubit<SignupState> {

@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/helpers/dialogs_helper.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
-import 'package:connect_chain/features/signup/logic/cubit/signup_cubit.dart';
+import '../../../../core/helpers/dialogs_helper.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../../logic/cubit/signup_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

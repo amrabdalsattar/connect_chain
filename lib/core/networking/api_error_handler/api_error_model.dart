@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/constant_string.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
+import '../../helpers/constant_string.dart';
+import '../../helpers/extensions.dart';
 
 class ApiErrorModel {
   final int? errorCode;

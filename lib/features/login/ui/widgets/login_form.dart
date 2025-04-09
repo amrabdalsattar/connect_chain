@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/constant_string.dart';
+import '../../../../core/helpers/constant_string.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/spacing.dart';

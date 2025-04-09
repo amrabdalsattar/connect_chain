@@ -1,5 +1,6 @@
-import 'colors_helper.dart';
 import 'package:flutter/material.dart';
+
+import 'colors_helper.dart';
 
 class ThemesHelper {
   static ThemeData lightTheme = ThemeData(

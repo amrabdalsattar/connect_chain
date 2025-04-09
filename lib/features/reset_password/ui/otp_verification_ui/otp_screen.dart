@@ -1,12 +1,12 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-
-import 'package:connect_chain/core/widgets/screen_label.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/otp_button_bloc_consumer.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/otp_form.dart';
-import 'package:connect_chain/features/reset_password/ui/otp_verification_ui/widgets/resend_otp_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/screen_label.dart';
+import 'widgets/otp_button_bloc_consumer.dart';
+import 'widgets/otp_form.dart';
+import 'widgets/resend_otp_row.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});

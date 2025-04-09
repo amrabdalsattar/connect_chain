@@ -1,8 +1,8 @@
-import 'package:connect_chain/core/helpers/constant_string.dart';
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/reset_password/data/datasources/reset_password_data_source.dart';
-import 'package:connect_chain/features/reset_password/data/models/reset_password_request_model.dart';
+import '../../../../core/helpers/constant_string.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasources/reset_password_data_source.dart';
+import '../models/reset_password_request_model.dart';
 
 class ResetPasswordRepo {
   final ResetPasswordDataSource _dataSource;
