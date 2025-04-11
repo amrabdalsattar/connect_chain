@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,6 +20,11 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
   List<TextEditingController> otpControllers =
       List.generate(4, (index) => TextEditingController());
 
+  // OTP Timer
+  Timer? _otpTimer;
+  int _otpTimeout = 120;
+  bool canResendOtp = false;
+
   final emailController = TextEditingController();
   final newPasswordController = TextEditingController();
   final newPasswordConfirmationController = TextEditingController();
@@ -28,13 +35,52 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
         .join();
   }
 
+  void startTimer() {
+    _otpTimer?.cancel();
+    _otpTimeout = 120; // Remember to change this to 120
+    canResendOtp = false;
+    emit(ResetPasswordState.otpTimerRunning(remainingSeconds: formattedTime()));
+    _otpTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      _otpTimeout--;
+      // Emit the state To change the value
+      emit(ResetPasswordState.otpTimerRunning(
+          remainingSeconds: formattedTime()));
+
+      if (_otpTimeout == 0) {
+        canResendOtp = true;
+        timer.cancel();
+      }
+    });
+  }
+
+  String formattedTime() {
+    final minutes = (_otpTimeout ~/ 60).toString().padLeft(2, '0');
+    final seconds = (_otpTimeout % 60).toString().padLeft(2, '0');
+    return '$minutes:$seconds';
+  }
+
+  void emitResendOtpState() async {
+    final result = await _repo.forgetPassword(emailController.text);
+    emit(const ResetPasswordState.otpVerificationLoading());
+    result.when(
+      success: (message) {
+        emit(ResetPasswordState.resendOtpVerficationSuccess(message));
+        startTimer();
+      },
+      failure: (apiErrorModel) =>
+          emit(ResetPasswordState.otpVerificationError(apiErrorModel)),
+    );
+  }
+
   void emitForgetPasswordStates() async {
     if (forgetPasswordFormKey.currentState!.validate()) {
       emit(const ResetPasswordState.forgetPasswordLoading());
       final result = await _repo.forgetPassword(emailController.text);
       result.when(
-          success: (message) =>
-              emit(ResetPasswordState.forgetPasswordSuccess(message)),
+          success: (message) {
+            emit(ResetPasswordState.forgetPasswordSuccess(message));
+            startTimer();
+          },
           failure: (apiErrorModel) =>
               emit(ResetPasswordState.forgetPasswordError(apiErrorModel)));
     }

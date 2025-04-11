@@ -23,6 +23,14 @@ class ResetPasswordState with _$ResetPasswordState {
   const factory ResetPasswordState.otpVerificationError(
       ApiErrorModel apiErrorModel) = OtpVerificationErrorState;
 
+  // Additional OTP States
+  const factory ResetPasswordState.resendOtpVerficationSuccess(String message) =
+      ResendOtpVerficationSuccess;
+
+  const factory ResetPasswordState.otpTimerRunning({
+    required String remainingSeconds,
+  }) = OtpTimerRunningState;
+
   // Reset password states
   const factory ResetPasswordState.resetPasswordLoading() =
       ResetPasswordLoadingState;

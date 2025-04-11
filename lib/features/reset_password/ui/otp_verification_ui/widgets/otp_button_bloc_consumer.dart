@@ -15,11 +15,14 @@ class OtpButtonBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<ResetPasswordCubit, ResetPasswordState>(
       listenWhen: (previous, current) =>
+          current is ResendOtpVerficationSuccess ||
           current is OtpVerificationLoadingState ||
           current is OtpVerificationSuccessState ||
           current is OtpVerificationErrorState,
       listener: (context, state) {
         state.whenOrNull(
+          resendOtpVerficationSuccess: (message) =>
+              DialogsHelper.showSnackBar(context, message),
           otpVerificationError: (apiErrorModel) =>
               DialogsHelper.showErrorDialog(
                   context, apiErrorModel.getErrorMessages()!),
@@ -28,7 +31,7 @@ class OtpButtonBlocConsumer extends StatelessWidget {
             context.pushNamed(
               Routes.resetPasswordScreenRoute,
               arguments: context.read<ResetPasswordCubit>(),
-            );
+            );  
           },
         );
       },
