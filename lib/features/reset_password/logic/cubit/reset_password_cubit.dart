@@ -64,7 +64,7 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
     emit(const ResetPasswordState.otpVerificationLoading());
     result.when(
       success: (message) {
-        emit(ResetPasswordState.resendOtpVerficationSuccess(message));
+        emit(ResetPasswordState.resendOtpVerificationSuccess(message));
         startTimer();
       },
       failure: (apiErrorModel) =>
@@ -92,8 +92,9 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
       final result =
           await _repo.verifyOtp(email: emailController.text, otp: getOtpCode());
       result.when(
-        success: (message) =>
-            emit(ResetPasswordState.otpVerificationSuccess(message)),
+        success: (message) {
+          emit(ResetPasswordState.otpVerificationSuccess(message));
+        },
         failure: (apiErrorModel) =>
             emit(ResetPasswordState.otpVerificationError(apiErrorModel)),
       );
@@ -126,6 +127,7 @@ class ResetPasswordCubit extends Cubit<ResetPasswordState> {
     for (final controller in otpControllers) {
       controller.dispose();
     }
+    _otpTimer?.cancel();
     return super.close();
   }
 }

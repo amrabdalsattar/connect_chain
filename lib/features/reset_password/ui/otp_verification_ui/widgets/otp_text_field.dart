@@ -48,7 +48,7 @@ class OtpTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.r),
           ),
           enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
+            borderSide: BorderSide(
               color: ColorsHelper.semiGray,
               width: 1.3,
             ),
