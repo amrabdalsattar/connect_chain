@@ -19,7 +19,7 @@ class SocialMediaRegistrationWidgets extends StatelessWidget {
             Expanded(
                 child: Container(
               height: 1,
-              color: ColorsHelper.semiGray,
+              color: ColorsHelper.dividerGray,
             )),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -31,7 +31,7 @@ class SocialMediaRegistrationWidgets extends StatelessWidget {
             Expanded(
                 child: Container(
               height: 1,
-              color: ColorsHelper.semiGray,
+              color: ColorsHelper.dividerGray,
             )),
           ],
         ),

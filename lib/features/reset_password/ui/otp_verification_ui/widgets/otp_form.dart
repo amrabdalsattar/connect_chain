@@ -42,6 +42,7 @@ class _OtpFormState extends State<OtpForm> {
                               .otpControllers
                               .every(
                                   (controller) => controller.text.isNotEmpty)) {
+                        FocusScope.of(context).unfocus();
                         context
                             .read<ResetPasswordCubit>()
                             .emitOtpVerificationStates();
