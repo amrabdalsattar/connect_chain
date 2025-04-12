@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/data/models/profile_item_model.dart';
+import 'profile_item_model.dart';
 
 class ProfileSectionModel {
   final String title;

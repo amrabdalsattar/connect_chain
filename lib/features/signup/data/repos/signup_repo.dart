@@ -1,9 +1,8 @@
 import '../../../../core/helpers/constant_string.dart';
 import '../../../../core/networking/api_error_handler/api_error_handler.dart';
-import '../models/signup_request_model.dart';
-
 import '../../../../core/networking/api_result.dart';
 import '../datasources/signup_data_source.dart';
+import '../models/signup_request_model.dart';
 
 class SignupRepo {
   final SignupDataSource _signupDataSource;

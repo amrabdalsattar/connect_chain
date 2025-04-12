@@ -1,7 +1,8 @@
-import '../../../logic/cubit/reset_password_cubit.dart';
-import 'otp_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../logic/cubit/reset_password_cubit.dart';
+import 'otp_text_field.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../helpers/extensions.dart';
+import '../theming/colors_helper.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({super.key});

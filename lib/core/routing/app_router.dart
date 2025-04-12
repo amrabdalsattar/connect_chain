@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/ui/profile_screen.dart';
+import '../../features/profile/ui/profile_screen.dart';
 
 import '../../features/reset_password/logic/cubit/reset_password_cubit.dart';
 import '../../features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';

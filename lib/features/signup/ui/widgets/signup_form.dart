@@ -1,13 +1,13 @@
-import '../../../../core/helpers/app_images.dart';
-import '../../../../core/helpers/constant_string.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors_helper.dart';
-import '../../logic/cubit/signup_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/constant_string.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/colors_helper.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
+import '../../logic/cubit/signup_cubit.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
@@ -107,8 +107,23 @@ class _SignUpFormState extends State<SignupForm> {
                   : const Icon(Icons.visibility, color: ColorsHelper.darkBlue),
             ),
             validator: (value) {
-              if (value == null || value.isEmpty || value.length < 8) {
+              if (value == null || value.isEmpty) {
                 return 'يرجى إدخال كلمة مرور صالحة';
+              }
+              if (value.length < 8) {
+                return 'كلمة المرور يجب أن تكون أطول من 8 خانات';
+              }
+              if (!AppRegex.hasUpperCase(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف كبير';
+              }
+              if (!AppRegex.hasSpecialCharacter(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف خاص';
+              }
+              if (!AppRegex.hasNumber(value)) {
+                return 'كلمة المرور يجب أن تحتوي على رقم';
+              }
+              if (!AppRegex.hasLowerCase(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف صغير';
               }
             },
           ),

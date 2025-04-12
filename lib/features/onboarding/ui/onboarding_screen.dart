@@ -1,12 +1,12 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/widgets/custom_button.dart';
-import 'package:connect_chain/features/onboarding/logic/cubit/onboarding_cubit.dart';
-import 'package:connect_chain/features/onboarding/ui/widgets/onboarding_card.dart';
-import 'package:connect_chain/features/onboarding/ui/widgets/page_indicator.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/helpers/spacing.dart';
+import '../../../core/widgets/custom_button.dart';
+import '../logic/cubit/onboarding_cubit.dart';
+import 'widgets/onboarding_card.dart';
+import 'widgets/page_indicator.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

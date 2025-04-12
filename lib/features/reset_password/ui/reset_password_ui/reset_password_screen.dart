@@ -1,17 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/helpers/constant_string.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theming/colors_helper.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../core/widgets/logo.dart';
 import '../../../../core/widgets/screen_label.dart';
 import '../../logic/cubit/reset_password_cubit.dart';
 import 'widgets/reset_password_bloc_consumer_button.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/theming/colors_helper.dart';
 
 part 'widgets/reset_password_form.dart';
 

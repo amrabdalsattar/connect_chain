@@ -1,6 +1,6 @@
-import '../../helpers/constant_string.dart';
 import 'package:dio/dio.dart';
 
+import '../../helpers/constant_string.dart';
 import 'api_error_model.dart';
 
 class ApiErrorHandler {

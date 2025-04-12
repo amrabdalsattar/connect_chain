@@ -1,15 +1,16 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/widgets/custom_back_button.dart';
-import 'package:connect_chain/features/profile/data/models/profile_item_model.dart';
-import 'package:connect_chain/features/profile/data/models/profile_section_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/helpers/spacing.dart';
+import '../../../core/theming/app_text_styles.dart';
+import '../../../core/theming/colors_helper.dart';
+import '../../../core/widgets/custom_back_button.dart';
+import '../data/models/profile_item_model.dart';
+import '../data/models/profile_section_model.dart';
 import 'widgets/profile_header.dart';
 
-part 'widgets/profile_details_section.dart';
 part 'widgets/profile_details_list_tile.dart';
+part 'widgets/profile_details_section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
