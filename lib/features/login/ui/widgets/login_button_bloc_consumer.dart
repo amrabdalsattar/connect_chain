@@ -24,7 +24,9 @@ class LoginButtonBlocConsumer extends StatelessWidget {
           error: (apiErrorModel) => DialogsHelper.showErrorDialog(
               context, apiErrorModel.getErrorMessages()!),
           success: (loginResponseModel) =>
-              context.pushReplacementNamed(Routes.homeRoute),
+          // Remember To change to the real Route
+              // context.pushReplacementNamed(Routes.homeRoute),
+              context.pushReplacementNamed(Routes.profileScreenRoute),
         );
       },
       builder: (context, state) => CustomButton(

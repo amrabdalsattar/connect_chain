@@ -19,9 +19,14 @@ class ColorsHelper {
   static const Color liteGray = Color(0xFFEEEEEE);
 
   static const Color offWhite = Color.fromARGB(171, 242, 242, 242);
-
+  
   static const Color darkBlue = Color(0xFF292D32);
 
   static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
   static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);
+
+  // Profile Header Gradinet Colors.
+
+  static const Color profileHeaderGradientStart = Color(0xffF28B22);
+  static const Color profileHeaderGradientEnd = Color(0xff8C5014);
 }

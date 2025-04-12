@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/profile/ui/profile_screen.dart';
+
 import '../../features/reset_password/logic/cubit/reset_password_cubit.dart';
 import '../../features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';
 import '../../features/reset_password/ui/otp_verification_ui/otp_screen.dart';
@@ -44,6 +46,11 @@ class AppRouter {
       case Routes.homeRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
           screen: const HomeScreen(),
+          settings: settings,
+        );
+      case Routes.profileScreenRoute:
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: const ProfileScreen(),
           settings: settings,
         );
       case Routes.signUpRoute:
