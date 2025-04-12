@@ -1,12 +1,12 @@
-import '../../../../core/helpers/app_images.dart';
-import '../../../../core/helpers/extensions.dart';
-import '../../../../core/routing/routes.dart';
-import '../../data/models/onboarding_page_model.dart';
+import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/features/onboarding/data/models/onboarding_page_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnboardingCubit extends Cubit<int> {
   OnboardingCubit() : super(0);
+
+  final PageController pageController = PageController();
 
   List<OnboardingPageModel> onboardingPages = [
     OnboardingPageModel(
@@ -29,11 +29,20 @@ class OnboardingCubit extends Cubit<int> {
     )
   ];
 
-  void increasePageIndex(BuildContext context) {
-    if (state < 2) {
-      emit(state + 1);
-    } else {
-      context.pushReplacementNamed(Routes.loginRoute);
-    }
+  void updatePageIndex(int index) => emit(index);
+
+  void nextPage() {
+    final nextIndex = state + 1;
+    if (nextIndex < onboardingPages.length) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+
+
+  @override
+  Future<void> close() {
+    pageController.dispose();
+    return super.close();
   }
 }
