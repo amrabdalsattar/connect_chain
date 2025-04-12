@@ -38,8 +38,7 @@ class OnboardingCubit extends Cubit<int> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
-    }
-  }
+
 
   @override
   Future<void> close() {

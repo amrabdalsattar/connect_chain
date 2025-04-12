@@ -1,3 +1,4 @@
+import '../../helpers/constant_string.dart';
 import 'package:dio/dio.dart';
 
 import 'api_error_model.dart';
@@ -13,7 +14,7 @@ class ApiErrorHandler {
         case DioExceptionType.connectionTimeout:
           return ApiErrorModel(message: 'Connection timed out');
         case DioExceptionType.unknown:
-          return ApiErrorModel(message: 'Unknown error occurred');
+          return ApiErrorModel(message: ConstantString.unknownError);
         case DioExceptionType.receiveTimeout:
           return ApiErrorModel(message: 'Failed to receive data');
         case DioExceptionType.badResponse:
@@ -31,13 +32,21 @@ class ApiErrorHandler {
 
 ApiErrorModel _handleError(dynamic data) {
   try {
+    // Check if 'data' is a map and has 'message' and 'errors'
+    final message = data['message'];
+    final errorCode = data['errorCode'];
+    final errors =
+        data['errors'] is List ? List<String>.from(data['errors']) : null;
+
     return ApiErrorModel(
-      message: data['message'] ?? 'Unknown error occurred',
-      code: data['code'],
+      message: message,
+      errorCode: errorCode,
+      errors: errors,
     );
   } catch (e) {
     return ApiErrorModel(
-      message: data['message'] ?? 'Unknown error occurred',
+      message: 'An error occurred while parsing the error response.',
+      errors: [],
     );
   }
 }

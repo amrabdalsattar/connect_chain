@@ -1,24 +1,105 @@
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'colors_helper.dart';
+import 'font_weight_helper.dart';
+
 class AppTextStyles {
-  static TextStyle fontPrimaryBold20 = TextStyle(
+  // Cairo font
+  static TextStyle cairoPrimaryBold20 = TextStyle(
     fontSize: 20.sp,
     color: ColorsHelper.primaryColor,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle cairoBlackBold20 = TextStyle(
+    fontSize: 20.sp,
+    color: ColorsHelper.black,
+    fontWeight: FontWeightHelper.bold,
+  );
 
-  static TextStyle fontFadedBlackRegular16 = TextStyle(
+  static TextStyle cairoFadedBlackRegular16 = TextStyle(
     fontSize: 15.sp,
     color: ColorsHelper.fadedBlack,
     fontWeight: FontWeightHelper.regular,
   );
 
-  static TextStyle fontWhiteBold16 = TextStyle(
+  static TextStyle cairoWhiteBold16 = TextStyle(
     fontSize: 16.sp,
     color: ColorsHelper.white,
     fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoDarkGrayBold22 = TextStyle(
+    fontSize: 22.sp,
+    color: ColorsHelper.darkGray,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoSemiGreyRegular12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.semiGray,
+    fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle cairoSemiOpacityBlackRegular16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.semiOpacityBlack,
+    fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle cairoDarkGrayBold16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.darkGray,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static TextStyle cairoSemiDarkSemiBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.semiOpacityBlack,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static TextStyle cairoWhiteBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.white,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoPrimaryBold16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.primaryColor,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoBlackMedium16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.black,
+    fontWeight: FontWeightHelper.medium,
+  );
+
+  // Tajawal font
+  static TextStyle tajawalGrayRegular15 = TextStyle(
+    fontFamily: 'tajawal',
+    fontSize: 15.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle tajawaldarkGrayRegular16 = TextStyle(
+    fontFamily: 'tajawal',
+    fontSize: 16.sp,
+    color: ColorsHelper.darkGray,
+    fontWeight: FontWeightHelper.regular,
+  );
+
+  static TextStyle tajawalDarkGrayMedium14 = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsHelper.darkGray,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle tajawalPrimaryMedium15 = TextStyle(
+    fontSize: 15.sp,
+    color: ColorsHelper.primaryColor,
+    fontWeight: FontWeightHelper.medium,
   );
 }

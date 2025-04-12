@@ -1,6 +1,20 @@
-class ApiErrorModel {
-  final String? message;
-  final int? code;
+import '../../helpers/constant_string.dart';
+import '../../helpers/extensions.dart';
 
-  ApiErrorModel({this.message, this.code});
+class ApiErrorModel {
+  final int? errorCode;
+  final String? message;
+  final List<dynamic>? errors;
+
+  ApiErrorModel({
+    this.errorCode,
+    this.message,
+    this.errors,
+  });
+
+  String? getErrorMessages() {
+    return errors.isNullOrEmpty()
+        ? (message ?? ConstantString.unknownError)
+        : errors!.join('\n');
+  }
 }

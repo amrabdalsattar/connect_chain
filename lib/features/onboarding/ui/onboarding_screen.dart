@@ -3,6 +3,7 @@ import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:connect_chain/features/onboarding/logic/cubit/onboarding_cubit.dart';
 import 'package:connect_chain/features/onboarding/ui/widgets/onboarding_card.dart';
 import 'package:connect_chain/features/onboarding/ui/widgets/page_indicator.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
