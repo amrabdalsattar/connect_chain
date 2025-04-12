@@ -24,7 +24,7 @@ class ScreenLabel extends StatelessWidget {
         verticalSpace(10),
         Text(
           subTitle,
-          style: AppTextStyles.cairoSemiOpacityBlackRegular14,
+          style: AppTextStyles.cairoSemiGreyRegular12,
         ),
       ],
     );

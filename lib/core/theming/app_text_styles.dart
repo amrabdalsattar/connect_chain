@@ -11,6 +11,11 @@ class AppTextStyles {
     color: ColorsHelper.primaryColor,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle cairoBlackBold20 = TextStyle(
+    fontSize: 20.sp,
+    color: ColorsHelper.black,
+    fontWeight: FontWeightHelper.bold,
+  );
 
   static TextStyle cairoFadedBlackRegular16 = TextStyle(
     fontSize: 15.sp,
@@ -30,9 +35,9 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
-  static TextStyle cairoSemiOpacityBlackRegular14 = TextStyle(
-    fontSize: 14.sp,
-    color: ColorsHelper.semiOpacityBlack,
+  static TextStyle cairoSemiGreyRegular12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.semiGray,
     fontWeight: FontWeightHelper.regular,
   );
 
@@ -46,6 +51,18 @@ class AppTextStyles {
     fontSize: 16.sp,
     color: ColorsHelper.darkGray,
     fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static TextStyle cairoSemiDarkSemiBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.semiOpacityBlack,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static TextStyle cairoWhiteBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.white,
+    fontWeight: FontWeightHelper.bold,
   );
 
   static TextStyle cairoPrimaryBold16 = TextStyle(
@@ -65,6 +82,12 @@ class AppTextStyles {
     fontFamily: 'tajawal',
     fontSize: 15.sp,
     color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle tajawaldarkGrayRegular16 = TextStyle(
+    fontFamily: 'tajawal',
+    fontSize: 16.sp,
+    color: ColorsHelper.darkGray,
     fontWeight: FontWeightHelper.regular,
   );
 

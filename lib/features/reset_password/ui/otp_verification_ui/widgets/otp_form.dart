@@ -29,9 +29,22 @@ class _OtpFormState extends State<OtpForm> {
                 },
                 child: OtpTextField(
                     onChanged: (value) {
+                      // Moves the focus Forward
                       if (value.length == 1 && index > 0) {
                         FocusScope.of(context)
                             .requestFocus(focusNodes[index - 1]);
+                      }
+
+                      // Check if last field is filled AND all fields have input
+                      if (index == 0 &&
+                          context
+                              .read<ResetPasswordCubit>()
+                              .otpControllers
+                              .every(
+                                  (controller) => controller.text.isNotEmpty)) {
+                        context
+                            .read<ResetPasswordCubit>()
+                            .emitOtpVerificationStates();
                       }
                       // Move focus
                       else if (value.isEmpty && index < focusNodes.length - 1) {
