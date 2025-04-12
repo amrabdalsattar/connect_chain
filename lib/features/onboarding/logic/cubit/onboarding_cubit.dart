@@ -1,4 +1,6 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/core/helpers/extensions.dart';
+import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/features/onboarding/data/models/onboarding_page_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,14 +33,17 @@ class OnboardingCubit extends Cubit<int> {
 
   void updatePageIndex(int index) => emit(index);
 
-  void nextPage() {
+  void nextPage(BuildContext context) {
     final nextIndex = state + 1;
     if (nextIndex < onboardingPages.length) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
-
+    } else {
+      context.pushNamed(Routes.loginRoute);
+    }
+  }
 
   @override
   Future<void> close() {

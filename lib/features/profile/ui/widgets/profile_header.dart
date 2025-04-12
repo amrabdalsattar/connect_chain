@@ -13,12 +13,13 @@ class ProfileHeader extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        gradient: const LinearGradient(
-          colors: [
-            ColorsHelper.primaryColor,
-            ColorsHelper.profileHeaderGradientEnd,
-          ],
-        ),
+        gradient: const LinearGradient(colors: [
+          ColorsHelper.primaryColor,
+          ColorsHelper.profileHeaderGradientEnd,
+        ], stops: [
+          0.15,
+          2
+        ]),
       ),
       height: 85.h,
       width: 342.w,

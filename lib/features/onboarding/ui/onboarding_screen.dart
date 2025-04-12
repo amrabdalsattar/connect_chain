@@ -47,7 +47,9 @@ class OnboardingScreen extends StatelessWidget {
                     title: 'التالي',
                     width: 155.w,
                     elevation: 2,
-                    onTap: cubit.nextPage,
+                    onTap: () {
+                      cubit.nextPage(context);
+                    },
                   )
                 ],
               ),
