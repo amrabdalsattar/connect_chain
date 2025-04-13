@@ -7,7 +7,9 @@ class AppImages {
   static const String thirdOnboardingPage =
       "assets/images/onboarding_page_3.png";
   static const String connectChainLogo = "assets/images/connect_chain_logo.png";
-    static const String connectChainwhiteLogo = "assets/images/connect_chain_white_logo.png";
+  static const String connectChainwhiteLogo =
+      "assets/images/connect_chain_white_logo.png";
+  static const String infoIcon = "assets/images/info.png";
 
   static const String forgetPassword = "assets/images/forget_password.png";
   static const String otpImage = "assets/images/otp.png";
@@ -23,4 +25,5 @@ class AppImages {
   static const String personIcon = "assets/svgs/person.svg";
   static const String phoneIcon = "assets/svgs/phone.svg";
   static const String addressIcon = "assets/svgs/address.svg";
+  static const String deleteIcon = "assets/svgs/delete.svg";
 }

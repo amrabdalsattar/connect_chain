@@ -24,6 +24,8 @@ class ColorsHelper {
 
   static const Color darkBlue = Color(0xFF292D32);
 
+  static const Color subText = Color(0xff6B7280);
+
   static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
   static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);
 

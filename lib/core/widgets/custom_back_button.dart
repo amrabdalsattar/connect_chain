@@ -8,24 +8,21 @@ class CustomBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(24.w),
-      child: InkWell(
-        onTap: () => context.pop(),
-        borderRadius: BorderRadius.circular(4),
-        child: Container(
-          width: 32.w,
-          height: 32.h,
-          padding: EdgeInsets.all(2.w),
-          decoration: BoxDecoration(
-            color: ColorsHelper.black,
-            borderRadius: BorderRadius.circular(4),
-          ),
-          child: const Icon(
-            Icons.arrow_back,
-            size: 24,
-            color: ColorsHelper.white,
-          ),
+    return InkWell(
+      onTap: () => context.pop(),
+      borderRadius: BorderRadius.circular(4),
+      child: Container(
+        width: 32.w,
+        height: 32.h,
+        padding: EdgeInsets.all(2.w),
+        decoration: BoxDecoration(
+          color: ColorsHelper.black,
+          borderRadius: BorderRadius.circular(4),
+        ),
+        child: const Icon(
+          Icons.arrow_forward_rounded,
+          size: 24,
+          color: ColorsHelper.white,
         ),
       ),
     );
