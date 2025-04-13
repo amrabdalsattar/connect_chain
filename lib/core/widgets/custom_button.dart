@@ -11,6 +11,10 @@ class CustomButton extends StatelessWidget {
   final double width;
   final double elevation;
   final bool isLoading;
+  final Color? color;
+  final TextStyle? textStyle;
+  final Color? borderColor;
+
   const CustomButton({
     super.key,
     required this.title,
@@ -18,6 +22,9 @@ class CustomButton extends StatelessWidget {
     required this.width,
     this.elevation = 0,
     this.isLoading = false,
+    this.color,
+    this.textStyle,
+    this.borderColor,
   });
 
   @override
@@ -28,8 +35,12 @@ class CustomButton extends StatelessWidget {
         height: 50.h,
         width: width,
         decoration: BoxDecoration(
-          color: ColorsHelper.primaryColor,
+          color: color ?? ColorsHelper.primaryColor,
           borderRadius: BorderRadius.circular(8.r),
+          border: Border.all(
+            color: borderColor ?? ColorsHelper.borderGray,
+            width: 1.5,
+          ),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(elevation == 0 ? 0 : 0.25),
@@ -50,7 +61,7 @@ class CustomButton extends StatelessWidget {
             : Center(
                 child: Text(
                   title,
-                  style: AppTextStyles.cairoWhiteBold16,
+                  style: textStyle ?? AppTextStyles.cairoWhiteBold16,
                 ),
               ),
       ),

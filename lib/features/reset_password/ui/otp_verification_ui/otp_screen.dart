@@ -30,7 +30,7 @@ class OtpScreen extends StatelessWidget {
               verticalSpace(24),
               const OtpForm(),
               verticalSpace(14),
-              const ResendOtpRow(),
+              const ResendOtpRow(), 
               verticalSpace(32),
               const OtpButtonBlocConsumer()
             ],

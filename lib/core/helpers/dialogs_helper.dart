@@ -1,4 +1,7 @@
+import 'package:connect_chain/core/helpers/spacing.dart';
+import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_text_styles.dart';
 import '../theming/colors_helper.dart';
@@ -40,6 +43,48 @@ class DialogsHelper {
           )
         ],
       ),
+    );
+  }
+
+  static void showMessageBottomSheet({
+    required BuildContext context,
+    required String message,
+    VoidCallback? onClose,
+  }) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: ColorsHelper.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      isDismissible: true,
+      enableDrag: true,
+      isScrollControlled: false,
+      builder: (context) {
+        return Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                message,
+                style: AppTextStyles.cairoBlackMedium16
+                    .copyWith(fontWeight: FontWeight.w400),
+                textAlign: TextAlign.center,
+              ),
+              verticalSpace(12),
+              CustomButton(
+                title: 'إغلاق',
+                width: 324.w,
+                onTap: () {
+                  context.pop();
+                },
+              )
+            ],
+          ),
+        );
+      },
     );
   }
 

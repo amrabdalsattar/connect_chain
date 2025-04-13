@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/add_product/ui/add_product_screen.dart';
+
 import '../../features/profile/ui/profile_screen.dart';
 
 import '../../features/reset_password/logic/cubit/reset_password_cubit.dart';
@@ -51,6 +53,11 @@ class AppRouter {
       case Routes.profileScreenRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
           screen: const ProfileScreen(),
+          settings: settings,
+        );
+      case Routes.addProductScreenRoute:
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: const AddProductScreen(),
           settings: settings,
         );
       case Routes.signUpRoute:
