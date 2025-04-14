@@ -1,3 +1,6 @@
+import 'package:connect_chain/core/theming/colors_helper.dart';
+import 'package:connect_chain/features/home/ui/widgets/home_tab_app_bar.dart';
+import 'package:connect_chain/features/home/ui/widgets/monthly_statistics.dart';
 import 'package:flutter/material.dart';
 
 class HomeTab extends StatelessWidget {
@@ -6,8 +9,14 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Home Tab'),
+      backgroundColor: ColorsHelper.homeScaffoldColor,
+      appBar: HomeTabAppBar(),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: MonthlyStatistics(),
+          )
+        ],
       ),
     );
   }

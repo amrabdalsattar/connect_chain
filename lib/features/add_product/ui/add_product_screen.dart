@@ -16,13 +16,12 @@ class AddProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: const CustomAppBar(
         title: 'إضافة منتج ',
       ),
       bottomNavigationBar:
           //  Buttons row
-          const AddProducButtons(),
+          const AddProductButtons(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 48),
@@ -35,7 +34,6 @@ class AddProductScreen extends StatelessWidget {
                 verticalSpace(32),
                 const ProductDetailsSection(),
                 verticalSpace(24),
-                
               ],
             ),
           ),

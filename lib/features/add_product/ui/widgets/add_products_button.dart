@@ -1,7 +1,7 @@
 part of '../add_product_screen.dart';
 
-class AddProducButtons extends StatelessWidget {
-  const AddProducButtons({
+class AddProductButtons extends StatelessWidget {
+  const AddProductButtons({
     super.key,
   });
 

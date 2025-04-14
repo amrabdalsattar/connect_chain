@@ -7,7 +7,7 @@ class AppImages {
   static const String thirdOnboardingPage =
       "assets/images/onboarding_page_3.png";
   static const String connectChainLogo = "assets/images/connect_chain_logo.png";
-  static const String connectChainwhiteLogo =
+  static const String connectChainWhiteLogo =
       "assets/images/connect_chain_white_logo.png";
   static const String infoIcon = "assets/images/info.png";
   static const String forgetPassword = "assets/images/forget_password.png";

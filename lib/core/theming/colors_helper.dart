@@ -8,6 +8,7 @@ class ColorsHelper {
   static const Color green = Colors.green;
 
   static const Color primaryColor = Color(0xFFF28D23);
+  static const Color homeScaffoldColor = Color(0xFFF7F7F9);
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);

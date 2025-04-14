@@ -30,7 +30,7 @@ class ProfileDetailsItem extends StatelessWidget {
                 verticalSpace(8),
                 Text(
                   itemModel.subtitle,
-                  style: AppTextStyles.tajawaldarkGrayRegular16,
+                  style: AppTextStyles.tajawalDarkGrayRegular16,
                 ),
               ],
             ),
