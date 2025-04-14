@@ -21,7 +21,7 @@ class OtpButtonBlocConsumer extends StatelessWidget {
           current is OtpVerificationErrorState,
       listener: (context, state) {
         state.whenOrNull(
-          resendOtpVerficationSuccess: (message) =>
+          resendOtpVerificationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
           otpVerificationError: (apiErrorModel) =>
               DialogsHelper.showErrorDialog(

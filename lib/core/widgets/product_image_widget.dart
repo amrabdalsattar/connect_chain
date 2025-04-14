@@ -1,11 +1,13 @@
-import '../helpers/app_images.dart';
-import '../theming/colors_helper.dart';
+import 'dart:io';
+
+import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProductImageWidget extends StatelessWidget {
-  final String imageUrl;
+  final File imgFile;
   final bool isSelected;
   final VoidCallback? onTap;
   final bool showDeleteButton;
@@ -13,7 +15,7 @@ class ProductImageWidget extends StatelessWidget {
 
   const ProductImageWidget({
     super.key,
-    required this.imageUrl,
+    required this.imgFile,
     this.isSelected = false,
     this.onTap,
     this.showDeleteButton = false,
@@ -39,7 +41,7 @@ class ProductImageWidget extends StatelessWidget {
               ),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage(imageUrl),
+                image: FileImage(imgFile),
               ),
             ),
           ),

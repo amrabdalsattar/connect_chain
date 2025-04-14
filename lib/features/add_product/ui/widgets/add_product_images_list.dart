@@ -1,18 +1,22 @@
-import '../../../../core/widgets/product_image_widget.dart';
+import 'dart:io';
+
+import 'package:connect_chain/core/widgets/product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class EditProductImages extends StatelessWidget {
-  const EditProductImages({
+class AddProductImagesList extends StatelessWidget {
+  const AddProductImagesList({
     super.key,
-    required this.imagesUrl,
+    required this.imageFiles,
     this.selectedIndex,
     this.onImageTap,
+    this.onDeleteTap,
   });
 
-  final List<String> imagesUrl;
+  final List<File> imageFiles;
   final int? selectedIndex;
   final ValueChanged<int>? onImageTap;
+  final ValueChanged<File>? onDeleteTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +26,11 @@ class EditProductImages extends StatelessWidget {
         spacing: 8.w,
         runSpacing: 8.h,
         children: List.generate(
-          imagesUrl.length,
+          imageFiles.length,
           (index) => ProductImageWidget(
+            onDelete: () => onDeleteTap?.call(imageFiles[index]),
             showDeleteButton: true,
-            imageUrl: imagesUrl[0],
+            imgFile: imageFiles[index],
             isSelected: selectedIndex == index,
             onTap: () => onImageTap?.call(index),
           ),

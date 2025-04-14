@@ -1,6 +1,6 @@
-import '../helpers/spacing.dart';
-import '../theming/app_text_styles.dart';
-import '../theming/colors_helper.dart';
+import 'package:connect_chain/core/helpers/spacing.dart';
+import 'package:connect_chain/core/theming/app_text_styles.dart';
+import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,11 +8,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class UploadImageWidget extends StatelessWidget {
   const UploadImageWidget({
     super.key,
+    this.onTap,
   });
+
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: onTap,
       child: DottedBorder(
         dashPattern: const [8],
         borderType: BorderType.RRect,
