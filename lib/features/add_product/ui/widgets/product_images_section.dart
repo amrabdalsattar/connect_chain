@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:connect_chain/core/widgets/upload_image.dart';
-import 'package:connect_chain/features/add_product/ui/widgets/edit_product_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../../../../core/widgets/upload_image.dart';
+import 'edit_product_images.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_text_styles.dart';
 
 class ProductImagesSection extends StatelessWidget {
   const ProductImagesSection({super.key});

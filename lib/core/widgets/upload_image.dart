@@ -1,7 +1,6 @@
-
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../helpers/spacing.dart';
+import '../theming/app_text_styles.dart';
+import '../theming/colors_helper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/home/ui/widgets/orders_section/widgets/orders_section_data.dart';
-import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
+import 'widgets/orders_section_data.dart';
+import '../../../../main/logic/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

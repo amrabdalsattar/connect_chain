@@ -1,10 +1,10 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/home/ui/widgets/home_tab_app_bar.dart';
-import 'package:connect_chain/features/home/ui/widgets/monthly_statistics_section/monthly_statistics_section.dart';
-import 'package:connect_chain/features/home/ui/widgets/most_selling_section/most_selling_section.dart';
-import 'package:connect_chain/features/home/ui/widgets/orders_section/orders_section.dart';
-import 'package:connect_chain/features/home/ui/widgets/products_summary_section/products_summary_section.dart';
+import '../../../core/helpers/spacing.dart';
+import '../../../core/theming/colors_helper.dart';
+import 'widgets/home_tab_app_bar.dart';
+import 'widgets/monthly_statistics_section/monthly_statistics_section.dart';
+import 'widgets/most_selling_section/most_selling_section.dart';
+import 'widgets/orders_section/orders_section.dart';
+import 'widgets/products_summary_section/products_summary_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

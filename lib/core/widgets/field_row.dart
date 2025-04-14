@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/widgets/labeled_field.dart';
+import '../helpers/spacing.dart';
+import 'labeled_field.dart';
 import 'package:flutter/material.dart';
 
 class LabeledFieldRow extends StatelessWidget {
@@ -9,7 +9,7 @@ class LabeledFieldRow extends StatelessWidget {
   const LabeledFieldRow({required this.left, required this.right, super.key});
 
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(child: left),

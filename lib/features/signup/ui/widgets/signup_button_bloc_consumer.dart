@@ -1,9 +1,9 @@
-import '../../../../core/helpers/dialogs_helper.dart';
-import '../../../../core/widgets/custom_button.dart';
-import '../../logic/cubit/signup_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helpers/dialogs_helper.dart';
+import '../../../../core/widgets/custom_button.dart';
+import '../../logic/cubit/signup_cubit.dart';
 import '../../logic/cubit/signup_state.dart';
 
 class SignupButtonBlocConsumer extends StatelessWidget {

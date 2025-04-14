@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/home/ui/widgets/statistics_data_item.dart';
+import '../../../../../../core/helpers/app_images.dart';
+import '../../../../../../core/helpers/spacing.dart';
+import '../../../../../../core/theming/colors_helper.dart';
+import '../../statistics_data_item.dart';
 import 'package:flutter/material.dart';
 
 class OrdersSectionData extends StatelessWidget {

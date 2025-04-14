@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/add_product/ui/add_product_screen.dart';
-import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
+import '../../features/add_product/ui/add_product_screen.dart';
+import '../../features/main/logic/cubit/main_cubit.dart';
 
 import '../../features/profile/ui/profile_screen.dart';
 

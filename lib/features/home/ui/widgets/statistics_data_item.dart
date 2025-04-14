@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

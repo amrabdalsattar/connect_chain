@@ -1,9 +1,9 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/features/home/ui/home_tab.dart';
-import 'package:connect_chain/features/my_products/ui/my_products_tab.dart';
-import 'package:connect_chain/features/notifications/ui/notifications_tab.dart';
-import 'package:connect_chain/features/orders/ui/orders_tab.dart';
-import 'package:connect_chain/features/settings/ui/settings_tab.dart';
+import '../../../../core/helpers/app_images.dart';
+import '../../../home/ui/home_tab.dart';
+import '../../../my_products/ui/my_products_tab.dart';
+import '../../../notifications/ui/notifications_tab.dart';
+import '../../../orders/ui/orders_tab.dart';
+import '../../../settings/ui/settings_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
