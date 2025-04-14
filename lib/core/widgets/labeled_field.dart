@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/widgets/custom_alert_button.dart';
+import '../helpers/spacing.dart';
+import 'custom_alert_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theming/app_text_styles.dart';

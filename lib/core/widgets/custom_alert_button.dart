@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/dialogs_helper.dart';
+import '../helpers/app_images.dart';
+import '../helpers/dialogs_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

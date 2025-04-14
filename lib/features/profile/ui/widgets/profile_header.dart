@@ -48,7 +48,7 @@ class ProfileHeader extends StatelessWidget {
             margin: const EdgeInsetsDirectional.only(end: 16, top: 13),
             width: 24.w,
             height: 24.h,
-            child: Image.asset(AppImages.connectChainwhiteLogo),
+            child: Image.asset(AppImages.connectChainWhiteLogo),
           ),
         ],
       ),
