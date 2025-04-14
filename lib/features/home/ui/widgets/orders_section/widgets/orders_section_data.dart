@@ -12,24 +12,24 @@ class OrdersSectionData extends StatelessWidget {
     return Row(
       children: [
         const StatisticsDataItem(
-          title: 'إجمالي المنتجات',
-          imagePath: AppImages.documentIcon,
-          iconBackGroundColor: ColorsHelper.grossProductsBackGroundColor,
-          value: '1000',
-        ),
-        horizontalSpace(4),
-        const StatisticsDataItem(
-          title: 'مخزون منخفض',
-          imagePath: AppImages.downChartIcon,
-          iconBackGroundColor: ColorsHelper.lowStockBackGroundColor,
+          title: 'طلب مكتمل',
+          imagePath: AppImages.completedOrderIcon,
+          iconBackGroundColor: ColorsHelper.completedOrderBackGroundColor,
           value: '500',
         ),
         horizontalSpace(4),
         const StatisticsDataItem(
-          title: 'نفد من المخزون',
-          imagePath: AppImages.outOfStockChartIcon,
-          iconBackGroundColor: ColorsHelper.outOfStockBackGroundColor,
-          value: '50',
+          title: 'طلب معلق',
+          imagePath: AppImages.pinnedOrderIcon,
+          iconBackGroundColor: ColorsHelper.pinnedOrderBackGroundColor,
+          value: '10',
+        ),
+        horizontalSpace(4),
+        const StatisticsDataItem(
+          title: 'طلب مرفوض',
+          imagePath: AppImages.rejectedOrderIcon,
+          iconBackGroundColor: ColorsHelper.rejectedOrderBackGroundColor,
+          value: '20',
         ),
       ],
     );

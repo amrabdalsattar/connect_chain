@@ -55,12 +55,12 @@ class AppRouter {
           settings: settings,
         );
       case Routes.profileScreenRoute:
-        return CustomAnimationsBuilder.buildFadeTransition(
+        return CustomAnimationsBuilder.slideFromLeft(
           screen: const ProfileScreen(),
           settings: settings,
         );
       case Routes.addProductScreenRoute:
-        return CustomAnimationsBuilder.buildFadeTransition(
+        return CustomAnimationsBuilder.slideFromLeft(
           screen: const AddProductScreen(),
           settings: settings,
         );

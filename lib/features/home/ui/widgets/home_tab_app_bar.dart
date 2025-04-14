@@ -13,6 +13,7 @@ class HomeTabAppBar extends StatelessWidget implements PreferredSizeWidget {
     return SizedBox(
       height: preferredSize.height,
       child: AppBar(
+        surfaceTintColor: ColorsHelper.homeScaffoldColor,
         backgroundColor: ColorsHelper.homeScaffoldColor,
         toolbarHeight: preferredSize.height,
         title: Text(

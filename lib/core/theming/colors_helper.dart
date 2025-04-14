@@ -19,6 +19,9 @@ class ColorsHelper {
   static const Color grossProductsBackGroundColor = Color(0xFF6C757D);
   static const Color lowStockBackGroundColor = Color(0xFFFF6B6B);
   static const Color outOfStockBackGroundColor = Color(0xFF6C4F37);
+  static const Color completedOrderBackGroundColor = Color(0xFF00C853);
+  static const Color rejectedOrderBackGroundColor = Color(0xFFF44336);
+  static const Color pinnedOrderBackGroundColor = Color(0xFFFFA500);
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);

@@ -29,9 +29,10 @@ class CustomLineChart extends StatelessWidget {
         children: [
           Text('مخطط الإيرادات', style: AppTextStyles.cairoBlackBold13),
           verticalSpace(40),
-          SizedBox(
+          Container(
             height: 200.h,
             width: double.infinity,
+            padding: EdgeInsets.only(right: 12.w),
             child: LineChart(
               LineChartData(
                   lineBarsData: [

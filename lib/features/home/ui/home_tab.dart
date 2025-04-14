@@ -4,6 +4,7 @@ import 'package:connect_chain/features/home/ui/widgets/home_tab_app_bar.dart';
 import 'package:connect_chain/features/home/ui/widgets/monthly_statistics_section/monthly_statistics_section.dart';
 import 'package:connect_chain/features/home/ui/widgets/most_selling_section/most_selling_section.dart';
 import 'package:connect_chain/features/home/ui/widgets/orders_section/orders_section.dart';
+import 'package:connect_chain/features/home/ui/widgets/products_summary_section/products_summary_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,6 +19,7 @@ class HomeTab extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 23.w),
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
             const SliverToBoxAdapter(
               child: MonthlyStatisticsSection(),
@@ -33,6 +35,15 @@ class HomeTab extends StatelessWidget {
             ),
             const SliverToBoxAdapter(
               child: OrdersSection(),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(24),
+            ),
+            const SliverToBoxAdapter(
+              child: ProductsSummarySection(),
+            ),
+            SliverToBoxAdapter(
+              child: verticalSpace(24),
             ),
           ],
         ),
