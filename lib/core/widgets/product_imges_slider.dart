@@ -1,16 +1,18 @@
-import 'product_image_widget.dart';
+import 'dart:io';
+
+import 'package:connect_chain/core/widgets/product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductOtherImagesSlider extends StatefulWidget {
   const ProductOtherImagesSlider({
     super.key,
-    required this.imagesUrl,
+    required this.imageFiles,
     this.selectedIndex,
     this.onImageTap,
   });
 
-  final List<String> imagesUrl;
+  final List<File> imageFiles;
   final int? selectedIndex;
   final ValueChanged<int>? onImageTap;
 
@@ -60,7 +62,7 @@ class _ProductOtherImagesSliderState extends State<ProductOtherImagesSlider> {
                     (index) => Padding(
                       padding: EdgeInsets.symmetric(horizontal: 4.w),
                       child: ProductImageWidget(
-                        imageUrl: widget.imagesUrl[0],
+                        imgFile: File(''),
                         isSelected: widget.selectedIndex == index,
                         onTap: () => widget.onImageTap?.call(index),
                       ),
