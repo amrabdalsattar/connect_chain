@@ -98,6 +98,25 @@ class AppTextStyles {
     color: ColorsHelper.black,
     fontWeight: FontWeightHelper.bold,
   );
+
+  static TextStyle cairoBlackBold14 = TextStyle(
+    fontSize: 15.sp,
+    color: ColorsHelper.black,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoGrayMedium11 = TextStyle(
+    fontSize: 11.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.medium,
+  );
+
+  static TextStyle cairoBlackBold13 = TextStyle(
+    fontSize: 13.sp,
+    color: ColorsHelper.black,
+    fontWeight: FontWeightHelper.bold,
+  );
+
   // Tajawal font
   static TextStyle tajawalGrayRegular15 = TextStyle(
     fontFamily: 'tajawal',

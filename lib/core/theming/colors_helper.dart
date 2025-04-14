@@ -9,6 +9,13 @@ class ColorsHelper {
 
   static const Color primaryColor = Color(0xFFF28D23);
   static const Color homeScaffoldColor = Color(0xFFF7F7F9);
+  static const Color purple = Color(0xFF655B96);
+  static Color fadedPurple = const Color(0xFF5B47BC).withValues(alpha: 0.3);
+
+  // statistics data icons background colors
+  static const Color dollarIconBackGroundColor = Color(0xFF28A745);
+  static const Color bagIconBackGroundColor = Color(0xFF17A2B8);
+  static const Color statisticsIconBackGroundColor = Color(0xFF9C27B0);
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);

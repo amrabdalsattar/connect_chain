@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,6 +13,7 @@ class HomeTabAppBar extends StatelessWidget implements PreferredSizeWidget {
     return SizedBox(
       height: preferredSize.height,
       child: AppBar(
+        backgroundColor: ColorsHelper.homeScaffoldColor,
         toolbarHeight: preferredSize.height,
         title: Text(
           'اهلا بك Amr Abdelsattar  👋 ',

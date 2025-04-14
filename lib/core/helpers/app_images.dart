@@ -31,4 +31,7 @@ class AppImages {
   static const String phoneIcon = "assets/svgs/phone.svg";
   static const String addressIcon = "assets/svgs/address.svg";
   static const String deleteIcon = "assets/svgs/delete.svg";
+  static const String bagIcon = "assets/svgs/bag_icon.svg";
+  static const String dollarIcon = "assets/svgs/dollar_icon.svg";
+  static const String statisticsIcon = "assets/svgs/statistics_icon.svg";
 }
