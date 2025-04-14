@@ -34,4 +34,7 @@ class AppImages {
   static const String bagIcon = "assets/svgs/bag_icon.svg";
   static const String dollarIcon = "assets/svgs/dollar_icon.svg";
   static const String statisticsIcon = "assets/svgs/statistics_icon.svg";
+  static const String outOfStockChartIcon = "assets/svgs/up_chart_icon.svg";
+  static const String downChartIcon = "assets/svgs/down_chart_icon.svg";
+  static const String documentIcon = "assets/svgs/document_icon.svg";
 }

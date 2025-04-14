@@ -13,7 +13,7 @@ class MonthlyStatisticsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 23.w, right: 23.w, top: 25.h),
+      margin: EdgeInsets.only(top: 25.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.r),
         color: ColorsHelper.white,
