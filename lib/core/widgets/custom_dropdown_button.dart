@@ -8,18 +8,20 @@ class CustomDropdownButton extends StatelessWidget {
   final List<DropdownMenuItem<String>> items;
   final ValueChanged<String?>? onChanged;
   final String hintText;
+  final Function(String?) validator;
 
   const CustomDropdownButton({
     super.key,
     required this.value,
     required this.items,
     required this.onChanged,
-    required this.hintText,
+    required this.hintText, required this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
+      validator: (value) => validator(value),
       value: value,
       items: items,
       onChanged: onChanged,
@@ -57,7 +59,7 @@ class CustomDropdownButton extends StatelessWidget {
       style: AppTextStyles.tajawalDarkGrayMedium14,
       icon: const Icon(
         Icons.arrow_drop_down,
-        color: ColorsHelper.primaryColor,
+        color: ColorsHelper.borderGray,
       ),
     );
   }

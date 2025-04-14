@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
+
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';
 
@@ -61,7 +63,10 @@ class AppRouter {
         );
       case Routes.addProductScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const AddProductScreen(),
+          screen: BlocProvider(
+            create: (context) => AddProductCubit(getIt()),
+            child: const AddProductScreen(),
+          ),
           settings: settings,
         );
       case Routes.signUpRoute:

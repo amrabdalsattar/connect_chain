@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class ProductModel {
   final String name;
   final String category;
@@ -6,7 +8,7 @@ class ProductModel {
   final String sku;
   final int inventoryLimit;
   final String description;
-  final List<String> images;
+  final List<File> images;
 
   ProductModel({
     required this.name,
