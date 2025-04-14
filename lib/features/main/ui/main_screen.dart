@@ -10,9 +10,12 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     MainCubit mainCubit = context.read<MainCubit>();
 
-    return Scaffold(
-      body: mainCubit.mainTabs[mainCubit.currentTabIndex],
-      bottomNavigationBar: const CustomBottomNavBar(),
+    return BlocBuilder<MainCubit, dynamic>(
+      bloc: mainCubit,
+      builder: (_, state) => Scaffold(
+        body: mainCubit.mainTabs[mainCubit.currentTabIndex],
+        bottomNavigationBar: const CustomBottomNavBar(),
+      ),
     );
   }
 }

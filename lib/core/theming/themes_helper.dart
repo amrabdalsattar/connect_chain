@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 import 'colors_helper.dart';
@@ -9,13 +10,14 @@ class ThemesHelper {
         cursorColor: ColorsHelper.primaryColor,
         selectionHandleColor: ColorsHelper.primaryColor,
         selectionColor: ColorsHelper.primaryColor.withValues(alpha: 0.2)),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       showSelectedLabels: true,
       showUnselectedLabels: true,
       unselectedItemColor: ColorsHelper.secondaryGray,
       selectedItemColor: ColorsHelper.primaryColor,
+      selectedLabelStyle: AppTextStyles.cairoPrimaryBold12,
       backgroundColor: Colors.white,
-      selectedIconTheme: IconThemeData(color: ColorsHelper.primaryColor),
+      selectedIconTheme: const IconThemeData(color: ColorsHelper.primaryColor),
     ),
     scaffoldBackgroundColor: ColorsHelper.white,
     primaryColor: ColorsHelper.primaryColor,
