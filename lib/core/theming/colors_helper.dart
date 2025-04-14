@@ -15,6 +15,7 @@ class ColorsHelper {
   static Color fadedGray = Colors.black.withValues(alpha: 0.1);
   static const Color darkGray = Color(0xFF141414);
   static const Color gray = Color(0xFF333333);
+  static const Color secondaryGray = Color(0xFF888888);
   static Color semiGray = Colors.black.withValues(alpha: 0.5);
   static const Color liteGray = Color(0xFFEEEEEE);
   static const Color borderGray = Color(0xFFD1D1D1);

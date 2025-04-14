@@ -1,4 +1,5 @@
 import 'package:connect_chain/features/add_product/ui/add_product_screen.dart';
+import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
 
 import '../../features/profile/ui/profile_screen.dart';
 
@@ -11,7 +12,7 @@ import '../../features/signup/ui/signup_screen.dart';
 import '../../features/signup/logic/cubit/signup_cubit.dart';
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
-import '../../features/home/ui/home_screen.dart';
+import '../../features/main/ui/main_screen.dart';
 import '../../features/login/logic/login_cubit.dart';
 import '../../features/onboarding/logic/cubit/onboarding_cubit.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
@@ -45,9 +46,12 @@ class AppRouter {
           settings: settings,
         );
 
-      case Routes.homeRoute:
+      case Routes.mainScreenRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
-          screen: const HomeScreen(),
+          screen: BlocProvider(
+            create: (context) => MainCubit(),
+            child: const MainScreen(),
+          ),
           settings: settings,
         );
       case Routes.profileScreenRoute:

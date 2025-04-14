@@ -10,12 +10,17 @@ class AppImages {
   static const String connectChainwhiteLogo =
       "assets/images/connect_chain_white_logo.png";
   static const String infoIcon = "assets/images/info.png";
-
   static const String forgetPassword = "assets/images/forget_password.png";
   static const String otpImage = "assets/images/otp.png";
-
   static const String forgotPassword = "assets/images/forgot_password.png";
   static const String otpVerification = "assets/images/otp_verification.png";
+
+  static const String homeIcon = "assets/images/home.png";
+  static const String notificationsIcon = "assets/images/notifications.png";
+  static const String myProductsIcon = "assets/images/my_products.png";
+  static const String ordersIcon = "assets/images/orders.png";
+  static const String settingsIcon = "assets/images/settings.png";
+
   // SVG
   static const String emailIcon = "assets/svgs/email_icon.svg";
   static const String lockIcon = "assets/svgs/lock.svg";
