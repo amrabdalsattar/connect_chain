@@ -12,13 +12,17 @@ class ManageProductsList extends StatelessWidget {
   Widget build(BuildContext context) {
     // Instance of The ManageProdutsCubit
     ManageProdutsCubit manageProdutsCubit = context.read<ManageProdutsCubit>();
-    
+
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: products.length,
       itemBuilder: (context, index) {
         return CustomEditProductTile(
+          onTap: () {
+            context.pushNamed(Routes.productDetailsScreenRoute,
+                arguments: products[index]);
+          },
           onDelete: () {
             manageProdutsCubit.deleteProduct(products[index].id);
           },

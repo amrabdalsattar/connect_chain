@@ -22,6 +22,7 @@ class ColorsHelper {
   static const Color completedOrderBackGroundColor = Color(0xFF00C853);
   static const Color rejectedOrderBackGroundColor = Color(0xFFF44336);
   static const Color pinnedOrderBackGroundColor = Color(0xFFFFA500);
+  static const Color lastOrderBackGroundColor = Color(0x6C4F3717);
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);

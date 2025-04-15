@@ -7,7 +7,7 @@ import 'package:connect_chain/core/widgets/custom_app_bar.dart';
 import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:connect_chain/core/widgets/custom_dropdown_button.dart';
 import 'package:connect_chain/core/widgets/custom_text_form_field.dart';
-import 'package:connect_chain/core/widgets/field_row.dart';
+import 'package:connect_chain/core/widgets/labeled_field_row.dart';
 import 'package:connect_chain/core/widgets/labeled_field.dart';
 import 'package:connect_chain/core/widgets/upload_image.dart';
 import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
@@ -18,7 +18,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Parts are used to split the code into smaller files for better organization and readability.
 
-part 'widgets/add_products_button.dart';
+part '../../../core/widgets/custom_two_buttons_row.dart';
 part 'widgets/add_prodcut_image_list_bloc_consumer.dart';
 part 'widgets/add_product_images_section.dart';
 part 'widgets/product_details_section.dart';
@@ -36,7 +36,13 @@ class AddProductScreen extends StatelessWidget {
       ),
       bottomNavigationBar:
           //  Buttons row
-          AddProductButtons(addProductCubit: addProductCubit),
+          CustomTwoButtonsRow(
+        onRightTap: () async {
+          await addProductCubit.emitAddProductStates();
+        },
+        leftText: 'الغاء',
+        rightText: 'حفظ',
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 48),

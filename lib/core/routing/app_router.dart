@@ -1,3 +1,6 @@
+import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
+import 'package:connect_chain/features/product_details/ui/product_deatils_screen.dart';
+
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
 import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
 import 'package:connect_chain/features/manage_products/logic/cubit/manage_produts_cubit.dart';
@@ -67,6 +70,15 @@ class AppRouter {
       case Routes.manageProductsScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ManageProductsScreen(),
+          settings: settings,
+        );
+
+      case Routes.productDetailsScreenRoute:
+        final productDataModel = arguments as ProductDataModel;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: ProductDeatilsScreen(
+            productDataModel: productDataModel,
+          ),
           settings: settings,
         );
       case Routes.addProductScreenRoute:

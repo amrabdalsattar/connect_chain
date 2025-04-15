@@ -1,6 +1,8 @@
 import 'package:connect_chain/core/di/dependency_injection.dart';
 import 'package:connect_chain/core/helpers/dialogs_helper.dart';
+import 'package:connect_chain/core/helpers/extensions.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
+import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/core/widgets/custom_app_bar.dart';
 import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';

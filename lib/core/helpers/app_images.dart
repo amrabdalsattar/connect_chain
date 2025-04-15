@@ -45,4 +45,7 @@ class AppImages {
   static const String editIcon = "assets/svgs/edit.svg";
   static const String searchIcon = "assets/svgs/search.svg";
   static const String addIcon = "assets/svgs/add.svg";
+  static const String starIcon = "assets/svgs/star.svg";
+  static const String clockIcon = "assets/svgs/timer.svg";
+  static const String categoryIcon = "assets/svgs/Category.svg";
 }

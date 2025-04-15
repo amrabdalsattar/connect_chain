@@ -15,6 +15,7 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         if (state is ManageProductsSuccessState) {
+          // If the products list is empty, show a message
           return ManageProductsList(
             products: state.products.data,
           );
