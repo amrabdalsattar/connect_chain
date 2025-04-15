@@ -8,6 +8,20 @@ class ColorsHelper {
   static const Color green = Colors.green;
 
   static const Color primaryColor = Color(0xFFF28D23);
+  static const Color homeScaffoldColor = Color(0xFFF7F7F9);
+  static const Color purple = Color(0xFF655B96);
+  static Color fadedPurple = const Color(0xFF5B47BC).withValues(alpha: 0.3);
+
+  // statistics data icons background colors
+  static const Color dollarIconBackGroundColor = Color(0xFF28A745);
+  static const Color bagIconBackGroundColor = Color(0xFF17A2B8);
+  static const Color statisticsIconBackGroundColor = Color(0xFF9C27B0);
+  static const Color grossProductsBackGroundColor = Color(0xFF6C757D);
+  static const Color lowStockBackGroundColor = Color(0xFFFF6B6B);
+  static const Color outOfStockBackGroundColor = Color(0xFF6C4F37);
+  static const Color completedOrderBackGroundColor = Color(0xFF00C853);
+  static const Color rejectedOrderBackGroundColor = Color(0xFFF44336);
+  static const Color pinnedOrderBackGroundColor = Color(0xFFFFA500);
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);
@@ -15,6 +29,7 @@ class ColorsHelper {
   static Color fadedGray = Colors.black.withValues(alpha: 0.1);
   static const Color darkGray = Color(0xFF141414);
   static const Color gray = Color(0xFF333333);
+  static const Color secondaryGray = Color(0xFF888888);
   static Color semiGray = Colors.black.withValues(alpha: 0.5);
   static const Color liteGray = Color(0xFFEEEEEE);
   static const Color borderGray = Color(0xFFD1D1D1);
@@ -23,6 +38,8 @@ class ColorsHelper {
   static const Color offWhite = Color.fromARGB(171, 242, 242, 242);
 
   static const Color darkBlue = Color(0xFF292D32);
+
+  static const Color subText = Color(0xff6B7280);
 
   static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
   static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);

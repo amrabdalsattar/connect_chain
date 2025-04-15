@@ -8,11 +8,12 @@ import '../theming/colors_helper.dart';
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final Widget? suffixIcon;
-  final String prefixIconPath;
+  final String? prefixIconPath;
   final bool? isObscure;
   final TextInputType? keyboardType;
   final TextEditingController controller;
   final Function(String?) validator;
+  final int maxLines;
 
   const CustomTextFormField({
     super.key,
@@ -22,28 +23,38 @@ class CustomTextFormField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     required this.controller,
     required this.validator,
-    required this.prefixIconPath,
+    this.prefixIconPath,
+    this.maxLines = 1,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      maxLines: maxLines,
       textCapitalization: keyboardType == TextInputType.name
           ? TextCapitalization.words
           : TextCapitalization.none,
       keyboardType: keyboardType,
       validator: (value) => validator(value),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.only(top: 14.h, bottom: 14.h),
-        prefixIcon: SvgPicture.asset(
-          prefixIconPath,
-          fit: BoxFit.scaleDown,
+        contentPadding: EdgeInsets.symmetric(
+          vertical: maxLines > 1 ? 16.h : 14.h,
+          horizontal: 12.w,
         ),
+        prefixIcon: prefixIconPath != null
+            ? Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
+                child: SvgPicture.asset(
+                  prefixIconPath!,
+                  fit: BoxFit.scaleDown,
+                ),
+              )
+            : null,
         focusColor: ColorsHelper.primaryColor,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        hintStyle: AppTextStyles.tajawalGrayRegular15.copyWith(height: 2),
+        hintStyle: AppTextStyles.tajawalGrayRegular15.copyWith(height: 1.8),
         fillColor: ColorsHelper.offWhite,
         filled: true,
         focusedBorder: OutlineInputBorder(

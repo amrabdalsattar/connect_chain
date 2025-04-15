@@ -1,9 +1,11 @@
+import '../../../../core/helpers/cache/user_data_operator.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/extensions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../data/models/onboarding_page_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnboardingCubit extends Cubit<int> {
   OnboardingCubit() : super(0);
@@ -41,7 +43,8 @@ class OnboardingCubit extends Cubit<int> {
         curve: Curves.easeInOut,
       );
     } else {
-      context.pushNamed(Routes.loginRoute);
+      UserDataOperator.setViewOnBoardingBool();
+      context.pushReplacementNamed(Routes.loginRoute);
     }
   }
 

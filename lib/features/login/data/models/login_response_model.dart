@@ -15,37 +15,37 @@ class LoginResponseModel {
 }
 
 class UserData {
-  String firstName;
-  String lastName;
+  String name;
   String email;
   String address;
   String token;
   String phone;
+  dynamic businessType;
 
   UserData({
-    required this.firstName,
-    required this.lastName,
+    required this.name,
     required this.email,
     required this.address,
     required this.token,
     required this.phone,
+    required this.businessType,
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) => UserData(
-        firstName: json["firstName"],
-        lastName: json["lastName"],
+        name: json["name"],
         email: json["email"],
         address: json["address"],
         token: json["token"],
         phone: json["phone"],
+        businessType: json["businessType"],
       );
 
   Map<String, dynamic> toJson() => {
-        "firstName": firstName,
-        "lastName": lastName,
+        "name": name,
         "email": email,
         "address": address,
         "token": token,
         "phone": phone,
+        "businessType": businessType,
       };
 }
