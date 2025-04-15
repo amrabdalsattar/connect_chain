@@ -14,6 +14,11 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final Function(String?) validator;
   final int maxLines;
+  final InputBorder? enabledBorder;
+  final InputBorder? focusedBorder;
+
+  final Color? fillColor;
+  final bool? filled;
 
   const CustomTextFormField({
     super.key,
@@ -25,6 +30,10 @@ class CustomTextFormField extends StatelessWidget {
     required this.validator,
     this.prefixIconPath,
     this.maxLines = 1,
+    this.enabledBorder,
+    this.fillColor,
+    this.filled,
+    this.focusedBorder,
   });
 
   @override
@@ -55,22 +64,24 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         suffixIcon: suffixIcon,
         hintStyle: AppTextStyles.tajawalGrayRegular15.copyWith(height: 1.8),
-        fillColor: ColorsHelper.offWhite,
-        filled: true,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: ColorsHelper.primaryColor,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(8.r),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: ColorsHelper.borderGray,
-            width: 1.3,
-          ),
-          borderRadius: BorderRadius.circular(8.r),
-        ),
+        fillColor: fillColor ?? ColorsHelper.offWhite,
+        filled: filled ?? true,
+        focusedBorder: focusedBorder ??
+            OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: ColorsHelper.primaryColor,
+                width: 1.3,
+              ),
+              borderRadius: BorderRadius.circular(8.r),
+            ),
+        enabledBorder: enabledBorder ??
+            OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: ColorsHelper.borderGray,
+                width: 1.3,
+              ),
+              borderRadius: BorderRadius.circular(8.r),
+            ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: ColorsHelper.red,

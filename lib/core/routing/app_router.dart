@@ -1,4 +1,7 @@
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
+import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
+import 'package:connect_chain/features/manage_products/logic/cubit/manage_produts_cubit.dart';
+import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';
@@ -59,6 +62,11 @@ class AppRouter {
       case Routes.profileScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ProfileScreen(),
+          settings: settings,
+        );
+      case Routes.manageProductsScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const ManageProductsScreen(),
           settings: settings,
         );
       case Routes.addProductScreenRoute:

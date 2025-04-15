@@ -111,6 +111,11 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.medium,
   );
 
+  static TextStyle cairoWhiteBold14 = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsHelper.white,
+    fontWeight: FontWeightHelper.bold,
+  );
   static TextStyle cairoBlackBold13 = TextStyle(
     fontSize: 13.sp,
     color: ColorsHelper.black,
