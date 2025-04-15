@@ -1,16 +1,12 @@
+import 'package:flutter_svg/svg.dart';
+
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class StatisticsDataItem extends StatelessWidget {
-  final String title;
-  final String imagePath;
-  final String value;
-  final Color iconBackGroundColor;
-  final bool isMonetaryValue;
   const StatisticsDataItem(
       {super.key,
       required this.title,
@@ -18,6 +14,12 @@ class StatisticsDataItem extends StatelessWidget {
       required this.iconBackGroundColor,
       required this.value,
       this.isMonetaryValue = false});
+
+  final Color iconBackGroundColor;
+  final String imagePath;
+  final bool isMonetaryValue;
+  final String title;
+  final String value;
 
   @override
   Widget build(BuildContext context) {
