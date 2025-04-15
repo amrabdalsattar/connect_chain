@@ -10,6 +10,7 @@ class AppImages {
   static const String connectChainWhiteLogo =
       "assets/images/connect_chain_white_logo.png";
   static const String infoIcon = "assets/images/info.png";
+
   static const String forgetPassword = "assets/images/forget_password.png";
   static const String otpImage = "assets/images/otp.png";
   static const String forgotPassword = "assets/images/forgot_password.png";
@@ -41,4 +42,10 @@ class AppImages {
   static const String completedOrderIcon =
       "assets/svgs/completed_order_icon.svg";
   static const String pinnedOrderIcon = "assets/svgs/pinned_order_icon.svg";
+  static const String editIcon = "assets/svgs/edit.svg";
+  static const String searchIcon = "assets/svgs/search.svg";
+  static const String addIcon = "assets/svgs/add.svg";
+  static const String starIcon = "assets/svgs/star.svg";
+  static const String clockIcon = "assets/svgs/timer.svg";
+  static const String categoryIcon = "assets/svgs/Category.svg";
 }

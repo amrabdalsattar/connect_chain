@@ -1,8 +1,8 @@
-import '../../../../core/helpers/cache/user_data_operator.dart';
+import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
+import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../home/ui/home_tab.dart';
-import '../../../my_products/ui/my_products_tab.dart';
 import '../../../notifications/ui/notifications_tab.dart';
 import '../../../orders/ui/orders_tab.dart';
 import '../../../settings/ui/settings_tab.dart';
@@ -24,7 +24,7 @@ class MainCubit extends Cubit<dynamic> {
   List<Widget> mainTabs = const [
     HomeTab(),
     NotificationsTab(),
-    MyProductsTab(),
+    ManageProductsScreen(),
     OrdersTab(),
     SettingsTab(),
   ];

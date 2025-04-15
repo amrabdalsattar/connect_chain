@@ -4,8 +4,8 @@ import 'product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ProductOtherImagesSlider extends StatefulWidget {
-  const ProductOtherImagesSlider({
+class CustomImageSlider extends StatefulWidget {
+  const CustomImageSlider({
     super.key,
     required this.imageFiles,
     this.selectedIndex,
@@ -17,11 +17,10 @@ class ProductOtherImagesSlider extends StatefulWidget {
   final ValueChanged<int>? onImageTap;
 
   @override
-  State<ProductOtherImagesSlider> createState() =>
-      _ProductOtherImagesSliderState();
+  State<CustomImageSlider> createState() => _CustomImageSliderState();
 }
 
-class _ProductOtherImagesSliderState extends State<ProductOtherImagesSlider> {
+class _CustomImageSliderState extends State<CustomImageSlider> {
   final ScrollController _scrollController = ScrollController();
 
   void _scrollLeft() {
