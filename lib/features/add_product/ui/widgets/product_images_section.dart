@@ -36,7 +36,8 @@ class AddProductImagesSection extends StatelessWidget {
               current is AddproductImageDeleted,
           builder: (context, state) {
             return AddProductImagesList(
-              imageFiles: addProductCubit.images.map((file) => file).toList(),
+              imageFiles:
+                  addProductCubit.productImages.map((file) => file).toList(),
               onDeleteTap: (image) => addProductCubit.deleteImage(image),
             );
           },

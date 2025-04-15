@@ -20,6 +20,7 @@ mixin _$AddProductState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -32,6 +33,7 @@ mixin _$AddProductState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -44,6 +46,7 @@ mixin _$AddProductState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -57,6 +60,7 @@ mixin _$AddProductState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -70,6 +74,7 @@ mixin _$AddProductState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -83,6 +88,7 @@ mixin _$AddProductState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -165,6 +171,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -180,6 +187,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -195,6 +203,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -214,6 +223,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -230,6 +240,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -246,6 +257,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -320,6 +332,7 @@ class _$AddProductLoadingStateImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -335,6 +348,7 @@ class _$AddProductLoadingStateImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -350,6 +364,7 @@ class _$AddProductLoadingStateImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -369,6 +384,7 @@ class _$AddProductLoadingStateImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -385,6 +401,7 @@ class _$AddProductLoadingStateImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -401,6 +418,7 @@ class _$AddProductLoadingStateImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -419,6 +437,167 @@ class _$AddProductLoadingStateImpl
 
 abstract class AddProductLoadingState implements AddProductState {
   const factory AddProductLoadingState() = _$AddProductLoadingStateImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductSuccessStateImplCopyWith<$Res> {
+  factory _$$AddProductSuccessStateImplCopyWith(
+          _$AddProductSuccessStateImpl value,
+          $Res Function(_$AddProductSuccessStateImpl) then) =
+      __$$AddProductSuccessStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductSuccessStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res, _$AddProductSuccessStateImpl>
+    implements _$$AddProductSuccessStateImplCopyWith<$Res> {
+  __$$AddProductSuccessStateImplCopyWithImpl(
+      _$AddProductSuccessStateImpl _value,
+      $Res Function(_$AddProductSuccessStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductSuccessStateImpl
+    with DiagnosticableTreeMixin
+    implements AddProductSuccessState {
+  const _$AddProductSuccessStateImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddProductState.success()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AddProductState.success'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductSuccessStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function(File image) imageUploadSuccess,
+    required TResult Function(String error) imageError,
+    required TResult Function() imageLoading,
+    required TResult Function() intial,
+    required TResult Function(File image) imageDeleted,
+  }) {
+    return success();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function(File image)? imageUploadSuccess,
+    TResult? Function(String error)? imageError,
+    TResult? Function()? imageLoading,
+    TResult? Function()? intial,
+    TResult? Function(File image)? imageDeleted,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function(File image)? imageUploadSuccess,
+    TResult Function(String error)? imageError,
+    TResult Function()? imageLoading,
+    TResult Function()? intial,
+    TResult Function(File image)? imageDeleted,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
+    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductImageUploadSuccessState value)
+        imageUploadSuccess,
+    required TResult Function(AddProdcutImageErrorState value) imageError,
+    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageInitial value) intial,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
+    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult? Function(AddProdcutImageErrorState value)? imageError,
+    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageInitial value)? intial,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
+    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult Function(AddProdcutImageErrorState value)? imageError,
+    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageInitial value)? intial,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductSuccessState implements AddProductState {
+  const factory AddProductSuccessState() = _$AddProductSuccessStateImpl;
 }
 
 /// @nodoc
@@ -503,6 +682,7 @@ class _$AddProductErrostateImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -518,6 +698,7 @@ class _$AddProductErrostateImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -533,6 +714,7 @@ class _$AddProductErrostateImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -552,6 +734,7 @@ class _$AddProductErrostateImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -568,6 +751,7 @@ class _$AddProductErrostateImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -584,6 +768,7 @@ class _$AddProductErrostateImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -698,6 +883,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -713,6 +899,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -728,6 +915,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -747,6 +935,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -763,6 +952,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -779,6 +969,7 @@ class _$AddProductImageUploadSuccessStateImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -892,6 +1083,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -907,6 +1099,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -922,6 +1115,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -941,6 +1135,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -957,6 +1152,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -973,6 +1169,7 @@ class _$AddProdcutImageErrorStateImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1057,6 +1254,7 @@ class _$AddproductImageloadingStateImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -1072,6 +1270,7 @@ class _$AddproductImageloadingStateImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -1087,6 +1286,7 @@ class _$AddproductImageloadingStateImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -1106,6 +1306,7 @@ class _$AddproductImageloadingStateImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -1122,6 +1323,7 @@ class _$AddproductImageloadingStateImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1138,6 +1340,7 @@ class _$AddproductImageloadingStateImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1213,6 +1416,7 @@ class _$AddProductImageInitialImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -1228,6 +1432,7 @@ class _$AddProductImageInitialImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -1243,6 +1448,7 @@ class _$AddProductImageInitialImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -1262,6 +1468,7 @@ class _$AddProductImageInitialImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -1278,6 +1485,7 @@ class _$AddProductImageInitialImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1294,6 +1502,7 @@ class _$AddProductImageInitialImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1397,6 +1606,7 @@ class _$AddproductImageDeletedImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
@@ -1412,6 +1622,7 @@ class _$AddproductImageDeletedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
@@ -1427,6 +1638,7 @@ class _$AddproductImageDeletedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
@@ -1446,6 +1658,7 @@ class _$AddproductImageDeletedImpl
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrostate value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
@@ -1462,6 +1675,7 @@ class _$AddproductImageDeletedImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrostate value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
@@ -1478,6 +1692,7 @@ class _$AddproductImageDeletedImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrostate value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,

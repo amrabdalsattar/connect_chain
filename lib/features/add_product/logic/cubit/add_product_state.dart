@@ -4,7 +4,8 @@ part of 'add_product_cubit.dart';
 class AddProductState with _$AddProductState {
   const factory AddProductState.initial() = _Initial;
   const factory AddProductState.loading() = AddProductLoadingState;
-  // const factory AddProductState.success() = _success;
+  const factory AddProductState.success() =
+      AddProductSuccessState;
   const factory AddProductState.error(ApiErrorModel apiErrorModel) =
       AddProductErrostate;
   // Image States

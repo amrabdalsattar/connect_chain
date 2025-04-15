@@ -9,7 +9,7 @@ class ApiConstants {
   static const String resetPasswordEP = 'Account/ResetPassword';
 
   // Product endpoints
-  static const String addProductEP = 'api/Product/AddProduct';
+  static const String addProductEP = 'Product/AddProduct';
 
   static const Duration timeOut = Duration(seconds: 20);
 }
