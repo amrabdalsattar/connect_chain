@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
+
 import '../../../../core/helpers/app_images.dart';
 import '../../../home/ui/home_tab.dart';
 import '../../../my_products/ui/my_products_tab.dart';
@@ -68,5 +70,10 @@ class MainCubit extends Cubit<dynamic> {
       ),
       label: label,
     );
+  }
+
+  Map<String, dynamic> userData = {};
+  Future<void> loadUserData() async {
+    userData = await UserDataOperator.getUserData();
   }
 }
