@@ -13,25 +13,36 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
-  TextEditingController firstNameController = TextEditingController();
-  TextEditingController lastNameController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+
+  List<String> get businessTypesList => [
+        "Clothes",
+        "Food",
+        "Beverages",
+        "Other",
+      ];
+  String businessType = '';
+
+  void changeBusinessType(String value) {
+    businessType = value;
+  }
 
   void emitSignupStates() async {
     if (formKey.currentState!.validate()) {
       emit(const SignupState.loading());
       final result = await _signupRepo.signup(
         SignupRequestModel(
-            firstName: firstNameController.text,
-            lastName: lastNameController.text,
-            phoneNumber: phoneNumberController.text,
-            email: emailController.text,
-            password: passwordController.text,
-            address: addressController.text,
-            country: 'Egypt',
-            confirmPassword: confirmPasswordController.text,
-            role: 2),
+          name: nameController.text,
+          phoneNumber: phoneNumberController.text,
+          email: emailController.text,
+          password: passwordController.text,
+          address: addressController.text,
+          businessType: businessType,
+          confirmPassword: confirmPasswordController.text,
+          role: 2,
+        ),
       );
       result.when(
         success: (confirmationMessage) {
@@ -49,8 +60,7 @@ class SignupCubit extends Cubit<SignupState> {
     emailController.dispose();
     passwordController.dispose();
     confirmPasswordController.dispose();
-    firstNameController.dispose();
-    lastNameController.dispose();
+    nameController.dispose();
     phoneNumberController.dispose();
     addressController.dispose();
     return super.close();

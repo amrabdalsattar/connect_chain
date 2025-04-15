@@ -1,4 +1,3 @@
-import 'package:connect_chain/core/helpers/app_regex.dart';
 import 'package:connect_chain/core/helpers/dialogs_helper.dart';
 import 'package:connect_chain/core/helpers/extensions.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
