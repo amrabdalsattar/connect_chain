@@ -3,6 +3,7 @@ class SharedPreferencesKeys {
   static const String userName = 'userName';
   static const String userAddress = 'userAddress';
   static const String userEmail = 'userEmail';
+  static const String userBusinessType = 'userBusinessType';
   static const String userPhoneNumber = 'userPhoneNumber';
   static const String isViewedOnboarding = 'isViewedOnboarding';
 }

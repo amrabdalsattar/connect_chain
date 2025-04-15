@@ -12,6 +12,9 @@ class UserDataOperator {
               SharedPreferencesKeys.userAddress),
       SharedPreferencesKeys.userEmail: await SharedPreferencesHelper.getString(
           SharedPreferencesKeys.userEmail),
+      SharedPreferencesKeys.userBusinessType:
+          await SharedPreferencesHelper.getString(
+              SharedPreferencesKeys.userBusinessType),
       SharedPreferencesKeys.userPhoneNumber:
           await SharedPreferencesHelper.getString(
               SharedPreferencesKeys.userPhoneNumber),
@@ -21,6 +24,8 @@ class UserDataOperator {
   static Future<void> saveUserData(UserData userData) async {
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userName, userData.name);
+    await SharedPreferencesHelper.setData(
+        SharedPreferencesKeys.userBusinessType, userData.businessType);
 
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userAddress, userData.address);
@@ -36,9 +41,11 @@ class UserDataOperator {
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userEmail);
     await SharedPreferencesHelper.removeData(
         SharedPreferencesKeys.userPhoneNumber);
+    await SharedPreferencesHelper.removeData(
+        SharedPreferencesKeys.userBusinessType);
   }
 
-  Future<bool> isViewedOnboarding() async {
+  static Future<bool> isViewedOnboarding() async {
     return await SharedPreferencesHelper.getBool(
             SharedPreferencesKeys.isViewedOnboarding) ??
         false;

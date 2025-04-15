@@ -20,6 +20,7 @@ class UserData {
   String address;
   String token;
   String phone;
+  dynamic businessType;
 
   UserData({
     required this.name,
@@ -27,6 +28,7 @@ class UserData {
     required this.address,
     required this.token,
     required this.phone,
+    required this.businessType,
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) => UserData(
@@ -35,13 +37,15 @@ class UserData {
         address: json["address"],
         token: json["token"],
         phone: json["phone"],
+        businessType: json["businessType"],
       );
 
   Map<String, dynamic> toJson() => {
-        "firstName": name,
+        "name": name,
         "email": email,
         "address": address,
         "token": token,
         "phone": phone,
+        "businessType": businessType,
       };
 }

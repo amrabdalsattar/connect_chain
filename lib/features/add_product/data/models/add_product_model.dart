@@ -1,8 +1,6 @@
 import 'dart:io';
 import 'package:connect_chain/core/utils/convert_image_to_multipart_file.dart';
 import 'package:dio/dio.dart';
-import 'package:http_parser/http_parser.dart';
-import 'package:mime/mime.dart';
 
 class AddProductRequestModel {
   final String name;
@@ -25,7 +23,6 @@ class AddProductRequestModel {
     required this.images,
   });
 
-  
   Future<FormData> toFormData() async {
     for (var image in images) {
       convertImageToMultipartFile(image, 'Images');

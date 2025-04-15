@@ -15,7 +15,8 @@ class CustomDropdownButton extends StatelessWidget {
     required this.value,
     required this.items,
     required this.onChanged,
-    required this.hintText, required this.validator,
+    required this.hintText,
+    required this.validator,
   });
 
   @override
