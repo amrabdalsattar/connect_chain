@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
-import 'package:connect_chain/core/helpers/token_helper.dart';
+import 'core/helpers/cache/user_data_operator.dart';
+import 'core/helpers/token_helper.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';

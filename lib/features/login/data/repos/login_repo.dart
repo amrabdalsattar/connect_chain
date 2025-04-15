@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import '../../../../core/networking/api_error_handler/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../datasources/login_datasource.dart';
@@ -17,7 +19,7 @@ class LoginRepo {
       );
       return ApiResult.success(result);
     } catch (error) {
-      print('The errror is $error');
+      debugPrint('The error is $error');
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }

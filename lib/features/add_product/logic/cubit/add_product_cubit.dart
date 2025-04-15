@@ -1,9 +1,10 @@
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/features/add_product/data/models/add_product_model.dart';
-import 'package:connect_chain/features/add_product/data/repos/add_product_repo.dart';
+import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
+
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/add_product_model.dart';
+import '../../data/repos/add_product_repo.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -21,14 +22,14 @@ class AddProductCubit extends Cubit<AddProductState> {
   String categoryController = '1'; // Replace with actual category ID
   TextEditingController nameController = TextEditingController();
   TextEditingController priceController = TextEditingController();
-  TextEditingController qunatityController = TextEditingController();
+  TextEditingController quantityController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   TextEditingController minimumStockController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   List<File> productImages = [];
 
-// Images Functinos
+// Images Functions
 
   Future<void> pickImage() async {
     emit(const AddProductState.initial());
@@ -89,7 +90,7 @@ class AddProductCubit extends Cubit<AddProductState> {
         price: double.parse(priceController.text),
         minimumStock: int.parse(minimumStockController.text),
         images: productImages,
-        stock: int.parse(qunatityController.text),
+        stock: int.parse(quantityController.text),
         supplierId:
             '20044e2f-7c63-4ea5-a458-c39729d93e62', // Replace with actual supplier ID
         categoryId: 1,
@@ -105,7 +106,7 @@ class AddProductCubit extends Cubit<AddProductState> {
   Future<void> close() {
     nameController.dispose();
     priceController.dispose();
-    qunatityController.dispose();
+    quantityController.dispose();
     descriptionController.dispose();
     minimumStockController.dispose();
     categoryController = '';

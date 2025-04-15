@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/add_product/data/datasources/add_product_datasource.dart';
-import 'package:connect_chain/features/add_product/data/models/add_product_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasources/add_product_datasource.dart';
+import '../models/add_product_model.dart';
 
 class AddProductRepo {
   final AddProductDatasource _addProductDatasource;

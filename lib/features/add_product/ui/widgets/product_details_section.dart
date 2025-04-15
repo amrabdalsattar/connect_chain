@@ -99,7 +99,7 @@ class ProductDetailsSection extends StatelessWidget {
                 label: 'الكمية',
                 field: CustomTextFormField(
                   hintText: 'الكمية ',
-                  controller: addProductCubit.qunatityController,
+                  controller: addProductCubit.quantityController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'الرجاء إدخال الكمية';

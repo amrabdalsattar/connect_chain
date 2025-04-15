@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
+import '../../features/add_product/logic/cubit/add_product_cubit.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';
@@ -6,7 +6,7 @@ import '../../features/main/logic/cubit/main_cubit.dart';
 import '../../features/profile/ui/profile_screen.dart';
 
 import '../../features/reset_password/logic/cubit/reset_password_cubit.dart';
-import '../../features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';
+import '../../features/reset_password/ui/forgot_password_ui/forget_password_screen.dart';
 import '../../features/reset_password/ui/otp_verification_ui/otp_screen.dart';
 import '../../features/reset_password/ui/reset_password_ui/reset_password_screen.dart';
 import '../../features/signup/ui/signup_screen.dart';
