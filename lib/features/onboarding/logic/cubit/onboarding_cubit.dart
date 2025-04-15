@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,7 +43,8 @@ class OnboardingCubit extends Cubit<int> {
         curve: Curves.easeInOut,
       );
     } else {
-      context.pushNamed(Routes.loginRoute);
+      UserDataOperator.setViewOnBoardingBool();
+      context.pushReplacementNamed(Routes.loginRoute);
     }
   }
 

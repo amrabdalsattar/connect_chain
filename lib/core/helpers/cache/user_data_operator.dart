@@ -45,6 +45,11 @@ class UserDataOperator {
         SharedPreferencesKeys.userBusinessType);
   }
 
+  static setViewOnBoardingBool() async {
+    await SharedPreferencesHelper.setData(
+        SharedPreferencesKeys.isViewedOnboarding, true);
+  }
+
   static Future<bool> isViewedOnboarding() async {
     return await SharedPreferencesHelper.getBool(
             SharedPreferencesKeys.isViewedOnboarding) ??
