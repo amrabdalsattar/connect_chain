@@ -7,7 +7,7 @@ import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/core/widgets/custom_app_bar.dart';
 import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
 import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
-import 'package:connect_chain/features/manage_products/logic/cubit/manage_produts_cubit.dart';
+import 'package:connect_chain/features/manage_products/logic/cubit/manage_products_cubit.dart';
 import 'package:connect_chain/features/manage_products/ui/widgets/custom_add_product_button.dart';
 import 'package:connect_chain/features/manage_products/ui/widgets/custom_edit_product_tile.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class ManageProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => ManageProdutsCubit(getIt<ManageProductsRepo>())
+      create: (_) => ManageProductsCubit(getIt<ManageProductsRepo>())
         ..getSupplierProducts(),
       child: Scaffold(
         floatingActionButton: const CustomAddProductButton(),

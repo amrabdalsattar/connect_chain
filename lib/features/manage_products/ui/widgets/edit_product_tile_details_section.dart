@@ -1,7 +1,7 @@
 part of 'custom_edit_product_tile.dart';
 
-class EditProducttileDetailsSection extends StatelessWidget {
-  const EditProducttileDetailsSection({
+class EditProductTileDetailsSection extends StatelessWidget {
+  const EditProductTileDetailsSection({
     super.key,
     required this.name,
     required this.stock,

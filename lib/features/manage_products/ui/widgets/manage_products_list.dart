@@ -11,7 +11,8 @@ class ManageProductsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Instance of The ManageProdutsCubit
-    ManageProdutsCubit manageProdutsCubit = context.read<ManageProdutsCubit>();
+    ManageProductsCubit manageProdutsCubit =
+        context.read<ManageProductsCubit>();
 
     return ListView.separated(
       shrinkWrap: true,

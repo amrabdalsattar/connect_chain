@@ -7,7 +7,7 @@ import 'package:connect_chain/features/manage_products/data/models/manage_suppli
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-part 'custom_edit_prodcut_tile_tralling_section.dart';
+part 'custom_edit_product_tile_trailing_section.dart';
 part 'edit_product_tile_details_section.dart';
 
 class CustomEditProductTile extends StatelessWidget {
@@ -34,7 +34,7 @@ class CustomEditProductTile extends StatelessWidget {
           color: ColorsHelper.white,
           boxShadow: [
             BoxShadow(
-              color: ColorsHelper.black.withOpacity(0.25),
+              color: ColorsHelper.black.withValues(alpha: 0.25),
               offset: const Offset(0, 2),
               blurRadius: 4,
             ),
@@ -58,12 +58,12 @@ class CustomEditProductTile extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            EditProducttileDetailsSection(
+            EditProductTileDetailsSection(
               name: productDataModel.name,
               stock: productDataModel.stock,
             ),
             const Spacer(),
-            EditProdcutTileTrallingSection(
+            EditProductTileTrailingSection(
               onDelete: onDelete,
               onEdit: onEdit,
             )

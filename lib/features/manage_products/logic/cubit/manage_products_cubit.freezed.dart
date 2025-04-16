@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'manage_produts_cubit.dart';
+part of 'manage_products_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$ManageProdutsState {
+mixin _$ManageProductsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -62,9 +62,9 @@ mixin _$ManageProdutsState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) =>
       throw _privateConstructorUsedError;
@@ -76,9 +76,9 @@ mixin _$ManageProdutsState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,32 +89,32 @@ mixin _$ManageProdutsState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ManageProdutsStateCopyWith<$Res> {
-  factory $ManageProdutsStateCopyWith(
-          ManageProdutsState value, $Res Function(ManageProdutsState) then) =
-      _$ManageProdutsStateCopyWithImpl<$Res, ManageProdutsState>;
+abstract class $ManageProductsStateCopyWith<$Res> {
+  factory $ManageProductsStateCopyWith(
+          ManageProductsState value, $Res Function(ManageProductsState) then) =
+      _$ManageProductsStateCopyWithImpl<$Res, ManageProductsState>;
 }
 
 /// @nodoc
-class _$ManageProdutsStateCopyWithImpl<$Res, $Val extends ManageProdutsState>
-    implements $ManageProdutsStateCopyWith<$Res> {
-  _$ManageProdutsStateCopyWithImpl(this._value, this._then);
+class _$ManageProductsStateCopyWithImpl<$Res, $Val extends ManageProductsState>
+    implements $ManageProductsStateCopyWith<$Res> {
+  _$ManageProductsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -127,13 +127,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$ManageProductsStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -144,7 +144,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'ManageProdutsState.initial()';
+    return 'ManageProductsState.initial()';
   }
 
   @override
@@ -215,9 +215,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return initial(this);
@@ -232,9 +232,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return initial?.call(this);
   }
@@ -248,9 +248,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -260,7 +260,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements ManageProdutsState {
+abstract class _Initial implements ManageProductsState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -276,7 +276,7 @@ abstract class _$$ManageProductsSuccessStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ManageProductsSuccessStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
+    extends _$ManageProductsStateCopyWithImpl<$Res,
         _$ManageProductsSuccessStateImpl>
     implements _$$ManageProductsSuccessStateImplCopyWith<$Res> {
   __$$ManageProductsSuccessStateImplCopyWithImpl(
@@ -284,7 +284,7 @@ class __$$ManageProductsSuccessStateImplCopyWithImpl<$Res>
       $Res Function(_$ManageProductsSuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -310,7 +310,7 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
 
   @override
   String toString() {
-    return 'ManageProdutsState.success(products: $products)';
+    return 'ManageProductsState.success(products: $products)';
   }
 
   @override
@@ -325,7 +325,7 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
   @override
   int get hashCode => Object.hash(runtimeType, products);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -393,9 +393,9 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return success(this);
@@ -410,9 +410,9 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return success?.call(this);
   }
@@ -426,9 +426,9 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -438,14 +438,14 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
   }
 }
 
-abstract class ManageProductsSuccessState implements ManageProdutsState {
+abstract class ManageProductsSuccessState implements ManageProductsState {
   const factory ManageProductsSuccessState(
           final ManageSupplierProductsResponseModel products) =
       _$ManageProductsSuccessStateImpl;
 
   ManageSupplierProductsResponseModel get products;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ManageProductsSuccessStateImplCopyWith<_$ManageProductsSuccessStateImpl>
@@ -462,7 +462,7 @@ abstract class _$$ManageProductsLoadingStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ManageProductsLoadingStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
+    extends _$ManageProductsStateCopyWithImpl<$Res,
         _$ManageProductsLoadingStateImpl>
     implements _$$ManageProductsLoadingStateImplCopyWith<$Res> {
   __$$ManageProductsLoadingStateImplCopyWithImpl(
@@ -470,7 +470,7 @@ class __$$ManageProductsLoadingStateImplCopyWithImpl<$Res>
       $Res Function(_$ManageProductsLoadingStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -481,7 +481,7 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
 
   @override
   String toString() {
-    return 'ManageProdutsState.loading()';
+    return 'ManageProductsState.loading()';
   }
 
   @override
@@ -553,9 +553,9 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return loading(this);
@@ -570,9 +570,9 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return loading?.call(this);
   }
@@ -586,9 +586,9 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -598,7 +598,7 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
   }
 }
 
-abstract class ManageProductsLoadingState implements ManageProdutsState {
+abstract class ManageProductsLoadingState implements ManageProductsState {
   const factory ManageProductsLoadingState() = _$ManageProductsLoadingStateImpl;
 }
 
@@ -614,7 +614,7 @@ abstract class _$$ManageProductsErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ManageProductsErrorStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
+    extends _$ManageProductsStateCopyWithImpl<$Res,
         _$ManageProductsErrorStateImpl>
     implements _$$ManageProductsErrorStateImplCopyWith<$Res> {
   __$$ManageProductsErrorStateImplCopyWithImpl(
@@ -622,7 +622,7 @@ class __$$ManageProductsErrorStateImplCopyWithImpl<$Res>
       $Res Function(_$ManageProductsErrorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -648,7 +648,7 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
 
   @override
   String toString() {
-    return 'ManageProdutsState.error(error: $error)';
+    return 'ManageProductsState.error(error: $error)';
   }
 
   @override
@@ -662,7 +662,7 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -730,9 +730,9 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return error(this);
@@ -747,9 +747,9 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return error?.call(this);
   }
@@ -763,9 +763,9 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -775,13 +775,13 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
   }
 }
 
-abstract class ManageProductsErrorState implements ManageProdutsState {
+abstract class ManageProductsErrorState implements ManageProductsState {
   const factory ManageProductsErrorState(final ApiErrorModel error) =
       _$ManageProductsErrorStateImpl;
 
   ApiErrorModel get error;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ManageProductsErrorStateImplCopyWith<_$ManageProductsErrorStateImpl>
@@ -798,7 +798,7 @@ abstract class _$$ManageProductsDeleteStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ManageProductsDeleteStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
+    extends _$ManageProductsStateCopyWithImpl<$Res,
         _$ManageProductsDeleteStateImpl>
     implements _$$ManageProductsDeleteStateImplCopyWith<$Res> {
   __$$ManageProductsDeleteStateImplCopyWithImpl(
@@ -806,7 +806,7 @@ class __$$ManageProductsDeleteStateImplCopyWithImpl<$Res>
       $Res Function(_$ManageProductsDeleteStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -817,7 +817,7 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
 
   @override
   String toString() {
-    return 'ManageProdutsState.delete()';
+    return 'ManageProductsState.delete()';
   }
 
   @override
@@ -889,9 +889,9 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return delete(this);
@@ -906,9 +906,9 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return delete?.call(this);
   }
@@ -922,9 +922,9 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -934,7 +934,7 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
   }
 }
 
-abstract class ManageProductsDeleteState implements ManageProdutsState {
+abstract class ManageProductsDeleteState implements ManageProductsState {
   const factory ManageProductsDeleteState() = _$ManageProductsDeleteStateImpl;
 }
 
@@ -950,14 +950,15 @@ abstract class _$$ManageEditsDeleteStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ManageEditsDeleteStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res, _$ManageEditsDeleteStateImpl>
+    extends _$ManageProductsStateCopyWithImpl<$Res,
+        _$ManageEditsDeleteStateImpl>
     implements _$$ManageEditsDeleteStateImplCopyWith<$Res> {
   __$$ManageEditsDeleteStateImplCopyWithImpl(
       _$ManageEditsDeleteStateImpl _value,
       $Res Function(_$ManageEditsDeleteStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -983,7 +984,7 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
 
   @override
   String toString() {
-    return 'ManageProdutsState.edit(product: $product)';
+    return 'ManageProductsState.edit(product: $product)';
   }
 
   @override
@@ -997,7 +998,7 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
   @override
   int get hashCode => Object.hash(runtimeType, product);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -1065,9 +1066,9 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return edit(this);
@@ -1082,9 +1083,9 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return edit?.call(this);
   }
@@ -1098,9 +1099,9 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (edit != null) {
@@ -1110,13 +1111,13 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
   }
 }
 
-abstract class ManageEditsDeleteState implements ManageProdutsState {
+abstract class ManageEditsDeleteState implements ManageProductsState {
   const factory ManageEditsDeleteState(final ProductDataModel product) =
       _$ManageEditsDeleteStateImpl;
 
   ProductDataModel get product;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ManageEditsDeleteStateImplCopyWith<_$ManageEditsDeleteStateImpl>
@@ -1124,33 +1125,33 @@ abstract class ManageEditsDeleteState implements ManageProdutsState {
 }
 
 /// @nodoc
-abstract class _$$MangeProductsoperationSuccessStateImplCopyWith<$Res> {
-  factory _$$MangeProductsoperationSuccessStateImplCopyWith(
-          _$MangeProductsoperationSuccessStateImpl value,
-          $Res Function(_$MangeProductsoperationSuccessStateImpl) then) =
-      __$$MangeProductsoperationSuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$MangeProductsOperationSuccessStateImplCopyWith<$Res> {
+  factory _$$MangeProductsOperationSuccessStateImplCopyWith(
+          _$MangeProductsOperationSuccessStateImpl value,
+          $Res Function(_$MangeProductsOperationSuccessStateImpl) then) =
+      __$$MangeProductsOperationSuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$MangeProductsoperationSuccessStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
-        _$MangeProductsoperationSuccessStateImpl>
-    implements _$$MangeProductsoperationSuccessStateImplCopyWith<$Res> {
-  __$$MangeProductsoperationSuccessStateImplCopyWithImpl(
-      _$MangeProductsoperationSuccessStateImpl _value,
-      $Res Function(_$MangeProductsoperationSuccessStateImpl) _then)
+class __$$MangeProductsOperationSuccessStateImplCopyWithImpl<$Res>
+    extends _$ManageProductsStateCopyWithImpl<$Res,
+        _$MangeProductsOperationSuccessStateImpl>
+    implements _$$MangeProductsOperationSuccessStateImplCopyWith<$Res> {
+  __$$MangeProductsOperationSuccessStateImplCopyWithImpl(
+      _$MangeProductsOperationSuccessStateImpl _value,
+      $Res Function(_$MangeProductsOperationSuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$MangeProductsoperationSuccessStateImpl(
+    return _then(_$MangeProductsOperationSuccessStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1161,38 +1162,38 @@ class __$$MangeProductsoperationSuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MangeProductsoperationSuccessStateImpl
-    implements MangeProductsoperationSuccessState {
-  const _$MangeProductsoperationSuccessStateImpl(this.message);
+class _$MangeProductsOperationSuccessStateImpl
+    implements MangeProductsOperationSuccessState {
+  const _$MangeProductsOperationSuccessStateImpl(this.message);
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'ManageProdutsState.operationSuccess(message: $message)';
+    return 'ManageProductsState.operationSuccess(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MangeProductsoperationSuccessStateImpl &&
+            other is _$MangeProductsOperationSuccessStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MangeProductsoperationSuccessStateImplCopyWith<
-          _$MangeProductsoperationSuccessStateImpl>
-      get copyWith => __$$MangeProductsoperationSuccessStateImplCopyWithImpl<
-          _$MangeProductsoperationSuccessStateImpl>(this, _$identity);
+  _$$MangeProductsOperationSuccessStateImplCopyWith<
+          _$MangeProductsOperationSuccessStateImpl>
+      get copyWith => __$$MangeProductsOperationSuccessStateImplCopyWithImpl<
+          _$MangeProductsOperationSuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1253,9 +1254,9 @@ class _$MangeProductsoperationSuccessStateImpl
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return operationSuccess(this);
@@ -1270,9 +1271,9 @@ class _$MangeProductsoperationSuccessStateImpl
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return operationSuccess?.call(this);
   }
@@ -1286,9 +1287,9 @@ class _$MangeProductsoperationSuccessStateImpl
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (operationSuccess != null) {
@@ -1298,49 +1299,49 @@ class _$MangeProductsoperationSuccessStateImpl
   }
 }
 
-abstract class MangeProductsoperationSuccessState
-    implements ManageProdutsState {
-  const factory MangeProductsoperationSuccessState(final String message) =
-      _$MangeProductsoperationSuccessStateImpl;
+abstract class MangeProductsOperationSuccessState
+    implements ManageProductsState {
+  const factory MangeProductsOperationSuccessState(final String message) =
+      _$MangeProductsOperationSuccessStateImpl;
 
   String get message;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MangeProductsoperationSuccessStateImplCopyWith<
-          _$MangeProductsoperationSuccessStateImpl>
+  _$$MangeProductsOperationSuccessStateImplCopyWith<
+          _$MangeProductsOperationSuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MangeProductsoperationFailedStateImplCopyWith<$Res> {
-  factory _$$MangeProductsoperationFailedStateImplCopyWith(
-          _$MangeProductsoperationFailedStateImpl value,
-          $Res Function(_$MangeProductsoperationFailedStateImpl) then) =
-      __$$MangeProductsoperationFailedStateImplCopyWithImpl<$Res>;
+abstract class _$$MangeProductsOperationFailedStateImplCopyWith<$Res> {
+  factory _$$MangeProductsOperationFailedStateImplCopyWith(
+          _$MangeProductsOperationFailedStateImpl value,
+          $Res Function(_$MangeProductsOperationFailedStateImpl) then) =
+      __$$MangeProductsOperationFailedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$MangeProductsoperationFailedStateImplCopyWithImpl<$Res>
-    extends _$ManageProdutsStateCopyWithImpl<$Res,
-        _$MangeProductsoperationFailedStateImpl>
-    implements _$$MangeProductsoperationFailedStateImplCopyWith<$Res> {
-  __$$MangeProductsoperationFailedStateImplCopyWithImpl(
-      _$MangeProductsoperationFailedStateImpl _value,
-      $Res Function(_$MangeProductsoperationFailedStateImpl) _then)
+class __$$MangeProductsOperationFailedStateImplCopyWithImpl<$Res>
+    extends _$ManageProductsStateCopyWithImpl<$Res,
+        _$MangeProductsOperationFailedStateImpl>
+    implements _$$MangeProductsOperationFailedStateImplCopyWith<$Res> {
+  __$$MangeProductsOperationFailedStateImplCopyWithImpl(
+      _$MangeProductsOperationFailedStateImpl _value,
+      $Res Function(_$MangeProductsOperationFailedStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$MangeProductsoperationFailedStateImpl(
+    return _then(_$MangeProductsOperationFailedStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1351,38 +1352,38 @@ class __$$MangeProductsoperationFailedStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MangeProductsoperationFailedStateImpl
-    implements MangeProductsoperationFailedState {
-  const _$MangeProductsoperationFailedStateImpl(this.message);
+class _$MangeProductsOperationFailedStateImpl
+    implements MangeProductsOperationFailedState {
+  const _$MangeProductsOperationFailedStateImpl(this.message);
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'ManageProdutsState.operationFailed(message: $message)';
+    return 'ManageProductsState.operationFailed(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MangeProductsoperationFailedStateImpl &&
+            other is _$MangeProductsOperationFailedStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MangeProductsoperationFailedStateImplCopyWith<
-          _$MangeProductsoperationFailedStateImpl>
-      get copyWith => __$$MangeProductsoperationFailedStateImplCopyWithImpl<
-          _$MangeProductsoperationFailedStateImpl>(this, _$identity);
+  _$$MangeProductsOperationFailedStateImplCopyWith<
+          _$MangeProductsOperationFailedStateImpl>
+      get copyWith => __$$MangeProductsOperationFailedStateImplCopyWithImpl<
+          _$MangeProductsOperationFailedStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1443,9 +1444,9 @@ class _$MangeProductsoperationFailedStateImpl
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsoperationSuccessState value)
+    required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
-    required TResult Function(MangeProductsoperationFailedState value)
+    required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
   }) {
     return operationFailed(this);
@@ -1460,9 +1461,9 @@ class _$MangeProductsoperationFailedStateImpl
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsoperationSuccessState value)?
+    TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult? Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
   }) {
     return operationFailed?.call(this);
   }
@@ -1476,9 +1477,9 @@ class _$MangeProductsoperationFailedStateImpl
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsoperationSuccessState value)?
+    TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
-    TResult Function(MangeProductsoperationFailedState value)? operationFailed,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
     required TResult orElse(),
   }) {
     if (operationFailed != null) {
@@ -1488,16 +1489,17 @@ class _$MangeProductsoperationFailedStateImpl
   }
 }
 
-abstract class MangeProductsoperationFailedState implements ManageProdutsState {
-  const factory MangeProductsoperationFailedState(final String message) =
-      _$MangeProductsoperationFailedStateImpl;
+abstract class MangeProductsOperationFailedState
+    implements ManageProductsState {
+  const factory MangeProductsOperationFailedState(final String message) =
+      _$MangeProductsOperationFailedStateImpl;
 
   String get message;
 
-  /// Create a copy of ManageProdutsState
+  /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MangeProductsoperationFailedStateImplCopyWith<
-          _$MangeProductsoperationFailedStateImpl>
+  _$$MangeProductsOperationFailedStateImplCopyWith<
+          _$MangeProductsOperationFailedStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -7,11 +7,11 @@ class ManageProductsBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<ManageProdutsCubit, ManageProdutsState>(
+    return BlocConsumer<ManageProductsCubit, ManageProductsState>(
       buildWhen: (previous, current) {
         return current is ManageProductsLoadingState ||
             current is ManageProductsSuccessState ||
-            current is MangeProductsoperationSuccessState;
+            current is MangeProductsOperationSuccessState;
       },
       builder: (context, state) {
         if (state is ManageProductsSuccessState) {

@@ -1,4 +1,4 @@
-part of '../product_deatils_screen.dart';
+part of '../product_details_screen.dart';
 
 class ProductDetailsImagesSection extends StatelessWidget {
   const ProductDetailsImagesSection({
@@ -33,7 +33,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           verticalSpace(16),
-          // Image Crasuol section
+          // Image Carousal section
           const CustomImageSlider(imageFiles: []),
           verticalSpace(25.5)
         ],

@@ -1,7 +1,5 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
 import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/routing/routes.dart';
 import 'package:connect_chain/core/theming/app_text_styles.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/core/utils/format_utils.dart';
@@ -16,8 +14,8 @@ import 'package:flutter_svg/svg.dart';
 
 part 'widgets/product_details_images_section.dart';
 
-class ProductDeatilsScreen extends StatelessWidget {
-  const ProductDeatilsScreen({super.key, required this.productDataModel});
+class ProductDetailsScreen extends StatelessWidget {
+  const ProductDetailsScreen({super.key, required this.productDataModel});
 
   final ProductDataModel productDataModel;
 
@@ -27,7 +25,7 @@ class ProductDeatilsScreen extends StatelessWidget {
       bottomNavigationBar: CustomTwoButtonsRow(
           rightText: 'تعديل',
           onRightTap: () {
-            // Put the Edit Page Here 
+            // Put the Edit Page Here
             // context.pushNamed(Routes.addProductScreenRoute,
             //     arguments: productDataModel);
           },
