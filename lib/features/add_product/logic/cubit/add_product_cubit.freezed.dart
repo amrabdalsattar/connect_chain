@@ -1001,22 +1001,22 @@ abstract class AddProductImageUploadSuccessState implements AddProductState {
 }
 
 /// @nodoc
-abstract class _$$AddProdcutImageErrorStateImplCopyWith<$Res> {
-  factory _$$AddProdcutImageErrorStateImplCopyWith(
-          _$AddProdcutImageErrorStateImpl value,
-          $Res Function(_$AddProdcutImageErrorStateImpl) then) =
-      __$$AddProdcutImageErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$AddProductImageErrorStateImplCopyWith<$Res> {
+  factory _$$AddProductImageErrorStateImplCopyWith(
+          _$AddProductImageErrorStateImpl value,
+          $Res Function(_$AddProductImageErrorStateImpl) then) =
+      __$$AddProductImageErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$AddProdcutImageErrorStateImplCopyWithImpl<$Res>
-    extends _$AddProductStateCopyWithImpl<$Res, _$AddProdcutImageErrorStateImpl>
-    implements _$$AddProdcutImageErrorStateImplCopyWith<$Res> {
-  __$$AddProdcutImageErrorStateImplCopyWithImpl(
-      _$AddProdcutImageErrorStateImpl _value,
-      $Res Function(_$AddProdcutImageErrorStateImpl) _then)
+class __$$AddProductImageErrorStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res, _$AddProductImageErrorStateImpl>
+    implements _$$AddProductImageErrorStateImplCopyWith<$Res> {
+  __$$AddProductImageErrorStateImplCopyWithImpl(
+      _$AddProductImageErrorStateImpl _value,
+      $Res Function(_$AddProductImageErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AddProductState
@@ -1026,7 +1026,7 @@ class __$$AddProdcutImageErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$AddProdcutImageErrorStateImpl(
+    return _then(_$AddProductImageErrorStateImpl(
       null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -1037,10 +1037,10 @@ class __$$AddProdcutImageErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProdcutImageErrorStateImpl
+class _$AddProductImageErrorStateImpl
     with DiagnosticableTreeMixin
     implements AddProductImageErrorState {
-  const _$AddProdcutImageErrorStateImpl(this.error);
+  const _$AddProductImageErrorStateImpl(this.error);
 
   @override
   final String error;
@@ -1062,7 +1062,7 @@ class _$AddProdcutImageErrorStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddProdcutImageErrorStateImpl &&
+            other is _$AddProductImageErrorStateImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -1074,9 +1074,9 @@ class _$AddProdcutImageErrorStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddProdcutImageErrorStateImplCopyWith<_$AddProdcutImageErrorStateImpl>
-      get copyWith => __$$AddProdcutImageErrorStateImplCopyWithImpl<
-          _$AddProdcutImageErrorStateImpl>(this, _$identity);
+  _$$AddProductImageErrorStateImplCopyWith<_$AddProductImageErrorStateImpl>
+      get copyWith => __$$AddProductImageErrorStateImplCopyWithImpl<
+          _$AddProductImageErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1188,14 +1188,14 @@ class _$AddProdcutImageErrorStateImpl
 
 abstract class AddProductImageErrorState implements AddProductState {
   const factory AddProductImageErrorState(final String error) =
-      _$AddProdcutImageErrorStateImpl;
+      _$AddProductImageErrorStateImpl;
 
   String get error;
 
   /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddProdcutImageErrorStateImplCopyWith<_$AddProdcutImageErrorStateImpl>
+  _$$AddProductImageErrorStateImplCopyWith<_$AddProductImageErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1524,22 +1524,22 @@ abstract class AddProductImageInitial implements AddProductState {
 }
 
 /// @nodoc
-abstract class _$$AddproductImageDeletedImplCopyWith<$Res> {
-  factory _$$AddproductImageDeletedImplCopyWith(
-          _$AddproductImageDeletedImpl value,
-          $Res Function(_$AddproductImageDeletedImpl) then) =
-      __$$AddproductImageDeletedImplCopyWithImpl<$Res>;
+abstract class _$$AddProductImageDeletedImplCopyWith<$Res> {
+  factory _$$AddProductImageDeletedImplCopyWith(
+          _$AddProductImageDeletedImpl value,
+          $Res Function(_$AddProductImageDeletedImpl) then) =
+      __$$AddProductImageDeletedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({File image});
 }
 
 /// @nodoc
-class __$$AddproductImageDeletedImplCopyWithImpl<$Res>
-    extends _$AddProductStateCopyWithImpl<$Res, _$AddproductImageDeletedImpl>
-    implements _$$AddproductImageDeletedImplCopyWith<$Res> {
-  __$$AddproductImageDeletedImplCopyWithImpl(
-      _$AddproductImageDeletedImpl _value,
-      $Res Function(_$AddproductImageDeletedImpl) _then)
+class __$$AddProductImageDeletedImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res, _$AddProductImageDeletedImpl>
+    implements _$$AddProductImageDeletedImplCopyWith<$Res> {
+  __$$AddProductImageDeletedImplCopyWithImpl(
+      _$AddProductImageDeletedImpl _value,
+      $Res Function(_$AddProductImageDeletedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AddProductState
@@ -1549,7 +1549,7 @@ class __$$AddproductImageDeletedImplCopyWithImpl<$Res>
   $Res call({
     Object? image = null,
   }) {
-    return _then(_$AddproductImageDeletedImpl(
+    return _then(_$AddProductImageDeletedImpl(
       null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -1560,10 +1560,10 @@ class __$$AddproductImageDeletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddproductImageDeletedImpl
+class _$AddProductImageDeletedImpl
     with DiagnosticableTreeMixin
     implements AddProductImageDeleted {
-  const _$AddproductImageDeletedImpl(this.image);
+  const _$AddProductImageDeletedImpl(this.image);
 
   @override
   final File image;
@@ -1585,7 +1585,7 @@ class _$AddproductImageDeletedImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddproductImageDeletedImpl &&
+            other is _$AddProductImageDeletedImpl &&
             (identical(other.image, image) || other.image == image));
   }
 
@@ -1597,9 +1597,9 @@ class _$AddproductImageDeletedImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddproductImageDeletedImplCopyWith<_$AddproductImageDeletedImpl>
-      get copyWith => __$$AddproductImageDeletedImplCopyWithImpl<
-          _$AddproductImageDeletedImpl>(this, _$identity);
+  _$$AddProductImageDeletedImplCopyWith<_$AddProductImageDeletedImpl>
+      get copyWith => __$$AddProductImageDeletedImplCopyWithImpl<
+          _$AddProductImageDeletedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1711,13 +1711,13 @@ class _$AddproductImageDeletedImpl
 
 abstract class AddProductImageDeleted implements AddProductState {
   const factory AddProductImageDeleted(final File image) =
-      _$AddproductImageDeletedImpl;
+      _$AddProductImageDeletedImpl;
 
   File get image;
 
   /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddproductImageDeletedImplCopyWith<_$AddproductImageDeletedImpl>
+  _$$AddProductImageDeletedImplCopyWith<_$AddProductImageDeletedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

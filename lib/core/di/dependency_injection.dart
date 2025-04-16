@@ -1,3 +1,4 @@
+import 'package:connect_chain/features/home/logic/cubit/dashboard_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -29,32 +30,53 @@ Future<void> setUpGetIt() async {
   getIt.registerLazySingleton<Dio>(() => DioFactory.instance);
   getIt.registerLazySingleton<ApiHelper>(() => DioHelper(getIt()));
 
-  getIt.registerLazySingleton(() => LoginDatasource(getIt()));
-  getIt.registerLazySingleton(() => LoginRepo(getIt()));
+  getIt.registerLazySingleton<LoginDatasource>(() => LoginDatasource(getIt()));
+  getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
 
-  getIt.registerLazySingleton(() => SignupDataSource(getIt()));
-  getIt.registerLazySingleton(() => SignupRepo(getIt()));
+  getIt
+      .registerLazySingleton<SignupDataSource>(() => SignupDataSource(getIt()));
+  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
 
-  getIt.registerLazySingleton(() => ResetPasswordDataSource(getIt()));
-  getIt.registerLazySingleton(() => ResetPasswordRepo(getIt()));
+  getIt.registerLazySingleton<ResetPasswordDataSource>(
+      () => ResetPasswordDataSource(getIt()));
+  getIt.registerLazySingleton<ResetPasswordRepo>(
+      () => ResetPasswordRepo(getIt()));
 
   // Product DI
-  getIt.registerLazySingleton(() => AddProductRepo(getIt()));
-  getIt.registerLazySingleton(() => AddProductDatasource(getIt()));
+  getIt.registerLazySingleton<AddProductRepo>(() => AddProductRepo(getIt()));
+  getIt.registerLazySingleton<AddProductDatasource>(
+      () => AddProductDatasource(getIt()));
 
-  getIt.registerLazySingleton(() => ManageProductsRepo(getIt()));
-  getIt.registerLazySingleton(() => ManageProductsDatasource(getIt()));
+  getIt.registerLazySingleton<ManageProductsRepo>(
+      () => ManageProductsRepo(getIt()));
+  getIt.registerLazySingleton<ManageProductsDatasource>(
+      () => ManageProductsDatasource(getIt()));
 
   // Dashboard DI
-  getIt.registerLazySingleton(() => MonthlyStatsDataSource(getIt()));
-  getIt.registerLazySingleton(() => MonthlyStatsRepo(getIt()));
+  getIt.registerLazySingleton<MonthlyStatsDataSource>(
+      () => MonthlyStatsDataSource(getIt()));
+  getIt
+      .registerLazySingleton<MonthlyStatsRepo>(() => MonthlyStatsRepo(getIt()));
 
-  getIt.registerLazySingleton(() => RevenueChartDataSource(getIt()));
-  getIt.registerLazySingleton(() => RevenueChartRepo(getIt()));
+  getIt.registerLazySingleton<RevenueChartDataSource>(
+      () => RevenueChartDataSource(getIt()));
+  getIt
+      .registerLazySingleton<RevenueChartRepo>(() => RevenueChartRepo(getIt()));
 
-  getIt.registerLazySingleton(() => OrdersSummaryDatasource(getIt()));
-  getIt.registerLazySingleton(() => OrdersSummaryRepo(getIt()));
+  getIt.registerLazySingleton<OrdersSummaryDatasource>(
+      () => OrdersSummaryDatasource(getIt()));
+  getIt.registerLazySingleton<OrdersSummaryRepo>(
+      () => OrdersSummaryRepo(getIt()));
 
-  getIt.registerLazySingleton(() => ProductsSummaryDatasource(getIt()));
-  getIt.registerLazySingleton(() => ProductsSummaryRepo(getIt()));
+  getIt.registerLazySingleton<ProductsSummaryDatasource>(
+      () => ProductsSummaryDatasource(getIt()));
+  getIt.registerLazySingleton<ProductsSummaryRepo>(
+      () => ProductsSummaryRepo(getIt()));
+
+  getIt.registerFactory<DashboardCubit>(() => DashboardCubit(
+        monthlyStatsRepo: getIt(),
+        ordersSummaryRepo: getIt(),
+        productsSummaryRepo: getIt(),
+        revenueChartRepo: getIt(),
+      ));
 }
