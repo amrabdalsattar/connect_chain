@@ -1,15 +1,18 @@
 part of 'custom_edit_product_tile.dart';
 
 class EditProductTileTrailingSection extends StatelessWidget {
-  const EditProductTileTrailingSection({super.key, this.onEdit, this.onDelete});
+  const EditProductTileTrailingSection(
+      {super.key, this.onEdit, this.onDelete, required this.price});
 
   final void Function()? onEdit;
   final void Function()? onDelete;
+  final double price;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           // Edit and Delete Buttons
           Row(
@@ -28,8 +31,8 @@ class EditProductTileTrailingSection extends StatelessWidget {
           verticalSpace(10),
           // Price Section
           Text(
-            '700 EGP',
-            style: AppTextStyles.cairoBlackMedium16
+            '${priceFormat(price)} EGP',
+            style: AppTextStyles.cairoBlackSemiBold16
                 .copyWith(fontWeight: FontWeight.w600),
           )
         ],

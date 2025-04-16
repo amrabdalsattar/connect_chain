@@ -10,8 +10,8 @@ class ManageProductsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Instance of The ManageProdutsCubit
-    ManageProductsCubit manageProdutsCubit =
+    // Instance of The ManageProductsCubit
+    ManageProductsCubit manageProductsCubit =
         context.read<ManageProductsCubit>();
 
     return ListView.separated(
@@ -25,7 +25,7 @@ class ManageProductsList extends StatelessWidget {
                 arguments: products[index]);
           },
           onDelete: () {
-            manageProdutsCubit.deleteProduct(products[index].id);
+            manageProductsCubit.deleteProduct(products[index].id);
           },
           productDataModel: products[index],
         );

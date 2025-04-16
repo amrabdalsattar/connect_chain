@@ -30,10 +30,10 @@ class AddProductImagesSection extends StatelessWidget {
         BlocConsumer<AddProductCubit, AddProductState>(
           buildWhen: (previous, current) =>
               current is AddProductImageUploadSuccessState ||
-              current is AddProdcutImageErrorState ||
+              current is AddProductImageErrorState ||
               current is AddProductLoadingState ||
               current is AddProductImageInitial ||
-              current is AddproductImageDeleted,
+              current is AddProductImageDeleted,
           builder: (context, state) {
             return AddProductImagesList(
               imageFiles:
@@ -42,7 +42,7 @@ class AddProductImagesSection extends StatelessWidget {
             );
           },
           listener: (context, state) {
-            if (state is AddProdcutImageErrorState) {
+            if (state is AddProductImageErrorState) {
               DialogsHelper.showErrorDialog(context, state.error);
             }
           },
