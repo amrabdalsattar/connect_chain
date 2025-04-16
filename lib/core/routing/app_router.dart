@@ -1,9 +1,9 @@
+import 'package:connect_chain/features/edit_product/logic/cubit/edit_product_cubit.dart';
+import 'package:connect_chain/features/edit_product/ui/edit_product_screen.dart';
 import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
 import 'package:connect_chain/features/product_details/ui/product_deatils_screen.dart';
 
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
-import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
-import 'package:connect_chain/features/manage_products/logic/cubit/manage_produts_cubit.dart';
 import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
@@ -65,6 +65,14 @@ class AppRouter {
       case Routes.profileScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ProfileScreen(),
+          settings: settings,
+        );
+      case Routes.editProductScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) => EditProductCubit(getIt()),
+            child: const EditProductScreen(),
+          ),
           settings: settings,
         );
       case Routes.manageProductsScreenRoute:

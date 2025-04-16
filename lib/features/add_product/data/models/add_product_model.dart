@@ -24,8 +24,10 @@ class AddProductRequestModel {
   });
 
   Future<FormData> toFormData() async {
-    for (var image in images) {
-      convertImageToMultipartFile(image, 'Images');
+    final List<MultipartFile> images = [];
+    for (var image in this.images) {
+      final multipartFile = await convertImageToMultipartFile(image, 'Images');
+      images.add(multipartFile);
     }
 
     final formMap = {

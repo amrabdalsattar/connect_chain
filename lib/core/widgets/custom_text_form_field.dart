@@ -8,6 +8,8 @@ import '../theming/colors_helper.dart';
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final Widget? suffixIcon;
+  final Widget? suffix;
+
   final String? prefixIconPath;
   final bool? isObscure;
   final TextInputType? keyboardType;
@@ -16,9 +18,9 @@ class CustomTextFormField extends StatelessWidget {
   final int maxLines;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
-
   final Color? fillColor;
   final bool? filled;
+  final bool? isReadOnly;
 
   const CustomTextFormField({
     super.key,
@@ -34,11 +36,15 @@ class CustomTextFormField extends StatelessWidget {
     this.fillColor,
     this.filled,
     this.focusedBorder,
+    this.suffix,
+    this.isReadOnly,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: isReadOnly ?? false,
+      canRequestFocus: !(isReadOnly ?? true),
       controller: controller,
       maxLines: maxLines,
       textCapitalization: keyboardType == TextInputType.name
@@ -95,6 +101,13 @@ class CustomTextFormField extends StatelessWidget {
             width: 1.3,
           ),
           borderRadius: BorderRadius.circular(8.r),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.r),
+          borderSide: const BorderSide(
+            color: ColorsHelper.borderGray,
+            width: 1.3,
+          ),
         ),
       ),
       obscureText: isObscure ?? false,

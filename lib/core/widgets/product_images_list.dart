@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import '../../../../core/widgets/product_image_widget.dart';
+import 'product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AddProductImagesList extends StatelessWidget {
-  const AddProductImagesList({
+class ProductImageList extends StatelessWidget {
+  const ProductImageList({
     super.key,
     required this.imageFiles,
     this.selectedIndex,

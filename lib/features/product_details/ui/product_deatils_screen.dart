@@ -27,9 +27,9 @@ class ProductDeatilsScreen extends StatelessWidget {
       bottomNavigationBar: CustomTwoButtonsRow(
           rightText: 'تعديل',
           onRightTap: () {
-            // Put the Edit Page Here 
-            // context.pushNamed(Routes.addProductScreenRoute,
-            //     arguments: productDataModel);
+            // Put the Edit Page Here
+            context.pushNamed(Routes.editProductScreenRoute,
+                arguments: productDataModel);
           },
           leftText: 'حذف',
           onLeftTap: () {}),
