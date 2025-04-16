@@ -34,7 +34,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
           ),
           verticalSpace(16),
           // Image Crasuol section
-          const CustomImageSlider(imageFiles: []),
+          const CustomImageSlider(imagePaths: []),
           verticalSpace(25.5)
         ],
       ),

@@ -66,7 +66,7 @@ class AddProductCubit extends Cubit<AddProductState> {
     categoryController = categoryId;
   }
 
-  emitAddProductStates() async {
+ Future<void> emitAddProductStates() async {
     emit(const AddProductState.initial());
     if (productImages.isEmpty) {
       emit(

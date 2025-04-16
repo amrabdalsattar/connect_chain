@@ -1,5 +1,7 @@
 import 'package:connect_chain/features/add_product/data/datasources/add_product_datasource.dart';
 import 'package:connect_chain/features/add_product/data/repos/add_product_repo.dart';
+import 'package:connect_chain/features/edit_product/data/datasource/edit_product_datasourece.dart';
+import 'package:connect_chain/features/edit_product/data/repos/edit_product_repo.dart';
 import 'package:connect_chain/features/manage_products/data/datasource/manage_products_datasource.dart';
 import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
 import 'package:dio/dio.dart';
@@ -35,4 +37,7 @@ Future<void> setUpGetIt() async {
 
   getIt.registerLazySingleton(() => ManageProductsRepo(getIt()));
   getIt.registerLazySingleton(() => ManageProductsDatasource(getIt()));
+
+  getIt.registerLazySingleton(() => EditProductRepo(getIt()));
+  getIt.registerLazySingleton(() => EditProductDatasource(getIt()));
 }

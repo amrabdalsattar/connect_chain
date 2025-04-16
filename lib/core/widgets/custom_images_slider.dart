@@ -7,12 +7,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomImageSlider extends StatefulWidget {
   const CustomImageSlider({
     super.key,
-    required this.imageFiles,
+    required this.imagePaths,
     this.selectedIndex,
     this.onImageTap,
   });
 
-  final List<File> imageFiles;
+  final List<String> imagePaths;
   final int? selectedIndex;
   final ValueChanged<int>? onImageTap;
 

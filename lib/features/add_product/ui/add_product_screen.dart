@@ -11,7 +11,7 @@ import 'package:connect_chain/core/widgets/labeled_field_row.dart';
 import 'package:connect_chain/core/widgets/labeled_field.dart';
 import 'package:connect_chain/core/widgets/upload_image.dart';
 import 'package:connect_chain/features/add_product/logic/cubit/add_product_cubit.dart';
-import 'package:connect_chain/features/add_product/ui/widgets/add_product_images_list.dart';
+import 'package:connect_chain/core/widgets/product_images_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +41,7 @@ class AddProductScreen extends StatelessWidget {
           await addProductCubit.emitAddProductStates();
         },
         leftText: 'الغاء',
-        rightText: 'حفظ',
+        rightText: 'اضافة',
       ),
       body: SafeArea(
         child: Padding(
