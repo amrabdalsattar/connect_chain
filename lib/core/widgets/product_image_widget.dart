@@ -7,19 +7,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProductImageWidget extends StatelessWidget {
-  final File imgFile;
+  final File? imgFile;
   final bool isSelected;
   final VoidCallback? onTap;
   final bool showDeleteButton;
   final VoidCallback? onDelete;
+  final String? imageUrl;
 
   const ProductImageWidget({
     super.key,
-    required this.imgFile,
+    this.imgFile,
     this.isSelected = false,
     this.onTap,
     this.showDeleteButton = false,
     this.onDelete,
+    this.imageUrl,
   });
 
   @override
@@ -41,7 +43,9 @@ class ProductImageWidget extends StatelessWidget {
               ),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: FileImage(imgFile),
+                image: imgFile != null
+                    ? FileImage(imgFile!) as ImageProvider
+                    : NetworkImage(imageUrl ?? ''),
               ),
             ),
           ),

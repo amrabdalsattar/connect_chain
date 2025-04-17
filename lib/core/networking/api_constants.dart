@@ -13,6 +13,7 @@ class ApiConstants {
   static const String getSupplierProductsEP = 'Product/GetSupplierProducts';
   static const String deleteProductEP = 'Product/DeleteProduct';
   static const String updateProductEP = 'Product/UpdateProduct';
+  static const String getProductDetailsEP = 'Product/GetProductDetails';
 
   static const Duration timeOut = Duration(seconds: 20);
 }

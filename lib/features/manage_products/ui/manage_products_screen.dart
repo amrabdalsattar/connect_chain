@@ -9,7 +9,7 @@ import 'package:connect_chain/features/manage_products/data/models/manage_suppli
 import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
 import 'package:connect_chain/features/manage_products/logic/cubit/manage_produts_cubit.dart';
 import 'package:connect_chain/features/manage_products/ui/widgets/custom_add_product_button.dart';
-import 'package:connect_chain/features/manage_products/ui/widgets/custom_edit_product_tile.dart';
+import 'package:connect_chain/features/manage_products/ui/widgets/manage_product_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/custom_search_text_form_field.dart';

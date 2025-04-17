@@ -1,4 +1,4 @@
-part of 'custom_edit_product_tile.dart';
+part of 'manage_product_tile.dart';
 
 class EditProdcutTileTrallingSection extends StatelessWidget {
   const EditProdcutTileTrallingSection({super.key, this.onEdit, this.onDelete});

@@ -1,4 +1,4 @@
-part of 'custom_edit_product_tile.dart';
+part of 'manage_product_tile.dart';
 
 class EditProducttileDetailsSection extends StatelessWidget {
   const EditProducttileDetailsSection({
