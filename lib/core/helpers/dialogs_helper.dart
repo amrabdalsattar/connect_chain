@@ -18,6 +18,8 @@ class DialogsHelper {
     );
   }
 
+  
+
   static void showErrorDialog(BuildContext context, String error) {
     showDialog(
       context: context,
@@ -100,6 +102,49 @@ class DialogsHelper {
         backgroundColor: backgroundColor ?? ColorsHelper.green,
         behavior: SnackBarBehavior.fixed,
         duration: const Duration(seconds: 3),
+      ),
+    );
+  }
+
+  static void showConfirmationDialog({
+    required BuildContext context,
+    required String message,
+    required VoidCallback onContinue,
+    required VoidCallback onCancel,
+  }) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: Text(
+          message,
+          style: AppTextStyles.cairoPrimaryBold16,
+        ),
+        actions: [
+          TextButton(
+            child: Text(
+              'إلغاء',
+              style: AppTextStyles.cairoPrimaryBold16.copyWith(
+                color: ColorsHelper.red,
+              ),
+            ),
+            onPressed: () {
+              onCancel();
+              context.pop();
+            },
+          ),
+          TextButton(
+            child: Text(
+              'متابعة',
+              style: AppTextStyles.cairoPrimaryBold16.copyWith(
+                color: ColorsHelper.green,
+              ),
+            ),
+            onPressed: () {
+              onContinue();
+              context.pop();
+            },
+          ),
+        ],
       ),
     );
   }

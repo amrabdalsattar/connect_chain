@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,19 +22,25 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
   final ScrollController _scrollController = ScrollController();
 
   void _scrollLeft() {
-    _scrollController.animateTo(
-      _scrollController.offset - 80.w,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeOut,
-    );
+    if (_scrollController.hasClients) {
+      _scrollController.animateTo(
+        (_scrollController.offset - 80.w)
+            .clamp(0.0, _scrollController.position.maxScrollExtent),
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+      );
+    }
   }
 
   void _scrollRight() {
-    _scrollController.animateTo(
-      _scrollController.offset + 80.w,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeOut,
-    );
+    if (_scrollController.hasClients) {
+      _scrollController.animateTo(
+        (_scrollController.offset + 80.w)
+            .clamp(0.0, _scrollController.position.maxScrollExtent),
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+      );
+    }
   }
 
   @override
@@ -50,21 +54,21 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
         Expanded(
           child: SizedBox(
             height: 60.h,
-            child: AbsorbPointer(
-              absorbing: true,
-              child: SingleChildScrollView(
-                controller: _scrollController,
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(
-                    9,
-                    (index) => Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 4.w),
-                      child: ProductImageWidget(
-                        imgFile: File(''),
-                        isSelected: widget.selectedIndex == index,
-                        onTap: () => widget.onImageTap?.call(index),
-                      ),
+            child: SingleChildScrollView(
+              controller: _scrollController,
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                  widget.imagePaths.length,
+                  (index) => Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 4.w),
+                    child: ProductImageWidget(
+                      imageUrl: widget.imagePaths[index],
+                      showDeleteButton: false,
+                      isSelected: widget.selectedIndex == index,
+                      onTap: () {
+                        widget.onImageTap?.call(index);
+                      },
                     ),
                   ),
                 ),

@@ -10,8 +10,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 part 'custom_edit_prodcut_tile_tralling_section.dart';
 part 'edit_product_tile_details_section.dart';
 
-class CustomEditProductTile extends StatelessWidget {
-  const CustomEditProductTile(
+class ManageProductsTile extends StatelessWidget {
+  const ManageProductsTile(
       {super.key,
       required this.productDataModel,
       this.onEdit,
@@ -34,7 +34,7 @@ class CustomEditProductTile extends StatelessWidget {
           color: ColorsHelper.white,
           boxShadow: [
             BoxShadow(
-              color: ColorsHelper.black.withOpacity(0.25),
+              color: ColorsHelper.boxShadow,
               offset: const Offset(0, 2),
               blurRadius: 4,
             ),

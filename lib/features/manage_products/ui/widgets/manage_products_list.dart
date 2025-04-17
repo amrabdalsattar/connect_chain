@@ -18,13 +18,17 @@ class ManageProductsList extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: products.length,
       itemBuilder: (context, index) {
-        return CustomEditProductTile(
+        return ManageProductsTile(
           onTap: () {
             context.pushNamed(Routes.productDetailsScreenRoute,
-                arguments: products[index]);
+                arguments: products[index].id);
           },
           onDelete: () {
             manageProdutsCubit.deleteProduct(products[index].id);
+          },
+          onEdit: () {
+            context.pushNamed(Routes.editProductScreenRoute,
+                arguments: products[index]);
           },
           productDataModel: products[index],
         );
