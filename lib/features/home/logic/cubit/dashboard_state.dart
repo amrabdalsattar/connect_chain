@@ -2,7 +2,6 @@ import 'package:connect_chain/features/home/data/models/response_models/top_sold
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
-import '../../data/models/response_models/monthly_stats_response_model.dart';
 import '../../data/models/response_models/orders_summary_response_model.dart';
 import '../../data/models/response_models/products_summary_response_model.dart';
 
@@ -11,22 +10,6 @@ part 'dashboard_state.freezed.dart';
 @freezed
 class DashboardState with _$DashboardState {
   const factory DashboardState.initial() = _DashboardInitialState;
-
-  // Monthly Statistics States
-  const factory DashboardState.monthlyStatisticsLoading() =
-      MonthlyStatisticsLoadingState;
-  const factory DashboardState.monthlyStatisticsSuccess(
-          MonthlyStatsDataModel monthlyStatsDataModel) =
-      MonthlyStatisticsSuccessState;
-  const factory DashboardState.monthlyStatisticsError(
-      ApiErrorModel apiErrorModel) = MonthlyStatisticsErrorState;
-
-  // Revenue Chart States
-  const factory DashboardState.revenueChartLoading() = RevenueChartLoadingState;
-  const factory DashboardState.revenueChartSuccess(Map<String, num> chartData) =
-      RevenueChartSuccessState;
-  const factory DashboardState.revenueChartError(ApiErrorModel apiErrorModel) =
-      RevenueChartErrorState;
 
   // Orders Summary States
   const factory DashboardState.ordersSummaryLoading() =

@@ -12,7 +12,7 @@ class RevenueChartDataSource {
     final response = await _apiHelper.get(
       ApiRequestModel(
         endPoint: ApiConstants.revenueChartEP,
-        body: {
+        queries: {
           'supplierId': supplierId,
           'year': year,
         },

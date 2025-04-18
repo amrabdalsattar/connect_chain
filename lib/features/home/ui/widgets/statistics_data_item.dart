@@ -49,7 +49,7 @@ class StatisticsDataItem extends StatelessWidget {
                       style: AppTextStyles.cairoBlackBold14,
                       children: [
                         TextSpan(
-                            text: '$value ',
+                            text: '${value.toString()} ',
                             style: AppTextStyles.cairoBlackBold14),
                         TextSpan(
                           text: 'EGP',

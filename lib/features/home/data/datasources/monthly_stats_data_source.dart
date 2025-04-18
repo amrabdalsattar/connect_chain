@@ -13,7 +13,7 @@ class MonthlyStatsDataSource {
     final response = await _apiHelper.get(
       ApiRequestModel(
         endPoint: ApiConstants.monthlyStatsEP,
-        body: requestModel.toJson(),
+        queries: requestModel.toJson(),
       ),
     );
 

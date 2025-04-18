@@ -13,32 +13,6 @@ class DashboardCubit extends Cubit<DashboardState> {
   final String supplierId =
       '20044e2f-7c63-4ea5-a458-c39729d93e62'; // Edit it lama el sabakeen yeb3toh m3 el login response
 
-  void getMonthlyStats() async {
-    emit(const DashboardState.monthlyStatisticsLoading());
-    final result = await _useCase.getMonthlyStats(DashboardRequestModel(
-        supplierId: supplierId, year: currentYear, month: currentMonth));
-    result.when(
-      success: (monthlyStatsDataModel) {
-        emit(DashboardState.monthlyStatisticsSuccess(monthlyStatsDataModel));
-      },
-      failure: (apiErrorModel) => emit(
-        DashboardState.monthlyStatisticsError(apiErrorModel),
-      ),
-    );
-  }
-
-  void getRevenueChartData() async {
-    emit(const DashboardState.revenueChartLoading());
-    final result = await _useCase.getRevenueChartData(
-        supplierId: supplierId, year: currentYear);
-
-    result.when(
-        success: (chartData) =>
-            emit(DashboardState.revenueChartSuccess(chartData)),
-        failure: (apiErrorModel) =>
-            emit(DashboardState.revenueChartError(apiErrorModel)));
-  }
-
   void getOrdersSummary() async {
     emit(const DashboardState.ordersSummaryLoading());
     final result = await _useCase.getOrdersSummary(supplierId);

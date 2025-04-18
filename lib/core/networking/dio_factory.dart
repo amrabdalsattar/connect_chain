@@ -15,6 +15,7 @@ class DioFactory {
       ..options.baseUrl = ApiConstants.baseUrl
       ..options.connectTimeout = ApiConstants.timeOut
       ..options.receiveTimeout = ApiConstants.timeOut;
+
     addDioInterceptors();
     addDioHeaders();
 
