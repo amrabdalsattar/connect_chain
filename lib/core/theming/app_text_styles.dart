@@ -81,12 +81,6 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
-  static TextStyle cairoBlackSemiBold16 = TextStyle(
-    fontSize: 16.sp,
-    color: ColorsHelper.black,
-    fontWeight: FontWeightHelper.semiBold,
-  );
-
   static TextStyle cairoPrimaryBold12 = TextStyle(
     fontSize: 12.sp,
     color: ColorsHelper.primaryColor,
@@ -120,6 +114,18 @@ class AppTextStyles {
     fontSize: 13.sp,
     color: ColorsHelper.black,
     fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle cairoGrayMedium12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.black.withValues(alpha: 0.65),
+    fontWeight: FontWeightHelper.medium,
+  );
+
+  static TextStyle cairoLiteBlueSemiBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.black.withValues(alpha: 0.65),
+    fontWeight: FontWeightHelper.semiBold,
   );
 
   // Tajawal font

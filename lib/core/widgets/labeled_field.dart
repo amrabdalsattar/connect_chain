@@ -26,8 +26,7 @@ class LabeledField extends StatelessWidget {
           children: [
             Text(
               label,
-              style:
-                  AppTextStyles.cairoBlackSemiBold16.copyWith(fontSize: 14.sp),
+              style: AppTextStyles.cairoBlackBold16.copyWith(fontSize: 14.sp),
             ),
             alertMessage != null
                 ? CustomAlertButton(message: alertMessage!)

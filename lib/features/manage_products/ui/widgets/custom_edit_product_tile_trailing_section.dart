@@ -32,7 +32,7 @@ class EditProductTileTrailingSection extends StatelessWidget {
           // Price Section
           Text(
             '${priceFormat(price)} EGP',
-            style: AppTextStyles.cairoBlackSemiBold16
+            style: AppTextStyles.cairoBlackBold16
                 .copyWith(fontWeight: FontWeight.w600),
           )
         ],

@@ -13,7 +13,7 @@ class EditProductTileDetailsSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(productDataModel.name, style: AppTextStyles.cairoBlackSemiBold16),
+        Text(productDataModel.name, style: AppTextStyles.cairoBlackBold16),
         Text('${productDataModel.stock} منتج في المخزن',
             style: AppTextStyles.cairoSemiDarkSemiBold12)
       ],
