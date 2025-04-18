@@ -45,7 +45,7 @@ class ProfileDetailsItem extends StatelessWidget {
             ),
             child: Text(
               'تعديل',
-              style: AppTextStyles.cairoBlackMedium16.copyWith(
+              style: AppTextStyles.cairoBlackBold16.copyWith(
                 decoration: TextDecoration.underline,
                 fontSize: 12,
               ),

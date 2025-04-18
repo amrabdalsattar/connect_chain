@@ -1,4 +1,3 @@
-import '../../../../core/widgets/custom_dropdown_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,6 +6,7 @@ import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/helpers/constant_string.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors_helper.dart';
+import '../../../../core/widgets/custom_dropdown_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../logic/cubit/signup_cubit.dart';
 

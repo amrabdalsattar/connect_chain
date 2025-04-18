@@ -1,7 +1,8 @@
-import '../helpers/app_images.dart';
-import '../helpers/dialogs_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../helpers/app_images.dart';
+import '../helpers/dialogs_helper.dart';
 
 class CustomAlertButton extends StatelessWidget {
   const CustomAlertButton({super.key, required this.message});

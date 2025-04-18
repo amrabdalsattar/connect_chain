@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:mime/mime.dart';
@@ -13,3 +14,5 @@ Future<MultipartFile> convertImageToMultipartFile(
     contentType: MediaType(mimeType[0], mimeType[1]),
   );
 }
+
+// application/octet-stream   or *\*

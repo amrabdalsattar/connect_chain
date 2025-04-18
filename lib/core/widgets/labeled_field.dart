@@ -1,8 +1,9 @@
-import '../helpers/spacing.dart';
-import 'custom_alert_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../helpers/spacing.dart';
 import '../theming/app_text_styles.dart';
+import 'custom_alert_button.dart';
 
 class LabeledField extends StatelessWidget {
   final String label;
@@ -26,7 +27,7 @@ class LabeledField extends StatelessWidget {
           children: [
             Text(
               label,
-              style: AppTextStyles.cairoBlackMedium16.copyWith(fontSize: 14.sp),
+              style: AppTextStyles.cairoBlackBold16.copyWith(fontSize: 14.sp),
             ),
             alertMessage != null
                 ? CustomAlertButton(message: alertMessage!)

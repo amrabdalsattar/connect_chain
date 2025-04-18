@@ -1,17 +1,17 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import '../../data/models/add_product_model.dart';
 import '../../data/repos/add_product_repo.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:image_picker/image_picker.dart';
 
-part 'add_product_state.dart';
 part 'add_product_cubit.freezed.dart';
+part 'add_product_state.dart';
 
 class AddProductCubit extends Cubit<AddProductState> {
   final AddProductRepo _addProductRepo;

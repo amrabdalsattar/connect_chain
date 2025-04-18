@@ -1,11 +1,12 @@
-import '../../../../core/helpers/dialogs_helper.dart';
-import '../../logic/cubit/add_product_cubit.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/widgets/upload_image.dart';
-import '../../../../core/widgets/product_images_list.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/helpers/dialogs_helper.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/widgets/product_images_list.dart';
+import '../../../../core/widgets/upload_image.dart';
+import '../../logic/cubit/add_product_cubit.dart';
 
 class AddProductImagesSection extends StatelessWidget {
   const AddProductImagesSection({super.key});
@@ -30,19 +31,19 @@ class AddProductImagesSection extends StatelessWidget {
         BlocConsumer<AddProductCubit, AddProductState>(
           buildWhen: (previous, current) =>
               current is AddProductImageUploadSuccessState ||
-              current is AddProdcutImageErrorState ||
+              current is AddProductImageErrorState ||
               current is AddProductLoadingState ||
               current is AddProductImageInitial ||
-              current is AddproductImageDeleted,
+              current is AddProductImageDeleted,
           builder: (context, state) {
-            return ProductImageList(
+            return AddProductImagesList(
               imageFiles:
                   addProductCubit.productImages.map((file) => file).toList(),
               onDeleteTap: (image) => addProductCubit.deleteImage(image),
             );
           },
           listener: (context, state) {
-            if (state is AddProdcutImageErrorState) {
+            if (state is AddProductImageErrorState) {
               DialogsHelper.showErrorDialog(context, state.error);
             }
           },

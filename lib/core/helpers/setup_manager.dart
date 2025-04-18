@@ -15,7 +15,7 @@ class SetupManager {
       statusBarColor: ColorsHelper.white,
       statusBarIconBrightness: Brightness.dark,
     ));
-
+// Future.wait()
     await setUpGetIt();
     await SharedPreferencesHelper.init();
     await TokenHelper.checkIfUserIsLoggedIn();

@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
-import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
+import '../../../../core/helpers/cache/user_data_operator.dart';
+import '../../../manage_products/ui/manage_products_screen.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../home/ui/home_tab.dart';

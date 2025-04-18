@@ -1,6 +1,6 @@
-import 'app_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import 'app_text_styles.dart';
 import 'colors_helper.dart';
 
 class ThemesHelper {

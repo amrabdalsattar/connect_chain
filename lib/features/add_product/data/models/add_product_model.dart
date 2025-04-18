@@ -24,13 +24,11 @@ class AddProductRequestModel {
   });
 
   Future<FormData> toFormData() async {
-    final List<MultipartFile> images = [];
-    for (var image in this.images) {
-      final multipartFile = await convertImageToMultipartFile(image, 'Images');
-      images.add(multipartFile);
-    }
+    final multipartImages = await Future.wait(
+      images.map((image) => convertImageToMultipartFile(image, 'Images')),
+    );
 
-    final formMap = {
+    return FormData.fromMap({
       'Name': name,
       'Description': description,
       'Price': price,
@@ -38,10 +36,7 @@ class AddProductRequestModel {
       'Stock': stock,
       'SupplierId': supplierId,
       'CategoryId': categoryId,
-      'Images': images,
-    };
-    return FormData.fromMap(
-      formMap,
-    );
+      'Images': multipartImages,
+    });
   }
 }

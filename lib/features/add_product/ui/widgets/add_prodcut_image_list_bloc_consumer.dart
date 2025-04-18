@@ -13,19 +13,19 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
     return BlocConsumer<AddProductCubit, AddProductState>(
       buildWhen: (previous, current) =>
           current is AddProductImageUploadSuccessState ||
-          current is AddProdcutImageErrorState ||
+          current is AddProductImageErrorState ||
           current is AddProductLoadingState ||
           current is AddProductImageInitial ||
-          current is AddproductImageDeleted,
+          current is AddProductImageDeleted,
       builder: (context, state) {
-        return ProductImageList(
+        return AddProductImagesList(
           imageFiles:
               addProductCubit.productImages.map((file) => file).toList(),
           onDeleteTap: (image) => addProductCubit.deleteImage(image),
         );
       },
       listener: (context, state) {
-        if (state is AddProdcutImageErrorState) {
+        if (state is AddProductImageErrorState) {
           DialogsHelper.showErrorDialog(context, state.error);
         }
       },

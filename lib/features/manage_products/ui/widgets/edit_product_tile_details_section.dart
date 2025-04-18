@@ -1,13 +1,11 @@
 part of 'manage_product_tile.dart';
 
-class EditProducttileDetailsSection extends StatelessWidget {
-  const EditProducttileDetailsSection({
+class EditProductTileDetailsSection extends StatelessWidget {
+  const EditProductTileDetailsSection({
     super.key,
-    required this.name,
-    required this.stock,
+    required this.productDataModel,
   });
-  final String name;
-  final int stock;
+  final ProductDataModel productDataModel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +13,8 @@ class EditProducttileDetailsSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(name, style: AppTextStyles.cairoBlackMedium16),
-        Text('$stock منتج في المخزن',
+        Text(productDataModel.name, style: AppTextStyles.cairoBlackBold16),
+        Text('${productDataModel.stock} منتج في المخزن',
             style: AppTextStyles.cairoSemiDarkSemiBold12)
       ],
     );
