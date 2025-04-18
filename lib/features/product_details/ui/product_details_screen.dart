@@ -1,3 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:connect_chain/core/widgets/loading_indicator.dart';
+
 import '../../../core/helpers/app_images.dart';
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/helpers/spacing.dart';
@@ -8,7 +11,6 @@ import '../../../core/widgets/custom_app_bar.dart';
 import '../../../core/widgets/custom_images_slider.dart';
 import '../../add_product/ui/add_product_screen.dart';
 import '../../home/ui/widgets/statistics_data_item.dart';
-import '../../manage_products/data/models/manage_supplier_products_request_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,8 +21,8 @@ import '../logic/cubit/product_details_cubit.dart';
 
 part 'widgets/product_details_images_section.dart';
 
-class ProductDeatilsScreen extends StatelessWidget {
-  const ProductDeatilsScreen({super.key, required this.productResponseModel});
+class ProductDetailsScreen extends StatelessWidget {
+  const ProductDetailsScreen({super.key, required this.productResponseModel});
 
   final ProductDetailsResponseModel productResponseModel;
   @override
@@ -119,8 +121,7 @@ class ProductDetailsLowerWidget extends StatelessWidget {
             'معلومات المخزون',
             style: AppTextStyles.cairoBlackBold16,
           ),
-          verticalSpace(8),
-
+          verticalSpace(16),
           // Statistics Data Row
           Row(
             children: [

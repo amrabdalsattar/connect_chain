@@ -1,4 +1,4 @@
-import '../../../../../../core/widgets/loading_indicator.dart';
+import '../../../../../../core/widgets/shimmer_loading_list.dart';
 import '../../../../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
 import 'most_selling_products_list_view.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +15,13 @@ class MostSellingProductsBlocBuilder extends StatelessWidget {
         builder: (_, state) {
       switch (state) {
         case TopSoldProductsLoadingState():
-          return const Center(child: LoadingIndicator());
+          return const ShimmerLoadingList(
+            itemCount: 3,
+            containerHeight: 110,
+            containerWidth: 110,
+            scrollDirection: Axis.horizontal,
+            listHeight: 88,
+          );
         case TopSoldProductsFailureState():
           return Text(state.apiErrorModel.getErrorMessages()!);
         case TopSoldProductsSuccessState():

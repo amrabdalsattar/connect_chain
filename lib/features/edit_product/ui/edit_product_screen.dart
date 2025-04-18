@@ -6,12 +6,13 @@ import 'package:connect_chain/core/widgets/custom_button.dart';
 import 'package:connect_chain/core/widgets/custom_dropdown_button.dart';
 import 'package:connect_chain/core/widgets/editable_text_form_field.dart';
 import 'package:connect_chain/core/widgets/labeled_field.dart';
-import 'package:connect_chain/core/widgets/product_images_list.dart';
 import 'package:connect_chain/core/widgets/upload_image.dart';
 import 'package:connect_chain/features/edit_product/logic/cubit/edit_product_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/widgets/product_image_list.dart';
 
 // Parts of The Screen
 part 'widgets/edit_product_details_section.dart';

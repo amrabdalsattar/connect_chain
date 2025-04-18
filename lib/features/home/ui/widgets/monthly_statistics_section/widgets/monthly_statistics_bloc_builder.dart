@@ -1,5 +1,4 @@
-import '../../../../../../core/theming/colors_helper.dart';
-import '../../../../../../core/widgets/loading_indicator.dart';
+import '../../../../../../core/widgets/shimmer_loading_list.dart';
 import '../../../../logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
 import 'monthly_statistics_data.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +20,12 @@ class MonthlyStatisticsBlocBuilder extends StatelessWidget {
       builder: (_, state) {
         switch (state) {
           case MonthlyStatisticsLoadingState():
-            return const LoadingIndicator(
-              color: ColorsHelper.primaryColor,
+            return const ShimmerLoadingList(
+              itemCount: 3,
+              containerHeight: 88,
+              containerWidth: 100,
+              scrollDirection: Axis.horizontal,
+              listHeight: 88,
             );
           case MonthlyStatisticsErrorState():
             return Text(

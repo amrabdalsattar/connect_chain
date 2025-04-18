@@ -20,7 +20,13 @@ class ManageProductsBlocConsumer extends StatelessWidget {
             products: state.products.data,
           );
         } else if (state is ManageProductsLoadingState) {
-          return const Center(child: CircularProgressIndicator());
+          return ShimmerLoadingList(
+            itemCount: 4,
+            listHeight: MediaQuery.of(context).size.height,
+            containerHeight: 80,
+            containerWidth: 100,
+            scrollDirection: Axis.vertical,
+          );
         } else {
           return const Center(
             child: Text('No Products Was found'),

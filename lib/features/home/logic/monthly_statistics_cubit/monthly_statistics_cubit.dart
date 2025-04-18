@@ -16,13 +16,14 @@ class MonthlyStatisticsCubit extends Cubit<MonthlyStatisticsState> {
     emit(const MonthlyStatisticsLoadingState());
     final result = await _repo.getMonthlyStats(DashboardRequestModel(
         supplierId: supplierId, year: currentYear, month: currentMonth));
-    result.when(
-      success: (monthlyStatsDataModel) {
+    result.when(success: (monthlyStatsDataModel) {
+      if (!isClosed) {
         emit(MonthlyStatisticsSuccessState(monthlyStatsDataModel));
-      },
-      failure: (apiErrorModel) => emit(
-        MonthlyStatisticsErrorState(apiErrorModel),
-      ),
-    );
+      }
+    }, failure: (apiErrorModel) {
+      if (!isClosed) {
+        emit(MonthlyStatisticsErrorState(apiErrorModel));
+      }
+    });
   }
 }

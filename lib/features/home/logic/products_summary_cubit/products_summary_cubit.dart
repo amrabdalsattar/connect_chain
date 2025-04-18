@@ -14,10 +14,14 @@ class ProductsSummaryCubit extends Cubit<ProductsSummaryState> {
     emit(const ProductsSummaryLoadingState());
     final result = await _repo.getProductsSummary(supplierId);
 
-    result.when(
-        success: (productsSummaryDataModel) =>
-            emit(ProductsSummarySuccessState(productsSummaryDataModel)),
-        failure: (apiErrorModel) =>
-            emit(ProductsSummaryFailureState(apiErrorModel)));
+    result.when(success: (productsSummaryDataModel) {
+      if (!isClosed) {
+        emit(ProductsSummarySuccessState(productsSummaryDataModel));
+      }
+    }, failure: (apiErrorModel) {
+      if (!isClosed) {
+        emit(ProductsSummaryFailureState(apiErrorModel));
+      }
+    });
   }
 }

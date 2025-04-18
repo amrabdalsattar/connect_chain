@@ -19,7 +19,13 @@ class CustomTwoButtonsRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomButton(title: rightText, width: 166.w, onTap: onRightTap),
+          CustomButton(
+            title: rightText,
+            width: 166.w,
+            onTap: onRightTap,
+            borderColor: ColorsHelper.primaryColor,
+            radius: 12,
+          ),
           CustomButton(
             onTap: onLeftTap,
             textStyle: AppTextStyles.cairoBlackBold16
@@ -27,6 +33,7 @@ class CustomTwoButtonsRow extends StatelessWidget {
             title: leftText,
             width: 166.w,
             color: ColorsHelper.white,
+            radius: 12,
           ),
         ],
       ),

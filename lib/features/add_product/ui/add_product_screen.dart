@@ -1,5 +1,3 @@
-import 'package:connect_chain/core/widgets/product_images_list.dart';
-
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/helpers/extensions.dart';
 import '../../../core/helpers/spacing.dart';
@@ -11,6 +9,7 @@ import '../../../core/widgets/custom_dropdown_button.dart';
 import '../../../core/widgets/custom_text_form_field.dart';
 import '../../../core/widgets/labeled_field_row.dart';
 import '../../../core/widgets/labeled_field.dart';
+import '../../../core/widgets/product_image_list.dart';
 import '../../../core/widgets/upload_image.dart';
 import '../logic/cubit/add_product_cubit.dart';
 import 'package:flutter/material.dart';

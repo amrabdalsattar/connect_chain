@@ -40,15 +40,19 @@ class ProductDetailsImagesSection extends StatelessWidget {
                     transitionBuilder: (child, animation) {
                       return FadeTransition(opacity: animation, child: child);
                     },
-                    child: Image.network(
-                      imageUrl,
-                      key: ValueKey(imageUrl),
-                      width: 343.w,
-                      height: 230.h,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) =>
-                          const Center(
-                        child: Text('Image not available'),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(18.r),
+                      child: CachedNetworkImage(
+                        imageUrl: imageUrl,
+                        key: ValueKey(imageUrl),
+                        width: double.infinity,
+                        height: 230.h,
+                        fit: BoxFit.cover,
+                        placeholder: (_, __) => const LoadingIndicator(),
+                        errorWidget: (context, error, stackTrace) =>
+                            const Center(
+                          child: Text('Image not available'),
+                        ),
                       ),
                     ),
                   ),
@@ -68,11 +72,6 @@ class ProductDetailsImagesSection extends StatelessWidget {
             },
           ),
           verticalSpace(16),
-          // Image Carousal section
-          const CustomImageSlider(
-            imagePaths: [],
-          ),
-          verticalSpace(25.5)
         ],
       ),
     );

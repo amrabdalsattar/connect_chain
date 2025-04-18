@@ -20,10 +20,14 @@ class TopSoldProductsCubit extends Cubit<TopSoldProductsState> {
       month: currentMonth,
       limit: 5,
     ));
-    result.when(
-        success: (topSoldProducts) =>
-            emit(TopSoldProductsSuccessState(topSoldProducts)),
-        failure: (apiErrorModel) =>
-            emit(TopSoldProductsFailureState(apiErrorModel)));
+    result.when(success: (topSoldProducts) {
+      if (!isClosed) {
+        emit(TopSoldProductsSuccessState(topSoldProducts));
+      }
+    }, failure: (apiErrorModel) {
+      if (!isClosed) {
+        emit(TopSoldProductsFailureState(apiErrorModel));
+      }
+    });
   }
 }

@@ -1,7 +1,7 @@
 import '../../data/repos/orders_summary_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'dashboard_state.dart';
+import 'orders_summary_state.dart';
 
 class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {
   final OrdersSummaryRepo _repo;
@@ -15,10 +15,14 @@ class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {
     emit(const OrdersSummaryLoadingState());
     final result = await _repo.getOrdersSummary(supplierId);
 
-    result.when(
-        success: (ordersSummaryDataModel) =>
-            emit(OrdersSummarySuccessState(ordersSummaryDataModel)),
-        failure: (apiErrorModel) =>
-            emit(OrdersSummaryFailureState(apiErrorModel)));
+    result.when(success: (ordersSummaryDataModel) {
+      if (!isClosed) {
+        emit(OrdersSummarySuccessState(ordersSummaryDataModel));
+      }
+    }, failure: (apiErrorModel) {
+      if (!isClosed) {
+        emit(OrdersSummaryFailureState(apiErrorModel));
+      }
+    });
   }
 }

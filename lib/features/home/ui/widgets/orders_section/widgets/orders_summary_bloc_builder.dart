@@ -1,5 +1,5 @@
-import '../../../../../../core/widgets/loading_indicator.dart';
-import '../../../../logic/orders_summary_cubit/dashboard_state.dart';
+import '../../../../../../core/widgets/shimmer_loading_list.dart';
+import '../../../../logic/orders_summary_cubit/orders_summary_state.dart';
 import '../../../../logic/orders_summary_cubit/orders_summary_cubit.dart';
 import 'orders_section_data.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,13 @@ class OrdersSummaryBlocBuilder extends StatelessWidget {
       builder: (_, state) {
         switch (state) {
           case OrdersSummaryLoadingState():
-            return const LoadingIndicator();
+            return const ShimmerLoadingList(
+              itemCount: 3,
+              containerHeight: 88,
+              containerWidth: 100,
+              scrollDirection: Axis.horizontal,
+              listHeight: 88,
+            );
           case OrdersSummaryFailureState():
             return Text(state.apiErrorModel.getErrorMessages()!);
           case OrdersSummarySuccessState():

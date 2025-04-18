@@ -15,10 +15,15 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
   void getSupplierProducts() async {
     emit(const ManageProductsState.loading());
     final result = await _manageProductsRepo.getSupplierProducts();
-    result.when(
-        success: (manageRequestModel) =>
-            emit(ManageProductsState.success(manageRequestModel)),
-        failure: (error) => emit(ManageProductsState.error(error)));
+    result.when(success: (manageRequestModel) {
+      if (!isClosed) {
+        emit(ManageProductsState.success(manageRequestModel));
+      }
+    }, failure: (error) {
+      if (!isClosed) {
+        emit(ManageProductsState.error(error));
+      }
+    });
   }
 
   void deleteProduct(int productId) async {

@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/dialogs_helper.dart';
 
-import '../../../../core/widgets/product_images_list.dart';
+import '../../../../core/widgets/product_image_list.dart';
 import '../../../../core/widgets/upload_image.dart';
 
 import '../../../../core/helpers/spacing.dart';

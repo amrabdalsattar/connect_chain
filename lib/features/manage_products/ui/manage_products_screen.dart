@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/theming/colors_helper.dart';
+import '../../../core/widgets/shimmer_loading_list.dart';
 import '../logic/cubit/manage_products_cubit.dart';
 import 'widgets/custom_search_text_form_field.dart';
 

@@ -44,8 +44,8 @@ class ColorsHelper {
 
   static const Color subText = Color(0xff6B7280);
 
-  static const Color shimmerMidGrey = Color.fromARGB(18, 95, 95, 96);
-  static const Color shimmerLiteGrey = Color.fromARGB(34, 95, 95, 96);
+  static const Color shimmerHighlightColor = Color.fromARGB(14, 95, 95, 96);
+  static const Color shimmerBaseColor = Color.fromARGB(25, 95, 95, 96);
 
   // Profile Header Gradient Colors.
   static const Color profileHeaderGradientEnd = Color(0xff8C5014);

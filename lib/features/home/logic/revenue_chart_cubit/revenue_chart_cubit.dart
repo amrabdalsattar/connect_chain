@@ -16,12 +16,15 @@ class RevenueChartCubit extends Cubit<RevenueChartState> {
     final result = await _repo.getRevenueChartData(
         supplierId: supplierId, year: currentYear);
 
-    result.when(
-        success: (chartData) {
-          emit(RevenueChartSuccessState(_getLineChartSpots(chartData)));
-        },
-        failure: (apiErrorModel) =>
-            emit(RevenueChartFailureState(apiErrorModel)));
+    result.when(success: (chartData) {
+      if (!isClosed) {
+        emit(RevenueChartSuccessState(_getLineChartSpots(chartData)));
+      }
+    }, failure: (apiErrorModel) {
+      if (!isClosed) {
+        emit(RevenueChartFailureState(apiErrorModel));
+      }
+    });
   }
 
   Map<String, num> _getLineChartSpots(Map<String, num> spots) {

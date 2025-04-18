@@ -31,8 +31,8 @@ class ProductImageWidget extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Container(
-            height: 52.h,
-            width: 62.w,
+            height: 70.h,
+            width: 70.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
