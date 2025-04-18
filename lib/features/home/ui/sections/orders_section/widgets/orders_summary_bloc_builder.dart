@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/widgets/loading_indicator.dart';
-import 'package:connect_chain/features/home/logic/orders_summary_cubit/dashboard_state.dart';
-import 'package:connect_chain/features/home/logic/orders_summary_cubit/orders_summary_cubit.dart';
-import 'package:connect_chain/features/home/ui/sections/orders_section/widgets/orders_section_data.dart';
+import '../../../../../../core/widgets/loading_indicator.dart';
+import '../../../../logic/orders_summary_cubit/dashboard_state.dart';
+import '../../../../logic/orders_summary_cubit/orders_summary_cubit.dart';
+import 'orders_section_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

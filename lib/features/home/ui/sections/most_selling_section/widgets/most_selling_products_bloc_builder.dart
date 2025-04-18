@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/widgets/loading_indicator.dart';
-import 'package:connect_chain/features/home/logic/top_sold_products_cubit/top_sold_products_cubit.dart';
-import 'package:connect_chain/features/home/ui/sections/most_selling_section/widgets/most_selling_products_list_view.dart';
+import '../../../../../../core/widgets/loading_indicator.dart';
+import '../../../../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
+import 'most_selling_products_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

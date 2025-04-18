@@ -1,11 +1,11 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../../core/helpers/app_images.dart';
 import '../../../../../../core/helpers/spacing.dart';
 import '../../../../../../core/theming/colors_helper.dart';
+import '../../../../../../core/utils/format_utils.dart';
 import '../../../../data/models/response_models/monthly_stats_response_model.dart';
 import '../../../widgets/statistics_data_item.dart';
-import 'package:flutter/material.dart';
-
-import '../../../../../../core/utils/format_utils.dart';
 
 class MonthlyStatisticsData extends StatelessWidget {
   final MonthlyStatsDataModel monthlyStatsDataModel;

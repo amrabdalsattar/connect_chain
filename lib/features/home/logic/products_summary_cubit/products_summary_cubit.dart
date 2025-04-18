@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/home/data/repos/products_summary_repo.dart';
-import 'package:connect_chain/features/home/logic/products_summary_cubit/products_summary_states.dart';
+import '../../data/repos/products_summary_repo.dart';
+import 'products_summary_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductsSummaryCubit extends Cubit<ProductsSummaryState> {

@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
-import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/manage_supplier_products_request_model.dart';
+import '../../data/repos/manage_products_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

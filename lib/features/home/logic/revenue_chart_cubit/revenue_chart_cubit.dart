@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/home/logic/revenue_chart_cubit/revenue_chart_states.dart';
+import 'revenue_chart_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/repos/revenue_chart_repo.dart';

@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/home/data/repos/orders_summary_repo.dart';
+import '../../data/repos/orders_summary_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'dashboard_state.dart';

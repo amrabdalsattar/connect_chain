@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/home/data/models/response_models/products_summary_response_model.dart';
+import '../../../../data/models/response_models/products_summary_response_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/helpers/app_images.dart';

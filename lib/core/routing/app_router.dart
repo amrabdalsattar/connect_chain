@@ -1,8 +1,8 @@
-import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
-import 'package:connect_chain/features/product_details/ui/product_details_screen.dart';
+import '../../features/manage_products/data/models/manage_supplier_products_request_model.dart';
+import '../../features/product_details/ui/product_details_screen.dart';
 
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
-import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
+import '../../features/manage_products/ui/manage_products_screen.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';

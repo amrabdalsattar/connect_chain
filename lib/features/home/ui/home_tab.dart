@@ -1,14 +1,14 @@
-import 'package:connect_chain/core/di/dependency_injection.dart';
-import 'package:connect_chain/features/home/data/repos/monthly_stats_repo.dart';
-import 'package:connect_chain/features/home/data/repos/orders_summary_repo.dart';
-import 'package:connect_chain/features/home/data/repos/products_summary_repo.dart';
-import 'package:connect_chain/features/home/data/repos/revenue_chart_repo.dart';
-import 'package:connect_chain/features/home/logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
-import 'package:connect_chain/features/home/logic/orders_summary_cubit/orders_summary_cubit.dart';
-import 'package:connect_chain/features/home/logic/products_summary_cubit/products_summary_cubit.dart';
-import 'package:connect_chain/features/home/logic/revenue_chart_cubit/revenue_chart_cubit.dart';
-import 'package:connect_chain/features/home/logic/top_sold_products_cubit/top_sold_products_cubit.dart';
-import 'package:connect_chain/features/home/ui/sections/monthly_statistics_section/monthly_statistics_section.dart';
+import '../../../core/di/dependency_injection.dart';
+import '../data/repos/monthly_stats_repo.dart';
+import '../data/repos/orders_summary_repo.dart';
+import '../data/repos/products_summary_repo.dart';
+import '../data/repos/revenue_chart_repo.dart';
+import '../logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
+import '../logic/orders_summary_cubit/orders_summary_cubit.dart';
+import '../logic/products_summary_cubit/products_summary_cubit.dart';
+import '../logic/revenue_chart_cubit/revenue_chart_cubit.dart';
+import '../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
+import 'sections/monthly_statistics_section/monthly_statistics_section.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/helpers/spacing.dart';

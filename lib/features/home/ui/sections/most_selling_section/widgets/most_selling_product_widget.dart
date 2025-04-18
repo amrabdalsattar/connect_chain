@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/widgets/loading_indicator.dart';
-import 'package:connect_chain/features/home/data/models/response_models/top_sold_products_response_model.dart';
-import 'package:connect_chain/features/home/ui/sections/most_selling_section/widgets/sold_quantity_text_span.dart';
+import '../../../../../../core/theming/app_text_styles.dart';
+import '../../../../../../core/theming/colors_helper.dart';
+import '../../../../../../core/widgets/loading_indicator.dart';
+import '../../../../data/models/response_models/top_sold_products_response_model.dart';
+import 'sold_quantity_text_span.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

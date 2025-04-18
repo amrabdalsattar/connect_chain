@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/home/data/models/response_models/orders_summary_response_model.dart';
+import '../../../../data/models/response_models/orders_summary_response_model.dart';
 
 import '../../../../../../core/helpers/app_images.dart';
 import '../../../../../../core/helpers/spacing.dart';

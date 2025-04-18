@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/home/logic/revenue_chart_cubit/revenue_chart_cubit.dart';
-import 'package:connect_chain/features/home/logic/revenue_chart_cubit/revenue_chart_states.dart';
+import '../../../../logic/revenue_chart_cubit/revenue_chart_cubit.dart';
+import '../../../../logic/revenue_chart_cubit/revenue_chart_states.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

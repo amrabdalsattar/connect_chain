@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/home/data/datasources/revenue_chart_data_source.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasources/revenue_chart_data_source.dart';
 
 class RevenueChartRepo {
   final RevenueChartDataSource _dataSource;

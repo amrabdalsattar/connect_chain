@@ -1,12 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/utils/format_utils.dart';
-import 'package:connect_chain/core/widgets/custom_icon_button.dart';
-import 'package:connect_chain/core/widgets/loading_indicator.dart';
-import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theming/colors_helper.dart';
+import '../../../../core/utils/format_utils.dart';
+import '../../../../core/widgets/custom_icon_button.dart';
+import '../../../../core/widgets/loading_indicator.dart';
+import '../../data/models/manage_supplier_products_request_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,9 +1,10 @@
-import '../helpers/spacing.dart';
-import '../theming/app_text_styles.dart';
-import '../theming/colors_helper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../helpers/spacing.dart';
+import '../theming/app_text_styles.dart';
+import '../theming/colors_helper.dart';
 
 class UploadImageWidget extends StatelessWidget {
   const UploadImageWidget({

@@ -1,6 +1,3 @@
-import 'package:connect_chain/features/home/ui/sections/orders_section/widgets/orders_summary_bloc_builder.dart';
-
-import '../../../../main/logic/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,6 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/app_text_styles.dart';
 import '../../../../../core/theming/colors_helper.dart';
+import '../../../../main/logic/cubit/main_cubit.dart';
+import 'widgets/orders_summary_bloc_builder.dart';
 
 class OrdersSection extends StatelessWidget {
   const OrdersSection({super.key});

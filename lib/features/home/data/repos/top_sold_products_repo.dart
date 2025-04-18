@@ -1,8 +1,8 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/home/data/datasources/top_sold_products_datasource.dart';
-import 'package:connect_chain/features/home/data/models/request_models/dashboard_request_model.dart';
-import 'package:connect_chain/features/home/data/models/response_models/top_sold_products_response_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasources/top_sold_products_datasource.dart';
+import '../models/request_models/dashboard_request_model.dart';
+import '../models/response_models/top_sold_products_response_model.dart';
 
 class TopSoldProductsRepo {
   final TopSoldProductsDatasource _datasource;

@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../helpers/spacing.dart';
 import 'labeled_field.dart';
-import 'package:flutter/material.dart';
 
 class LabeledFieldRow extends StatelessWidget {
   final LabeledField left;
