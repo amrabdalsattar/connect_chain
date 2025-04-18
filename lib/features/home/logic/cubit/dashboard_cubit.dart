@@ -1,32 +1,22 @@
-import 'package:connect_chain/features/home/data/repos/monthly_stats_repo.dart';
-import 'package:connect_chain/features/home/data/repos/orders_summary_repo.dart';
-import 'package:connect_chain/features/home/data/repos/products_summary_repo.dart';
-import 'package:connect_chain/features/home/data/repos/revenue_chart_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/models/request_models/dashboard_request_model.dart';
+import '../../domain/dashboard_use_case.dart';
 import 'dashboard_state.dart';
 
 class DashboardCubit extends Cubit<DashboardState> {
-  final MonthlyStatsRepo monthlyStatsRepo;
-  final RevenueChartRepo revenueChartRepo;
-  final OrdersSummaryRepo ordersSummaryRepo;
-  final ProductsSummaryRepo productsSummaryRepo;
-  DashboardCubit(
-      {required this.revenueChartRepo,
-      required this.ordersSummaryRepo,
-      required this.productsSummaryRepo,
-      required this.monthlyStatsRepo})
-      : super(const DashboardState.initial());
+  final DashboardUseCase _useCase;
+  DashboardCubit(this._useCase) : super(const DashboardState.initial());
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
   final String supplierId =
       '20044e2f-7c63-4ea5-a458-c39729d93e62'; // Edit it lama el sabakeen yeb3toh m3 el login response
 
-  void emitMonthlyStatisticsStates() async {
+  void getMonthlyStats() async {
     emit(const DashboardState.monthlyStatisticsLoading());
-    final result = await monthlyStatsRepo.getMonthlyStats(
-        supplierId: supplierId, year: currentYear, month: currentMonth);
+    final result = await _useCase.getMonthlyStats(DashboardRequestModel(
+        supplierId: supplierId, year: currentYear, month: currentMonth));
     result.when(
       success: (monthlyStatsDataModel) {
         emit(DashboardState.monthlyStatisticsSuccess(monthlyStatsDataModel));
@@ -37,9 +27,9 @@ class DashboardCubit extends Cubit<DashboardState> {
     );
   }
 
-  void emitRevenueChartStates() async {
+  void getRevenueChartData() async {
     emit(const DashboardState.revenueChartLoading());
-    final result = await revenueChartRepo.getRevenueChartData(
+    final result = await _useCase.getRevenueChartData(
         supplierId: supplierId, year: currentYear);
 
     result.when(
@@ -49,9 +39,9 @@ class DashboardCubit extends Cubit<DashboardState> {
             emit(DashboardState.revenueChartError(apiErrorModel)));
   }
 
-  void emitOrdersSummaryStates() async {
+  void getOrdersSummary() async {
     emit(const DashboardState.ordersSummaryLoading());
-    final result = await ordersSummaryRepo.getOrdersSummary(supplierId);
+    final result = await _useCase.getOrdersSummary(supplierId);
 
     result.when(
         success: (ordersSummaryDataModel) =>
@@ -60,14 +50,29 @@ class DashboardCubit extends Cubit<DashboardState> {
             emit(DashboardState.ordersSummaryError(apiErrorModel)));
   }
 
-  void emitProductsSummaryStates() async {
+  void getProductsSummary() async {
     emit(const DashboardState.productsSummaryLoading());
-    final result = await productsSummaryRepo.getProductsSummary(supplierId);
+    final result = await _useCase.getProductsSummary(supplierId);
 
     result.when(
         success: (productsSummaryDataModel) => emit(
             DashboardState.productsSummarySuccess(productsSummaryDataModel)),
         failure: (apiErrorModel) =>
             emit(DashboardState.productsSummaryError(apiErrorModel)));
+  }
+
+  void getTopSoldProducts() async {
+    emit(const DashboardState.topSoldProductsLoading());
+    final result = await _useCase.getTopSoldProducts(DashboardRequestModel(
+      supplierId: supplierId,
+      year: currentYear,
+      month: currentMonth,
+      limit: 5,
+    ));
+    result.when(
+        success: (topSoldProducts) =>
+            emit(DashboardState.topSoldProductsSuccess(topSoldProducts)),
+        failure: (apiErrorModel) =>
+            emit(DashboardState.topSoldProductsError(apiErrorModel)));
   }
 }

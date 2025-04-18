@@ -1,4 +1,5 @@
 import 'package:connect_chain/core/di/dependency_injection.dart';
+import 'package:connect_chain/features/home/domain/dashboard_use_case.dart';
 import 'package:connect_chain/features/home/logic/cubit/dashboard_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,13 +13,26 @@ import 'widgets/products_summary_section/products_summary_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HomeTab extends StatelessWidget {
+class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
+
+  @override
+  State<HomeTab> createState() => _HomeTabState();
+}
+
+class _HomeTabState extends State<HomeTab> {
+  late final DashboardCubit dashboardCubit;
+
+  @override
+  void initState() {
+    dashboardCubit = DashboardCubit(getIt<DashboardUseCase>());
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<DashboardCubit>(),
+      create: (context) => dashboardCubit,
       child: Scaffold(
         backgroundColor: ColorsHelper.homeScaffoldColor,
         appBar: const HomeTabAppBar(),

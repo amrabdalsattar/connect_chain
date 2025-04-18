@@ -1,4 +1,6 @@
-import 'package:connect_chain/features/home/logic/cubit/dashboard_cubit.dart';
+import 'package:connect_chain/features/home/data/datasources/top_sold_products_datasource.dart';
+import 'package:connect_chain/features/home/data/repos/top_sold_products_repo.dart';
+import 'package:connect_chain/features/home/domain/dashboard_use_case.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -73,10 +75,16 @@ Future<void> setUpGetIt() async {
   getIt.registerLazySingleton<ProductsSummaryRepo>(
       () => ProductsSummaryRepo(getIt()));
 
-  getIt.registerFactory<DashboardCubit>(() => DashboardCubit(
-        monthlyStatsRepo: getIt(),
-        ordersSummaryRepo: getIt(),
-        productsSummaryRepo: getIt(),
-        revenueChartRepo: getIt(),
+  getIt.registerLazySingleton<TopSoldProductsDatasource>(
+      () => TopSoldProductsDatasource(getIt()));
+  getIt.registerLazySingleton<TopSoldProductsRepo>(
+      () => TopSoldProductsRepo(getIt()));
+
+  getIt.registerLazySingleton<DashboardUseCase>(() => DashboardUseCase(
+        monthlyStatsRepo: getIt<MonthlyStatsRepo>(),
+        revenueChartRepo: getIt<RevenueChartRepo>(),
+        ordersSummaryRepo: getIt<OrdersSummaryRepo>(),
+        productsSummaryRepo: getIt<ProductsSummaryRepo>(),
+        topSoldProductsRepo: getIt<TopSoldProductsRepo>(),
       ));
 }

@@ -1,6 +1,6 @@
 import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
 import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/home/data/models/orders_summary_response_model.dart';
+import 'package:connect_chain/features/home/data/models/response_models/orders_summary_response_model.dart';
 
 import '../datasources/orders_summary_datasource.dart';
 

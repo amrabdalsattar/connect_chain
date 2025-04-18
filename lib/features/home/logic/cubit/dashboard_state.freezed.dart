@@ -35,6 +35,10 @@ mixin _$DashboardState {
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,10 @@ mixin _$DashboardState {
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,93 +83,93 @@ mixin _$DashboardState {
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -248,6 +256,10 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return initial();
   }
@@ -271,6 +283,10 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return initial?.call();
   }
@@ -294,6 +310,10 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -306,30 +326,34 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return initial(this);
   }
@@ -338,30 +362,28 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return initial?.call(this);
   }
@@ -370,29 +392,23 @@ class _$DashboardInitialStateImpl implements _DashboardInitialState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -407,21 +423,21 @@ abstract class _DashboardInitialState implements DashboardState {
 }
 
 /// @nodoc
-abstract class _$$DashboardMonthlyStatisticsLoadingStateImplCopyWith<$Res> {
-  factory _$$DashboardMonthlyStatisticsLoadingStateImplCopyWith(
-          _$DashboardMonthlyStatisticsLoadingStateImpl value,
-          $Res Function(_$DashboardMonthlyStatisticsLoadingStateImpl) then) =
-      __$$DashboardMonthlyStatisticsLoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$MonthlyStatisticsLoadingStateImplCopyWith<$Res> {
+  factory _$$MonthlyStatisticsLoadingStateImplCopyWith(
+          _$MonthlyStatisticsLoadingStateImpl value,
+          $Res Function(_$MonthlyStatisticsLoadingStateImpl) then) =
+      __$$MonthlyStatisticsLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DashboardMonthlyStatisticsLoadingStateImplCopyWithImpl<$Res>
+class __$$MonthlyStatisticsLoadingStateImplCopyWithImpl<$Res>
     extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardMonthlyStatisticsLoadingStateImpl>
-    implements _$$DashboardMonthlyStatisticsLoadingStateImplCopyWith<$Res> {
-  __$$DashboardMonthlyStatisticsLoadingStateImplCopyWithImpl(
-      _$DashboardMonthlyStatisticsLoadingStateImpl _value,
-      $Res Function(_$DashboardMonthlyStatisticsLoadingStateImpl) _then)
+        _$MonthlyStatisticsLoadingStateImpl>
+    implements _$$MonthlyStatisticsLoadingStateImplCopyWith<$Res> {
+  __$$MonthlyStatisticsLoadingStateImplCopyWithImpl(
+      _$MonthlyStatisticsLoadingStateImpl _value,
+      $Res Function(_$MonthlyStatisticsLoadingStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -430,9 +446,9 @@ class __$$DashboardMonthlyStatisticsLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardMonthlyStatisticsLoadingStateImpl
-    implements _DashboardMonthlyStatisticsLoadingState {
-  const _$DashboardMonthlyStatisticsLoadingStateImpl();
+class _$MonthlyStatisticsLoadingStateImpl
+    implements MonthlyStatisticsLoadingState {
+  const _$MonthlyStatisticsLoadingStateImpl();
 
   @override
   String toString() {
@@ -443,7 +459,7 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardMonthlyStatisticsLoadingStateImpl);
+            other is _$MonthlyStatisticsLoadingStateImpl);
   }
 
   @override
@@ -469,6 +485,10 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return monthlyStatisticsLoading();
   }
@@ -492,6 +512,10 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return monthlyStatisticsLoading?.call();
   }
@@ -515,6 +539,10 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsLoading != null) {
@@ -527,30 +555,34 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return monthlyStatisticsLoading(this);
   }
@@ -559,30 +591,28 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return monthlyStatisticsLoading?.call(this);
   }
@@ -591,29 +621,23 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsLoading != null) {
@@ -623,30 +647,29 @@ class _$DashboardMonthlyStatisticsLoadingStateImpl
   }
 }
 
-abstract class _DashboardMonthlyStatisticsLoadingState
-    implements DashboardState {
-  const factory _DashboardMonthlyStatisticsLoadingState() =
-      _$DashboardMonthlyStatisticsLoadingStateImpl;
+abstract class MonthlyStatisticsLoadingState implements DashboardState {
+  const factory MonthlyStatisticsLoadingState() =
+      _$MonthlyStatisticsLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$DashboardMonthlyStatisticsSuccessStateImplCopyWith<$Res> {
-  factory _$$DashboardMonthlyStatisticsSuccessStateImplCopyWith(
-          _$DashboardMonthlyStatisticsSuccessStateImpl value,
-          $Res Function(_$DashboardMonthlyStatisticsSuccessStateImpl) then) =
-      __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$MonthlyStatisticsSuccessStateImplCopyWith<$Res> {
+  factory _$$MonthlyStatisticsSuccessStateImplCopyWith(
+          _$MonthlyStatisticsSuccessStateImpl value,
+          $Res Function(_$MonthlyStatisticsSuccessStateImpl) then) =
+      __$$MonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({MonthlyStatsDataModel monthlyStatsDataModel});
 }
 
 /// @nodoc
-class __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>
+class __$$MonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>
     extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardMonthlyStatisticsSuccessStateImpl>
-    implements _$$DashboardMonthlyStatisticsSuccessStateImplCopyWith<$Res> {
-  __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl(
-      _$DashboardMonthlyStatisticsSuccessStateImpl _value,
-      $Res Function(_$DashboardMonthlyStatisticsSuccessStateImpl) _then)
+        _$MonthlyStatisticsSuccessStateImpl>
+    implements _$$MonthlyStatisticsSuccessStateImplCopyWith<$Res> {
+  __$$MonthlyStatisticsSuccessStateImplCopyWithImpl(
+      _$MonthlyStatisticsSuccessStateImpl _value,
+      $Res Function(_$MonthlyStatisticsSuccessStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -656,7 +679,7 @@ class __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>
   $Res call({
     Object? monthlyStatsDataModel = null,
   }) {
-    return _then(_$DashboardMonthlyStatisticsSuccessStateImpl(
+    return _then(_$MonthlyStatisticsSuccessStateImpl(
       null == monthlyStatsDataModel
           ? _value.monthlyStatsDataModel
           : monthlyStatsDataModel // ignore: cast_nullable_to_non_nullable
@@ -667,10 +690,9 @@ class __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardMonthlyStatisticsSuccessStateImpl
-    implements _DashboardMonthlyStatisticsSuccessState {
-  const _$DashboardMonthlyStatisticsSuccessStateImpl(
-      this.monthlyStatsDataModel);
+class _$MonthlyStatisticsSuccessStateImpl
+    implements MonthlyStatisticsSuccessState {
+  const _$MonthlyStatisticsSuccessStateImpl(this.monthlyStatsDataModel);
 
   @override
   final MonthlyStatsDataModel monthlyStatsDataModel;
@@ -684,7 +706,7 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardMonthlyStatisticsSuccessStateImpl &&
+            other is _$MonthlyStatisticsSuccessStateImpl &&
             (identical(other.monthlyStatsDataModel, monthlyStatsDataModel) ||
                 other.monthlyStatsDataModel == monthlyStatsDataModel));
   }
@@ -697,11 +719,10 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardMonthlyStatisticsSuccessStateImplCopyWith<
-          _$DashboardMonthlyStatisticsSuccessStateImpl>
-      get copyWith =>
-          __$$DashboardMonthlyStatisticsSuccessStateImplCopyWithImpl<
-              _$DashboardMonthlyStatisticsSuccessStateImpl>(this, _$identity);
+  _$$MonthlyStatisticsSuccessStateImplCopyWith<
+          _$MonthlyStatisticsSuccessStateImpl>
+      get copyWith => __$$MonthlyStatisticsSuccessStateImplCopyWithImpl<
+          _$MonthlyStatisticsSuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -723,6 +744,10 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return monthlyStatisticsSuccess(monthlyStatsDataModel);
   }
@@ -746,6 +771,10 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return monthlyStatisticsSuccess?.call(monthlyStatsDataModel);
   }
@@ -769,6 +798,10 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsSuccess != null) {
@@ -781,30 +814,34 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return monthlyStatisticsSuccess(this);
   }
@@ -813,30 +850,28 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return monthlyStatisticsSuccess?.call(this);
   }
@@ -845,29 +880,23 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsSuccess != null) {
@@ -877,40 +906,39 @@ class _$DashboardMonthlyStatisticsSuccessStateImpl
   }
 }
 
-abstract class _DashboardMonthlyStatisticsSuccessState
-    implements DashboardState {
-  const factory _DashboardMonthlyStatisticsSuccessState(
+abstract class MonthlyStatisticsSuccessState implements DashboardState {
+  const factory MonthlyStatisticsSuccessState(
           final MonthlyStatsDataModel monthlyStatsDataModel) =
-      _$DashboardMonthlyStatisticsSuccessStateImpl;
+      _$MonthlyStatisticsSuccessStateImpl;
 
   MonthlyStatsDataModel get monthlyStatsDataModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardMonthlyStatisticsSuccessStateImplCopyWith<
-          _$DashboardMonthlyStatisticsSuccessStateImpl>
+  _$$MonthlyStatisticsSuccessStateImplCopyWith<
+          _$MonthlyStatisticsSuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardMonthlyStatisticsErrorStateImplCopyWith<$Res> {
-  factory _$$DashboardMonthlyStatisticsErrorStateImplCopyWith(
-          _$DashboardMonthlyStatisticsErrorStateImpl value,
-          $Res Function(_$DashboardMonthlyStatisticsErrorStateImpl) then) =
-      __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$MonthlyStatisticsErrorStateImplCopyWith<$Res> {
+  factory _$$MonthlyStatisticsErrorStateImplCopyWith(
+          _$MonthlyStatisticsErrorStateImpl value,
+          $Res Function(_$MonthlyStatisticsErrorStateImpl) then) =
+      __$$MonthlyStatisticsErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
-class __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl<$Res>
+class __$$MonthlyStatisticsErrorStateImplCopyWithImpl<$Res>
     extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardMonthlyStatisticsErrorStateImpl>
-    implements _$$DashboardMonthlyStatisticsErrorStateImplCopyWith<$Res> {
-  __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl(
-      _$DashboardMonthlyStatisticsErrorStateImpl _value,
-      $Res Function(_$DashboardMonthlyStatisticsErrorStateImpl) _then)
+        _$MonthlyStatisticsErrorStateImpl>
+    implements _$$MonthlyStatisticsErrorStateImplCopyWith<$Res> {
+  __$$MonthlyStatisticsErrorStateImplCopyWithImpl(
+      _$MonthlyStatisticsErrorStateImpl _value,
+      $Res Function(_$MonthlyStatisticsErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -920,7 +948,7 @@ class __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? apiErrorModel = null,
   }) {
-    return _then(_$DashboardMonthlyStatisticsErrorStateImpl(
+    return _then(_$MonthlyStatisticsErrorStateImpl(
       null == apiErrorModel
           ? _value.apiErrorModel
           : apiErrorModel // ignore: cast_nullable_to_non_nullable
@@ -931,9 +959,8 @@ class __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardMonthlyStatisticsErrorStateImpl
-    implements _DashboardMonthlyStatisticsErrorState {
-  const _$DashboardMonthlyStatisticsErrorStateImpl(this.apiErrorModel);
+class _$MonthlyStatisticsErrorStateImpl implements MonthlyStatisticsErrorState {
+  const _$MonthlyStatisticsErrorStateImpl(this.apiErrorModel);
 
   @override
   final ApiErrorModel apiErrorModel;
@@ -947,7 +974,7 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardMonthlyStatisticsErrorStateImpl &&
+            other is _$MonthlyStatisticsErrorStateImpl &&
             (identical(other.apiErrorModel, apiErrorModel) ||
                 other.apiErrorModel == apiErrorModel));
   }
@@ -960,10 +987,9 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardMonthlyStatisticsErrorStateImplCopyWith<
-          _$DashboardMonthlyStatisticsErrorStateImpl>
-      get copyWith => __$$DashboardMonthlyStatisticsErrorStateImplCopyWithImpl<
-          _$DashboardMonthlyStatisticsErrorStateImpl>(this, _$identity);
+  _$$MonthlyStatisticsErrorStateImplCopyWith<_$MonthlyStatisticsErrorStateImpl>
+      get copyWith => __$$MonthlyStatisticsErrorStateImplCopyWithImpl<
+          _$MonthlyStatisticsErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -985,6 +1011,10 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return monthlyStatisticsError(apiErrorModel);
   }
@@ -1008,6 +1038,10 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return monthlyStatisticsError?.call(apiErrorModel);
   }
@@ -1031,6 +1065,10 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsError != null) {
@@ -1043,30 +1081,34 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return monthlyStatisticsError(this);
   }
@@ -1075,30 +1117,28 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return monthlyStatisticsError?.call(this);
   }
@@ -1107,29 +1147,23 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (monthlyStatisticsError != null) {
@@ -1139,37 +1173,34 @@ class _$DashboardMonthlyStatisticsErrorStateImpl
   }
 }
 
-abstract class _DashboardMonthlyStatisticsErrorState implements DashboardState {
-  const factory _DashboardMonthlyStatisticsErrorState(
-          final ApiErrorModel apiErrorModel) =
-      _$DashboardMonthlyStatisticsErrorStateImpl;
+abstract class MonthlyStatisticsErrorState implements DashboardState {
+  const factory MonthlyStatisticsErrorState(final ApiErrorModel apiErrorModel) =
+      _$MonthlyStatisticsErrorStateImpl;
 
   ApiErrorModel get apiErrorModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardMonthlyStatisticsErrorStateImplCopyWith<
-          _$DashboardMonthlyStatisticsErrorStateImpl>
+  _$$MonthlyStatisticsErrorStateImplCopyWith<_$MonthlyStatisticsErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardRevenueChartLoadingStateImplCopyWith<$Res> {
-  factory _$$DashboardRevenueChartLoadingStateImplCopyWith(
-          _$DashboardRevenueChartLoadingStateImpl value,
-          $Res Function(_$DashboardRevenueChartLoadingStateImpl) then) =
-      __$$DashboardRevenueChartLoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$RevenueChartLoadingStateImplCopyWith<$Res> {
+  factory _$$RevenueChartLoadingStateImplCopyWith(
+          _$RevenueChartLoadingStateImpl value,
+          $Res Function(_$RevenueChartLoadingStateImpl) then) =
+      __$$RevenueChartLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DashboardRevenueChartLoadingStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardRevenueChartLoadingStateImpl>
-    implements _$$DashboardRevenueChartLoadingStateImplCopyWith<$Res> {
-  __$$DashboardRevenueChartLoadingStateImplCopyWithImpl(
-      _$DashboardRevenueChartLoadingStateImpl _value,
-      $Res Function(_$DashboardRevenueChartLoadingStateImpl) _then)
+class __$$RevenueChartLoadingStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$RevenueChartLoadingStateImpl>
+    implements _$$RevenueChartLoadingStateImplCopyWith<$Res> {
+  __$$RevenueChartLoadingStateImplCopyWithImpl(
+      _$RevenueChartLoadingStateImpl _value,
+      $Res Function(_$RevenueChartLoadingStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -1178,9 +1209,8 @@ class __$$DashboardRevenueChartLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardRevenueChartLoadingStateImpl
-    implements _DashboardRevenueChartLoadingState {
-  const _$DashboardRevenueChartLoadingStateImpl();
+class _$RevenueChartLoadingStateImpl implements RevenueChartLoadingState {
+  const _$RevenueChartLoadingStateImpl();
 
   @override
   String toString() {
@@ -1191,7 +1221,7 @@ class _$DashboardRevenueChartLoadingStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardRevenueChartLoadingStateImpl);
+            other is _$RevenueChartLoadingStateImpl);
   }
 
   @override
@@ -1217,6 +1247,10 @@ class _$DashboardRevenueChartLoadingStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return revenueChartLoading();
   }
@@ -1240,6 +1274,10 @@ class _$DashboardRevenueChartLoadingStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return revenueChartLoading?.call();
   }
@@ -1263,6 +1301,10 @@ class _$DashboardRevenueChartLoadingStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartLoading != null) {
@@ -1275,30 +1317,34 @@ class _$DashboardRevenueChartLoadingStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return revenueChartLoading(this);
   }
@@ -1307,30 +1353,28 @@ class _$DashboardRevenueChartLoadingStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return revenueChartLoading?.call(this);
   }
@@ -1339,29 +1383,23 @@ class _$DashboardRevenueChartLoadingStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartLoading != null) {
@@ -1371,29 +1409,27 @@ class _$DashboardRevenueChartLoadingStateImpl
   }
 }
 
-abstract class _DashboardRevenueChartLoadingState implements DashboardState {
-  const factory _DashboardRevenueChartLoadingState() =
-      _$DashboardRevenueChartLoadingStateImpl;
+abstract class RevenueChartLoadingState implements DashboardState {
+  const factory RevenueChartLoadingState() = _$RevenueChartLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$DashboardRevenueChartSuccessStateImplCopyWith<$Res> {
-  factory _$$DashboardRevenueChartSuccessStateImplCopyWith(
-          _$DashboardRevenueChartSuccessStateImpl value,
-          $Res Function(_$DashboardRevenueChartSuccessStateImpl) then) =
-      __$$DashboardRevenueChartSuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$RevenueChartSuccessStateImplCopyWith<$Res> {
+  factory _$$RevenueChartSuccessStateImplCopyWith(
+          _$RevenueChartSuccessStateImpl value,
+          $Res Function(_$RevenueChartSuccessStateImpl) then) =
+      __$$RevenueChartSuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Map<String, num> chartData});
 }
 
 /// @nodoc
-class __$$DashboardRevenueChartSuccessStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardRevenueChartSuccessStateImpl>
-    implements _$$DashboardRevenueChartSuccessStateImplCopyWith<$Res> {
-  __$$DashboardRevenueChartSuccessStateImplCopyWithImpl(
-      _$DashboardRevenueChartSuccessStateImpl _value,
-      $Res Function(_$DashboardRevenueChartSuccessStateImpl) _then)
+class __$$RevenueChartSuccessStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$RevenueChartSuccessStateImpl>
+    implements _$$RevenueChartSuccessStateImplCopyWith<$Res> {
+  __$$RevenueChartSuccessStateImplCopyWithImpl(
+      _$RevenueChartSuccessStateImpl _value,
+      $Res Function(_$RevenueChartSuccessStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -1403,7 +1439,7 @@ class __$$DashboardRevenueChartSuccessStateImplCopyWithImpl<$Res>
   $Res call({
     Object? chartData = null,
   }) {
-    return _then(_$DashboardRevenueChartSuccessStateImpl(
+    return _then(_$RevenueChartSuccessStateImpl(
       null == chartData
           ? _value._chartData
           : chartData // ignore: cast_nullable_to_non_nullable
@@ -1414,10 +1450,8 @@ class __$$DashboardRevenueChartSuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardRevenueChartSuccessStateImpl
-    implements _DashboardRevenueChartSuccessState {
-  const _$DashboardRevenueChartSuccessStateImpl(
-      final Map<String, num> chartData)
+class _$RevenueChartSuccessStateImpl implements RevenueChartSuccessState {
+  const _$RevenueChartSuccessStateImpl(final Map<String, num> chartData)
       : _chartData = chartData;
 
   final Map<String, num> _chartData;
@@ -1437,7 +1471,7 @@ class _$DashboardRevenueChartSuccessStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardRevenueChartSuccessStateImpl &&
+            other is _$RevenueChartSuccessStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._chartData, _chartData));
   }
@@ -1451,10 +1485,9 @@ class _$DashboardRevenueChartSuccessStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardRevenueChartSuccessStateImplCopyWith<
-          _$DashboardRevenueChartSuccessStateImpl>
-      get copyWith => __$$DashboardRevenueChartSuccessStateImplCopyWithImpl<
-          _$DashboardRevenueChartSuccessStateImpl>(this, _$identity);
+  _$$RevenueChartSuccessStateImplCopyWith<_$RevenueChartSuccessStateImpl>
+      get copyWith => __$$RevenueChartSuccessStateImplCopyWithImpl<
+          _$RevenueChartSuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1476,6 +1509,10 @@ class _$DashboardRevenueChartSuccessStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return revenueChartSuccess(chartData);
   }
@@ -1499,6 +1536,10 @@ class _$DashboardRevenueChartSuccessStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return revenueChartSuccess?.call(chartData);
   }
@@ -1522,6 +1563,10 @@ class _$DashboardRevenueChartSuccessStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartSuccess != null) {
@@ -1534,30 +1579,34 @@ class _$DashboardRevenueChartSuccessStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return revenueChartSuccess(this);
   }
@@ -1566,30 +1615,28 @@ class _$DashboardRevenueChartSuccessStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return revenueChartSuccess?.call(this);
   }
@@ -1598,29 +1645,23 @@ class _$DashboardRevenueChartSuccessStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartSuccess != null) {
@@ -1630,39 +1671,36 @@ class _$DashboardRevenueChartSuccessStateImpl
   }
 }
 
-abstract class _DashboardRevenueChartSuccessState implements DashboardState {
-  const factory _DashboardRevenueChartSuccessState(
-          final Map<String, num> chartData) =
-      _$DashboardRevenueChartSuccessStateImpl;
+abstract class RevenueChartSuccessState implements DashboardState {
+  const factory RevenueChartSuccessState(final Map<String, num> chartData) =
+      _$RevenueChartSuccessStateImpl;
 
   Map<String, num> get chartData;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardRevenueChartSuccessStateImplCopyWith<
-          _$DashboardRevenueChartSuccessStateImpl>
+  _$$RevenueChartSuccessStateImplCopyWith<_$RevenueChartSuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardRevenueChartErrorStateImplCopyWith<$Res> {
-  factory _$$DashboardRevenueChartErrorStateImplCopyWith(
-          _$DashboardRevenueChartErrorStateImpl value,
-          $Res Function(_$DashboardRevenueChartErrorStateImpl) then) =
-      __$$DashboardRevenueChartErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$RevenueChartErrorStateImplCopyWith<$Res> {
+  factory _$$RevenueChartErrorStateImplCopyWith(
+          _$RevenueChartErrorStateImpl value,
+          $Res Function(_$RevenueChartErrorStateImpl) then) =
+      __$$RevenueChartErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
-class __$$DashboardRevenueChartErrorStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardRevenueChartErrorStateImpl>
-    implements _$$DashboardRevenueChartErrorStateImplCopyWith<$Res> {
-  __$$DashboardRevenueChartErrorStateImplCopyWithImpl(
-      _$DashboardRevenueChartErrorStateImpl _value,
-      $Res Function(_$DashboardRevenueChartErrorStateImpl) _then)
+class __$$RevenueChartErrorStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$RevenueChartErrorStateImpl>
+    implements _$$RevenueChartErrorStateImplCopyWith<$Res> {
+  __$$RevenueChartErrorStateImplCopyWithImpl(
+      _$RevenueChartErrorStateImpl _value,
+      $Res Function(_$RevenueChartErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -1672,7 +1710,7 @@ class __$$DashboardRevenueChartErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? apiErrorModel = null,
   }) {
-    return _then(_$DashboardRevenueChartErrorStateImpl(
+    return _then(_$RevenueChartErrorStateImpl(
       null == apiErrorModel
           ? _value.apiErrorModel
           : apiErrorModel // ignore: cast_nullable_to_non_nullable
@@ -1683,9 +1721,8 @@ class __$$DashboardRevenueChartErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardRevenueChartErrorStateImpl
-    implements _DashboardRevenueChartErrorState {
-  const _$DashboardRevenueChartErrorStateImpl(this.apiErrorModel);
+class _$RevenueChartErrorStateImpl implements RevenueChartErrorState {
+  const _$RevenueChartErrorStateImpl(this.apiErrorModel);
 
   @override
   final ApiErrorModel apiErrorModel;
@@ -1699,7 +1736,7 @@ class _$DashboardRevenueChartErrorStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardRevenueChartErrorStateImpl &&
+            other is _$RevenueChartErrorStateImpl &&
             (identical(other.apiErrorModel, apiErrorModel) ||
                 other.apiErrorModel == apiErrorModel));
   }
@@ -1712,10 +1749,9 @@ class _$DashboardRevenueChartErrorStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardRevenueChartErrorStateImplCopyWith<
-          _$DashboardRevenueChartErrorStateImpl>
-      get copyWith => __$$DashboardRevenueChartErrorStateImplCopyWithImpl<
-          _$DashboardRevenueChartErrorStateImpl>(this, _$identity);
+  _$$RevenueChartErrorStateImplCopyWith<_$RevenueChartErrorStateImpl>
+      get copyWith => __$$RevenueChartErrorStateImplCopyWithImpl<
+          _$RevenueChartErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1737,6 +1773,10 @@ class _$DashboardRevenueChartErrorStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return revenueChartError(apiErrorModel);
   }
@@ -1760,6 +1800,10 @@ class _$DashboardRevenueChartErrorStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return revenueChartError?.call(apiErrorModel);
   }
@@ -1783,6 +1827,10 @@ class _$DashboardRevenueChartErrorStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartError != null) {
@@ -1795,30 +1843,34 @@ class _$DashboardRevenueChartErrorStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return revenueChartError(this);
   }
@@ -1827,30 +1879,28 @@ class _$DashboardRevenueChartErrorStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return revenueChartError?.call(this);
   }
@@ -1859,29 +1909,23 @@ class _$DashboardRevenueChartErrorStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (revenueChartError != null) {
@@ -1891,37 +1935,34 @@ class _$DashboardRevenueChartErrorStateImpl
   }
 }
 
-abstract class _DashboardRevenueChartErrorState implements DashboardState {
-  const factory _DashboardRevenueChartErrorState(
-          final ApiErrorModel apiErrorModel) =
-      _$DashboardRevenueChartErrorStateImpl;
+abstract class RevenueChartErrorState implements DashboardState {
+  const factory RevenueChartErrorState(final ApiErrorModel apiErrorModel) =
+      _$RevenueChartErrorStateImpl;
 
   ApiErrorModel get apiErrorModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardRevenueChartErrorStateImplCopyWith<
-          _$DashboardRevenueChartErrorStateImpl>
+  _$$RevenueChartErrorStateImplCopyWith<_$RevenueChartErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardOrdersSummaryLoadingStateImplCopyWith<$Res> {
-  factory _$$DashboardOrdersSummaryLoadingStateImplCopyWith(
-          _$DashboardOrdersSummaryLoadingStateImpl value,
-          $Res Function(_$DashboardOrdersSummaryLoadingStateImpl) then) =
-      __$$DashboardOrdersSummaryLoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$OrdersSummaryLoadingStateImplCopyWith<$Res> {
+  factory _$$OrdersSummaryLoadingStateImplCopyWith(
+          _$OrdersSummaryLoadingStateImpl value,
+          $Res Function(_$OrdersSummaryLoadingStateImpl) then) =
+      __$$OrdersSummaryLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DashboardOrdersSummaryLoadingStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardOrdersSummaryLoadingStateImpl>
-    implements _$$DashboardOrdersSummaryLoadingStateImplCopyWith<$Res> {
-  __$$DashboardOrdersSummaryLoadingStateImplCopyWithImpl(
-      _$DashboardOrdersSummaryLoadingStateImpl _value,
-      $Res Function(_$DashboardOrdersSummaryLoadingStateImpl) _then)
+class __$$OrdersSummaryLoadingStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$OrdersSummaryLoadingStateImpl>
+    implements _$$OrdersSummaryLoadingStateImplCopyWith<$Res> {
+  __$$OrdersSummaryLoadingStateImplCopyWithImpl(
+      _$OrdersSummaryLoadingStateImpl _value,
+      $Res Function(_$OrdersSummaryLoadingStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -1930,9 +1971,8 @@ class __$$DashboardOrdersSummaryLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardOrdersSummaryLoadingStateImpl
-    implements _DashboardOrdersSummaryLoadingState {
-  const _$DashboardOrdersSummaryLoadingStateImpl();
+class _$OrdersSummaryLoadingStateImpl implements OrdersSummaryLoadingState {
+  const _$OrdersSummaryLoadingStateImpl();
 
   @override
   String toString() {
@@ -1943,7 +1983,7 @@ class _$DashboardOrdersSummaryLoadingStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardOrdersSummaryLoadingStateImpl);
+            other is _$OrdersSummaryLoadingStateImpl);
   }
 
   @override
@@ -1969,6 +2009,10 @@ class _$DashboardOrdersSummaryLoadingStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return ordersSummaryLoading();
   }
@@ -1992,6 +2036,10 @@ class _$DashboardOrdersSummaryLoadingStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return ordersSummaryLoading?.call();
   }
@@ -2015,6 +2063,10 @@ class _$DashboardOrdersSummaryLoadingStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummaryLoading != null) {
@@ -2027,30 +2079,34 @@ class _$DashboardOrdersSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return ordersSummaryLoading(this);
   }
@@ -2059,30 +2115,28 @@ class _$DashboardOrdersSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return ordersSummaryLoading?.call(this);
   }
@@ -2091,29 +2145,23 @@ class _$DashboardOrdersSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummaryLoading != null) {
@@ -2123,29 +2171,27 @@ class _$DashboardOrdersSummaryLoadingStateImpl
   }
 }
 
-abstract class _DashboardOrdersSummaryLoadingState implements DashboardState {
-  const factory _DashboardOrdersSummaryLoadingState() =
-      _$DashboardOrdersSummaryLoadingStateImpl;
+abstract class OrdersSummaryLoadingState implements DashboardState {
+  const factory OrdersSummaryLoadingState() = _$OrdersSummaryLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$DashboardOrdersSummarySuccessStateImplCopyWith<$Res> {
-  factory _$$DashboardOrdersSummarySuccessStateImplCopyWith(
-          _$DashboardOrdersSummarySuccessStateImpl value,
-          $Res Function(_$DashboardOrdersSummarySuccessStateImpl) then) =
-      __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$OrdersSummarySuccessStateImplCopyWith<$Res> {
+  factory _$$OrdersSummarySuccessStateImplCopyWith(
+          _$OrdersSummarySuccessStateImpl value,
+          $Res Function(_$OrdersSummarySuccessStateImpl) then) =
+      __$$OrdersSummarySuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({OrdersSummaryDataModel ordersSummaryDataModel});
 }
 
 /// @nodoc
-class __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardOrdersSummarySuccessStateImpl>
-    implements _$$DashboardOrdersSummarySuccessStateImplCopyWith<$Res> {
-  __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl(
-      _$DashboardOrdersSummarySuccessStateImpl _value,
-      $Res Function(_$DashboardOrdersSummarySuccessStateImpl) _then)
+class __$$OrdersSummarySuccessStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$OrdersSummarySuccessStateImpl>
+    implements _$$OrdersSummarySuccessStateImplCopyWith<$Res> {
+  __$$OrdersSummarySuccessStateImplCopyWithImpl(
+      _$OrdersSummarySuccessStateImpl _value,
+      $Res Function(_$OrdersSummarySuccessStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -2155,7 +2201,7 @@ class __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl<$Res>
   $Res call({
     Object? ordersSummaryDataModel = null,
   }) {
-    return _then(_$DashboardOrdersSummarySuccessStateImpl(
+    return _then(_$OrdersSummarySuccessStateImpl(
       null == ordersSummaryDataModel
           ? _value.ordersSummaryDataModel
           : ordersSummaryDataModel // ignore: cast_nullable_to_non_nullable
@@ -2166,9 +2212,8 @@ class __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardOrdersSummarySuccessStateImpl
-    implements _DashboardOrdersSummarySuccessState {
-  const _$DashboardOrdersSummarySuccessStateImpl(this.ordersSummaryDataModel);
+class _$OrdersSummarySuccessStateImpl implements OrdersSummarySuccessState {
+  const _$OrdersSummarySuccessStateImpl(this.ordersSummaryDataModel);
 
   @override
   final OrdersSummaryDataModel ordersSummaryDataModel;
@@ -2182,7 +2227,7 @@ class _$DashboardOrdersSummarySuccessStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardOrdersSummarySuccessStateImpl &&
+            other is _$OrdersSummarySuccessStateImpl &&
             (identical(other.ordersSummaryDataModel, ordersSummaryDataModel) ||
                 other.ordersSummaryDataModel == ordersSummaryDataModel));
   }
@@ -2195,10 +2240,9 @@ class _$DashboardOrdersSummarySuccessStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardOrdersSummarySuccessStateImplCopyWith<
-          _$DashboardOrdersSummarySuccessStateImpl>
-      get copyWith => __$$DashboardOrdersSummarySuccessStateImplCopyWithImpl<
-          _$DashboardOrdersSummarySuccessStateImpl>(this, _$identity);
+  _$$OrdersSummarySuccessStateImplCopyWith<_$OrdersSummarySuccessStateImpl>
+      get copyWith => __$$OrdersSummarySuccessStateImplCopyWithImpl<
+          _$OrdersSummarySuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2220,6 +2264,10 @@ class _$DashboardOrdersSummarySuccessStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return ordersSummarySuccess(ordersSummaryDataModel);
   }
@@ -2243,6 +2291,10 @@ class _$DashboardOrdersSummarySuccessStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return ordersSummarySuccess?.call(ordersSummaryDataModel);
   }
@@ -2266,6 +2318,10 @@ class _$DashboardOrdersSummarySuccessStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummarySuccess != null) {
@@ -2278,30 +2334,34 @@ class _$DashboardOrdersSummarySuccessStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return ordersSummarySuccess(this);
   }
@@ -2310,30 +2370,28 @@ class _$DashboardOrdersSummarySuccessStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return ordersSummarySuccess?.call(this);
   }
@@ -2342,29 +2400,23 @@ class _$DashboardOrdersSummarySuccessStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummarySuccess != null) {
@@ -2374,39 +2426,37 @@ class _$DashboardOrdersSummarySuccessStateImpl
   }
 }
 
-abstract class _DashboardOrdersSummarySuccessState implements DashboardState {
-  const factory _DashboardOrdersSummarySuccessState(
+abstract class OrdersSummarySuccessState implements DashboardState {
+  const factory OrdersSummarySuccessState(
           final OrdersSummaryDataModel ordersSummaryDataModel) =
-      _$DashboardOrdersSummarySuccessStateImpl;
+      _$OrdersSummarySuccessStateImpl;
 
   OrdersSummaryDataModel get ordersSummaryDataModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardOrdersSummarySuccessStateImplCopyWith<
-          _$DashboardOrdersSummarySuccessStateImpl>
+  _$$OrdersSummarySuccessStateImplCopyWith<_$OrdersSummarySuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardOrdersSummaryErrorStateImplCopyWith<$Res> {
-  factory _$$DashboardOrdersSummaryErrorStateImplCopyWith(
-          _$DashboardOrdersSummaryErrorStateImpl value,
-          $Res Function(_$DashboardOrdersSummaryErrorStateImpl) then) =
-      __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$OrdersSummaryErrorStateImplCopyWith<$Res> {
+  factory _$$OrdersSummaryErrorStateImplCopyWith(
+          _$OrdersSummaryErrorStateImpl value,
+          $Res Function(_$OrdersSummaryErrorStateImpl) then) =
+      __$$OrdersSummaryErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
-class __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardOrdersSummaryErrorStateImpl>
-    implements _$$DashboardOrdersSummaryErrorStateImplCopyWith<$Res> {
-  __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl(
-      _$DashboardOrdersSummaryErrorStateImpl _value,
-      $Res Function(_$DashboardOrdersSummaryErrorStateImpl) _then)
+class __$$OrdersSummaryErrorStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$OrdersSummaryErrorStateImpl>
+    implements _$$OrdersSummaryErrorStateImplCopyWith<$Res> {
+  __$$OrdersSummaryErrorStateImplCopyWithImpl(
+      _$OrdersSummaryErrorStateImpl _value,
+      $Res Function(_$OrdersSummaryErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -2416,7 +2466,7 @@ class __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? apiErrorModel = null,
   }) {
-    return _then(_$DashboardOrdersSummaryErrorStateImpl(
+    return _then(_$OrdersSummaryErrorStateImpl(
       null == apiErrorModel
           ? _value.apiErrorModel
           : apiErrorModel // ignore: cast_nullable_to_non_nullable
@@ -2427,9 +2477,8 @@ class __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardOrdersSummaryErrorStateImpl
-    implements _DashboardOrdersSummaryErrorState {
-  const _$DashboardOrdersSummaryErrorStateImpl(this.apiErrorModel);
+class _$OrdersSummaryErrorStateImpl implements OrdersSummaryErrorState {
+  const _$OrdersSummaryErrorStateImpl(this.apiErrorModel);
 
   @override
   final ApiErrorModel apiErrorModel;
@@ -2443,7 +2492,7 @@ class _$DashboardOrdersSummaryErrorStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardOrdersSummaryErrorStateImpl &&
+            other is _$OrdersSummaryErrorStateImpl &&
             (identical(other.apiErrorModel, apiErrorModel) ||
                 other.apiErrorModel == apiErrorModel));
   }
@@ -2456,10 +2505,9 @@ class _$DashboardOrdersSummaryErrorStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardOrdersSummaryErrorStateImplCopyWith<
-          _$DashboardOrdersSummaryErrorStateImpl>
-      get copyWith => __$$DashboardOrdersSummaryErrorStateImplCopyWithImpl<
-          _$DashboardOrdersSummaryErrorStateImpl>(this, _$identity);
+  _$$OrdersSummaryErrorStateImplCopyWith<_$OrdersSummaryErrorStateImpl>
+      get copyWith => __$$OrdersSummaryErrorStateImplCopyWithImpl<
+          _$OrdersSummaryErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2481,6 +2529,10 @@ class _$DashboardOrdersSummaryErrorStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return ordersSummaryError(apiErrorModel);
   }
@@ -2504,6 +2556,10 @@ class _$DashboardOrdersSummaryErrorStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return ordersSummaryError?.call(apiErrorModel);
   }
@@ -2527,6 +2583,10 @@ class _$DashboardOrdersSummaryErrorStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummaryError != null) {
@@ -2539,30 +2599,34 @@ class _$DashboardOrdersSummaryErrorStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return ordersSummaryError(this);
   }
@@ -2571,30 +2635,28 @@ class _$DashboardOrdersSummaryErrorStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return ordersSummaryError?.call(this);
   }
@@ -2603,29 +2665,23 @@ class _$DashboardOrdersSummaryErrorStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (ordersSummaryError != null) {
@@ -2635,37 +2691,35 @@ class _$DashboardOrdersSummaryErrorStateImpl
   }
 }
 
-abstract class _DashboardOrdersSummaryErrorState implements DashboardState {
-  const factory _DashboardOrdersSummaryErrorState(
-          final ApiErrorModel apiErrorModel) =
-      _$DashboardOrdersSummaryErrorStateImpl;
+abstract class OrdersSummaryErrorState implements DashboardState {
+  const factory OrdersSummaryErrorState(final ApiErrorModel apiErrorModel) =
+      _$OrdersSummaryErrorStateImpl;
 
   ApiErrorModel get apiErrorModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardOrdersSummaryErrorStateImplCopyWith<
-          _$DashboardOrdersSummaryErrorStateImpl>
+  _$$OrdersSummaryErrorStateImplCopyWith<_$OrdersSummaryErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardProductsSummaryLoadingStateImplCopyWith<$Res> {
-  factory _$$DashboardProductsSummaryLoadingStateImplCopyWith(
-          _$DashboardProductsSummaryLoadingStateImpl value,
-          $Res Function(_$DashboardProductsSummaryLoadingStateImpl) then) =
-      __$$DashboardProductsSummaryLoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$ProductsSummaryLoadingStateImplCopyWith<$Res> {
+  factory _$$ProductsSummaryLoadingStateImplCopyWith(
+          _$ProductsSummaryLoadingStateImpl value,
+          $Res Function(_$ProductsSummaryLoadingStateImpl) then) =
+      __$$ProductsSummaryLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DashboardProductsSummaryLoadingStateImplCopyWithImpl<$Res>
+class __$$ProductsSummaryLoadingStateImplCopyWithImpl<$Res>
     extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardProductsSummaryLoadingStateImpl>
-    implements _$$DashboardProductsSummaryLoadingStateImplCopyWith<$Res> {
-  __$$DashboardProductsSummaryLoadingStateImplCopyWithImpl(
-      _$DashboardProductsSummaryLoadingStateImpl _value,
-      $Res Function(_$DashboardProductsSummaryLoadingStateImpl) _then)
+        _$ProductsSummaryLoadingStateImpl>
+    implements _$$ProductsSummaryLoadingStateImplCopyWith<$Res> {
+  __$$ProductsSummaryLoadingStateImplCopyWithImpl(
+      _$ProductsSummaryLoadingStateImpl _value,
+      $Res Function(_$ProductsSummaryLoadingStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -2674,9 +2728,8 @@ class __$$DashboardProductsSummaryLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardProductsSummaryLoadingStateImpl
-    implements _DashboardProductsSummaryLoadingState {
-  const _$DashboardProductsSummaryLoadingStateImpl();
+class _$ProductsSummaryLoadingStateImpl implements ProductsSummaryLoadingState {
+  const _$ProductsSummaryLoadingStateImpl();
 
   @override
   String toString() {
@@ -2687,7 +2740,7 @@ class _$DashboardProductsSummaryLoadingStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardProductsSummaryLoadingStateImpl);
+            other is _$ProductsSummaryLoadingStateImpl);
   }
 
   @override
@@ -2713,6 +2766,10 @@ class _$DashboardProductsSummaryLoadingStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return productsSummaryLoading();
   }
@@ -2736,6 +2793,10 @@ class _$DashboardProductsSummaryLoadingStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return productsSummaryLoading?.call();
   }
@@ -2759,6 +2820,10 @@ class _$DashboardProductsSummaryLoadingStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummaryLoading != null) {
@@ -2771,30 +2836,34 @@ class _$DashboardProductsSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return productsSummaryLoading(this);
   }
@@ -2803,30 +2872,28 @@ class _$DashboardProductsSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return productsSummaryLoading?.call(this);
   }
@@ -2835,29 +2902,23 @@ class _$DashboardProductsSummaryLoadingStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummaryLoading != null) {
@@ -2867,29 +2928,29 @@ class _$DashboardProductsSummaryLoadingStateImpl
   }
 }
 
-abstract class _DashboardProductsSummaryLoadingState implements DashboardState {
-  const factory _DashboardProductsSummaryLoadingState() =
-      _$DashboardProductsSummaryLoadingStateImpl;
+abstract class ProductsSummaryLoadingState implements DashboardState {
+  const factory ProductsSummaryLoadingState() =
+      _$ProductsSummaryLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$DashboardProductsSummarySuccessStateImplCopyWith<$Res> {
-  factory _$$DashboardProductsSummarySuccessStateImplCopyWith(
-          _$DashboardProductsSummarySuccessStateImpl value,
-          $Res Function(_$DashboardProductsSummarySuccessStateImpl) then) =
-      __$$DashboardProductsSummarySuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$ProductsSummarySuccessStateImplCopyWith<$Res> {
+  factory _$$ProductsSummarySuccessStateImplCopyWith(
+          _$ProductsSummarySuccessStateImpl value,
+          $Res Function(_$ProductsSummarySuccessStateImpl) then) =
+      __$$ProductsSummarySuccessStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ProductsSummaryDataModel productsSummaryDataModel});
 }
 
 /// @nodoc
-class __$$DashboardProductsSummarySuccessStateImplCopyWithImpl<$Res>
+class __$$ProductsSummarySuccessStateImplCopyWithImpl<$Res>
     extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardProductsSummarySuccessStateImpl>
-    implements _$$DashboardProductsSummarySuccessStateImplCopyWith<$Res> {
-  __$$DashboardProductsSummarySuccessStateImplCopyWithImpl(
-      _$DashboardProductsSummarySuccessStateImpl _value,
-      $Res Function(_$DashboardProductsSummarySuccessStateImpl) _then)
+        _$ProductsSummarySuccessStateImpl>
+    implements _$$ProductsSummarySuccessStateImplCopyWith<$Res> {
+  __$$ProductsSummarySuccessStateImplCopyWithImpl(
+      _$ProductsSummarySuccessStateImpl _value,
+      $Res Function(_$ProductsSummarySuccessStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -2899,7 +2960,7 @@ class __$$DashboardProductsSummarySuccessStateImplCopyWithImpl<$Res>
   $Res call({
     Object? productsSummaryDataModel = null,
   }) {
-    return _then(_$DashboardProductsSummarySuccessStateImpl(
+    return _then(_$ProductsSummarySuccessStateImpl(
       null == productsSummaryDataModel
           ? _value.productsSummaryDataModel
           : productsSummaryDataModel // ignore: cast_nullable_to_non_nullable
@@ -2910,10 +2971,8 @@ class __$$DashboardProductsSummarySuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardProductsSummarySuccessStateImpl
-    implements _DashboardProductsSummarySuccessState {
-  const _$DashboardProductsSummarySuccessStateImpl(
-      this.productsSummaryDataModel);
+class _$ProductsSummarySuccessStateImpl implements ProductsSummarySuccessState {
+  const _$ProductsSummarySuccessStateImpl(this.productsSummaryDataModel);
 
   @override
   final ProductsSummaryDataModel productsSummaryDataModel;
@@ -2927,7 +2986,7 @@ class _$DashboardProductsSummarySuccessStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardProductsSummarySuccessStateImpl &&
+            other is _$ProductsSummarySuccessStateImpl &&
             (identical(
                     other.productsSummaryDataModel, productsSummaryDataModel) ||
                 other.productsSummaryDataModel == productsSummaryDataModel));
@@ -2941,10 +3000,9 @@ class _$DashboardProductsSummarySuccessStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardProductsSummarySuccessStateImplCopyWith<
-          _$DashboardProductsSummarySuccessStateImpl>
-      get copyWith => __$$DashboardProductsSummarySuccessStateImplCopyWithImpl<
-          _$DashboardProductsSummarySuccessStateImpl>(this, _$identity);
+  _$$ProductsSummarySuccessStateImplCopyWith<_$ProductsSummarySuccessStateImpl>
+      get copyWith => __$$ProductsSummarySuccessStateImplCopyWithImpl<
+          _$ProductsSummarySuccessStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2966,6 +3024,10 @@ class _$DashboardProductsSummarySuccessStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return productsSummarySuccess(productsSummaryDataModel);
   }
@@ -2989,6 +3051,10 @@ class _$DashboardProductsSummarySuccessStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return productsSummarySuccess?.call(productsSummaryDataModel);
   }
@@ -3012,6 +3078,10 @@ class _$DashboardProductsSummarySuccessStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummarySuccess != null) {
@@ -3024,30 +3094,34 @@ class _$DashboardProductsSummarySuccessStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return productsSummarySuccess(this);
   }
@@ -3056,30 +3130,28 @@ class _$DashboardProductsSummarySuccessStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return productsSummarySuccess?.call(this);
   }
@@ -3088,29 +3160,23 @@ class _$DashboardProductsSummarySuccessStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummarySuccess != null) {
@@ -3120,39 +3186,37 @@ class _$DashboardProductsSummarySuccessStateImpl
   }
 }
 
-abstract class _DashboardProductsSummarySuccessState implements DashboardState {
-  const factory _DashboardProductsSummarySuccessState(
+abstract class ProductsSummarySuccessState implements DashboardState {
+  const factory ProductsSummarySuccessState(
           final ProductsSummaryDataModel productsSummaryDataModel) =
-      _$DashboardProductsSummarySuccessStateImpl;
+      _$ProductsSummarySuccessStateImpl;
 
   ProductsSummaryDataModel get productsSummaryDataModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardProductsSummarySuccessStateImplCopyWith<
-          _$DashboardProductsSummarySuccessStateImpl>
+  _$$ProductsSummarySuccessStateImplCopyWith<_$ProductsSummarySuccessStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DashboardProductsSummaryErrorStateImplCopyWith<$Res> {
-  factory _$$DashboardProductsSummaryErrorStateImplCopyWith(
-          _$DashboardProductsSummaryErrorStateImpl value,
-          $Res Function(_$DashboardProductsSummaryErrorStateImpl) then) =
-      __$$DashboardProductsSummaryErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$ProductsSummaryErrorStateImplCopyWith<$Res> {
+  factory _$$ProductsSummaryErrorStateImplCopyWith(
+          _$ProductsSummaryErrorStateImpl value,
+          $Res Function(_$ProductsSummaryErrorStateImpl) then) =
+      __$$ProductsSummaryErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
-class __$$DashboardProductsSummaryErrorStateImplCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res,
-        _$DashboardProductsSummaryErrorStateImpl>
-    implements _$$DashboardProductsSummaryErrorStateImplCopyWith<$Res> {
-  __$$DashboardProductsSummaryErrorStateImplCopyWithImpl(
-      _$DashboardProductsSummaryErrorStateImpl _value,
-      $Res Function(_$DashboardProductsSummaryErrorStateImpl) _then)
+class __$$ProductsSummaryErrorStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$ProductsSummaryErrorStateImpl>
+    implements _$$ProductsSummaryErrorStateImplCopyWith<$Res> {
+  __$$ProductsSummaryErrorStateImplCopyWithImpl(
+      _$ProductsSummaryErrorStateImpl _value,
+      $Res Function(_$ProductsSummaryErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DashboardState
@@ -3162,7 +3226,7 @@ class __$$DashboardProductsSummaryErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? apiErrorModel = null,
   }) {
-    return _then(_$DashboardProductsSummaryErrorStateImpl(
+    return _then(_$ProductsSummaryErrorStateImpl(
       null == apiErrorModel
           ? _value.apiErrorModel
           : apiErrorModel // ignore: cast_nullable_to_non_nullable
@@ -3173,9 +3237,8 @@ class __$$DashboardProductsSummaryErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DashboardProductsSummaryErrorStateImpl
-    implements _DashboardProductsSummaryErrorState {
-  const _$DashboardProductsSummaryErrorStateImpl(this.apiErrorModel);
+class _$ProductsSummaryErrorStateImpl implements ProductsSummaryErrorState {
+  const _$ProductsSummaryErrorStateImpl(this.apiErrorModel);
 
   @override
   final ApiErrorModel apiErrorModel;
@@ -3189,7 +3252,7 @@ class _$DashboardProductsSummaryErrorStateImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DashboardProductsSummaryErrorStateImpl &&
+            other is _$ProductsSummaryErrorStateImpl &&
             (identical(other.apiErrorModel, apiErrorModel) ||
                 other.apiErrorModel == apiErrorModel));
   }
@@ -3202,10 +3265,9 @@ class _$DashboardProductsSummaryErrorStateImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DashboardProductsSummaryErrorStateImplCopyWith<
-          _$DashboardProductsSummaryErrorStateImpl>
-      get copyWith => __$$DashboardProductsSummaryErrorStateImplCopyWithImpl<
-          _$DashboardProductsSummaryErrorStateImpl>(this, _$identity);
+  _$$ProductsSummaryErrorStateImplCopyWith<_$ProductsSummaryErrorStateImpl>
+      get copyWith => __$$ProductsSummaryErrorStateImplCopyWithImpl<
+          _$ProductsSummaryErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3227,6 +3289,10 @@ class _$DashboardProductsSummaryErrorStateImpl
     required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
         productsSummarySuccess,
     required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
   }) {
     return productsSummaryError(apiErrorModel);
   }
@@ -3250,6 +3316,10 @@ class _$DashboardProductsSummaryErrorStateImpl
     TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
   }) {
     return productsSummaryError?.call(apiErrorModel);
   }
@@ -3273,6 +3343,10 @@ class _$DashboardProductsSummaryErrorStateImpl
     TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
         productsSummarySuccess,
     TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummaryError != null) {
@@ -3285,30 +3359,34 @@ class _$DashboardProductsSummaryErrorStateImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_DashboardInitialState value) initial,
-    required TResult Function(_DashboardMonthlyStatisticsLoadingState value)
+    required TResult Function(MonthlyStatisticsLoadingState value)
         monthlyStatisticsLoading,
-    required TResult Function(_DashboardMonthlyStatisticsSuccessState value)
+    required TResult Function(MonthlyStatisticsSuccessState value)
         monthlyStatisticsSuccess,
-    required TResult Function(_DashboardMonthlyStatisticsErrorState value)
+    required TResult Function(MonthlyStatisticsErrorState value)
         monthlyStatisticsError,
-    required TResult Function(_DashboardRevenueChartLoadingState value)
+    required TResult Function(RevenueChartLoadingState value)
         revenueChartLoading,
-    required TResult Function(_DashboardRevenueChartSuccessState value)
+    required TResult Function(RevenueChartSuccessState value)
         revenueChartSuccess,
-    required TResult Function(_DashboardRevenueChartErrorState value)
-        revenueChartError,
-    required TResult Function(_DashboardOrdersSummaryLoadingState value)
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
         ordersSummaryLoading,
-    required TResult Function(_DashboardOrdersSummarySuccessState value)
+    required TResult Function(OrdersSummarySuccessState value)
         ordersSummarySuccess,
-    required TResult Function(_DashboardOrdersSummaryErrorState value)
-        ordersSummaryError,
-    required TResult Function(_DashboardProductsSummaryLoadingState value)
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
         productsSummaryLoading,
-    required TResult Function(_DashboardProductsSummarySuccessState value)
+    required TResult Function(ProductsSummarySuccessState value)
         productsSummarySuccess,
-    required TResult Function(_DashboardProductsSummaryErrorState value)
+    required TResult Function(ProductsSummaryErrorState value)
         productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
   }) {
     return productsSummaryError(this);
   }
@@ -3317,30 +3395,28 @@ class _$DashboardProductsSummaryErrorStateImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DashboardInitialState value)? initial,
-    TResult? Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult? Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult? Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult? Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult? Function(_DashboardMonthlyStatisticsErrorState value)?
+    TResult? Function(MonthlyStatisticsErrorState value)?
         monthlyStatisticsError,
-    TResult? Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult? Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult? Function(_DashboardRevenueChartErrorState value)?
-        revenueChartError,
-    TResult? Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult? Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult? Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult? Function(_DashboardProductsSummaryLoadingState value)?
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
         productsSummaryLoading,
-    TResult? Function(_DashboardProductsSummarySuccessState value)?
+    TResult? Function(ProductsSummarySuccessState value)?
         productsSummarySuccess,
-    TResult? Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
   }) {
     return productsSummaryError?.call(this);
   }
@@ -3349,29 +3425,23 @@ class _$DashboardProductsSummaryErrorStateImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DashboardInitialState value)? initial,
-    TResult Function(_DashboardMonthlyStatisticsLoadingState value)?
+    TResult Function(MonthlyStatisticsLoadingState value)?
         monthlyStatisticsLoading,
-    TResult Function(_DashboardMonthlyStatisticsSuccessState value)?
+    TResult Function(MonthlyStatisticsSuccessState value)?
         monthlyStatisticsSuccess,
-    TResult Function(_DashboardMonthlyStatisticsErrorState value)?
-        monthlyStatisticsError,
-    TResult Function(_DashboardRevenueChartLoadingState value)?
-        revenueChartLoading,
-    TResult Function(_DashboardRevenueChartSuccessState value)?
-        revenueChartSuccess,
-    TResult Function(_DashboardRevenueChartErrorState value)? revenueChartError,
-    TResult Function(_DashboardOrdersSummaryLoadingState value)?
-        ordersSummaryLoading,
-    TResult Function(_DashboardOrdersSummarySuccessState value)?
-        ordersSummarySuccess,
-    TResult Function(_DashboardOrdersSummaryErrorState value)?
-        ordersSummaryError,
-    TResult Function(_DashboardProductsSummaryLoadingState value)?
-        productsSummaryLoading,
-    TResult Function(_DashboardProductsSummarySuccessState value)?
-        productsSummarySuccess,
-    TResult Function(_DashboardProductsSummaryErrorState value)?
-        productsSummaryError,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
     required TResult orElse(),
   }) {
     if (productsSummaryError != null) {
@@ -3381,17 +3451,782 @@ class _$DashboardProductsSummaryErrorStateImpl
   }
 }
 
-abstract class _DashboardProductsSummaryErrorState implements DashboardState {
-  const factory _DashboardProductsSummaryErrorState(
-          final ApiErrorModel apiErrorModel) =
-      _$DashboardProductsSummaryErrorStateImpl;
+abstract class ProductsSummaryErrorState implements DashboardState {
+  const factory ProductsSummaryErrorState(final ApiErrorModel apiErrorModel) =
+      _$ProductsSummaryErrorStateImpl;
 
   ApiErrorModel get apiErrorModel;
 
   /// Create a copy of DashboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DashboardProductsSummaryErrorStateImplCopyWith<
-          _$DashboardProductsSummaryErrorStateImpl>
+  _$$ProductsSummaryErrorStateImplCopyWith<_$ProductsSummaryErrorStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TopSoldProductsLoadingStateImplCopyWith<$Res> {
+  factory _$$TopSoldProductsLoadingStateImplCopyWith(
+          _$TopSoldProductsLoadingStateImpl value,
+          $Res Function(_$TopSoldProductsLoadingStateImpl) then) =
+      __$$TopSoldProductsLoadingStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TopSoldProductsLoadingStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res,
+        _$TopSoldProductsLoadingStateImpl>
+    implements _$$TopSoldProductsLoadingStateImplCopyWith<$Res> {
+  __$$TopSoldProductsLoadingStateImplCopyWithImpl(
+      _$TopSoldProductsLoadingStateImpl _value,
+      $Res Function(_$TopSoldProductsLoadingStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$TopSoldProductsLoadingStateImpl implements TopSoldProductsLoadingState {
+  const _$TopSoldProductsLoadingStateImpl();
+
+  @override
+  String toString() {
+    return 'DashboardState.topSoldProductsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TopSoldProductsLoadingStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)
+        monthlyStatisticsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel)
+        monthlyStatisticsError,
+    required TResult Function() revenueChartLoading,
+    required TResult Function(Map<String, num> chartData) revenueChartSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) revenueChartError,
+    required TResult Function() ordersSummaryLoading,
+    required TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)
+        ordersSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) ordersSummaryError,
+    required TResult Function() productsSummaryLoading,
+    required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
+        productsSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
+  }) {
+    return topSoldProductsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult? Function()? revenueChartLoading,
+    TResult? Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult? Function()? ordersSummaryLoading,
+    TResult? Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult? Function()? productsSummaryLoading,
+    TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+  }) {
+    return topSoldProductsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? monthlyStatisticsLoading,
+    TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult Function()? revenueChartLoading,
+    TResult Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult Function()? ordersSummaryLoading,
+    TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult Function()? productsSummaryLoading,
+    TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsLoading != null) {
+      return topSoldProductsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DashboardInitialState value) initial,
+    required TResult Function(MonthlyStatisticsLoadingState value)
+        monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatisticsSuccessState value)
+        monthlyStatisticsSuccess,
+    required TResult Function(MonthlyStatisticsErrorState value)
+        monthlyStatisticsError,
+    required TResult Function(RevenueChartLoadingState value)
+        revenueChartLoading,
+    required TResult Function(RevenueChartSuccessState value)
+        revenueChartSuccess,
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
+        ordersSummaryLoading,
+    required TResult Function(OrdersSummarySuccessState value)
+        ordersSummarySuccess,
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
+        productsSummaryLoading,
+    required TResult Function(ProductsSummarySuccessState value)
+        productsSummarySuccess,
+    required TResult Function(ProductsSummaryErrorState value)
+        productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
+  }) {
+    return topSoldProductsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DashboardInitialState value)? initial,
+    TResult? Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult? Function(MonthlyStatisticsErrorState value)?
+        monthlyStatisticsError,
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
+        productsSummaryLoading,
+    TResult? Function(ProductsSummarySuccessState value)?
+        productsSummarySuccess,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
+  }) {
+    return topSoldProductsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DashboardInitialState value)? initial,
+    TResult Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsLoading != null) {
+      return topSoldProductsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TopSoldProductsLoadingState implements DashboardState {
+  const factory TopSoldProductsLoadingState() =
+      _$TopSoldProductsLoadingStateImpl;
+}
+
+/// @nodoc
+abstract class _$$TopSoldProductsSuccessStateImplCopyWith<$Res> {
+  factory _$$TopSoldProductsSuccessStateImplCopyWith(
+          _$TopSoldProductsSuccessStateImpl value,
+          $Res Function(_$TopSoldProductsSuccessStateImpl) then) =
+      __$$TopSoldProductsSuccessStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<TopSoldProductDataModel> topSoldProducts});
+}
+
+/// @nodoc
+class __$$TopSoldProductsSuccessStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res,
+        _$TopSoldProductsSuccessStateImpl>
+    implements _$$TopSoldProductsSuccessStateImplCopyWith<$Res> {
+  __$$TopSoldProductsSuccessStateImplCopyWithImpl(
+      _$TopSoldProductsSuccessStateImpl _value,
+      $Res Function(_$TopSoldProductsSuccessStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? topSoldProducts = null,
+  }) {
+    return _then(_$TopSoldProductsSuccessStateImpl(
+      null == topSoldProducts
+          ? _value._topSoldProducts
+          : topSoldProducts // ignore: cast_nullable_to_non_nullable
+              as List<TopSoldProductDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TopSoldProductsSuccessStateImpl implements TopSoldProductsSuccessState {
+  const _$TopSoldProductsSuccessStateImpl(
+      final List<TopSoldProductDataModel> topSoldProducts)
+      : _topSoldProducts = topSoldProducts;
+
+  final List<TopSoldProductDataModel> _topSoldProducts;
+  @override
+  List<TopSoldProductDataModel> get topSoldProducts {
+    if (_topSoldProducts is EqualUnmodifiableListView) return _topSoldProducts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_topSoldProducts);
+  }
+
+  @override
+  String toString() {
+    return 'DashboardState.topSoldProductsSuccess(topSoldProducts: $topSoldProducts)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TopSoldProductsSuccessStateImpl &&
+            const DeepCollectionEquality()
+                .equals(other._topSoldProducts, _topSoldProducts));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_topSoldProducts));
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TopSoldProductsSuccessStateImplCopyWith<_$TopSoldProductsSuccessStateImpl>
+      get copyWith => __$$TopSoldProductsSuccessStateImplCopyWithImpl<
+          _$TopSoldProductsSuccessStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)
+        monthlyStatisticsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel)
+        monthlyStatisticsError,
+    required TResult Function() revenueChartLoading,
+    required TResult Function(Map<String, num> chartData) revenueChartSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) revenueChartError,
+    required TResult Function() ordersSummaryLoading,
+    required TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)
+        ordersSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) ordersSummaryError,
+    required TResult Function() productsSummaryLoading,
+    required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
+        productsSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
+  }) {
+    return topSoldProductsSuccess(topSoldProducts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult? Function()? revenueChartLoading,
+    TResult? Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult? Function()? ordersSummaryLoading,
+    TResult? Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult? Function()? productsSummaryLoading,
+    TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+  }) {
+    return topSoldProductsSuccess?.call(topSoldProducts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? monthlyStatisticsLoading,
+    TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult Function()? revenueChartLoading,
+    TResult Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult Function()? ordersSummaryLoading,
+    TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult Function()? productsSummaryLoading,
+    TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsSuccess != null) {
+      return topSoldProductsSuccess(topSoldProducts);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DashboardInitialState value) initial,
+    required TResult Function(MonthlyStatisticsLoadingState value)
+        monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatisticsSuccessState value)
+        monthlyStatisticsSuccess,
+    required TResult Function(MonthlyStatisticsErrorState value)
+        monthlyStatisticsError,
+    required TResult Function(RevenueChartLoadingState value)
+        revenueChartLoading,
+    required TResult Function(RevenueChartSuccessState value)
+        revenueChartSuccess,
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
+        ordersSummaryLoading,
+    required TResult Function(OrdersSummarySuccessState value)
+        ordersSummarySuccess,
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
+        productsSummaryLoading,
+    required TResult Function(ProductsSummarySuccessState value)
+        productsSummarySuccess,
+    required TResult Function(ProductsSummaryErrorState value)
+        productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
+  }) {
+    return topSoldProductsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DashboardInitialState value)? initial,
+    TResult? Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult? Function(MonthlyStatisticsErrorState value)?
+        monthlyStatisticsError,
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
+        productsSummaryLoading,
+    TResult? Function(ProductsSummarySuccessState value)?
+        productsSummarySuccess,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
+  }) {
+    return topSoldProductsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DashboardInitialState value)? initial,
+    TResult Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsSuccess != null) {
+      return topSoldProductsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TopSoldProductsSuccessState implements DashboardState {
+  const factory TopSoldProductsSuccessState(
+          final List<TopSoldProductDataModel> topSoldProducts) =
+      _$TopSoldProductsSuccessStateImpl;
+
+  List<TopSoldProductDataModel> get topSoldProducts;
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TopSoldProductsSuccessStateImplCopyWith<_$TopSoldProductsSuccessStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$TopSoldProductsErrorStateImplCopyWith<$Res> {
+  factory _$$TopSoldProductsErrorStateImplCopyWith(
+          _$TopSoldProductsErrorStateImpl value,
+          $Res Function(_$TopSoldProductsErrorStateImpl) then) =
+      __$$TopSoldProductsErrorStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ApiErrorModel apiErrorModel});
+}
+
+/// @nodoc
+class __$$TopSoldProductsErrorStateImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$TopSoldProductsErrorStateImpl>
+    implements _$$TopSoldProductsErrorStateImplCopyWith<$Res> {
+  __$$TopSoldProductsErrorStateImplCopyWithImpl(
+      _$TopSoldProductsErrorStateImpl _value,
+      $Res Function(_$TopSoldProductsErrorStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiErrorModel = null,
+  }) {
+    return _then(_$TopSoldProductsErrorStateImpl(
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TopSoldProductsErrorStateImpl implements TopSoldProductsErrorState {
+  const _$TopSoldProductsErrorStateImpl(this.apiErrorModel);
+
+  @override
+  final ApiErrorModel apiErrorModel;
+
+  @override
+  String toString() {
+    return 'DashboardState.topSoldProductsError(apiErrorModel: $apiErrorModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TopSoldProductsErrorStateImpl &&
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TopSoldProductsErrorStateImplCopyWith<_$TopSoldProductsErrorStateImpl>
+      get copyWith => __$$TopSoldProductsErrorStateImplCopyWithImpl<
+          _$TopSoldProductsErrorStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)
+        monthlyStatisticsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel)
+        monthlyStatisticsError,
+    required TResult Function() revenueChartLoading,
+    required TResult Function(Map<String, num> chartData) revenueChartSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) revenueChartError,
+    required TResult Function() ordersSummaryLoading,
+    required TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)
+        ordersSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) ordersSummaryError,
+    required TResult Function() productsSummaryLoading,
+    required TResult Function(ProductsSummaryDataModel productsSummaryDataModel)
+        productsSummarySuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) productsSummaryError,
+    required TResult Function() topSoldProductsLoading,
+    required TResult Function(List<TopSoldProductDataModel> topSoldProducts)
+        topSoldProductsSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) topSoldProductsError,
+  }) {
+    return topSoldProductsError(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult? Function()? revenueChartLoading,
+    TResult? Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult? Function()? ordersSummaryLoading,
+    TResult? Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult? Function()? productsSummaryLoading,
+    TResult? Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult? Function()? topSoldProductsLoading,
+    TResult? Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+  }) {
+    return topSoldProductsError?.call(apiErrorModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? monthlyStatisticsLoading,
+    TResult Function(MonthlyStatsDataModel monthlyStatsDataModel)?
+        monthlyStatisticsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? monthlyStatisticsError,
+    TResult Function()? revenueChartLoading,
+    TResult Function(Map<String, num> chartData)? revenueChartSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? revenueChartError,
+    TResult Function()? ordersSummaryLoading,
+    TResult Function(OrdersSummaryDataModel ordersSummaryDataModel)?
+        ordersSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? ordersSummaryError,
+    TResult Function()? productsSummaryLoading,
+    TResult Function(ProductsSummaryDataModel productsSummaryDataModel)?
+        productsSummarySuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? productsSummaryError,
+    TResult Function()? topSoldProductsLoading,
+    TResult Function(List<TopSoldProductDataModel> topSoldProducts)?
+        topSoldProductsSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsError != null) {
+      return topSoldProductsError(apiErrorModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DashboardInitialState value) initial,
+    required TResult Function(MonthlyStatisticsLoadingState value)
+        monthlyStatisticsLoading,
+    required TResult Function(MonthlyStatisticsSuccessState value)
+        monthlyStatisticsSuccess,
+    required TResult Function(MonthlyStatisticsErrorState value)
+        monthlyStatisticsError,
+    required TResult Function(RevenueChartLoadingState value)
+        revenueChartLoading,
+    required TResult Function(RevenueChartSuccessState value)
+        revenueChartSuccess,
+    required TResult Function(RevenueChartErrorState value) revenueChartError,
+    required TResult Function(OrdersSummaryLoadingState value)
+        ordersSummaryLoading,
+    required TResult Function(OrdersSummarySuccessState value)
+        ordersSummarySuccess,
+    required TResult Function(OrdersSummaryErrorState value) ordersSummaryError,
+    required TResult Function(ProductsSummaryLoadingState value)
+        productsSummaryLoading,
+    required TResult Function(ProductsSummarySuccessState value)
+        productsSummarySuccess,
+    required TResult Function(ProductsSummaryErrorState value)
+        productsSummaryError,
+    required TResult Function(TopSoldProductsLoadingState value)
+        topSoldProductsLoading,
+    required TResult Function(TopSoldProductsSuccessState value)
+        topSoldProductsSuccess,
+    required TResult Function(TopSoldProductsErrorState value)
+        topSoldProductsError,
+  }) {
+    return topSoldProductsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DashboardInitialState value)? initial,
+    TResult? Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult? Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult? Function(MonthlyStatisticsErrorState value)?
+        monthlyStatisticsError,
+    TResult? Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult? Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult? Function(RevenueChartErrorState value)? revenueChartError,
+    TResult? Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult? Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult? Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult? Function(ProductsSummaryLoadingState value)?
+        productsSummaryLoading,
+    TResult? Function(ProductsSummarySuccessState value)?
+        productsSummarySuccess,
+    TResult? Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult? Function(TopSoldProductsLoadingState value)?
+        topSoldProductsLoading,
+    TResult? Function(TopSoldProductsSuccessState value)?
+        topSoldProductsSuccess,
+    TResult? Function(TopSoldProductsErrorState value)? topSoldProductsError,
+  }) {
+    return topSoldProductsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DashboardInitialState value)? initial,
+    TResult Function(MonthlyStatisticsLoadingState value)?
+        monthlyStatisticsLoading,
+    TResult Function(MonthlyStatisticsSuccessState value)?
+        monthlyStatisticsSuccess,
+    TResult Function(MonthlyStatisticsErrorState value)? monthlyStatisticsError,
+    TResult Function(RevenueChartLoadingState value)? revenueChartLoading,
+    TResult Function(RevenueChartSuccessState value)? revenueChartSuccess,
+    TResult Function(RevenueChartErrorState value)? revenueChartError,
+    TResult Function(OrdersSummaryLoadingState value)? ordersSummaryLoading,
+    TResult Function(OrdersSummarySuccessState value)? ordersSummarySuccess,
+    TResult Function(OrdersSummaryErrorState value)? ordersSummaryError,
+    TResult Function(ProductsSummaryLoadingState value)? productsSummaryLoading,
+    TResult Function(ProductsSummarySuccessState value)? productsSummarySuccess,
+    TResult Function(ProductsSummaryErrorState value)? productsSummaryError,
+    TResult Function(TopSoldProductsLoadingState value)? topSoldProductsLoading,
+    TResult Function(TopSoldProductsSuccessState value)? topSoldProductsSuccess,
+    TResult Function(TopSoldProductsErrorState value)? topSoldProductsError,
+    required TResult orElse(),
+  }) {
+    if (topSoldProductsError != null) {
+      return topSoldProductsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TopSoldProductsErrorState implements DashboardState {
+  const factory TopSoldProductsErrorState(final ApiErrorModel apiErrorModel) =
+      _$TopSoldProductsErrorStateImpl;
+
+  ApiErrorModel get apiErrorModel;
+
+  /// Create a copy of DashboardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TopSoldProductsErrorStateImplCopyWith<_$TopSoldProductsErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

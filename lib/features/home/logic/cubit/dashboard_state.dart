@@ -1,9 +1,10 @@
+import 'package:connect_chain/features/home/data/models/response_models/top_sold_products_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
-import '../../data/models/monthly_stats_response_model.dart';
-import '../../data/models/orders_summary_response_model.dart';
-import '../../data/models/products_summary_response_model.dart';
+import '../../data/models/response_models/monthly_stats_response_model.dart';
+import '../../data/models/response_models/orders_summary_response_model.dart';
+import '../../data/models/response_models/products_summary_response_model.dart';
 
 part 'dashboard_state.freezed.dart';
 
@@ -13,36 +14,44 @@ class DashboardState with _$DashboardState {
 
   // Monthly Statistics States
   const factory DashboardState.monthlyStatisticsLoading() =
-      _DashboardMonthlyStatisticsLoadingState;
+      MonthlyStatisticsLoadingState;
   const factory DashboardState.monthlyStatisticsSuccess(
           MonthlyStatsDataModel monthlyStatsDataModel) =
-      _DashboardMonthlyStatisticsSuccessState;
+      MonthlyStatisticsSuccessState;
   const factory DashboardState.monthlyStatisticsError(
-      ApiErrorModel apiErrorModel) = _DashboardMonthlyStatisticsErrorState;
+      ApiErrorModel apiErrorModel) = MonthlyStatisticsErrorState;
 
   // Revenue Chart States
-  const factory DashboardState.revenueChartLoading() =
-      _DashboardRevenueChartLoadingState;
+  const factory DashboardState.revenueChartLoading() = RevenueChartLoadingState;
   const factory DashboardState.revenueChartSuccess(Map<String, num> chartData) =
-      _DashboardRevenueChartSuccessState;
+      RevenueChartSuccessState;
   const factory DashboardState.revenueChartError(ApiErrorModel apiErrorModel) =
-      _DashboardRevenueChartErrorState;
+      RevenueChartErrorState;
 
   // Orders Summary States
   const factory DashboardState.ordersSummaryLoading() =
-      _DashboardOrdersSummaryLoadingState;
+      OrdersSummaryLoadingState;
   const factory DashboardState.ordersSummarySuccess(
           OrdersSummaryDataModel ordersSummaryDataModel) =
-      _DashboardOrdersSummarySuccessState;
+      OrdersSummarySuccessState;
   const factory DashboardState.ordersSummaryError(ApiErrorModel apiErrorModel) =
-      _DashboardOrdersSummaryErrorState;
+      OrdersSummaryErrorState;
 
   // Products Summary States
   const factory DashboardState.productsSummaryLoading() =
-      _DashboardProductsSummaryLoadingState;
+      ProductsSummaryLoadingState;
   const factory DashboardState.productsSummarySuccess(
           ProductsSummaryDataModel productsSummaryDataModel) =
-      _DashboardProductsSummarySuccessState;
+      ProductsSummarySuccessState;
   const factory DashboardState.productsSummaryError(
-      ApiErrorModel apiErrorModel) = _DashboardProductsSummaryErrorState;
+      ApiErrorModel apiErrorModel) = ProductsSummaryErrorState;
+
+  // Top sold products States
+  const factory DashboardState.topSoldProductsLoading() =
+      TopSoldProductsLoadingState;
+  const factory DashboardState.topSoldProductsSuccess(
+          List<TopSoldProductDataModel> topSoldProducts) =
+      TopSoldProductsSuccessState;
+  const factory DashboardState.topSoldProductsError(
+      ApiErrorModel apiErrorModel) = TopSoldProductsErrorState;
 }

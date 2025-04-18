@@ -1,7 +1,7 @@
 import 'package:connect_chain/core/networking/api_constants.dart';
 import 'package:connect_chain/core/networking/api_helper.dart';
 import 'package:connect_chain/core/networking/api_request_model.dart';
-import 'package:connect_chain/features/home/data/models/revenue_chart_response_model.dart';
+import 'package:connect_chain/features/home/data/models/response_models/revenue_chart_response_model.dart';
 
 class RevenueChartDataSource {
   final ApiHelper _apiHelper;
