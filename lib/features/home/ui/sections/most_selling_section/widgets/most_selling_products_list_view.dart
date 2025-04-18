@@ -1,5 +1,5 @@
 import 'package:connect_chain/features/home/data/models/response_models/top_sold_products_response_model.dart';
-import 'package:connect_chain/features/home/ui/widgets/most_selling_section/widgets/most_selling_product_widget.dart';
+import 'package:connect_chain/features/home/ui/sections/most_selling_section/widgets/most_selling_product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

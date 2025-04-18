@@ -1,5 +1,5 @@
 import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/features/home/ui/widgets/most_selling_section/widgets/most_selling_products_bloc_builder.dart';
+import 'package:connect_chain/features/home/ui/sections/most_selling_section/widgets/most_selling_products_bloc_builder.dart';
 
 import '../../../../../core/theming/app_text_styles.dart';
 import '../../../../../core/theming/colors_helper.dart';

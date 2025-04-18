@@ -1,7 +1,7 @@
 import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/core/widgets/loading_indicator.dart';
 import 'package:connect_chain/features/home/logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
-import 'package:connect_chain/features/home/ui/widgets/monthly_statistics_section/widgets/monthly_statistics_data.dart';
+import 'package:connect_chain/features/home/ui/sections/monthly_statistics_section/widgets/monthly_statistics_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
