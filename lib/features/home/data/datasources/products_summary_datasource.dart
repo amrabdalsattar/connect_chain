@@ -10,7 +10,7 @@ class ProductsSummaryDatasource {
   Future<ProductsSummaryDataModel> getProductsSummary(String supplierId) async {
     final response = await _apiHelper.get(ApiRequestModel(
       endPoint: ApiConstants.productsSummaryEP,
-      body: {
+      queries: {
         'supplierId': supplierId,
       },
     ));

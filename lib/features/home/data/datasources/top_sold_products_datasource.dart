@@ -14,7 +14,7 @@ class TopSoldProductsDatasource {
     final response = await _apiHelper.get(
       ApiRequestModel(
           endPoint: ApiConstants.topSoldProductsEP,
-          body: requestModel.paginatedToJson()),
+          queries: requestModel.paginatedToJson()),
     );
     TopSoldProductsResponseModel responseModel =
         TopSoldProductsResponseModel.fromJson(response);

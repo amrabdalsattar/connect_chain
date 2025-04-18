@@ -48,7 +48,8 @@ class CustomLineChart extends StatelessWidget {
                 bottomTitles: AxisTitles(sideTitles: bottomTitles)),
             minX: 1,
             maxX: 12,
-            baselineX: 4,
+            minY: 0,
+            baselineY: 0,
             gridData: const FlGridData(show: false),
             borderData: FlBorderData(
               show: true,

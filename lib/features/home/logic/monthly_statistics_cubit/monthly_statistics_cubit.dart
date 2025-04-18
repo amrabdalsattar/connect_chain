@@ -1,13 +1,13 @@
-import 'package:connect_chain/features/home/domain/dashboard_use_case.dart';
+import 'package:connect_chain/features/home/data/repos/monthly_stats_repo.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/models/request_models/dashboard_request_model.dart';
 import 'monthly_statistics_states.dart';
 
 class MonthlyStatisticsCubit extends Cubit<MonthlyStatisticsState> {
-  final DashboardUseCase _useCase;
-  MonthlyStatisticsCubit(this._useCase)
-      : super(MonthlyStatisticsInitialState());
+  final MonthlyStatsRepo _repo;
+  MonthlyStatisticsCubit(this._repo) : super(MonthlyStatisticsInitialState());
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
@@ -15,7 +15,7 @@ class MonthlyStatisticsCubit extends Cubit<MonthlyStatisticsState> {
 
   Future<void> getMonthlyStats() async {
     emit(const MonthlyStatisticsLoadingState());
-    final result = await _useCase.getMonthlyStats(DashboardRequestModel(
+    final result = await _repo.getMonthlyStats(DashboardRequestModel(
         supplierId: supplierId, year: currentYear, month: currentMonth));
     result.when(
       success: (monthlyStatsDataModel) {

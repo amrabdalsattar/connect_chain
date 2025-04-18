@@ -1,10 +1,11 @@
-import 'package:connect_chain/features/home/domain/dashboard_use_case.dart';
 import 'package:connect_chain/features/home/logic/revenue_chart_cubit/revenue_chart_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/repos/revenue_chart_repo.dart';
+
 class RevenueChartCubit extends Cubit<RevenueChartState> {
-  final DashboardUseCase _useCase;
-  RevenueChartCubit(this._useCase) : super(RevenueChartInitialState());
+  final RevenueChartRepo _repo;
+  RevenueChartCubit(this._repo) : super(RevenueChartInitialState());
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
@@ -12,7 +13,7 @@ class RevenueChartCubit extends Cubit<RevenueChartState> {
 
   Future<void> getRevenueChartData() async {
     emit(const RevenueChartLoadingState());
-    final result = await _useCase.getRevenueChartData(
+    final result = await _repo.getRevenueChartData(
         supplierId: supplierId, year: currentYear);
 
     result.when(
@@ -31,7 +32,7 @@ class RevenueChartCubit extends Cubit<RevenueChartState> {
 
     final result = <String, num>{};
 
-    for (int i = 0; i < firstKey; i++) {
+    for (int i = 1; i < firstKey; i++) {
       result['$i'] = 0;
     }
 
