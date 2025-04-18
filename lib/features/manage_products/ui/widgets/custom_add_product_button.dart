@@ -26,6 +26,8 @@ class CustomAddProductButton extends StatelessWidget {
             vertical: 12.h,
             horizontal: 16.w,
           ),
+          shadowColor: ColorsHelper.boxShadow,
+          elevation: 4,
         ),
         onPressed: () {
           context.pushNamed(Routes.addProductScreenRoute);
@@ -33,7 +35,7 @@ class CustomAddProductButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
+            SvgPicture.asset( 
               AppImages.addIcon,
               width: 16.w,
               height: 16.h,

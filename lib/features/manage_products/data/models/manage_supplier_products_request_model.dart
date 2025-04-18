@@ -1,25 +1,22 @@
 class ManageSupplierProductsResponseModel {
   final List<ProductDataModel> data;
-  
 
   ManageSupplierProductsResponseModel({
     required this.data,
-  
   });
 
-  factory ManageSupplierProductsResponseModel.fromJson(Map<String, dynamic> json) {
+  factory ManageSupplierProductsResponseModel.fromJson(
+      Map<String, dynamic> json) {
     return ManageSupplierProductsResponseModel(
       data: (json['data'] as List<dynamic>)
           .map((item) => ProductDataModel.fromJson(item))
           .toList(),
-   
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'data': data.map((product) => product.toJson()).toList(),
-
     };
   }
 }
@@ -43,12 +40,12 @@ class ProductDataModel {
 
   factory ProductDataModel.fromJson(Map<String, dynamic> json) {
     return ProductDataModel(
-      id: json['id'] ,
-      name: json['name'] ,
+      id: json['id'],
+      name: json['name'],
       stock: json['stock'],
-      price: json['price'] ,
-      categoryName: json['categoryName'] ,
-      image: json['image'] ,
+      price: json['price'],
+      categoryName: json['categoryName'],
+      image: json['image'],
     );
   }
 

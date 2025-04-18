@@ -29,11 +29,18 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       },
       listener: (context, state) {
         state.whenOrNull(
+          error: (errorState) => DialogsHelper.showSnackBar(
+            context,
+            errorState.message ?? '',
+            backgroundColor: ColorsHelper.rejectedOrderBackGroundColor,
+          ),
           operationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
           operationFailed: (message) => DialogsHelper.showSnackBar(
-              context, message,
-              backgroundColor: ColorsHelper.rejectedOrderBackGroundColor),
+            context,
+            message,
+            backgroundColor: ColorsHelper.rejectedOrderBackGroundColor,
+          ),
         );
       },
     );

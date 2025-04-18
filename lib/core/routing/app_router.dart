@@ -1,8 +1,10 @@
-import '../../features/manage_products/data/models/manage_supplier_products_request_model.dart';
-import '../../features/product_details/ui/product_details_screen.dart';
+import 'package:connect_chain/features/edit_product/logic/cubit/edit_product_cubit.dart';
+import 'package:connect_chain/features/edit_product/ui/edit_product_screen.dart';
+import 'package:connect_chain/features/product_details/logic/cubit/product_details_cubit.dart';
+import 'package:connect_chain/features/product_details/ui/widgets/product_details_bloc_consumer.dart';
 
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
-import '../../features/manage_products/ui/manage_products_screen.dart';
+import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';
@@ -65,6 +67,14 @@ class AppRouter {
           screen: const ProfileScreen(),
           settings: settings,
         );
+      case Routes.editProductScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) => EditProductCubit(getIt()),
+            child: const EditProductScreen(),
+          ),
+          settings: settings,
+        );
       case Routes.manageProductsScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ManageProductsScreen(),
@@ -72,11 +82,12 @@ class AppRouter {
         );
 
       case Routes.productDetailsScreenRoute:
-        final productDataModel = arguments as ProductDataModel;
+        final productId = arguments as int;
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: ProductDetailsScreen(
-            productDataModel: productDataModel,
-          ),
+          screen: BlocProvider(
+              create: (context) => ProductDetailsCubit(getIt())
+                ..emitProductDetailsState(productId),
+              child: ProductDetailsBlocConsumer(productId: productId)),
           settings: settings,
         );
       case Routes.addProductScreenRoute:
