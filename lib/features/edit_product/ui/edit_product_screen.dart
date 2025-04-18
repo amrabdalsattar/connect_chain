@@ -36,14 +36,14 @@ class EditProductScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 48),
           child: SingleChildScrollView(
-            child: Column(  
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 verticalSpace(32),
                 const UploadImageWidget(),
                 verticalSpace(24),
                 //  Fake Image
-                ProductImageList(
+                AddProductImagesList(
                   imageFiles: [
                     File(''),
                     File(''),

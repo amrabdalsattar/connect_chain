@@ -13,8 +13,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 part 'custom_edit_product_tile_trailing_section.dart';
 part 'edit_product_tile_details_section.dart';
 
-class CustomEditProductTile extends StatelessWidget {
-  const CustomEditProductTile(
+class ManageProductsTile extends StatelessWidget {
+  const ManageProductsTile(
       {super.key,
       required this.productDataModel,
       this.onEdit,

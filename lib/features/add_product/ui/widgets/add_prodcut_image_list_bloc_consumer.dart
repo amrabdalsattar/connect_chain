@@ -18,7 +18,7 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
           current is AddProductImageInitial ||
           current is AddProductImageDeleted,
       builder: (context, state) {
-        return ProductImageList(
+        return AddProductImagesList(
           imageFiles:
               addProductCubit.productImages.map((file) => file).toList(),
           onDeleteTap: (image) => addProductCubit.deleteImage(image),
