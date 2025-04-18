@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/dialogs_helper.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/app_text_styles.dart';
+
 import '../../../../core/widgets/product_images_list.dart';
 import '../../../../core/widgets/upload_image.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/app_text_styles.dart';
+
 import '../../logic/cubit/add_product_cubit.dart';
 
 class AddProductImagesSection extends StatelessWidget {
@@ -36,7 +40,7 @@ class AddProductImagesSection extends StatelessWidget {
               current is AddProductImageInitial ||
               current is AddProductImageDeleted,
           builder: (context, state) {
-            return AddProductImagesList(
+            return ProductImageList(
               imageFiles:
                   addProductCubit.productImages.map((file) => file).toList(),
               onDeleteTap: (image) => addProductCubit.deleteImage(image),

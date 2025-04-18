@@ -8,20 +8,21 @@ import '../logic/orders_summary_cubit/orders_summary_cubit.dart';
 import '../logic/products_summary_cubit/products_summary_cubit.dart';
 import '../logic/revenue_chart_cubit/revenue_chart_cubit.dart';
 import '../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
-import 'sections/monthly_statistics_section/monthly_statistics_section.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/colors_helper.dart';
 import '../data/repos/top_sold_products_repo.dart';
 import 'widgets/home_tab_app_bar.dart';
-import 'sections/most_selling_section/most_selling_section.dart';
-import 'sections/orders_section/orders_section.dart';
-import 'sections/products_summary_section/products_summary_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'sections/revenue_chart/revenue_chart.dart';
+import 'widgets/monthly_statistics_section/monthly_statistics_section.dart';
+import 'widgets/most_selling_section/most_selling_section.dart';
+import 'widgets/orders_section/orders_section.dart';
+import 'widgets/products_summary_section/products_summary_section.dart';
+import 'widgets/revenue_chart/revenue_chart.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});

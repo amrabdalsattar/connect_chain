@@ -43,7 +43,7 @@ class EditProductScreen extends StatelessWidget {
                 const UploadImageWidget(),
                 verticalSpace(24),
                 //  Fake Image
-                AddProductImagesList(
+                ProductImageList(
                   imageFiles: [
                     File(''),
                     File(''),
