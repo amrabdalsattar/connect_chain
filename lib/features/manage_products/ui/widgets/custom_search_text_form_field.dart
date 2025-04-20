@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/theming/colors_helper.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
-import 'package:flutter/material.dart';
 
 class CustomSearchTextFormField extends StatelessWidget {
   const CustomSearchTextFormField({

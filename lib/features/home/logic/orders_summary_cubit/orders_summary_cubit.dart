@@ -1,6 +1,6 @@
-import '../../data/repos/orders_summary_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/repos/orders_summary_repo.dart';
 import 'orders_summary_state.dart';
 
 class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {

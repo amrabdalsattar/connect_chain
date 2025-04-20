@@ -27,7 +27,7 @@ class ColorsHelper {
 
   static Color fadedBlack = Colors.black.withValues(alpha: 0.65);
   static Color semiOpacityBlack = Colors.black.withValues(alpha: 0.5);
-  static Color boxShadow = Colors.black.withOpacity(0.25);
+  static Color boxShadow = Colors.black.withValues(alpha: 0.25);
 
   static Color fadedGray = Colors.black.withValues(alpha: 0.1);
   static const Color darkGray = Color(0xFF141414);

@@ -1,8 +1,8 @@
-import 'package:bloc/bloc.dart';
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/features/product_details/data/models/product_details_response_model.dart';
-import 'package:connect_chain/features/product_details/data/repos/product_details_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/product_details_response_model.dart';
+import '../../data/repos/product_details_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'product_details_state.dart';

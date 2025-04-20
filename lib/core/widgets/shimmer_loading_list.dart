@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../helpers/spacing.dart';
+import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';

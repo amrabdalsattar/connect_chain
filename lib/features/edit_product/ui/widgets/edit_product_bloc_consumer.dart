@@ -16,7 +16,7 @@ class EditProductBlocConsumer extends StatelessWidget {
           state.whenOrNull(
             error: (apiErrorModel) {
               context.pop();
-  
+
               DialogsHelper.showErrorDialog(
                   context, apiErrorModel.getErrorMessages()!);
             },
@@ -33,7 +33,7 @@ class EditProductBlocConsumer extends StatelessWidget {
                   final editProductCubit = context.read<EditProductCubit>();
                   return EditProductScreen(
                     editProductCubit: editProductCubit,
-                    product: productState.prodcut,
+                    product: productState.product,
                   );
                 },
               ) ??

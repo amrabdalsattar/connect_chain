@@ -61,13 +61,13 @@ mixin _$AddProductState {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,13 +75,13 @@ mixin _$AddProductState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,13 +89,13 @@ mixin _$AddProductState {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -218,13 +218,13 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return initial(this);
   }
@@ -235,13 +235,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return initial?.call(this);
   }
@@ -252,13 +252,13 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -371,13 +371,13 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return loading(this);
   }
@@ -388,13 +388,13 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return loading?.call(this);
   }
@@ -405,13 +405,13 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -524,13 +524,13 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return success(this);
   }
@@ -541,13 +541,13 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return success?.call(this);
   }
@@ -558,13 +558,13 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -613,7 +613,7 @@ class __$$AddProductErrostateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductErrostateImpl implements AddProductErrostate {
+class _$AddProductErrostateImpl implements AddProductErrorState {
   const _$AddProductErrostateImpl(this.apiErrorModel);
 
   @override
@@ -703,13 +703,13 @@ class _$AddProductErrostateImpl implements AddProductErrostate {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return error(this);
   }
@@ -720,13 +720,13 @@ class _$AddProductErrostateImpl implements AddProductErrostate {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return error?.call(this);
   }
@@ -737,13 +737,13 @@ class _$AddProductErrostateImpl implements AddProductErrostate {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -753,8 +753,8 @@ class _$AddProductErrostateImpl implements AddProductErrostate {
   }
 }
 
-abstract class AddProductErrostate implements AddProductState {
-  const factory AddProductErrostate(final ApiErrorModel apiErrorModel) =
+abstract class AddProductErrorState implements AddProductState {
+  const factory AddProductErrorState(final ApiErrorModel apiErrorModel) =
       _$AddProductErrostateImpl;
 
   ApiErrorModel get apiErrorModel;
@@ -895,13 +895,13 @@ class _$AddProductImageUploadSuccessStateImpl
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return imageUploadSuccess(this);
   }
@@ -912,13 +912,13 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return imageUploadSuccess?.call(this);
   }
@@ -929,13 +929,13 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageUploadSuccess != null) {
@@ -1085,13 +1085,13 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return imageError(this);
   }
@@ -1102,13 +1102,13 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return imageError?.call(this);
   }
@@ -1119,13 +1119,13 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageError != null) {
@@ -1172,7 +1172,7 @@ class __$$AddproductImageloadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
+class _$AddproductImageloadingStateImpl implements AddProductImageLoadingState {
   const _$AddproductImageloadingStateImpl();
 
   @override
@@ -1248,13 +1248,13 @@ class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return imageLoading(this);
   }
@@ -1265,13 +1265,13 @@ class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return imageLoading?.call(this);
   }
@@ -1282,13 +1282,13 @@ class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageLoading != null) {
@@ -1298,8 +1298,8 @@ class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
   }
 }
 
-abstract class AddproductImageloadingState implements AddProductState {
-  const factory AddproductImageloadingState() =
+abstract class AddProductImageLoadingState implements AddProductState {
+  const factory AddProductImageLoadingState() =
       _$AddproductImageloadingStateImpl;
 }
 
@@ -1402,13 +1402,13 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return intial(this);
   }
@@ -1419,13 +1419,13 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return intial?.call(this);
   }
@@ -1436,13 +1436,13 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (intial != null) {
@@ -1479,7 +1479,7 @@ class __$$AddproductImageDeletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
+class _$AddproductImageDeletedImpl implements AddProductImageDeleted {
   const _$AddproductImageDeletedImpl();
 
   @override
@@ -1555,13 +1555,13 @@ class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
     required TResult Function(_Initial value) initial,
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
-    required TResult Function(AddProductErrostate value) error,
+    required TResult Function(AddProductErrorState value) error,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
-    required TResult Function(AddproductImageloadingState value) imageLoading,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddproductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
   }) {
     return imageDeleted(this);
   }
@@ -1572,13 +1572,13 @@ class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
     TResult? Function(_Initial value)? initial,
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
-    TResult? Function(AddProductErrostate value)? error,
+    TResult? Function(AddProductErrorState value)? error,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
-    TResult? Function(AddproductImageloadingState value)? imageLoading,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddproductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
   }) {
     return imageDeleted?.call(this);
   }
@@ -1589,13 +1589,13 @@ class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
     TResult Function(_Initial value)? initial,
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
-    TResult Function(AddProductErrostate value)? error,
+    TResult Function(AddProductErrorState value)? error,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
-    TResult Function(AddproductImageloadingState value)? imageLoading,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddproductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageDeleted != null) {
@@ -1605,6 +1605,6 @@ class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
   }
 }
 
-abstract class AddproductImageDeleted implements AddProductState {
-  const factory AddproductImageDeleted() = _$AddproductImageDeletedImpl;
+abstract class AddProductImageDeleted implements AddProductState {
+  const factory AddProductImageDeleted() = _$AddproductImageDeletedImpl;
 }

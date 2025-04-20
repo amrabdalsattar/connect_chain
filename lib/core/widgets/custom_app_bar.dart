@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/widgets/logo.dart';
+import '../theming/colors_helper.dart';
+import 'logo.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_text_styles.dart';

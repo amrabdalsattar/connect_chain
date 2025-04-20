@@ -1,6 +1,7 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../data/repos/products_summary_repo.dart';
 import 'products_summary_states.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductsSummaryCubit extends Cubit<ProductsSummaryState> {
   final ProductsSummaryRepo _repo;

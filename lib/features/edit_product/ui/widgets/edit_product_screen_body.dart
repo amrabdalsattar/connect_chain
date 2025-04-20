@@ -27,7 +27,7 @@ class EditProductScreenBody extends StatelessWidget {
               ),
               verticalSpace(24),
               //  Image Section
-              EditProdcutImageBlocBuilder(
+              EditProductImageBlocBuilder(
                   product: product, editProductCubit: editProductCubit),
               verticalSpace(24),
               // ProductDetailsSection

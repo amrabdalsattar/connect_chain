@@ -1,5 +1,6 @@
-import '../../../../../../core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../../core/theming/app_text_styles.dart';
 
 class SoldQuantityTextSpan extends StatelessWidget {
   final int soldQuantity;

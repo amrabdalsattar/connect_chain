@@ -836,7 +836,7 @@ class __$$GetEditProductSuccessStateImplCopyWithImpl<$Res>
   }) {
     return _then(_$GetEditProductSuccessStateImpl(
       null == prodcut
-          ? _value.prodcut
+          ? _value.product
           : prodcut // ignore: cast_nullable_to_non_nullable
               as EditProductRequestModel,
     ));
@@ -846,14 +846,14 @@ class __$$GetEditProductSuccessStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
-  const _$GetEditProductSuccessStateImpl(this.prodcut);
+  const _$GetEditProductSuccessStateImpl(this.product);
 
   @override
-  final EditProductRequestModel prodcut;
+  final EditProductRequestModel product;
 
   @override
   String toString() {
-    return 'EditProductState.getProductSuccess(prodcut: $prodcut)';
+    return 'EditProductState.getProductSuccess(prodcut: $product)';
   }
 
   @override
@@ -861,11 +861,11 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetEditProductSuccessStateImpl &&
-            (identical(other.prodcut, prodcut) || other.prodcut == prodcut));
+            (identical(other.product, product) || other.product == product));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, prodcut);
+  int get hashCode => Object.hash(runtimeType, product);
 
   /// Create a copy of EditProductState
   /// with the given fields replaced by the non-null parameter values.
@@ -891,7 +891,7 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
   }) {
-    return getProductSuccess(prodcut);
+    return getProductSuccess(product);
   }
 
   @override
@@ -908,7 +908,7 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
   }) {
-    return getProductSuccess?.call(prodcut);
+    return getProductSuccess?.call(product);
   }
 
   @override
@@ -927,7 +927,7 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     required TResult orElse(),
   }) {
     if (getProductSuccess != null) {
-      return getProductSuccess(prodcut);
+      return getProductSuccess(product);
     }
     return orElse();
   }
@@ -996,7 +996,7 @@ abstract class GetEditProductSuccessState implements EditProductState {
   const factory GetEditProductSuccessState(
       final EditProductRequestModel prodcut) = _$GetEditProductSuccessStateImpl;
 
-  EditProductRequestModel get prodcut;
+  EditProductRequestModel get product;
 
   /// Create a copy of EditProductState
   /// with the given fields replaced by the non-null parameter values.

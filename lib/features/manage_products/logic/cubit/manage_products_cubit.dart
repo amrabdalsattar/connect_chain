@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
+import '../../../../core/helpers/extensions.dart';
 
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import '../../data/models/manage_supplier_products_request_model.dart';

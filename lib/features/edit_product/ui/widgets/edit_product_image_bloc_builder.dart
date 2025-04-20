@@ -1,7 +1,7 @@
 part of '../edit_product_screen.dart';
 
-class EditProdcutImageBlocBuilder extends StatelessWidget {
-  const EditProdcutImageBlocBuilder({
+class EditProductImageBlocBuilder extends StatelessWidget {
+  const EditProductImageBlocBuilder({
     super.key,
     required this.product,
     required this.editProductCubit,

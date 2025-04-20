@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/widgets/custom_image_widget.dart';
+import '../../../../core/widgets/custom_image_widget.dart';
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';

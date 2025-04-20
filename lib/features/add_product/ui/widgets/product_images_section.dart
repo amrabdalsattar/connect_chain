@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/widgets/product_image_list.dart';
+import '../../../../core/widgets/product_image_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';

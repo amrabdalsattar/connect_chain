@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:connect_chain/core/utils/convert_image_to_multipart_file.dart';
+import '../../../../core/utils/convert_image_to_multipart_file.dart';
 import 'package:dio/dio.dart';
 
 class EditProductRequestModel {

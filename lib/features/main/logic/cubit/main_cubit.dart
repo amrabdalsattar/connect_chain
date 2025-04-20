@@ -1,14 +1,13 @@
-import '../../../../core/helpers/cache/user_data_operator.dart';
-import '../../../manage_products/ui/manage_products_screen.dart';
-
-import '../../../../core/helpers/app_images.dart';
-import '../../../home/ui/home_tab.dart';
-import '../../../notifications/ui/notifications_tab.dart';
-import '../../../orders/ui/orders_tab.dart';
-import '../../../settings/ui/settings_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/cache/user_data_operator.dart';
+import '../../../home/ui/home_tab.dart';
+import '../../../manage_products/ui/manage_products_screen.dart';
+import '../../../notifications/ui/notifications_tab.dart';
+import '../../../orders/ui/orders_tab.dart';
+import '../../../settings/ui/settings_tab.dart';
 import '../../ui/widgets/bottom_nav_bar_item_switcher.dart';
 
 class MainCubit extends Cubit<dynamic> {

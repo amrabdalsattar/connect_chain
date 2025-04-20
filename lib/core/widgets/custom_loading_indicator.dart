@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
+import '../helpers/app_images.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {

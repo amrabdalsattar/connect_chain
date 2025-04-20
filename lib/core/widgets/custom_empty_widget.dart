@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomEmptyWidget extends StatelessWidget {

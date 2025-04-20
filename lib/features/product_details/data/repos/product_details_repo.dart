@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/networking/api_result.dart';
+import '../../../../core/networking/api_result.dart';
 
 import '../datasource/product_details_datasource.dart';
 import '../models/product_details_response_model.dart';
