@@ -8,8 +8,10 @@ class ProductDetailsResponseModel {
   final List<String> imageUrls;
   final String categoryName;
   final String? updatedDate;
+  final int? productId;
 
   ProductDetailsResponseModel({
+    this.productId,
     required this.sku,
     required this.name,
     required this.description,

@@ -59,6 +59,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
                   verticalSpace(16),
                   // Image Carousel Section
                   CustomImageSlider(
+                    
                     imagePaths: product.imageUrls,
                     selectedIndex: product.imageUrls.indexOf(imageUrl),
                     onImageTap: (selectedIndex) {

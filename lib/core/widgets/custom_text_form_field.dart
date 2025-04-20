@@ -44,7 +44,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       readOnly: isReadOnly ?? false,
-      canRequestFocus: isReadOnly ?? true,
+      canRequestFocus: isReadOnly != null ? !isReadOnly! : true,
       controller: controller,
       maxLines: maxLines,
       textCapitalization: keyboardType == TextInputType.name

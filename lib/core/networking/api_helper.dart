@@ -49,7 +49,9 @@ class DioHelper implements ApiHelper {
       apiRequestModel.endPoint,
       queryParameters: apiRequestModel.queries,
       data: apiRequestModel.body,
-      options: Options(headers: apiRequestModel.headers),
+      options: Options(
+        headers: apiRequestModel.headers,
+      ),
     );
 
     return response.data;

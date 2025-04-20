@@ -14,15 +14,16 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
       : super(const ProductDetailsState.initial());
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  int productId = 0;
 
   void changeSelectedImgUrl(int imageIndex) {
     emit(ProductDetailsState.imageChanged(imageIndex));
   }
 
   Future<void> emitProductDetailsState(int id) async {
-    // emit(const ProductDetailsState.initial());
     emit(const ProductDetailsState.loading());
     final result = await productDetailsRepo.getProductDetails(id);
+    productId = id;
 
     result.when(success: (product) {
       emit(ProductDetailsState.success(product));

@@ -18,8 +18,6 @@ class DialogsHelper {
     );
   }
 
-  
-
   static void showErrorDialog(BuildContext context, String error) {
     showDialog(
       context: context,

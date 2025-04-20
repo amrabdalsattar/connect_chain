@@ -1,7 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:connect_chain/core/utils/image_picker_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
@@ -30,34 +29,23 @@ class AddProductCubit extends Cubit<AddProductState> {
   List<File> productImages = [];
 
 // Images Functions
-
   Future<void> pickImage() async {
-    emit(const AddProductState.initial());
-    // Check if the user has already selected 5 images
-    if (productImages.length >= 5) {
-      emit(const AddProductState.imageError('You can add 5 images only'));
-      return;
-    }
-
-    final ImagePicker picker = ImagePicker();
-    try {
-      emit(const AddProductState.imageLoading());
-      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
-      if (image == null) {
-        emit(const AddProductState.imageError("No image selected"));
-        return;
-      }
-      final File imageFile = File(image.path);
-      productImages.add(imageFile);
-      emit(AddProductState.imageUploadSuccess(imageFile));
-    } catch (e) {
-      emit(AddProductState.imageError(e.toString()));
-    }
+    await ImagePickerHelper.pickImage(
+      maxImages: 5,
+      currentImages: productImages,
+      onImagePicked: (imageFile) {
+        productImages.add(imageFile);
+        emit(AddProductState.imageUploadSuccess(imageFile));
+      },
+      onError: (errorMessage) {
+        emit(AddProductState.imageError(errorMessage));
+      },
+    );
   }
 
-  void deleteImage(File image) {
-    productImages.remove(image);
-    emit(AddProductState.imageUploadSuccess(image));
+  void deleteImage(int imageIndex) {
+    productImages.removeAt(imageIndex);
+    emit(const AddProductState.imageDeleted());
   }
 
   // Product Functions
@@ -66,7 +54,7 @@ class AddProductCubit extends Cubit<AddProductState> {
     categoryController = categoryId;
   }
 
- Future<void> emitAddProductStates() async {
+  Future<void> emitAddProductStates() async {
     emit(const AddProductState.initial());
     if (productImages.isEmpty) {
       emit(

@@ -11,4 +11,6 @@ class Routes {
   static const String manageProductsScreenRoute = "/manageProductsScreen";
   static const String productDetailsScreenRoute = "/productDetailsScreen";
   static const String editProductScreenRoute = "/editProductScreen";
+    static const String heroImageView = "/heroImageView";
+
 }

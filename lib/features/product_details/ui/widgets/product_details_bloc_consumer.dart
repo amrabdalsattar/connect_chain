@@ -1,5 +1,7 @@
 import 'package:connect_chain/core/helpers/dialogs_helper.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
+import 'package:connect_chain/core/widgets/custom_empty_widget.dart';
+import 'package:connect_chain/core/widgets/custom_loading_indicator.dart';
 import 'package:connect_chain/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,9 +27,7 @@ class ProductDetailsBlocConsumer extends StatelessWidget {
                 productResponseModel: successState.product,
               ),
             ) ??
-            const Center(
-              child: Text('No Products Was found'),
-            );
+            const CustomEmptyWidget(message: 'لم يتم العثور على المنتج');
       },
       listener: (context, state) {
         state.whenOrNull(

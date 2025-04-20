@@ -45,7 +45,7 @@ class ProductDataModel {
       stock: json['stock'],
       price: json['price'],
       categoryName: json['categoryName'],
-      image: json['image'],
+      image: json['image'] ?? '',
     );
   }
 

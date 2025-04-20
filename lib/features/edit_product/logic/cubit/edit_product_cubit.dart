@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
+import 'package:connect_chain/core/utils/image_picker_helper.dart';
 import 'package:connect_chain/features/edit_product/data/model/edit_product_request_model.dart';
 import 'package:connect_chain/features/edit_product/data/repos/edit_product_repo.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class EditProductCubit extends Cubit<EditProductState> {
       : super(const EditProductState.initial());
 
   // Variables
-  String categoryController = '1'; // Replace with actual category ID
+  int categoryId = 0; // Replace with actual category ID
   TextEditingController nameController = TextEditingController();
   TextEditingController priceController = TextEditingController();
   TextEditingController quantityController = TextEditingController();
@@ -26,24 +27,76 @@ class EditProductCubit extends Cubit<EditProductState> {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  List<File> productImages = [];
+  List<String> productImages = [];
+  List<String> _imgaesIds = [];
+
+  final List<File> _newImages = [];
+  int _prodcutId = 0;
 
   emitEditStates() async {
-    emit(const EditProductState.initial());
     final result = await editProductRepo.updateProduct(EditProductRequestModel(
         name: nameController.text,
         description: descriptionController.text,
         price: double.parse(priceController.text),
         stock: int.parse(minimumStockController.text),
-        images: [],
-        remainingImages: [],
         minimumStock: int.parse(minimumStockController.text),
-        categoryId: 2));
-
+        categoryId: 2,
+        supplierId: '20044e2f-7c63-4ea5-a458-c39729d93e62',
+        newImages: _newImages,
+        productId: _prodcutId));
+  
     result.when(success: (product) {
       emit(const EditProductState.success());
     }, failure: (error) {
       emit(EditProductState.error(error));
     });
+  }
+
+  emitGetProductForUpdateStates(int productId) async {
+    emit(const EditProductState.loading());
+    final result = await editProductRepo.getProductForUpdate(productId);
+    result.when(success: (data) {
+      final EditProductRequestModel product = data;
+      nameController.text = product.name;
+      priceController.text = product.price.toString();
+      quantityController.text = product.stock.toString();
+      descriptionController.text = product.description;
+      minimumStockController.text = product.minimumStock.toString();
+      productImages = List.from(product.imageUrls?.values ?? []);
+      _imgaesIds = List.from(product.imageUrls?.keys ?? [])  ;
+
+      categoryId = product.categoryId;
+      _prodcutId = productId;
+      // No Response for SKU in the model
+      // skuController.text = product.;
+      emit(EditProductState.getProductSuccess(product));
+    }, failure: (error) {
+      emit(EditProductState.error(error));
+    });
+  }
+
+  // Image Functions
+  Future<void> uploadImage() async {
+    await ImagePickerHelper.pickImage(
+      maxImages: 5,
+      currentImages: productImages,
+      onImagePicked: (imageFile) {
+        _newImages.add(imageFile);
+        emit((EditProductState.imageUploadSuccess(imageFile)));
+      },
+      onError: (message) {
+        emit(EditProductState.error(ApiErrorModel(message: message)));
+      },
+    );
+  }
+
+  Future<void> deleteImage(int index) async {
+    if (productImages.isNotEmpty) {
+      emit(const EditProductState.imageLoading());
+      await editProductRepo.deleteProductImage(_imgaesIds[index]);
+      productImages.removeAt(index);
+      emit(const EditProductState.imageDeleted());
+    }
+    emit(const EditProductState.initial());
   }
 }

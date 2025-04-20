@@ -26,7 +26,7 @@ mixin _$AddProductState {
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,7 +39,7 @@ mixin _$AddProductState {
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,7 +52,7 @@ mixin _$AddProductState {
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,7 +177,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return initial();
   }
@@ -193,7 +193,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return initial?.call();
   }
@@ -209,7 +209,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -338,7 +338,7 @@ class _$AddProductLoadingStateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return loading();
   }
@@ -354,7 +354,7 @@ class _$AddProductLoadingStateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return loading?.call();
   }
@@ -370,7 +370,7 @@ class _$AddProductLoadingStateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -499,7 +499,7 @@ class _$AddProductSuccessStateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return success();
   }
@@ -515,7 +515,7 @@ class _$AddProductSuccessStateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return success?.call();
   }
@@ -531,7 +531,7 @@ class _$AddProductSuccessStateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -688,7 +688,7 @@ class _$AddProductErrostateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return error(apiErrorModel);
   }
@@ -704,7 +704,7 @@ class _$AddProductErrostateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return error?.call(apiErrorModel);
   }
@@ -720,7 +720,7 @@ class _$AddProductErrostateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -889,7 +889,7 @@ class _$AddProductImageUploadSuccessStateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return imageUploadSuccess(image);
   }
@@ -905,7 +905,7 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return imageUploadSuccess?.call(image);
   }
@@ -921,7 +921,7 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageUploadSuccess != null) {
@@ -1089,7 +1089,7 @@ class _$AddProductImageErrorStateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return imageError(this.error);
   }
@@ -1105,7 +1105,7 @@ class _$AddProductImageErrorStateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return imageError?.call(this.error);
   }
@@ -1121,7 +1121,7 @@ class _$AddProductImageErrorStateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageError != null) {
@@ -1260,7 +1260,7 @@ class _$AddproductImageloadingStateImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return imageLoading();
   }
@@ -1276,7 +1276,7 @@ class _$AddproductImageloadingStateImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return imageLoading?.call();
   }
@@ -1292,7 +1292,7 @@ class _$AddproductImageloadingStateImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageLoading != null) {
@@ -1422,7 +1422,7 @@ class _$AddProductImageInitialImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
     return intial();
   }
@@ -1438,7 +1438,7 @@ class _$AddProductImageInitialImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
     return intial?.call();
   }
@@ -1454,7 +1454,7 @@ class _$AddProductImageInitialImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (intial != null) {
@@ -1524,13 +1524,11 @@ abstract class AddProductImageInitial implements AddProductState {
 }
 
 /// @nodoc
-abstract class _$$AddProductImageDeletedImplCopyWith<$Res> {
-  factory _$$AddProductImageDeletedImplCopyWith(
-          _$AddProductImageDeletedImpl value,
-          $Res Function(_$AddProductImageDeletedImpl) then) =
-      __$$AddProductImageDeletedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({File image});
+abstract class _$$AddproductImageDeletedImplCopyWith<$Res> {
+  factory _$$AddproductImageDeletedImplCopyWith(
+          _$AddproductImageDeletedImpl value,
+          $Res Function(_$AddproductImageDeletedImpl) then) =
+      __$$AddproductImageDeletedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1544,62 +1542,35 @@ class __$$AddProductImageDeletedImplCopyWithImpl<$Res>
 
   /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? image = null,
-  }) {
-    return _then(_$AddProductImageDeletedImpl(
-      null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as File,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$AddProductImageDeletedImpl
     with DiagnosticableTreeMixin
-    implements AddProductImageDeleted {
-  const _$AddProductImageDeletedImpl(this.image);
-
-  @override
-  final File image;
+    implements AddproductImageDeleted {
+  const _$AddproductImageDeletedImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddProductState.imageDeleted(image: $image)';
+    return 'AddProductState.imageDeleted()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AddProductState.imageDeleted'))
-      ..add(DiagnosticsProperty('image', image));
+    properties.add(DiagnosticsProperty('type', 'AddProductState.imageDeleted'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddProductImageDeletedImpl &&
-            (identical(other.image, image) || other.image == image));
+            other is _$AddproductImageDeletedImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, image);
-
-  /// Create a copy of AddProductState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AddProductImageDeletedImplCopyWith<_$AddProductImageDeletedImpl>
-      get copyWith => __$$AddProductImageDeletedImplCopyWithImpl<
-          _$AddProductImageDeletedImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1612,9 +1583,9 @@ class _$AddProductImageDeletedImpl
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
     required TResult Function() intial,
-    required TResult Function(File image) imageDeleted,
+    required TResult Function() imageDeleted,
   }) {
-    return imageDeleted(image);
+    return imageDeleted();
   }
 
   @override
@@ -1628,9 +1599,9 @@ class _$AddProductImageDeletedImpl
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
     TResult? Function()? intial,
-    TResult? Function(File image)? imageDeleted,
+    TResult? Function()? imageDeleted,
   }) {
-    return imageDeleted?.call(image);
+    return imageDeleted?.call();
   }
 
   @override
@@ -1644,11 +1615,11 @@ class _$AddProductImageDeletedImpl
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
     TResult Function()? intial,
-    TResult Function(File image)? imageDeleted,
+    TResult Function()? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageDeleted != null) {
-      return imageDeleted(image);
+      return imageDeleted();
     }
     return orElse();
   }
@@ -1709,15 +1680,6 @@ class _$AddProductImageDeletedImpl
   }
 }
 
-abstract class AddProductImageDeleted implements AddProductState {
-  const factory AddProductImageDeleted(final File image) =
-      _$AddProductImageDeletedImpl;
-
-  File get image;
-
-  /// Create a copy of AddProductState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddProductImageDeletedImplCopyWith<_$AddProductImageDeletedImpl>
-      get copyWith => throw _privateConstructorUsedError;
+abstract class AddproductImageDeleted implements AddProductState {
+  const factory AddproductImageDeleted() = _$AddproductImageDeletedImpl;
 }

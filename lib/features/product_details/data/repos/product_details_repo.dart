@@ -11,6 +11,7 @@ class ProductDetailsRepo {
       int id) async {
     try {
       final result = await _productDetailsDatasource.fetchProductDetails(id);
+
       return ApiResult.success(result);
     } catch (error) {
       throw Exception('Failed to fetch product details: $error');
