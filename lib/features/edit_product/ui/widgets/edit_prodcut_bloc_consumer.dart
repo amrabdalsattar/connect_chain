@@ -16,7 +16,7 @@ class EditProductBlocConsumer extends StatelessWidget {
           state.whenOrNull(
             error: (apiErrorModel) {
               context.pop();
-
+  
               DialogsHelper.showErrorDialog(
                   context, apiErrorModel.getErrorMessages()!);
             },
