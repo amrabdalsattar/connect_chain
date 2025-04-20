@@ -24,19 +24,25 @@ class AddProductRequestModel {
   });
 
   Future<FormData> toFormData() async {
-    final multipartImages = await Future.wait(
-      images.map((image) => convertImageToMultipartFile(image, 'Images')),
-    );
+    try {
+      final multipartImages = await Future.wait(
+        images.map((image) => convertImageToMultipartFile(image, 'Images')),
+      ).onError((error, stackTrace) {
+        throw Exception('Failed to convert images: $error');
+      });
 
-    return FormData.fromMap({
-      'Name': name,
-      'Description': description,
-      'Price': price,
-      'MinimumStock': minimumStock,
-      'Stock': stock,
-      'SupplierId': supplierId,
-      'CategoryId': categoryId,
-      'Images': multipartImages,
-    });
+      return FormData.fromMap({
+        'Name': name,
+        'Description': description,
+        'Price': price,
+        'MinimumStock': minimumStock,
+        'Stock': stock,
+        'SupplierId': supplierId,
+        'CategoryId': categoryId,
+        'Images': multipartImages.whereType<MultipartFile>().toList(),
+      });
+    } catch (e) {
+      throw Exception('FormData creation failed: $e');
+    }
   }
 }

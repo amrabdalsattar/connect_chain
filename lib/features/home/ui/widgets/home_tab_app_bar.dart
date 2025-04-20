@@ -1,4 +1,7 @@
+import 'package:connect_chain/core/helpers/cache/shared_preferences_keys.dart';
+import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/app_text_styles.dart';
@@ -17,7 +20,7 @@ class HomeTabAppBar extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: ColorsHelper.homeScaffoldColor,
         toolbarHeight: preferredSize.height,
         title: Text(
-          'اهلا بك Amr Abdelsattar  👋 ',
+          'اهلا بك ${context.read<MainCubit>().userData[SharedPreferencesKeys.userName]}  👋 ',
           style: AppTextStyles.cairoBlackBold18,
         ),
         actionsPadding: EdgeInsetsDirectional.only(end: 24.w),

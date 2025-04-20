@@ -72,8 +72,5 @@ class MainCubit extends Cubit<dynamic> {
     );
   }
 
-  Map<String, dynamic> userData = {};
-  Future<void> loadUserData() async {
-    userData = await UserDataOperator.getUserData();
-  }
+  Map<String, dynamic> userData = UserDataOperator.getUserData();
 }

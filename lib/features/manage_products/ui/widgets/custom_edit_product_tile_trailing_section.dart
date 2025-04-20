@@ -10,12 +10,17 @@ class EditProductTileTrailingSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+      padding: const EdgeInsetsDirectional.only(end: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(
+            width: double.infinity,
+          ),
           // Edit and Delete Buttons
           Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               CustomIconButton(
                 iconPath: AppImages.editIcon,
@@ -31,8 +36,9 @@ class EditProductTileTrailingSection extends StatelessWidget {
           verticalSpace(10),
           // Price Section
           Text(
+            textDirection: TextDirection.ltr,
             '${priceFormat(price)} EGP',
-            style: AppTextStyles.cairoBlackBold16
+            style: AppTextStyles.cairoBlackSemiBold16
                 .copyWith(fontWeight: FontWeight.w600),
           )
         ],

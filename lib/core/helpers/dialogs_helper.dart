@@ -69,7 +69,7 @@ class DialogsHelper {
             children: [
               Text(
                 message,
-                style: AppTextStyles.cairoBlackBold16
+                style: AppTextStyles.cairoBlackSemiBold16
                     .copyWith(fontWeight: FontWeight.w400),
                 textAlign: TextAlign.center,
               ),

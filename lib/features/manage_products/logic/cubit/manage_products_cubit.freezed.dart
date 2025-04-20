@@ -19,38 +19,44 @@ mixin _$ManageProductsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,12 +66,15 @@ mixin _$ManageProductsState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,11 +83,13 @@ mixin _$ManageProductsState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,11 +98,13 @@ mixin _$ManageProductsState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -160,14 +173,16 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return initial();
   }
@@ -176,13 +191,15 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return initial?.call();
   }
@@ -191,13 +208,15 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -213,12 +232,15 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return initial(this);
   }
@@ -230,11 +252,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return initial?.call(this);
   }
@@ -246,11 +270,13 @@ class _$InitialImpl implements _Initial {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -271,7 +297,7 @@ abstract class _$$ManageProductsSuccessStateImplCopyWith<$Res> {
           $Res Function(_$ManageProductsSuccessStateImpl) then) =
       __$$ManageProductsSuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ManageSupplierProductsResponseModel products});
+  $Res call({List<ProductDataModel> products});
 }
 
 /// @nodoc
@@ -293,9 +319,9 @@ class __$$ManageProductsSuccessStateImplCopyWithImpl<$Res>
   }) {
     return _then(_$ManageProductsSuccessStateImpl(
       null == products
-          ? _value.products
+          ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
-              as ManageSupplierProductsResponseModel,
+              as List<ProductDataModel>,
     ));
   }
 }
@@ -303,10 +329,16 @@ class __$$ManageProductsSuccessStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
-  const _$ManageProductsSuccessStateImpl(this.products);
+  const _$ManageProductsSuccessStateImpl(final List<ProductDataModel> products)
+      : _products = products;
 
+  final List<ProductDataModel> _products;
   @override
-  final ManageSupplierProductsResponseModel products;
+  List<ProductDataModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
 
   @override
   String toString() {
@@ -318,12 +350,12 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ManageProductsSuccessStateImpl &&
-            (identical(other.products, products) ||
-                other.products == products));
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, products);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
 
   /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
@@ -338,14 +370,16 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return success(products);
   }
@@ -354,13 +388,15 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return success?.call(products);
   }
@@ -369,13 +405,15 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -391,12 +429,15 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return success(this);
   }
@@ -408,11 +449,13 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return success?.call(this);
   }
@@ -424,11 +467,13 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -440,10 +485,9 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
 
 abstract class ManageProductsSuccessState implements ManageProductsState {
   const factory ManageProductsSuccessState(
-          final ManageSupplierProductsResponseModel products) =
-      _$ManageProductsSuccessStateImpl;
+      final List<ProductDataModel> products) = _$ManageProductsSuccessStateImpl;
 
-  ManageSupplierProductsResponseModel get products;
+  List<ProductDataModel> get products;
 
   /// Create a copy of ManageProductsState
   /// with the given fields replaced by the non-null parameter values.
@@ -498,14 +542,16 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return loading();
   }
@@ -514,13 +560,15 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return loading?.call();
   }
@@ -529,13 +577,15 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -551,12 +601,15 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return loading(this);
   }
@@ -568,11 +621,13 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return loading?.call(this);
   }
@@ -584,11 +639,13 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -675,14 +732,16 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return error(this.error);
   }
@@ -691,13 +750,15 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return error?.call(this.error);
   }
@@ -706,13 +767,15 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -728,12 +791,15 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return error(this);
   }
@@ -745,11 +811,13 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return error?.call(this);
   }
@@ -761,11 +829,13 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -786,6 +856,203 @@ abstract class ManageProductsErrorState implements ManageProductsState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ManageProductsErrorStateImplCopyWith<_$ManageProductsErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EmptyProductsListImplCopyWith<$Res> {
+  factory _$$EmptyProductsListImplCopyWith(_$EmptyProductsListImpl value,
+          $Res Function(_$EmptyProductsListImpl) then) =
+      __$$EmptyProductsListImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$EmptyProductsListImplCopyWithImpl<$Res>
+    extends _$ManageProductsStateCopyWithImpl<$Res, _$EmptyProductsListImpl>
+    implements _$$EmptyProductsListImplCopyWith<$Res> {
+  __$$EmptyProductsListImplCopyWithImpl(_$EmptyProductsListImpl _value,
+      $Res Function(_$EmptyProductsListImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$EmptyProductsListImpl(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EmptyProductsListImpl implements EmptyProductsList {
+  const _$EmptyProductsListImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'ManageProductsState.emptyProductsList(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EmptyProductsListImpl &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EmptyProductsListImplCopyWith<_$EmptyProductsListImpl> get copyWith =>
+      __$$EmptyProductsListImplCopyWithImpl<_$EmptyProductsListImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<ProductDataModel> products) success,
+    required TResult Function() loading,
+    required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
+    required TResult Function() delete,
+    required TResult Function(ProductDataModel product) edit,
+    required TResult Function(String message) operationSuccess,
+    required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
+  }) {
+    return emptyProductsList(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<ProductDataModel> products)? success,
+    TResult? Function()? loading,
+    TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
+    TResult? Function()? delete,
+    TResult? Function(ProductDataModel product)? edit,
+    TResult? Function(String message)? operationSuccess,
+    TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
+  }) {
+    return emptyProductsList?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<ProductDataModel> products)? success,
+    TResult Function()? loading,
+    TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
+    TResult Function()? delete,
+    TResult Function(ProductDataModel product)? edit,
+    TResult Function(String message)? operationSuccess,
+    TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
+    required TResult orElse(),
+  }) {
+    if (emptyProductsList != null) {
+      return emptyProductsList(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ManageProductsSuccessState value) success,
+    required TResult Function(ManageProductsLoadingState value) loading,
+    required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
+    required TResult Function(ManageProductsDeleteState value) delete,
+    required TResult Function(ManageEditsDeleteState value) edit,
+    required TResult Function(MangeProductsOperationSuccessState value)
+        operationSuccess,
+    required TResult Function(MangeProductsOperationFailedState value)
+        operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
+  }) {
+    return emptyProductsList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ManageProductsSuccessState value)? success,
+    TResult? Function(ManageProductsLoadingState value)? loading,
+    TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
+    TResult? Function(ManageProductsDeleteState value)? delete,
+    TResult? Function(ManageEditsDeleteState value)? edit,
+    TResult? Function(MangeProductsOperationSuccessState value)?
+        operationSuccess,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
+  }) {
+    return emptyProductsList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ManageProductsSuccessState value)? success,
+    TResult Function(ManageProductsLoadingState value)? loading,
+    TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
+    TResult Function(ManageProductsDeleteState value)? delete,
+    TResult Function(ManageEditsDeleteState value)? edit,
+    TResult Function(MangeProductsOperationSuccessState value)?
+        operationSuccess,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
+    required TResult orElse(),
+  }) {
+    if (emptyProductsList != null) {
+      return emptyProductsList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmptyProductsList implements ManageProductsState {
+  const factory EmptyProductsList(final String errorMessage) =
+      _$EmptyProductsListImpl;
+
+  String get errorMessage;
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EmptyProductsListImplCopyWith<_$EmptyProductsListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -834,14 +1101,16 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return delete();
   }
@@ -850,13 +1119,15 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return delete?.call();
   }
@@ -865,13 +1136,15 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -887,12 +1160,15 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return delete(this);
   }
@@ -904,11 +1180,13 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return delete?.call(this);
   }
@@ -920,11 +1198,13 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -1011,14 +1291,16 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return edit(product);
   }
@@ -1027,13 +1309,15 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return edit?.call(product);
   }
@@ -1042,13 +1326,15 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (edit != null) {
@@ -1064,12 +1350,15 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return edit(this);
   }
@@ -1081,11 +1370,13 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return edit?.call(this);
   }
@@ -1097,11 +1388,13 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (edit != null) {
@@ -1199,14 +1492,16 @@ class _$MangeProductsOperationSuccessStateImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return operationSuccess(message);
   }
@@ -1215,13 +1510,15 @@ class _$MangeProductsOperationSuccessStateImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return operationSuccess?.call(message);
   }
@@ -1230,13 +1527,15 @@ class _$MangeProductsOperationSuccessStateImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (operationSuccess != null) {
@@ -1252,12 +1551,15 @@ class _$MangeProductsOperationSuccessStateImpl
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return operationSuccess(this);
   }
@@ -1269,11 +1571,13 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return operationSuccess?.call(this);
   }
@@ -1285,11 +1589,13 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (operationSuccess != null) {
@@ -1389,14 +1695,16 @@ class _$MangeProductsOperationFailedStateImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(ManageSupplierProductsResponseModel products)
-        success,
+    required TResult Function(List<ProductDataModel> products) success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
     required TResult Function(String message) operationSuccess,
     required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
   }) {
     return operationFailed(message);
   }
@@ -1405,13 +1713,15 @@ class _$MangeProductsOperationFailedStateImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(ManageSupplierProductsResponseModel products)? success,
+    TResult? Function(List<ProductDataModel> products)? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
     TResult? Function(String message)? operationSuccess,
     TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
   }) {
     return operationFailed?.call(message);
   }
@@ -1420,13 +1730,15 @@ class _$MangeProductsOperationFailedStateImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(ManageSupplierProductsResponseModel products)? success,
+    TResult Function(List<ProductDataModel> products)? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
     TResult Function(String message)? operationSuccess,
     TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (operationFailed != null) {
@@ -1442,12 +1754,15 @@ class _$MangeProductsOperationFailedStateImpl
     required TResult Function(ManageProductsSuccessState value) success,
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
     required TResult Function(ManageProductsDeleteState value) delete,
     required TResult Function(ManageEditsDeleteState value) edit,
     required TResult Function(MangeProductsOperationSuccessState value)
         operationSuccess,
     required TResult Function(MangeProductsOperationFailedState value)
         operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
   }) {
     return operationFailed(this);
   }
@@ -1459,11 +1774,13 @@ class _$MangeProductsOperationFailedStateImpl
     TResult? Function(ManageProductsSuccessState value)? success,
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
     TResult? Function(ManageProductsDeleteState value)? delete,
     TResult? Function(ManageEditsDeleteState value)? edit,
     TResult? Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
   }) {
     return operationFailed?.call(this);
   }
@@ -1475,11 +1792,13 @@ class _$MangeProductsOperationFailedStateImpl
     TResult Function(ManageProductsSuccessState value)? success,
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
     TResult Function(ManageProductsDeleteState value)? delete,
     TResult Function(ManageEditsDeleteState value)? edit,
     TResult Function(MangeProductsOperationSuccessState value)?
         operationSuccess,
     TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
     required TResult orElse(),
   }) {
     if (operationFailed != null) {
@@ -1501,5 +1820,211 @@ abstract class MangeProductsOperationFailedState
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MangeProductsOperationFailedStateImplCopyWith<
           _$MangeProductsOperationFailedStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdatedProductsListStateImplCopyWith<$Res> {
+  factory _$$UpdatedProductsListStateImplCopyWith(
+          _$UpdatedProductsListStateImpl value,
+          $Res Function(_$UpdatedProductsListStateImpl) then) =
+      __$$UpdatedProductsListStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ProductDataModel> products});
+}
+
+/// @nodoc
+class __$$UpdatedProductsListStateImplCopyWithImpl<$Res>
+    extends _$ManageProductsStateCopyWithImpl<$Res,
+        _$UpdatedProductsListStateImpl>
+    implements _$$UpdatedProductsListStateImplCopyWith<$Res> {
+  __$$UpdatedProductsListStateImplCopyWithImpl(
+      _$UpdatedProductsListStateImpl _value,
+      $Res Function(_$UpdatedProductsListStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? products = null,
+  }) {
+    return _then(_$UpdatedProductsListStateImpl(
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<ProductDataModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
+  const _$UpdatedProductsListStateImpl(final List<ProductDataModel> products)
+      : _products = products;
+
+  final List<ProductDataModel> _products;
+  @override
+  List<ProductDataModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
+
+  @override
+  String toString() {
+    return 'ManageProductsState.updatedProductsList(products: $products)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdatedProductsListStateImpl &&
+            const DeepCollectionEquality().equals(other._products, _products));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdatedProductsListStateImplCopyWith<_$UpdatedProductsListStateImpl>
+      get copyWith => __$$UpdatedProductsListStateImplCopyWithImpl<
+          _$UpdatedProductsListStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<ProductDataModel> products) success,
+    required TResult Function() loading,
+    required TResult Function(ApiErrorModel error) error,
+    required TResult Function(String errorMessage) emptyProductsList,
+    required TResult Function() delete,
+    required TResult Function(ProductDataModel product) edit,
+    required TResult Function(String message) operationSuccess,
+    required TResult Function(String message) operationFailed,
+    required TResult Function(List<ProductDataModel> products)
+        updatedProductsList,
+  }) {
+    return updatedProductsList(products);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<ProductDataModel> products)? success,
+    TResult? Function()? loading,
+    TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(String errorMessage)? emptyProductsList,
+    TResult? Function()? delete,
+    TResult? Function(ProductDataModel product)? edit,
+    TResult? Function(String message)? operationSuccess,
+    TResult? Function(String message)? operationFailed,
+    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
+  }) {
+    return updatedProductsList?.call(products);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<ProductDataModel> products)? success,
+    TResult Function()? loading,
+    TResult Function(ApiErrorModel error)? error,
+    TResult Function(String errorMessage)? emptyProductsList,
+    TResult Function()? delete,
+    TResult Function(ProductDataModel product)? edit,
+    TResult Function(String message)? operationSuccess,
+    TResult Function(String message)? operationFailed,
+    TResult Function(List<ProductDataModel> products)? updatedProductsList,
+    required TResult orElse(),
+  }) {
+    if (updatedProductsList != null) {
+      return updatedProductsList(products);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ManageProductsSuccessState value) success,
+    required TResult Function(ManageProductsLoadingState value) loading,
+    required TResult Function(ManageProductsErrorState value) error,
+    required TResult Function(EmptyProductsList value) emptyProductsList,
+    required TResult Function(ManageProductsDeleteState value) delete,
+    required TResult Function(ManageEditsDeleteState value) edit,
+    required TResult Function(MangeProductsOperationSuccessState value)
+        operationSuccess,
+    required TResult Function(MangeProductsOperationFailedState value)
+        operationFailed,
+    required TResult Function(UpdatedProductsListState value)
+        updatedProductsList,
+  }) {
+    return updatedProductsList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ManageProductsSuccessState value)? success,
+    TResult? Function(ManageProductsLoadingState value)? loading,
+    TResult? Function(ManageProductsErrorState value)? error,
+    TResult? Function(EmptyProductsList value)? emptyProductsList,
+    TResult? Function(ManageProductsDeleteState value)? delete,
+    TResult? Function(ManageEditsDeleteState value)? edit,
+    TResult? Function(MangeProductsOperationSuccessState value)?
+        operationSuccess,
+    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
+  }) {
+    return updatedProductsList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ManageProductsSuccessState value)? success,
+    TResult Function(ManageProductsLoadingState value)? loading,
+    TResult Function(ManageProductsErrorState value)? error,
+    TResult Function(EmptyProductsList value)? emptyProductsList,
+    TResult Function(ManageProductsDeleteState value)? delete,
+    TResult Function(ManageEditsDeleteState value)? edit,
+    TResult Function(MangeProductsOperationSuccessState value)?
+        operationSuccess,
+    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
+    TResult Function(UpdatedProductsListState value)? updatedProductsList,
+    required TResult orElse(),
+  }) {
+    if (updatedProductsList != null) {
+      return updatedProductsList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdatedProductsListState implements ManageProductsState {
+  const factory UpdatedProductsListState(
+      final List<ProductDataModel> products) = _$UpdatedProductsListStateImpl;
+
+  List<ProductDataModel> get products;
+
+  /// Create a copy of ManageProductsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdatedProductsListStateImplCopyWith<_$UpdatedProductsListStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

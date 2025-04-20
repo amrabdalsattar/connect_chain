@@ -15,7 +15,7 @@ class SoldQuantityTextSpan extends StatelessWidget {
         children: [
           TextSpan(
             text: '$soldQuantity',
-            style: AppTextStyles.cairoBlackBold16,
+            style: AppTextStyles.cairoBlackSemiBold16,
           ),
           WidgetSpan(
             alignment: PlaceholderAlignment.baseline,

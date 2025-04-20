@@ -9,6 +9,8 @@ class UserDataOperator {
     return {
       SharedPreferencesKeys.userName:
           SharedPreferencesHelper.getString(SharedPreferencesKeys.userName),
+      SharedPreferencesKeys.userId:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
       SharedPreferencesKeys.userAddress:
           SharedPreferencesHelper.getString(SharedPreferencesKeys.userAddress),
       SharedPreferencesKeys.userEmail:
@@ -24,6 +26,8 @@ class UserDataOperator {
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userName, userData.name);
     await SharedPreferencesHelper.setData(
+        SharedPreferencesKeys.userId, userData.id);
+    await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userBusinessType, userData.businessType);
 
     await SharedPreferencesHelper.setData(
@@ -38,6 +42,7 @@ class UserDataOperator {
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userName);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userAddress);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userEmail);
+    await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userId);
     await SharedPreferencesHelper.removeData(
         SharedPreferencesKeys.userPhoneNumber);
     await SharedPreferencesHelper.removeData(
@@ -55,19 +60,15 @@ class UserDataOperator {
         false;
   }
 
-  static String getInitialRoute() {
-    try {
-      final bool isViewedOnboarding = UserDataOperator.isViewedOnboarding();
+  static String? getInitialRoute() {
+    final bool isViewedOnboarding = UserDataOperator.isViewedOnboarding();
 
-      if (!isViewedOnboarding) {
-        return Routes.onboardingRoute;
-      } else if (isLoggedIn) {
-        return Routes.mainScreenRoute;
-      } else {
-        return Routes.loginRoute;
-      }
-    } catch (e) {
-      return Routes.loginRoute;
+    if (!isViewedOnboarding) {
+      return Routes.onboardingRoute;
     }
+    if (isLoggedIn) {
+      return Routes.mainScreenRoute;
+    }
+    return Routes.loginRoute;
   }
 }

@@ -18,11 +18,11 @@ import 'widgets/home_tab_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'widgets/monthly_statistics_section/monthly_statistics_section.dart';
-import 'widgets/most_selling_section/most_selling_section.dart';
-import 'widgets/orders_section/orders_section.dart';
-import 'widgets/products_summary_section/products_summary_section.dart';
-import 'widgets/revenue_chart/revenue_chart.dart';
+import 'sections/monthly_statistics_section/monthly_statistics_section.dart';
+import 'sections/most_selling_section/most_selling_section.dart';
+import 'sections/orders_section/orders_section.dart';
+import 'sections/products_summary_section/products_summary_section.dart';
+import 'sections/revenue_chart/revenue_chart.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -49,11 +49,13 @@ class _HomeTabState extends State<HomeTab> {
     topSoldProductsCubit = TopSoldProductsCubit(getIt<TopSoldProductsRepo>());
 
     // Fetching data
-    monthlyStatisticsCubit.getMonthlyStats();
-    revenueChartCubit.getRevenueChartData();
-    productsSummaryCubit.getProductsSummary();
-    ordersSummaryCubit.getOrdersSummary();
-    topSoldProductsCubit.getTopSoldProducts();
+    Future.wait<void>([
+      monthlyStatisticsCubit.getMonthlyStats(),
+      revenueChartCubit.getRevenueChartData(),
+      productsSummaryCubit.getProductsSummary(),
+      ordersSummaryCubit.getOrdersSummary(),
+      topSoldProductsCubit.getTopSoldProducts(),
+    ]);
   }
 
   @override

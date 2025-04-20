@@ -35,7 +35,7 @@ class CustomAddProductButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset( 
+            SvgPicture.asset(
               AppImages.addIcon,
               width: 16.w,
               height: 16.h,

@@ -47,7 +47,10 @@ class ProductDetailsScreen extends StatelessWidget {
               onCancel: () {},
             );
           }),
-      appBar: CustomAppBar(title: productResponseModel.name),
+      appBar: CustomAppBar(
+        title: productResponseModel.name,
+        isLeadedByLogo: false,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
