@@ -1,23 +1,22 @@
 import '../../../features/login/data/models/login_response_model.dart';
+import '../../routing/routes.dart';
+import '../token_helper.dart';
 import 'shared_preferences_helper.dart';
 import 'shared_preferences_keys.dart';
 
 class UserDataOperator {
-  static Future<Map<String, dynamic>> getUserData() async {
+  static Map<String, dynamic> getUserData() {
     return {
-      SharedPreferencesKeys.userName: await SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userName),
+      SharedPreferencesKeys.userName:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userName),
       SharedPreferencesKeys.userAddress:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userAddress),
-      SharedPreferencesKeys.userEmail: await SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userEmail),
-      SharedPreferencesKeys.userBusinessType:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userBusinessType),
-      SharedPreferencesKeys.userPhoneNumber:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userPhoneNumber),
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userAddress),
+      SharedPreferencesKeys.userEmail:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userEmail),
+      SharedPreferencesKeys.userBusinessType: SharedPreferencesHelper.getString(
+          SharedPreferencesKeys.userBusinessType),
+      SharedPreferencesKeys.userPhoneNumber: SharedPreferencesHelper.getString(
+          SharedPreferencesKeys.userPhoneNumber),
     };
   }
 
@@ -50,9 +49,25 @@ class UserDataOperator {
         SharedPreferencesKeys.isViewedOnboarding, true);
   }
 
-  static Future<bool> isViewedOnboarding() async {
-    return await SharedPreferencesHelper.getBool(
+  static bool isViewedOnboarding() {
+    return SharedPreferencesHelper.getBool(
             SharedPreferencesKeys.isViewedOnboarding) ??
         false;
+  }
+
+  static String getInitialRoute() {
+    try {
+      final bool isViewedOnboarding = UserDataOperator.isViewedOnboarding();
+
+      if (!isViewedOnboarding) {
+        return Routes.onboardingRoute;
+      } else if (isLoggedIn) {
+        return Routes.mainScreenRoute;
+      } else {
+        return Routes.loginRoute;
+      }
+    } catch (e) {
+      return Routes.loginRoute;
+    }
   }
 }

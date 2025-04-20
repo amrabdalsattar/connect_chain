@@ -39,22 +39,22 @@ class SharedPreferencesHelper {
   }
 
   /// Retrieves a boolean value from the SharedPreferences with given [key]
-  static getBool(String key) async {
+  static getBool(String key) {
     return _prefs.getBool(key) ?? false;
   }
 
   /// Retrieves a double value from the SharedPreferences with given [key]
-  static getDouble(String key) async {
+  static getDouble(String key) {
     return _prefs.getDouble(key) ?? 0.0;
   }
 
   /// Retrieves an integer value from the SharedPreferences with given [key]
-  static getInt(String key) async {
+  static getInt(String key) {
     return _prefs.getInt(key) ?? 0;
   }
 
   /// Retrieves a string value from the SharedPreferences with given [key]
-  static getString(String key) async {
+  static getString(String key) {
     return _prefs.getString(key) ?? '';
   }
 }

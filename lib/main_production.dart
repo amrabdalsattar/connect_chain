@@ -9,12 +9,17 @@ void main() async {
 
   await SetupManager.initialSetup();
 
-  runApp(EasyLocalization(
-      supportedLocales: const [
-        Locale('en'),
-        Locale('ar'),
-      ],
-      path: 'assets/translations',
-      fallbackLocale: const Locale('ar'),
-      child: const ConnectChainApp()));
+  runApp(localizationSetup(const ConnectChainApp()));
+}
+
+EasyLocalization localizationSetup(Widget myApp) {
+  return EasyLocalization(
+    supportedLocales: const [
+      Locale('en'),
+      Locale('ar'),
+    ],
+    path: 'assets/translations',
+    fallbackLocale: const Locale('ar'),
+    child: myApp,
+  );
 }

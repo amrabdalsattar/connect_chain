@@ -14,5 +14,3 @@ Future<MultipartFile> convertImageToMultipartFile(
     contentType: MediaType(mimeType[0], mimeType[1]),
   );
 }
-
-// application/octet-stream   or *\*

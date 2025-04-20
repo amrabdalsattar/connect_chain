@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import '../helpers/app_images.dart';
 import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +17,7 @@ class ProductImageWidget extends StatelessWidget {
     this.onTap,
     this.showDeleteButton = false,
     this.onDelete,
-     required this.imageProvider,
+    required this.imageProvider,
   });
 
   @override
@@ -39,10 +37,7 @@ class ProductImageWidget extends StatelessWidget {
                     ? ColorsHelper.primaryColor
                     : ColorsHelper.borderGray,
               ),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image:imageProvider
-              ),
+              image: DecorationImage(fit: BoxFit.cover, image: imageProvider),
             ),
           ),
         ),
