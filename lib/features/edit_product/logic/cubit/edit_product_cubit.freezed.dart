@@ -22,10 +22,10 @@ mixin _$EditProductState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -37,9 +37,9 @@ mixin _$EditProductState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -51,9 +51,9 @@ mixin _$EditProductState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -175,10 +175,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -193,9 +193,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -210,9 +210,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -336,10 +336,10 @@ class _$EditProductSuccessStateImpl implements EditProductSuccessState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -354,9 +354,9 @@ class _$EditProductSuccessStateImpl implements EditProductSuccessState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -371,9 +371,9 @@ class _$EditProductSuccessStateImpl implements EditProductSuccessState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -497,10 +497,10 @@ class _$EditProductLoadingStateImpl implements EditProductLoadingState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -515,9 +515,9 @@ class _$EditProductLoadingStateImpl implements EditProductLoadingState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -532,9 +532,9 @@ class _$EditProductLoadingStateImpl implements EditProductLoadingState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -685,10 +685,10 @@ class _$EditProductErrorStateImpl implements EditProductErrorState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -703,9 +703,9 @@ class _$EditProductErrorStateImpl implements EditProductErrorState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -720,9 +720,9 @@ class _$EditProductErrorStateImpl implements EditProductErrorState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -814,7 +814,7 @@ abstract class _$$GetEditProductSuccessStateImplCopyWith<$Res> {
           $Res Function(_$GetEditProductSuccessStateImpl) then) =
       __$$GetEditProductSuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({EditProductRequestModel prodcut});
+  $Res call({EditProductRequestModel product});
 }
 
 /// @nodoc
@@ -832,12 +832,12 @@ class __$$GetEditProductSuccessStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? prodcut = null,
+    Object? product = null,
   }) {
     return _then(_$GetEditProductSuccessStateImpl(
-      null == prodcut
+      null == product
           ? _value.product
-          : prodcut // ignore: cast_nullable_to_non_nullable
+          : product // ignore: cast_nullable_to_non_nullable
               as EditProductRequestModel,
     ));
   }
@@ -853,7 +853,7 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
 
   @override
   String toString() {
-    return 'EditProductState.getProductSuccess(prodcut: $product)';
+    return 'EditProductState.getProductSuccess(product: $product)';
   }
 
   @override
@@ -883,10 +883,10 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -901,9 +901,9 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -918,9 +918,9 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -994,7 +994,7 @@ class _$GetEditProductSuccessStateImpl implements GetEditProductSuccessState {
 
 abstract class GetEditProductSuccessState implements EditProductState {
   const factory GetEditProductSuccessState(
-      final EditProductRequestModel prodcut) = _$GetEditProductSuccessStateImpl;
+      final EditProductRequestModel product) = _$GetEditProductSuccessStateImpl;
 
   EditProductRequestModel get product;
 
@@ -1055,10 +1055,10 @@ class _$EditProductImageLoadingStateImpl
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -1073,9 +1073,9 @@ class _$EditProductImageLoadingStateImpl
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -1090,9 +1090,9 @@ class _$EditProductImageLoadingStateImpl
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -1176,7 +1176,7 @@ abstract class _$$EditProductImageUploadSuccessStateImplCopyWith<$Res> {
           $Res Function(_$EditProductImageUploadSuccessStateImpl) then) =
       __$$EditProductImageUploadSuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({File imgFlie});
+  $Res call({File imageFile});
 }
 
 /// @nodoc
@@ -1194,12 +1194,12 @@ class __$$EditProductImageUploadSuccessStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? imgFlie = null,
+    Object? imageFile = null,
   }) {
     return _then(_$EditProductImageUploadSuccessStateImpl(
-      null == imgFlie
-          ? _value.imgFlie
-          : imgFlie // ignore: cast_nullable_to_non_nullable
+      null == imageFile
+          ? _value.imageFile
+          : imageFile // ignore: cast_nullable_to_non_nullable
               as File,
     ));
   }
@@ -1209,14 +1209,14 @@ class __$$EditProductImageUploadSuccessStateImplCopyWithImpl<$Res>
 
 class _$EditProductImageUploadSuccessStateImpl
     implements EditProductImageUploadSuccessState {
-  const _$EditProductImageUploadSuccessStateImpl(this.imgFlie);
+  const _$EditProductImageUploadSuccessStateImpl(this.imageFile);
 
   @override
-  final File imgFlie;
+  final File imageFile;
 
   @override
   String toString() {
-    return 'EditProductState.imageUploadSuccess(imgFlie: $imgFlie)';
+    return 'EditProductState.imageUploadSuccess(imageFile: $imageFile)';
   }
 
   @override
@@ -1224,11 +1224,12 @@ class _$EditProductImageUploadSuccessStateImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditProductImageUploadSuccessStateImpl &&
-            (identical(other.imgFlie, imgFlie) || other.imgFlie == imgFlie));
+            (identical(other.imageFile, imageFile) ||
+                other.imageFile == imageFile));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, imgFlie);
+  int get hashCode => Object.hash(runtimeType, imageFile);
 
   /// Create a copy of EditProductState
   /// with the given fields replaced by the non-null parameter values.
@@ -1247,15 +1248,15 @@ class _$EditProductImageUploadSuccessStateImpl
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
   }) {
-    return imageUploadSuccess(imgFlie);
+    return imageUploadSuccess(imageFile);
   }
 
   @override
@@ -1265,14 +1266,14 @@ class _$EditProductImageUploadSuccessStateImpl
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
   }) {
-    return imageUploadSuccess?.call(imgFlie);
+    return imageUploadSuccess?.call(imageFile);
   }
 
   @override
@@ -1282,16 +1283,16 @@ class _$EditProductImageUploadSuccessStateImpl
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
     required TResult orElse(),
   }) {
     if (imageUploadSuccess != null) {
-      return imageUploadSuccess(imgFlie);
+      return imageUploadSuccess(imageFile);
     }
     return orElse();
   }
@@ -1357,10 +1358,10 @@ class _$EditProductImageUploadSuccessStateImpl
 }
 
 abstract class EditProductImageUploadSuccessState implements EditProductState {
-  const factory EditProductImageUploadSuccessState(final File imgFlie) =
+  const factory EditProductImageUploadSuccessState(final File imageFile) =
       _$EditProductImageUploadSuccessStateImpl;
 
-  File get imgFlie;
+  File get imageFile;
 
   /// Create a copy of EditProductState
   /// with the given fields replaced by the non-null parameter values.
@@ -1446,10 +1447,10 @@ class _$EditProductImageErrorStateImpl implements EditProductImageErrorState {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -1464,9 +1465,9 @@ class _$EditProductImageErrorStateImpl implements EditProductImageErrorState {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -1481,9 +1482,9 @@ class _$EditProductImageErrorStateImpl implements EditProductImageErrorState {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -1618,10 +1619,10 @@ class _$EditProductImageDeletedStateImpl
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -1636,9 +1637,9 @@ class _$EditProductImageDeletedStateImpl
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -1653,9 +1654,9 @@ class _$EditProductImageDeletedStateImpl
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
@@ -1780,10 +1781,10 @@ class _$EditProductImageInitialImpl implements EditProductImageInitial {
     required TResult Function() success,
     required TResult Function() loading,
     required TResult Function(ApiErrorModel apiErrorModel) error,
-    required TResult Function(EditProductRequestModel prodcut)
+    required TResult Function(EditProductRequestModel product)
         getProductSuccess,
     required TResult Function() imageLoading,
-    required TResult Function(File imgFlie) imageUploadSuccess,
+    required TResult Function(File imageFile) imageUploadSuccess,
     required TResult Function(String message) imageError,
     required TResult Function() imageDeleted,
     required TResult Function() imageInitial,
@@ -1798,9 +1799,9 @@ class _$EditProductImageInitialImpl implements EditProductImageInitial {
     TResult? Function()? success,
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
-    TResult? Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult? Function(EditProductRequestModel product)? getProductSuccess,
     TResult? Function()? imageLoading,
-    TResult? Function(File imgFlie)? imageUploadSuccess,
+    TResult? Function(File imageFile)? imageUploadSuccess,
     TResult? Function(String message)? imageError,
     TResult? Function()? imageDeleted,
     TResult? Function()? imageInitial,
@@ -1815,9 +1816,9 @@ class _$EditProductImageInitialImpl implements EditProductImageInitial {
     TResult Function()? success,
     TResult Function()? loading,
     TResult Function(ApiErrorModel apiErrorModel)? error,
-    TResult Function(EditProductRequestModel prodcut)? getProductSuccess,
+    TResult Function(EditProductRequestModel product)? getProductSuccess,
     TResult Function()? imageLoading,
-    TResult Function(File imgFlie)? imageUploadSuccess,
+    TResult Function(File imageFile)? imageUploadSuccess,
     TResult Function(String message)? imageError,
     TResult Function()? imageDeleted,
     TResult Function()? imageInitial,
