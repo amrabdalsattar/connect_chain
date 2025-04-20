@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/widgets/hero_image_view.dart';
 import 'package:connect_chain/features/edit_product/logic/cubit/edit_product_cubit.dart';
 import 'package:connect_chain/features/edit_product/ui/edit_product_screen.dart';
 import 'package:connect_chain/features/product_details/logic/cubit/product_details_cubit.dart';
@@ -67,10 +68,20 @@ class AppRouter {
           screen: const ProfileScreen(),
           settings: settings,
         );
+
+      case Routes.heroImageView:
+        final imageUrl = arguments as String;
+        return CustomAnimationsBuilder.buildWidget(
+          screen: HeroImageView(imageUrl: imageUrl),
+          settings: settings,
+        );
+
       case Routes.editProductScreenRoute:
+        final productId = arguments as int;
         return CustomAnimationsBuilder.slideFromLeft(
           screen: BlocProvider(
-            create: (context) => EditProductCubit(getIt()),
+            create: (context) => EditProductCubit(getIt())
+              ..emitGetProductForUpdateStates(productId),
             child: const EditProductScreen(),
           ),
           settings: settings,

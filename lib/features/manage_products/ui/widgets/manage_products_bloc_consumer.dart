@@ -42,11 +42,6 @@ class ManageProductsBlocConsumer extends StatelessWidget {
           ),
           operationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
-          operationFailed: (message) => DialogsHelper.showSnackBar(
-            context,
-            message,
-            backgroundColor: ColorsHelper.rejectedOrderBackGroundColor,
-          ),
         );
       },
     );

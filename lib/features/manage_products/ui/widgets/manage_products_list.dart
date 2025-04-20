@@ -29,7 +29,7 @@ class ManageProductsList extends StatelessWidget {
           },
           onEdit: () {
             context.pushNamed(Routes.editProductScreenRoute,
-                arguments: products[index]);
+                arguments: products[index].id);
           },
           productDataModel: products[index],
         );

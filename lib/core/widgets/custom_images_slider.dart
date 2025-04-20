@@ -9,11 +9,15 @@ class CustomImageSlider extends StatefulWidget {
     required this.imagePaths,
     this.selectedIndex,
     this.onImageTap,
+    this.onDeleteTap,
+    this.showDeleteButton,
   });
 
   final List<String> imagePaths;
   final int? selectedIndex;
   final ValueChanged<int>? onImageTap;
+  final ValueChanged<int>? onDeleteTap;
+  final bool? showDeleteButton;
 
   @override
   State<CustomImageSlider> createState() => _CustomImageSliderState();
@@ -47,40 +51,44 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: _scrollLeft,
-        ),
-        Expanded(
+        widget.imagePaths.length > 3
+            ? IconButton(
+                icon: const Icon(Icons.arrow_back_ios),
+                onPressed: _scrollLeft,
+              )
+            : const SizedBox(),
+        Flexible(
+          fit: FlexFit.loose,
           child: SizedBox(
             height: 60.h,
             child: SingleChildScrollView(
               controller: _scrollController,
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: List.generate(
-                  widget.imagePaths.length,
-                  (index) => Padding(
+                children: List.generate(widget.imagePaths.length, (index) {
+                  return Padding(
                     padding: EdgeInsets.symmetric(horizontal: 4.w),
                     child: ProductImageWidget(
-                      imageUrl: widget.imagePaths[index],
-                      showDeleteButton: false,
+                      onDelete: () => widget.onDeleteTap?.call(index),
+                      showDeleteButton: widget.showDeleteButton ?? false,
                       isSelected: widget.selectedIndex == index,
-                      onTap: () {
-                        widget.onImageTap?.call(index);
-                      },
+                      onTap: () => widget.onImageTap?.call(index),
+                      imageProvider: NetworkImage(widget.imagePaths[index]),
                     ),
-                  ),
-                ),
+                  );
+                }),
               ),
             ),
           ),
         ),
-        IconButton(
-          icon: const Icon(Icons.arrow_forward_ios),
-          onPressed: _scrollRight,
-        ),
+        widget.imagePaths.length > 3
+            ? IconButton(
+                icon: const Icon(Icons.arrow_forward_ios),
+                onPressed: _scrollRight,
+              )
+            : const SizedBox(),
       ],
     );
   }

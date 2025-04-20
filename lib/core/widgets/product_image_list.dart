@@ -13,10 +13,10 @@ class ProductImageList extends StatelessWidget {
     this.onDeleteTap,
   });
 
-  final List<File> imageFiles;
+  final List<dynamic> imageFiles;
   final int? selectedIndex;
   final ValueChanged<int>? onImageTap;
-  final ValueChanged<File>? onDeleteTap;
+  final ValueChanged<int>? onDeleteTap;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +25,18 @@ class ProductImageList extends StatelessWidget {
         alignment: WrapAlignment.center,
         spacing: 8.w,
         runSpacing: 8.h,
-        children: List.generate(
-          imageFiles.length,
-          (index) => ProductImageWidget(
-            onDelete: () => onDeleteTap?.call(imageFiles[index]),
+        children: List.generate(imageFiles.length, (index) {
+          final image = imageFiles[index];
+          return ProductImageWidget(
+            onDelete: () => onDeleteTap?.call(index),
             showDeleteButton: true,
-            imgFile: imageFiles[index],
             isSelected: selectedIndex == index,
             onTap: () => onImageTap?.call(index),
-          ),
-        ),
+            imageProvider: image is File
+                ? FileImage(image)
+                : NetworkImage(image.toString()),
+          );
+        }),
       ),
     );
   }

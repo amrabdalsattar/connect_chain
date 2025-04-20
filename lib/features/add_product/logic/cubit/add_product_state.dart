@@ -14,6 +14,6 @@ class AddProductState with _$AddProductState {
       AddProductImageErrorState;
   const factory AddProductState.imageLoading() = AddproductImageloadingState;
   const factory AddProductState.intial() = AddProductImageInitial;
-  const factory AddProductState.imageDeleted(File image) =
-      AddProductImageDeleted;
+  const factory AddProductState.imageDeleted() =
+      AddproductImageDeleted;
 }

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/dialogs_helper.dart';
-
-import '../../../../core/widgets/product_image_list.dart';
-import '../../../../core/widgets/upload_image.dart';
-
+import '../../logic/cubit/add_product_cubit.dart';
+import 'package:flutter/material.dart';
+import '../../../../core/widgets/upload_image_widget.dart';
+import '../../../../core/widgets/product_images_list.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
 

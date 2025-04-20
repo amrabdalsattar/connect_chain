@@ -14,6 +14,8 @@ class ApiConstants {
   static const String deleteProductEP = 'Product/DeleteProduct';
   static const String updateProductEP = 'Product/UpdateProduct';
   static const String getProductDetailsEP = 'Product/GetProductDetails';
+  static const String getProdcutforUpdateEp = 'Product/GetProductForUpdate';
+  static const String deleteProductImageEP = 'Product/DeleteProductImage';
 
   // Dashboard endpoints
   static const String monthlyStatsEP = 'Dashboard/GetMonthlyStats';
@@ -23,4 +25,9 @@ class ApiConstants {
   static const String productsSummaryEP = 'Dashboard/GetProductsSummary';
 
   static const Duration timeOut = Duration(seconds: 20);
+
+// Api query params 
+
+  static const String productId = 'productId';
+  static const String imgUrl = 'imageUrl';
 }

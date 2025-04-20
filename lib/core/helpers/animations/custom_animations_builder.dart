@@ -54,4 +54,32 @@ class CustomAnimationsBuilder {
       transitionDuration: duration,
     );
   }
+
+  static PageRouteBuilder buildHeroAnimation({
+    required Widget screen,
+    required RouteSettings settings,
+    Duration duration = const Duration(milliseconds: 400),
+  }) {
+    return PageRouteBuilder(
+      settings: settings,
+      pageBuilder: (context, animation, secondaryAnimation) => screen,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      },
+      transitionDuration: duration,
+    );
+  }
+
+  static PageRouteBuilder buildWidget({
+    required Widget screen,
+    required RouteSettings settings,
+  }) {
+    return PageRouteBuilder(
+      settings: settings,
+      pageBuilder: (context, animation, secondaryAnimation) => screen,
+    );  
+  }
 }

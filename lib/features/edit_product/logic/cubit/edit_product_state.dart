@@ -6,14 +6,17 @@ class EditProductState with _$EditProductState {
   const factory EditProductState.success() = EditProductSuccessState;
   const factory EditProductState.loading() = EditProductLoadingState;
   const factory EditProductState.error(ApiErrorModel apiErrorModel) =
+      EditProductErrorState;
+// Getting Data
+  const factory EditProductState.getProductSuccess(
+      EditProductRequestModel prodcut) = GetEditProductSuccessState;
 
   // Image States
-      EditProductErrorState;
-  const factory EditProductState.imageUploading() =
-      EditProductImageUploadingState;
-  const factory EditProductState.imageUploadSuccess() =
+  const factory EditProductState.imageLoading() = EditProductImageLoadingState;
+  const factory EditProductState.imageUploadSuccess(File imgFlie) =
       EditProductImageUploadSuccessState;
-  const factory EditProductState.imageError() = EditProductImageErrorState;
+  const factory EditProductState.imageError(String message) =
+      EditProductImageErrorState;
   const factory EditProductState.imageDeleted() = EditProductImageDeletedState;
   const factory EditProductState.imageInitial() = EditProductImageInitial;
 }
