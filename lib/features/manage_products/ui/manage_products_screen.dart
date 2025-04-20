@@ -30,7 +30,7 @@ class ManageProductsScreen extends StatelessWidget {
       create: (_) => ManageProductsCubit(getIt<ManageProductsRepo>())
         ..getSupplierProducts(),
       child: PopScope(
-        canPop: true,
+        canPop: false,
         onPopInvokedWithResult: (didPop, result) =>
             context.read<MainCubit>().toggleCurrentTabIndex = 0,
         child: Scaffold(
