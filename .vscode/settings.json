@@ -1,6 +1,7 @@
 {
   "dart.flutterSdkPath": ".fvm/versions/3.29.2",
-  "dart.projectSearchDepth": 5
+  "dart.projectSearchDepth": 5,
+  "git.ignoreLimitWarning": true
 
   
 }

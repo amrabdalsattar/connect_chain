@@ -1,5 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:connect_chain/core/widgets/loading_indicator.dart';
+import 'package:connect_chain/core/helpers/extensions.dart';
+import 'package:connect_chain/core/routing/routes.dart';
+import 'package:connect_chain/core/widgets/custom_image_widget.dart';
+import 'package:connect_chain/features/product_details/logic/cubit/product_details_cubit.dart';
 
 import '../../../core/helpers/app_images.dart';
 import '../../../core/helpers/dialogs_helper.dart';
@@ -19,8 +21,8 @@ import '../data/models/product_details_response_model.dart';
 
 // Part of this Widget
 part 'widgets/product_details_images_section.dart';
-part 'widgets/product_details_product_image.dart';
 part 'widgets/product_details_lower_widget.dart';
+part 'widgets/product_details_product_image.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key, required this.productResponseModel});

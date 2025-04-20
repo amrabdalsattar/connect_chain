@@ -15,8 +15,7 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
           current is AddProductImageUploadSuccessState ||
           current is AddProductImageErrorState ||
           current is AddProductLoadingState ||
-          current is AddProductImageInitial ||
-          current is AddProductImageDeleted,
+          current is AddProductImageInitial ,
       builder: (context, state) {
         return ProductImageList(
           imageFiles:

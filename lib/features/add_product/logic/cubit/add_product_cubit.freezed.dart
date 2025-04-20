@@ -67,7 +67,7 @@ mixin _$AddProductState {
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,7 +81,7 @@ mixin _$AddProductState {
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,7 +95,7 @@ mixin _$AddProductState {
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -143,18 +143,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.initial'));
   }
 
   @override
@@ -230,7 +224,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return initial(this);
   }
@@ -247,7 +241,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return initial?.call(this);
   }
@@ -264,7 +258,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -301,20 +295,12 @@ class __$$AddProductLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductLoadingStateImpl
-    with DiagnosticableTreeMixin
-    implements AddProductLoadingState {
+class _$AddProductLoadingStateImpl implements AddProductLoadingState {
   const _$AddProductLoadingStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.loading()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.loading'));
   }
 
   @override
@@ -391,7 +377,7 @@ class _$AddProductLoadingStateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return loading(this);
   }
@@ -408,7 +394,7 @@ class _$AddProductLoadingStateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return loading?.call(this);
   }
@@ -425,7 +411,7 @@ class _$AddProductLoadingStateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -462,20 +448,12 @@ class __$$AddProductSuccessStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductSuccessStateImpl
-    with DiagnosticableTreeMixin
-    implements AddProductSuccessState {
+class _$AddProductSuccessStateImpl implements AddProductSuccessState {
   const _$AddProductSuccessStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.success()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.success'));
   }
 
   @override
@@ -552,7 +530,7 @@ class _$AddProductSuccessStateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return success(this);
   }
@@ -569,7 +547,7 @@ class _$AddProductSuccessStateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return success?.call(this);
   }
@@ -586,7 +564,7 @@ class _$AddProductSuccessStateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -635,25 +613,15 @@ class __$$AddProductErrostateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductErrostateImpl
-    with DiagnosticableTreeMixin
-    implements AddProductErrostate {
+class _$AddProductErrostateImpl implements AddProductErrostate {
   const _$AddProductErrostateImpl(this.apiErrorModel);
 
   @override
   final ApiErrorModel apiErrorModel;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.error(apiErrorModel: $apiErrorModel)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AddProductState.error'))
-      ..add(DiagnosticsProperty('apiErrorModel', apiErrorModel));
   }
 
   @override
@@ -741,7 +709,7 @@ class _$AddProductErrostateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return error(this);
   }
@@ -758,7 +726,7 @@ class _$AddProductErrostateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return error?.call(this);
   }
@@ -775,7 +743,7 @@ class _$AddProductErrostateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -837,7 +805,6 @@ class __$$AddProductImageUploadSuccessStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AddProductImageUploadSuccessStateImpl
-    with DiagnosticableTreeMixin
     implements AddProductImageUploadSuccessState {
   const _$AddProductImageUploadSuccessStateImpl(this.image);
 
@@ -845,16 +812,8 @@ class _$AddProductImageUploadSuccessStateImpl
   final File image;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.imageUploadSuccess(image: $image)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AddProductState.imageUploadSuccess'))
-      ..add(DiagnosticsProperty('image', image));
   }
 
   @override
@@ -942,7 +901,7 @@ class _$AddProductImageUploadSuccessStateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return imageUploadSuccess(this);
   }
@@ -959,7 +918,7 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return imageUploadSuccess?.call(this);
   }
@@ -976,7 +935,7 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageUploadSuccess != null) {
@@ -1037,25 +996,15 @@ class __$$AddProductImageErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductImageErrorStateImpl
-    with DiagnosticableTreeMixin
-    implements AddProductImageErrorState {
+class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
   const _$AddProductImageErrorStateImpl(this.error);
 
   @override
   final String error;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.imageError(error: $error)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AddProductState.imageError'))
-      ..add(DiagnosticsProperty('error', error));
   }
 
   @override
@@ -1142,7 +1091,7 @@ class _$AddProductImageErrorStateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return imageError(this);
   }
@@ -1159,7 +1108,7 @@ class _$AddProductImageErrorStateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return imageError?.call(this);
   }
@@ -1176,7 +1125,7 @@ class _$AddProductImageErrorStateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageError != null) {
@@ -1223,20 +1172,12 @@ class __$$AddproductImageloadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddproductImageloadingStateImpl
-    with DiagnosticableTreeMixin
-    implements AddproductImageloadingState {
+class _$AddproductImageloadingStateImpl implements AddproductImageloadingState {
   const _$AddproductImageloadingStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.imageLoading()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.imageLoading'));
   }
 
   @override
@@ -1313,7 +1254,7 @@ class _$AddproductImageloadingStateImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return imageLoading(this);
   }
@@ -1330,7 +1271,7 @@ class _$AddproductImageloadingStateImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return imageLoading?.call(this);
   }
@@ -1347,7 +1288,7 @@ class _$AddproductImageloadingStateImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageLoading != null) {
@@ -1385,20 +1326,12 @@ class __$$AddProductImageInitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductImageInitialImpl
-    with DiagnosticableTreeMixin
-    implements AddProductImageInitial {
+class _$AddProductImageInitialImpl implements AddProductImageInitial {
   const _$AddProductImageInitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.intial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.intial'));
   }
 
   @override
@@ -1475,7 +1408,7 @@ class _$AddProductImageInitialImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return intial(this);
   }
@@ -1492,7 +1425,7 @@ class _$AddProductImageInitialImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return intial?.call(this);
   }
@@ -1509,7 +1442,7 @@ class _$AddProductImageInitialImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (intial != null) {
@@ -1532,12 +1465,12 @@ abstract class _$$AddproductImageDeletedImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AddProductImageDeletedImplCopyWithImpl<$Res>
-    extends _$AddProductStateCopyWithImpl<$Res, _$AddProductImageDeletedImpl>
-    implements _$$AddProductImageDeletedImplCopyWith<$Res> {
-  __$$AddProductImageDeletedImplCopyWithImpl(
-      _$AddProductImageDeletedImpl _value,
-      $Res Function(_$AddProductImageDeletedImpl) _then)
+class __$$AddproductImageDeletedImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res, _$AddproductImageDeletedImpl>
+    implements _$$AddproductImageDeletedImplCopyWith<$Res> {
+  __$$AddproductImageDeletedImplCopyWithImpl(
+      _$AddproductImageDeletedImpl _value,
+      $Res Function(_$AddproductImageDeletedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AddProductState
@@ -1546,20 +1479,12 @@ class __$$AddProductImageDeletedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddProductImageDeletedImpl
-    with DiagnosticableTreeMixin
-    implements AddproductImageDeleted {
+class _$AddproductImageDeletedImpl implements AddproductImageDeleted {
   const _$AddproductImageDeletedImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AddProductState.imageDeleted()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AddProductState.imageDeleted'));
   }
 
   @override
@@ -1636,7 +1561,7 @@ class _$AddProductImageDeletedImpl
     required TResult Function(AddProductImageErrorState value) imageError,
     required TResult Function(AddproductImageloadingState value) imageLoading,
     required TResult Function(AddProductImageInitial value) intial,
-    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddproductImageDeleted value) imageDeleted,
   }) {
     return imageDeleted(this);
   }
@@ -1653,7 +1578,7 @@ class _$AddProductImageDeletedImpl
     TResult? Function(AddProductImageErrorState value)? imageError,
     TResult? Function(AddproductImageloadingState value)? imageLoading,
     TResult? Function(AddProductImageInitial value)? intial,
-    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddproductImageDeleted value)? imageDeleted,
   }) {
     return imageDeleted?.call(this);
   }
@@ -1670,7 +1595,7 @@ class _$AddProductImageDeletedImpl
     TResult Function(AddProductImageErrorState value)? imageError,
     TResult Function(AddproductImageloadingState value)? imageLoading,
     TResult Function(AddProductImageInitial value)? intial,
-    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddproductImageDeleted value)? imageDeleted,
     required TResult orElse(),
   }) {
     if (imageDeleted != null) {

@@ -27,6 +27,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
           verticalSpace(8),
           BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
             buildWhen: (previous, current) =>
+                current is ProductDetailsImageChangedState ||
                 current is ProductDetailsImageChangedState,
             builder: (context, state) {
               final imageUrl = state is ProductDetailsImageChangedState
@@ -36,30 +37,25 @@ class ProductDetailsImagesSection extends StatelessWidget {
               return Column(
                 children: [
                   AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 400),
                     transitionBuilder: (child, animation) {
                       return FadeTransition(opacity: animation, child: child);
                     },
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(18.r),
-                      child: CachedNetworkImage(
-                        imageUrl: imageUrl,
-                        key: ValueKey(imageUrl),
-                        width: double.infinity,
-                        height: 230.h,
-                        fit: BoxFit.cover,
-                        placeholder: (_, __) => const LoadingIndicator(),
-                        errorWidget: (context, error, stackTrace) =>
-                            const Center(
-                          child: Text('Image not available'),
-                        ),
-                      ),
+                    child: CustomImageWidget(
+                      key: ValueKey(imageUrl),
+                      onTap: () {
+                        context.pushNamed(Routes.heroImageView,
+                            arguments: imageUrl);
+                      },
+                      imageUrl: imageUrl,
+                      height: 230.h,
+                      width: 343.w,
                     ),
                   ),
+
                   verticalSpace(16),
                   // Image Carousel Section
                   CustomImageSlider(
-                    
                     imagePaths: product.imageUrls,
                     selectedIndex: product.imageUrls.indexOf(imageUrl),
                     onImageTap: (selectedIndex) {

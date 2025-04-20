@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:connect_chain/core/widgets/custom_image_widget.dart';
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
@@ -52,19 +53,18 @@ class ManageProductsTile extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 9.h),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.r),
-                child: CachedNetworkImage(
-                  imageUrl: productDataModel.image!,
-                  placeholder: (_, __) => Padding(
-                      padding: EdgeInsets.all(16.r),
-                      child: const LoadingIndicator(
-                          color: ColorsHelper.primaryColor)),
-                  errorWidget: (_, __, ___) => Container(),
-                  height: 56.h,
-                  width: 56.w,
-                  fit: BoxFit.cover,
+              child: CustomImageWidget(
+                imageUrl: productDataModel.image!,
+                placeholder: Padding(
+                  padding: EdgeInsets.all(16.r),
+                  child: const LoadingIndicator(
+                    color: ColorsHelper.primaryColor,
+                  ),
                 ),
+                errorWidget: Container(),
+                height: 56.h,
+                width: 56.w,
+                fit: BoxFit.cover,
               ),
             ),
             EditProductTileDetailsSection(

@@ -27,13 +27,16 @@ class EditProductCubit extends Cubit<EditProductState> {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  List<String> productImages = [];
-  List<String> _imgaesIds = [];
-
+  final List<dynamic> productImages = [];
+  final List<String> _imgaesIds = [];
+  final List<String> _deletedImagesIndexes = [];
   final List<File> _newImages = [];
   int _prodcutId = 0;
 
-  emitEditStates() async {
+  List<File> get newImages => _newImages;
+
+  Future<void> saveProductUpdates() async {
+    emit(const EditProductState.loading());
     final result = await editProductRepo.updateProduct(EditProductRequestModel(
         name: nameController.text,
         description: descriptionController.text,
@@ -44,7 +47,14 @@ class EditProductCubit extends Cubit<EditProductState> {
         supplierId: '20044e2f-7c63-4ea5-a458-c39729d93e62',
         newImages: _newImages,
         productId: _prodcutId));
-  
+
+    // Deleting The images
+    if (_deletedImagesIndexes.isNotEmpty) {
+      for (String imageIndex in _deletedImagesIndexes) {
+        await editProductRepo.deleteProductImage(imageIndex);
+      }
+    }
+
     result.when(success: (product) {
       emit(const EditProductState.success());
     }, failure: (error) {
@@ -52,7 +62,7 @@ class EditProductCubit extends Cubit<EditProductState> {
     });
   }
 
-  emitGetProductForUpdateStates(int productId) async {
+  Future<void> fetchProductDataforEdit(int productId) async {
     emit(const EditProductState.loading());
     final result = await editProductRepo.getProductForUpdate(productId);
     result.when(success: (data) {
@@ -62,9 +72,8 @@ class EditProductCubit extends Cubit<EditProductState> {
       quantityController.text = product.stock.toString();
       descriptionController.text = product.description;
       minimumStockController.text = product.minimumStock.toString();
-      productImages = List.from(product.imageUrls?.values ?? []);
-      _imgaesIds = List.from(product.imageUrls?.keys ?? [])  ;
-
+      productImages.addAll(List.from(product.imageUrls?.values ?? []));
+      _imgaesIds.addAll(List.from(product.imageUrls?.keys ?? []));
       categoryId = product.categoryId;
       _prodcutId = productId;
       // No Response for SKU in the model
@@ -76,12 +85,13 @@ class EditProductCubit extends Cubit<EditProductState> {
   }
 
   // Image Functions
-  Future<void> uploadImage() async {
+  Future<void> addImage() async {
     await ImagePickerHelper.pickImage(
       maxImages: 5,
       currentImages: productImages,
       onImagePicked: (imageFile) {
         _newImages.add(imageFile);
+        productImages.add(imageFile);
         emit((EditProductState.imageUploadSuccess(imageFile)));
       },
       onError: (message) {
@@ -90,11 +100,11 @@ class EditProductCubit extends Cubit<EditProductState> {
     );
   }
 
-  Future<void> deleteImage(int index) async {
+  void removeImage(int imageIndex) {
     if (productImages.isNotEmpty) {
       emit(const EditProductState.imageLoading());
-      await editProductRepo.deleteProductImage(_imgaesIds[index]);
-      productImages.removeAt(index);
+      _deletedImagesIndexes.add(_imgaesIds[imageIndex]);
+      productImages.removeAt(imageIndex);
       emit(const EditProductState.imageDeleted());
     }
     emit(const EditProductState.initial());
