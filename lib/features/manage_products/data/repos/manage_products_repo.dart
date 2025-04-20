@@ -7,11 +7,10 @@ class ManageProductsRepo {
   final ManageProductsDatasource _datasource;
   const ManageProductsRepo(this._datasource);
 
-  Future<ApiResult<ManageSupplierProductsResponseModel>>
-      getSupplierProducts() async {
+  Future<ApiResult<List<ProductDataModel>>> getSupplierProducts() async {
     try {
       final result = await _datasource.getSupplierProducts();
-      return ApiResult.success(result);
+      return ApiResult.success(result.data);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }

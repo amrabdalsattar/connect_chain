@@ -1,5 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:connect_chain/core/widgets/custom_image_widget.dart';
+import '../../../../core/widgets/custom_image_widget.dart';
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
@@ -51,30 +50,38 @@ class ManageProductsTile extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 9.h),
-              child: CustomImageWidget(
-                imageUrl: productDataModel.image!,
-                placeholder: Padding(
-                  padding: EdgeInsets.all(16.r),
-                  child: const LoadingIndicator(
-                    color: ColorsHelper.primaryColor,
+            Expanded(
+              flex: 3,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 9.h),
+                child: CustomImageWidget(
+                  imageUrl: productDataModel.image!,
+                  placeholder: Padding(
+                    padding: EdgeInsets.all(16.r),
+                    child: const LoadingIndicator(
+                      color: ColorsHelper.primaryColor,
+                    ),
                   ),
+                  errorWidget: Container(),
+                  height: 56.h,
+                  width: 56.w,
+                  fit: BoxFit.cover,
                 ),
-                errorWidget: Container(),
-                height: 56.h,
-                width: 56.w,
-                fit: BoxFit.cover,
               ),
             ),
-            EditProductTileDetailsSection(
-              productDataModel: productDataModel,
+            Expanded(
+              flex: 5,
+              child: EditProductTileDetailsSection(
+                productDataModel: productDataModel,
+              ),
             ),
-            const Spacer(),
-            EditProductTileTrailingSection(
-              onDelete: onDelete,
-              onEdit: onEdit,
-              price: productDataModel.price,
+            Expanded(
+              flex: 4,
+              child: EditProductTileTrailingSection(
+                onDelete: onDelete,
+                onEdit: onEdit,
+                price: productDataModel.price,
+              ),
             )
           ],
         ),

@@ -4,6 +4,6 @@ String priceFormat(num price) {
   if (price >= 1000) {
     return NumberFormat('#,##0.#').format((price));
   } else {
-    return NumberFormat('###.00').format((price));
+    return NumberFormat('###.#').format((price));
   }
 }

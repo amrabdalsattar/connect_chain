@@ -28,7 +28,7 @@ class CustomTwoButtonsRow extends StatelessWidget {
           ),
           CustomButton(
             onTap: onLeftTap,
-            textStyle: AppTextStyles.cairoBlackBold16
+            textStyle: AppTextStyles.cairoBlackSemiBold16
                 .copyWith(fontWeight: FontWeight.w500),
             title: leftText,
             width: 166.w,

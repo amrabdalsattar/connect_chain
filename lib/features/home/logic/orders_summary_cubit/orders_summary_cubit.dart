@@ -1,6 +1,6 @@
-import '../../data/repos/orders_summary_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../data/repos/orders_summary_repo.dart';
 import 'orders_summary_state.dart';
 
 class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {
@@ -11,7 +11,7 @@ class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {
   final int currentMonth = DateTime.now().month;
   final String supplierId = '20044e2f-7c63-4ea5-a458-c39729d93e62';
 
-  void getOrdersSummary() async {
+  Future<void> getOrdersSummary() async {
     emit(const OrdersSummaryLoadingState());
     final result = await _repo.getOrdersSummary(supplierId);
 

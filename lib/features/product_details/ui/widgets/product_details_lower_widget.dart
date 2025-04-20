@@ -1,4 +1,3 @@
-
 part of '../product_details_screen.dart';
 
 class ProductDetailsLowerWidget extends StatelessWidget {
@@ -12,17 +11,17 @@ class ProductDetailsLowerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 33),
+      padding: EdgeInsets.symmetric(horizontal: 33.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Price & Ratting row
           Row(
             children: [
-              horizontalSpace(16),
               Text(
                 '${priceFormat(productResponseModel.price)} EGP',
                 style: AppTextStyles.cairoBlackBold20,
+                textDirection: TextDirection.ltr,
               ),
               const Spacer(),
               SvgPicture.asset(
@@ -31,10 +30,11 @@ class ProductDetailsLowerWidget extends StatelessWidget {
                 height: 20.h,
               ),
               horizontalSpace(8),
-              // Ratting Part
               Text(
-                productResponseModel.categoryName,
+                '0.0',
                 style: AppTextStyles.cairoBlackBold20,
+                maxLines: 1,
+                overflow: TextOverflow.fade,
               ),
             ],
           ),
@@ -49,51 +49,51 @@ class ProductDetailsLowerWidget extends StatelessWidget {
                 height: 16.h,
               ),
               horizontalSpace(8),
-              Text('اكسسوارات', style: AppTextStyles.cairoBlackBold14),
+              Text(productResponseModel.categoryName,
+                  style: AppTextStyles.cairoBlackBold14),
             ],
           ),
           verticalSpace(24),
           // Inventory Info Section
           Text(
             'معلومات المخزون',
-            style: AppTextStyles.cairoBlackBold16,
+            style: AppTextStyles.cairoBlackSemiBold16,
           ),
           verticalSpace(8),
 
           // Statistics Data Row
           Row(
             children: [
-              const StatisticsDataItem(
+              StatisticsDataItem(
                   title: 'الكميه المتوفره حاليا',
                   imagePath: AppImages.documentIcon,
                   iconBackGroundColor:
                       ColorsHelper.grossProductsBackGroundColor,
-                  value: '500'),
+                  value: '${productResponseModel.stock}'),
               horizontalSpace(16),
-              const StatisticsDataItem(
+              StatisticsDataItem(
                   title: 'حد التنبيه لنفاذ المخزون',
                   imagePath: AppImages.downChartIcon,
                   iconBackGroundColor:
                       ColorsHelper.rejectedOrderBackGroundColor,
-                  value: '50'),
+                  value: '${productResponseModel.minimumStock}'),
               horizontalSpace(16),
-              const StatisticsDataItem(
+              StatisticsDataItem(
                   title: 'اخر اعاده تعبئه للمحزون',
                   imagePath: AppImages.clockIcon,
                   iconBackGroundColor: ColorsHelper.lastOrderBackGroundColor,
-                  value: '5 OCT'),
+                  value: productResponseModel.updatedDate ?? "Not Found"),
             ],
           ),
           verticalSpace(24),
           // Description Section
           Text(
             'الوصف',
-            style: AppTextStyles.cairoBlackBold16,
+            style: AppTextStyles.cairoBlackSemiBold16,
           ),
           verticalSpace(8),
 
-          Text(
-              'استمتع بإطلالة عصرية مع هذه النضارة الشمسية الأنيقة المصممة لتوفير حماية كاملة من أشعة الشمس الضارة. تأتي بعدسات UV400 عالية الجودة لحماية عينيك من  الأشعة فوق البنفسجية، مع إطار خفيف الوزن ومتين يناسب جميع الأذواق.  مثالية للارتداء اليومي، السفر، أو القيادة',
+          Text(productResponseModel.description,
               style: AppTextStyles.cairoSemiGreyRegular12)
         ],
       ),

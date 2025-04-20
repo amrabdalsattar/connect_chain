@@ -1,5 +1,6 @@
-import '../../../../../../core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../../core/theming/app_text_styles.dart';
 
 class SoldQuantityTextSpan extends StatelessWidget {
   final int soldQuantity;
@@ -15,7 +16,7 @@ class SoldQuantityTextSpan extends StatelessWidget {
         children: [
           TextSpan(
             text: '$soldQuantity',
-            style: AppTextStyles.cairoBlackBold16,
+            style: AppTextStyles.cairoBlackSemiBold16,
           ),
           WidgetSpan(
             alignment: PlaceholderAlignment.baseline,

@@ -9,11 +9,11 @@ class EditProductState with _$EditProductState {
       EditProductErrorState;
 // Getting Data
   const factory EditProductState.getProductSuccess(
-      EditProductRequestModel prodcut) = GetEditProductSuccessState;
+      EditProductRequestModel product) = GetEditProductSuccessState;
 
   // Image States
   const factory EditProductState.imageLoading() = EditProductImageLoadingState;
-  const factory EditProductState.imageUploadSuccess(File imgFlie) =
+  const factory EditProductState.imageUploadSuccess(File imageFile) =
       EditProductImageUploadSuccessState;
   const factory EditProductState.imageError(String message) =
       EditProductImageErrorState;

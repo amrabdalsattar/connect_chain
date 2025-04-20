@@ -11,13 +11,18 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       buildWhen: (previous, current) {
         return current is ManageProductsLoadingState ||
             current is ManageProductsSuccessState ||
-            current is MangeProductsOperationSuccessState;
+            current is ManageProductsErrorState ||
+            current is EmptyProductsList ||
+            current is UpdatedProductsListState;
       },
       builder: (context, state) {
         if (state is ManageProductsSuccessState) {
-          // If the products list is empty, show a message
           return ManageProductsList(
-            products: state.products.data,
+            products: state.products,
+          );
+        } else if (state is UpdatedProductsListState) {
+          return ManageProductsList(
+            products: state.products,
           );
         } else if (state is ManageProductsLoadingState) {
           return ShimmerLoadingList(
@@ -27,19 +32,21 @@ class ManageProductsBlocConsumer extends StatelessWidget {
             containerWidth: 100,
             scrollDirection: Axis.vertical,
           );
+        } else if (state is EmptyProductsList) {
+          return const Center(
+            child: Text('No Products Was found'),
+          );
         } else {
           return const Center(
             child: Text('No Products Was found'),
           );
         }
       },
-      listener: (context, state) {
+      listenWhen: (previous, current) =>
+          current is MangeProductsOperationSuccessState ||
+          current is MangeProductsOperationFailedState,
+      listener: (_, state) {
         state.whenOrNull(
-          error: (errorState) => DialogsHelper.showSnackBar(
-            context,
-            errorState.message ?? '',
-            backgroundColor: ColorsHelper.rejectedOrderBackGroundColor,
-          ),
           operationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
         );

@@ -1,10 +1,9 @@
-import 'package:connect_chain/features/product_details/data/repos/product_details_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/add_product/data/datasources/add_product_datasource.dart';
 import '../../features/add_product/data/repos/add_product_repo.dart';
-import '../../features/edit_product/data/datasource/edit_product_datasourece.dart';
+import '../../features/edit_product/data/datasource/edit_product_datasource.dart';
 import '../../features/edit_product/data/repos/edit_product_repo.dart';
 import '../../features/home/data/datasources/monthly_stats_data_source.dart';
 import '../../features/home/data/datasources/orders_summary_datasource.dart';
@@ -21,6 +20,7 @@ import '../../features/login/data/repos/login_repo.dart';
 import '../../features/manage_products/data/datasource/manage_products_datasource.dart';
 import '../../features/manage_products/data/repos/manage_products_repo.dart';
 import '../../features/product_details/data/datasource/product_details_datasource.dart';
+import '../../features/product_details/data/repos/product_details_repo.dart';
 import '../../features/reset_password/data/datasources/reset_password_data_source.dart';
 import '../../features/reset_password/data/repos/reset_password_repo.dart';
 import '../../features/signup/data/datasources/signup_data_source.dart';

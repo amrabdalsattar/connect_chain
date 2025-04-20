@@ -1,3 +1,5 @@
+import '../../../../core/helpers/extensions.dart';
+
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import '../../data/models/manage_supplier_products_request_model.dart';
 import '../../data/repos/manage_products_repo.dart';
@@ -12,12 +14,20 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
   ManageProductsCubit(this._manageProductsRepo)
       : super(const ManageProductsState.initial());
 
+  List<ProductDataModel> productsLocalList = [];
+
   void getSupplierProducts() async {
     emit(const ManageProductsState.loading());
     final result = await _manageProductsRepo.getSupplierProducts();
-    result.when(success: (manageRequestModel) {
+    result.when(success: (products) {
       if (!isClosed) {
-        emit(ManageProductsState.success(manageRequestModel));
+        productsLocalList = products;
+        if (productsLocalList.isNullOrEmpty()) {
+          emit(const ManageProductsState.emptyProductsList(
+              'No Products was found'));
+        } else {
+          emit(ManageProductsState.success(productsLocalList));
+        }
       }
     }, failure: (error) {
       if (!isClosed) {
@@ -27,15 +37,24 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
   }
 
   void deleteProduct(int productId) async {
-    emit(const ManageProductsState.loading());
+    ProductDataModel product =
+        productsLocalList.firstWhere((product) => product.id == productId);
+    productsLocalList.removeWhere((product) => product.id == productId);
+
+    if (productsLocalList.isEmpty) {
+      emit(
+          const ManageProductsState.emptyProductsList('No Products was found'));
+    } else {
+      emit(ManageProductsState.updatedProductsList(productsLocalList));
+    }
+
     final result = await _manageProductsRepo.deleteProduct(productId);
     result.when(success: (message) {
       emit(ManageProductsState.operationSuccess(message));
-      getSupplierProducts();
     }, failure: (error) {
+      productsLocalList.add(product);
       emit(ManageProductsState.operationFailed(
           error.message ?? "unknown error"));
-      getSupplierProducts();
     });
   }
 }

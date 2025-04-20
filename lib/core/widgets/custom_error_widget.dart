@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomErrorWidget extends StatelessWidget {

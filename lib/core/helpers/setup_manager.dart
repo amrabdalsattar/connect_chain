@@ -15,14 +15,15 @@ class SetupManager {
       statusBarColor: ColorsHelper.white,
       statusBarIconBrightness: Brightness.dark,
     ));
-// Future.wait()
-    await setUpGetIt();
+
     await SharedPreferencesHelper.init();
-    await TokenHelper.checkIfUserIsLoggedIn();
-
-    await EasyLocalization.ensureInitialized();
-
-    await ScreenUtil.ensureScreenSize();
+    await Future.wait<void>([
+      setUpGetIt(),
+      EasyLocalization.ensureInitialized(),
+      TokenHelper.checkIfUserIsLoggedIn(),
+      EasyLocalization.ensureInitialized(),
+      ScreenUtil.ensureScreenSize(),
+    ]);
 
     Bloc.observer = AppBlocObserver();
   }

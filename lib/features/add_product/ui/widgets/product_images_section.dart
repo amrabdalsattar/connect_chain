@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/widgets/product_image_list.dart';
+import '../../../../core/widgets/product_image_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +8,6 @@ import '../../logic/cubit/add_product_cubit.dart';
 import '../../../../core/widgets/upload_image_widget.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
-
 
 class AddProductImagesSection extends StatelessWidget {
   const AddProductImagesSection({super.key});
@@ -21,7 +20,8 @@ class AddProductImagesSection extends StatelessWidget {
       children: [
         Text(
           'صور المنتج',
-          style: AppTextStyles.cairoBlackBold16.copyWith(color: Colors.black),
+          style:
+              AppTextStyles.cairoBlackSemiBold16.copyWith(color: Colors.black),
         ),
         verticalSpace(18),
         UploadImageWidget(
@@ -35,7 +35,7 @@ class AddProductImagesSection extends StatelessWidget {
               current is AddProductImageUploadSuccessState ||
               current is AddProductImageErrorState ||
               current is AddProductLoadingState ||
-              current is AddProductImageInitial ,
+              current is AddProductImageInitial,
           builder: (context, state) {
             return ProductImageList(
               imageFiles:

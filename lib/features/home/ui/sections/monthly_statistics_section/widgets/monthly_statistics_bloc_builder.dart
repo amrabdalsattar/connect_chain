@@ -1,10 +1,10 @@
-import '../../../../../../core/widgets/shimmer_loading_list.dart';
-import '../../../../logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
-import 'monthly_statistics_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../../core/widgets/shimmer_loading_list.dart';
+import '../../../../logic/monthly_statistics_cubit/monthly_statistics_cubit.dart';
 import '../../../../logic/monthly_statistics_cubit/monthly_statistics_states.dart';
+import 'monthly_statistics_data.dart';
 
 class MonthlyStatisticsBlocBuilder extends StatelessWidget {
   const MonthlyStatisticsBlocBuilder({super.key});

@@ -11,7 +11,8 @@ class AddProductImagesSection extends StatelessWidget {
       children: [
         Text(
           'صور المنتج',
-          style: AppTextStyles.cairoBlackBold16.copyWith(color: Colors.black),
+          style:
+              AppTextStyles.cairoBlackSemiBold16.copyWith(color: Colors.black),
         ),
         verticalSpace(18),
         UploadImageWidget(
@@ -23,5 +24,5 @@ class AddProductImagesSection extends StatelessWidget {
         AddProductImagesListBlocConsumer(addProductCubit: addProductCubit),
       ],
     );
-  } 
+  }
 }

@@ -1,11 +1,11 @@
-import 'package:connect_chain/core/widgets/hero_image_view.dart';
-import 'package:connect_chain/features/edit_product/logic/cubit/edit_product_cubit.dart';
-import 'package:connect_chain/features/edit_product/ui/edit_product_screen.dart';
-import 'package:connect_chain/features/product_details/logic/cubit/product_details_cubit.dart';
-import 'package:connect_chain/features/product_details/ui/widgets/product_details_bloc_consumer.dart';
+import '../widgets/hero_image_view.dart';
+import '../../features/edit_product/logic/cubit/edit_product_cubit.dart';
+import '../../features/edit_product/ui/edit_product_screen.dart';
+import '../../features/product_details/logic/cubit/product_details_cubit.dart';
+import '../../features/product_details/ui/widgets/product_details_bloc_consumer.dart';
 
 import '../../features/add_product/logic/cubit/add_product_cubit.dart';
-import 'package:connect_chain/features/manage_products/ui/manage_products_screen.dart';
+import '../../features/manage_products/ui/manage_products_screen.dart';
 
 import '../../features/add_product/ui/add_product_screen.dart';
 import '../../features/main/logic/cubit/main_cubit.dart';
@@ -81,7 +81,7 @@ class AppRouter {
         return CustomAnimationsBuilder.slideFromLeft(
           screen: BlocProvider(
             create: (context) =>
-                EditProductCubit(getIt())..fetchProductDataforEdit(productId),
+                EditProductCubit(getIt())..fetchProductDataForEdit(productId),
             child: const EditProductBlocConsumer(),
           ),
           settings: settings,

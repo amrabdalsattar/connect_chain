@@ -3,12 +3,14 @@ part of 'manage_products_cubit.dart';
 @freezed
 class ManageProductsState with _$ManageProductsState {
   const factory ManageProductsState.initial() = _Initial;
-  const factory ManageProductsState.success(
-          ManageSupplierProductsResponseModel products) =
+  const factory ManageProductsState.success(List<ProductDataModel> products) =
       ManageProductsSuccessState;
   const factory ManageProductsState.loading() = ManageProductsLoadingState;
   const factory ManageProductsState.error(ApiErrorModel error) =
       ManageProductsErrorState;
+
+  const factory ManageProductsState.emptyProductsList(String errorMessage) =
+      EmptyProductsList;
 
   // Delete Product
   const factory ManageProductsState.delete() = ManageProductsDeleteState;
@@ -18,4 +20,6 @@ class ManageProductsState with _$ManageProductsState {
       MangeProductsOperationSuccessState;
   const factory ManageProductsState.operationFailed(String message) =
       MangeProductsOperationFailedState;
+  const factory ManageProductsState.updatedProductsList(
+      List<ProductDataModel> products) = UpdatedProductsListState;
 }

@@ -6,14 +6,14 @@ class AddProductState with _$AddProductState {
   const factory AddProductState.loading() = AddProductLoadingState;
   const factory AddProductState.success() = AddProductSuccessState;
   const factory AddProductState.error(ApiErrorModel apiErrorModel) =
-      AddProductErrostate;
+      AddProductErrorState;
+
   // Image States
   const factory AddProductState.imageUploadSuccess(File image) =
       AddProductImageUploadSuccessState;
   const factory AddProductState.imageError(String error) =
       AddProductImageErrorState;
-  const factory AddProductState.imageLoading() = AddproductImageloadingState;
-  const factory AddProductState.intial() = AddProductImageInitial;
-  const factory AddProductState.imageDeleted() =
-      AddproductImageDeleted;
+  const factory AddProductState.imageLoading() = AddProductImageLoadingState;
+  const factory AddProductState.addProductInitial() = AddProductImageInitial;
+  const factory AddProductState.imageDeleted() = AddProductImageDeleted;
 }

@@ -15,14 +15,16 @@ class LoginResponseModel {
 }
 
 class UserData {
-  String name;
-  String email;
-  String address;
-  String token;
-  String phone;
+  final String id;
+  final String name;
+  final String email;
+  final String address;
+  final String token;
+  final String phone;
   dynamic businessType;
 
   UserData({
+    required this.id,
     required this.name,
     required this.email,
     required this.address,
@@ -32,6 +34,7 @@ class UserData {
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) => UserData(
+        id: json["id"],
         name: json["name"],
         email: json["email"],
         address: json["address"],
@@ -41,6 +44,7 @@ class UserData {
       );
 
   Map<String, dynamic> toJson() => {
+        "id": id,
         "name": name,
         "email": email,
         "address": address,

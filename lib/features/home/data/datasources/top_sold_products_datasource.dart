@@ -1,9 +1,8 @@
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
-import '../models/response_models/top_sold_products_response_model.dart';
-
 import '../models/request_models/dashboard_request_model.dart';
+import '../models/response_models/top_sold_products_response_model.dart';
 
 class TopSoldProductsDatasource {
   final ApiHelper _apiHelper;

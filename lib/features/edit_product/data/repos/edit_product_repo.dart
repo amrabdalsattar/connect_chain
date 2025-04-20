@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/edit_product/data/datasource/edit_product_datasourece.dart';
-import 'package:connect_chain/features/edit_product/data/model/edit_product_request_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasource/edit_product_datasource.dart';
+import '../model/edit_product_request_model.dart';
 
 class EditProductRepo {
   final EditProductDatasource _editProductDatasource;

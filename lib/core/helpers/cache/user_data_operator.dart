@@ -1,29 +1,32 @@
 import '../../../features/login/data/models/login_response_model.dart';
+import '../../routing/routes.dart';
+import '../token_helper.dart';
 import 'shared_preferences_helper.dart';
 import 'shared_preferences_keys.dart';
 
 class UserDataOperator {
-  static Future<Map<String, dynamic>> getUserData() async {
+  static Map<String, dynamic> getUserData() {
     return {
-      SharedPreferencesKeys.userName: await SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userName),
+      SharedPreferencesKeys.userName:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userName),
+      SharedPreferencesKeys.userId:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
       SharedPreferencesKeys.userAddress:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userAddress),
-      SharedPreferencesKeys.userEmail: await SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userEmail),
-      SharedPreferencesKeys.userBusinessType:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userBusinessType),
-      SharedPreferencesKeys.userPhoneNumber:
-          await SharedPreferencesHelper.getString(
-              SharedPreferencesKeys.userPhoneNumber),
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userAddress),
+      SharedPreferencesKeys.userEmail:
+          SharedPreferencesHelper.getString(SharedPreferencesKeys.userEmail),
+      SharedPreferencesKeys.userBusinessType: SharedPreferencesHelper.getString(
+          SharedPreferencesKeys.userBusinessType),
+      SharedPreferencesKeys.userPhoneNumber: SharedPreferencesHelper.getString(
+          SharedPreferencesKeys.userPhoneNumber),
     };
   }
 
   static Future<void> saveUserData(UserData userData) async {
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userName, userData.name);
+    await SharedPreferencesHelper.setData(
+        SharedPreferencesKeys.userId, userData.id);
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userBusinessType, userData.businessType);
 
@@ -39,6 +42,7 @@ class UserDataOperator {
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userName);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userAddress);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userEmail);
+    await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userId);
     await SharedPreferencesHelper.removeData(
         SharedPreferencesKeys.userPhoneNumber);
     await SharedPreferencesHelper.removeData(
@@ -50,9 +54,21 @@ class UserDataOperator {
         SharedPreferencesKeys.isViewedOnboarding, true);
   }
 
-  static Future<bool> isViewedOnboarding() async {
-    return await SharedPreferencesHelper.getBool(
+  static bool isViewedOnboarding() {
+    return SharedPreferencesHelper.getBool(
             SharedPreferencesKeys.isViewedOnboarding) ??
         false;
+  }
+
+  static String? getInitialRoute() {
+    final bool isViewedOnboarding = UserDataOperator.isViewedOnboarding();
+
+    if (!isViewedOnboarding) {
+      return Routes.onboardingRoute;
+    }
+    if (isLoggedIn) {
+      return Routes.mainScreenRoute;
+    }
+    return Routes.loginRoute;
   }
 }

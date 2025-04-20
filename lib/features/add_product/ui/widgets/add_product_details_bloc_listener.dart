@@ -11,7 +11,7 @@ class AddProductDetailsBlocListener extends StatelessWidget {
     return BlocListener<AddProductCubit, AddProductState>(
       listenWhen: (previous, current) =>
           current is AddProductLoadingState ||
-          current is AddProductErrostate ||
+          current is AddProductErrorState ||
           current is AddProductSuccessState,
       listener: (context, state) {
         state.whenOrNull(

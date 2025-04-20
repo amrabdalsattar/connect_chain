@@ -16,8 +16,9 @@ class ManageProductsList extends StatelessWidget {
 
     return ListView.separated(
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       itemCount: products.length,
+      reverse: true,
       itemBuilder: (context, index) {
         return ManageProductsTile(
           onTap: () {

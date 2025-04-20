@@ -1,10 +1,10 @@
-import '../../../../data/models/response_models/orders_summary_response_model.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../../../core/helpers/app_images.dart';
 import '../../../../../../core/helpers/spacing.dart';
 import '../../../../../../core/theming/colors_helper.dart';
+import '../../../../data/models/response_models/orders_summary_response_model.dart';
 import '../../../widgets/statistics_data_item.dart';
-import 'package:flutter/material.dart';
 
 class OrdersSectionData extends StatelessWidget {
   final OrdersSummaryDataModel ordersSummaryDataModel;
