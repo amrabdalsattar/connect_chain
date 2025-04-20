@@ -21,10 +21,11 @@ class EditProdcutImageBlocBuilder extends StatelessWidget {
         if (product.imageUrls!.isEmpty || product.imageUrls == null) {
           return const SizedBox();
         }
+
         return ProductImageList(
           imageFiles: editProductCubit.productImages,
-          onDeleteTap: (imageIndex) async {
-            await editProductCubit.deleteImage(imageIndex);
+          onDeleteTap: (imageIndex) {
+            editProductCubit.removeImage(imageIndex);
           },
         );
       },

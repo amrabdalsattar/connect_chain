@@ -45,7 +45,7 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeOut,
       );
-    }
+    } 
   }
 
   @override

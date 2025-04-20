@@ -21,8 +21,7 @@ class ProductDetailsBlocConsumer extends StatelessWidget {
           current is ProductDetailsSuccessState,
       builder: (context, state) {
         return state.mapOrNull(
-              loading: (_) => const Scaffold(
-                  body: Center(child: CircularProgressIndicator())),
+              loading: (_) => const Scaffold(body: CustomLoadingIndicator()),
               success: (successState) => ProductDetailsScreen(
                 productResponseModel: successState.product,
               ),

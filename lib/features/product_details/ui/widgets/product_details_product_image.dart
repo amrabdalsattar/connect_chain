@@ -1,5 +1,4 @@
-part of '../product_deatils_screen.dart';
-
+part of '../product_details_screen.dart';
 class ProductDetailsProductImage extends StatelessWidget {
   const ProductDetailsProductImage({
     super.key,

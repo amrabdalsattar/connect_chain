@@ -21,8 +21,8 @@ class EditProductScreenBody extends StatelessWidget {
             children: [
               verticalSpace(32),
               UploadImageWidget(
-                onTap: () async{
-                 await editProductCubit.uploadImage();
+                onTap: () async {
+                  await editProductCubit.addImage();
                 },
               ),
               verticalSpace(24),
