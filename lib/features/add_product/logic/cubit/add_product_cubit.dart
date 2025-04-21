@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../../../core/utils/image_picker_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
@@ -80,7 +82,7 @@ class AddProductCubit extends Cubit<AddProductState> {
         images: productImages,
         stock: int.parse(quantityController.text),
         supplierId:
-            '20044e2f-7c63-4ea5-a458-c39729d93e62', // Replace with actual supplier ID
+            SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
         categoryId: 1,
       ),
     );

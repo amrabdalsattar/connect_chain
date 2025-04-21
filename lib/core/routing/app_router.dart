@@ -84,7 +84,7 @@ class AppRouter {
         return CustomAnimationsBuilder.slideFromLeft(
           screen: BlocProvider(
             create: (context) =>
-                EditProductCubit(getIt())..fetchProductDataforEdit(productId),
+                EditProductCubit(getIt())..fetchProductDataForEdit(productId),
             child: const EditProductBlocConsumer(),
           ),
           settings: settings,

@@ -35,11 +35,14 @@ class EditProductTileTrailingSection extends StatelessWidget {
           ),
           verticalSpace(10),
           // Price Section
-          Text(
-            textDirection: TextDirection.ltr,
-            '${priceFormat(price)} EGP',
-            style: AppTextStyles.cairoBlackSemiBold16
-                .copyWith(fontWeight: FontWeight.w600),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              textDirection: TextDirection.ltr,
+              '${priceFormat(price)} EGP',
+              style: AppTextStyles.cairoBlackSemiBold16
+                  .copyWith(fontWeight: FontWeight.w600),
+            ),
           )
         ],
       ),

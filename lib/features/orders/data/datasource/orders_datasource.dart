@@ -11,7 +11,7 @@ class OrdersDatasource {
   Future<OrdersResponseModel> fetchSupplierOrders(String supplierId,
       {int? orderStatusIndex}) async {
     final result = await _apiHelper.get(ApiRequestModel(
-        endPoint: ApiConstants.getSpplierOrders,
+        endPoint: ApiConstants.getSupplierOrders,
         queries: {
           ApiConstants.orderStatus: orderStatusIndex,
           ApiConstants.supplierId: supplierId

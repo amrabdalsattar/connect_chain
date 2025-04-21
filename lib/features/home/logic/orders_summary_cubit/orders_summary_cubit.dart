@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/helpers/cache/shared_preferences_helper.dart';
+import 'package:connect_chain/core/helpers/cache/shared_preferences_keys.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/repos/orders_summary_repo.dart';
@@ -9,7 +11,8 @@ class OrdersSummaryCubit extends Cubit<OrdersSummaryState> {
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
-  final String supplierId = '20044e2f-7c63-4ea5-a458-c39729d93e62';
+  final String supplierId =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userId);
 
   Future<void> getOrdersSummary() async {
     emit(const OrdersSummaryLoadingState());

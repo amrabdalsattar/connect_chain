@@ -11,12 +11,11 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       buildWhen: (previous, current) {
         return current is ManageProductsLoadingState ||
             current is ManageProductsSuccessState ||
-            current is MangeProductsOperationSuccessState ||
             current is ManageProductsErrorState;
       },
       builder: (context, state) {
-        return state.mapOrNull(
-                loading: (_) => ShimmerLoadingList(
+        return state.whenOrNull(
+                loading: () => ShimmerLoadingList(
                     itemCount: 3,
                     containerWidth: double.infinity,
                     containerHeight: 80.h,
@@ -24,15 +23,15 @@ class ManageProductsBlocConsumer extends StatelessWidget {
                     listHeight: 300),
                 error: (errorState) => CustomErrorWidget(
                     errorMessage:
-                        errorState.error.getErrorMessages() ?? "Unkown Error"),
+                        errorState.getErrorMessages() ?? "Unkown Error"),
                 success: (succssState) {
-                  if (succssState.products.isEmpty) {
+                  if (succssState.isEmpty) {
                     return const CustomEmptyWidget(
                         message: 'لم يتم العثور علي منتجات');
                   }
                   // Show Data if Not Emtpy
                   return ManageProductsList(
-                    products: succssState.products,
+                    products: succssState,
                   );
                 }) ??
             const CustomErrorWidget(errorMessage: 'Unkown Error');
