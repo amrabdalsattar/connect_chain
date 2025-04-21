@@ -1,7 +1,5 @@
 part of '../orders_tab.dart';
 
-
-
 class OrderWidgetText extends StatelessWidget {
   const OrderWidgetText({
     super.key,
@@ -25,7 +23,7 @@ class OrderWidgetText extends StatelessWidget {
           children: [
             TextSpan(
                 text: ' $valueText',
-                style: valueTextStyle ?? AppTextStyles.carioGaryRegular12)
+                style: valueTextStyle ?? AppTextStyles.cairoGaryRegular12)
           ]),
     );
   }

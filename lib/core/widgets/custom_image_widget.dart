@@ -40,7 +40,7 @@ class CustomImageWidget extends StatelessWidget {
                   placeholder ??
                   Padding(
                       padding: EdgeInsets.all(16.r),
-                      child: const CustomLoadingIndicator()),
+                      child: const FittedBox(child: CustomLoadingIndicator())),
               errorWidget: (_, __, ___) =>
                   errorWidget ?? const Icon(Icons.broken_image),
               height: height.h,

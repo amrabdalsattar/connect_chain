@@ -16,7 +16,12 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return state.mapOrNull(
-                loading: (_) => const CustomLoadingIndicator(),
+                loading: (_) => ShimmerLoadingList(
+                    itemCount: 3,
+                    containerWidth: double.infinity,
+                    containerHeight: 80.h,
+                    scrollDirection: Axis.vertical,
+                    listHeight: 300),
                 error: (errorState) => CustomErrorWidget(
                     errorMessage:
                         errorState.error.getErrorMessages() ?? "Unkown Error"),

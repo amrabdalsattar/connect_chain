@@ -12,10 +12,11 @@ class OrdersCubit extends Cubit<OrdersState> {
 
   final OrdersRepo _ordersRepo;
 
-  Future<void> fetchSupplierOrders() async {
+  Future<void> fetchSupplierOrders({int? orderStatusIndex}) async {
     emit(const FetchOrdersLoading());
-    final result = await _ordersRepo
-        .fetchSupplierOrders('20044e2f-7c63-4ea5-a458-c39729d93e62');
+    final result = await _ordersRepo.fetchSupplierOrders(
+        '20044e2f-7c63-4ea5-a458-c39729d93e62',
+        orderStatusIndex: orderStatusIndex);
 
     result.when(
       success: (orderResponseModel) {
@@ -25,5 +26,10 @@ class OrdersCubit extends Cubit<OrdersState> {
         emit(FetchOrdersError(error));
       },
     );
+  }
+
+  void changeFilteredStatus(int? statusIndex) async {
+    emit(OrdersState.statusChanged(statusIndex));
+    await fetchSupplierOrders(orderStatusIndex: statusIndex);
   }
 }

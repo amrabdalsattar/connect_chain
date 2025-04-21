@@ -93,6 +93,12 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle cairoFadedBlack16 = TextStyle(
+    fontSize: 16.sp,
+    color: ColorsHelper.fadedBlack,
+    fontWeight: FontWeightHelper.medium,
+  );
+
   static TextStyle carioGrayRegular10 = TextStyle(
     fontSize: 10.sp,
     color: ColorsHelper.gray,
@@ -138,7 +144,7 @@ class AppTextStyles {
     color: ColorsHelper.black.withValues(alpha: 0.65),
     fontWeight: FontWeightHelper.semiBold,
   );
-  static TextStyle carioGaryRegular12 = TextStyle(
+  static TextStyle cairoGaryRegular12 = TextStyle(
     fontSize: 12.sp,
     color: ColorsHelper.gray,
     fontWeight: FontWeightHelper.regular,

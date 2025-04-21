@@ -1,3 +1,6 @@
+import 'package:connect_chain/features/orders/logic/cubit/order_details_cubit.dart';
+import 'package:connect_chain/features/orders/ui/order_details_screen.dart';
+
 import '../widgets/hero_image_view.dart';
 import '../../features/edit_product/logic/cubit/edit_product_cubit.dart';
 import '../../features/edit_product/ui/edit_product_screen.dart';
@@ -89,6 +92,17 @@ class AppRouter {
       case Routes.manageProductsScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ManageProductsScreen(),
+          settings: settings,
+        );
+
+      case Routes.orderDetailsScreenRoute:
+        final orderId = arguments as int;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (_) =>
+                OrderDetailsCubit(getIt())..fetchOrderDetails(orderId),
+            child: const OrderDetailsScreen(),
+          ),
           settings: settings,
         );
 

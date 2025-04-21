@@ -10,6 +10,7 @@ class OrdersList extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 4.w),
         child: BlocBuilder<OrdersCubit, OrdersState>(
           builder: (context, state) => state.when(
+            statusChanged: (_) => const SizedBox.shrink(),
             initial: () => const SizedBox.shrink(),
             loading: () => const ShimmerLoadingList(
               itemCount: 3,

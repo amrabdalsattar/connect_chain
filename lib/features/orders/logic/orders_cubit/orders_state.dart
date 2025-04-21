@@ -7,4 +7,7 @@ class OrdersState with _$OrdersState {
   const factory OrdersState.success(OrdersResponseModel orderResponseModel) =
       FetchOrdersSuccess;
   const factory OrdersState.error(ApiErrorModel error) = FetchOrdersError;
+
+  const factory OrdersState.statusChanged(int? statusIndex) =
+      FetchOrdersByStatus;
 }

@@ -8,7 +8,7 @@ import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:connect_chain/core/widgets/custom_app_bar.dart';
 import 'package:connect_chain/core/widgets/custom_empty_widget.dart';
 import 'package:connect_chain/core/widgets/custom_error_widget.dart';
-import 'package:connect_chain/core/widgets/custom_loading_indicator.dart';
+import 'package:connect_chain/core/widgets/shimmer_loading_list.dart';
 import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
 import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
 import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
@@ -16,6 +16,7 @@ import 'package:connect_chain/features/manage_products/ui/widgets/custom_add_pro
 import 'package:connect_chain/features/manage_products/ui/widgets/manage_product_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../logic/cubit/manage_products_cubit.dart';
 import 'widgets/custom_search_text_form_field.dart';

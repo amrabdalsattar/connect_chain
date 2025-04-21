@@ -1,4 +1,6 @@
+import 'package:connect_chain/features/orders/data/datasource/order_deatils_datasource.dart';
 import 'package:connect_chain/features/orders/data/datasource/orders_datasource.dart';
+import 'package:connect_chain/features/orders/data/repos/order_details_repo.dart';
 import 'package:connect_chain/features/orders/data/repos/orders_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
@@ -67,7 +69,10 @@ Future<void> setUpGetIt() async {
 
   getIt.registerLazySingleton(() => OrdersRepo(getIt()));
   getIt.registerLazySingleton(() => OrdersDatasource(getIt()));
-  
+
+  getIt.registerLazySingleton(() => OrderDetailsRepo(getIt()));
+  getIt.registerLazySingleton(() => OrderDeatilsDatasource(getIt()));
+
   // Dashboard DI
   getIt.registerLazySingleton<MonthlyStatsDataSource>(
       () => MonthlyStatsDataSource(getIt()));

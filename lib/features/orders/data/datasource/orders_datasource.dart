@@ -8,13 +8,14 @@ class OrdersDatasource {
 
   OrdersDatasource(this._apiHelper);
 
-  Future<OrdersResponseModel> fetchSupplierOrders(String supplierId) async {
-    final result = await _apiHelper
-        .get(ApiRequestModel(endPoint: ApiConstants.getSpplierOrders, queries: {
-      "pagination.PageSize": 1,
-      "pagination.PageNumber": 1,
-      ApiConstants.supplierId: supplierId
-    }));
+  Future<OrdersResponseModel> fetchSupplierOrders(String supplierId,
+      {int? orderStatusIndex}) async {
+    final result = await _apiHelper.get(ApiRequestModel(
+        endPoint: ApiConstants.getSpplierOrders,
+        queries: {
+          ApiConstants.orderStatus: orderStatusIndex,
+          ApiConstants.supplierId: supplierId
+        }));
 
     OrdersResponseModel ordersResponseModel =
         OrdersResponseModel.fromJson(result);

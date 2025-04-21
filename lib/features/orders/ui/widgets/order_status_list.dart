@@ -10,29 +10,50 @@ class OrdersStatusList extends StatefulWidget {
 }
 
 class _OrdersStatusListState extends State<OrdersStatusList> {
-  int selectedIndex = 0;
+  int? selectedIndex;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 46.h,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(
-          ordersTabs.length,
-          (index) => CustomChip(
-            isSelected: selectedIndex == index,
-            text: ordersTabs[index],
-            onTap: () {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-          ),
-        ),
-      ),
+    return BlocBuilder<OrdersCubit, OrdersState>(
+      builder: (context, state) {
+        if (state is fetchOrderDetailsLoading) {
+          return ShimmerLoadingList(
+              itemCount: 4,
+              containerWidth: 30.w,
+              containerHeight: 46.h,
+              scrollDirection: Axis.horizontal,
+              listHeight: double.infinity);
+        }
+        return SizedBox(
+            height: 46.h,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return CustomChip(
+                  isSelected: selectedIndex == index,
+                  text: OrderStatus.values[index].label,
+                  onTap: () {
+                    setState(() {
+                      if (selectedIndex == index) {
+                        // To Deselect the stat2us type
+                        selectedIndex = null;
+                      } else {
+                        // to selecte the status type
+                        selectedIndex = index;
+                      }
+                      context
+                          .read<OrdersCubit>()
+                          .changeFilteredStatus(selectedIndex);
+                    });
+                  },
+                );
+              },
+              separatorBuilder: (context, index) {
+                return horizontalSpace(24);
+              },
+              itemCount: OrderStatus.values.length,
+            ));
+      },
     );
   }
 }
-
-List<String> ordersTabs = ['الكل', 'قيد التنفيذ ', 'مكتملة', 'مرفوضة'];

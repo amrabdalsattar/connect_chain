@@ -22,6 +22,7 @@ mixin _$OrdersState {
     required TResult Function() loading,
     required TResult Function(OrdersResponseModel orderResponseModel) success,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$OrdersState {
     TResult? Function()? loading,
     TResult? Function(OrdersResponseModel orderResponseModel)? success,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$OrdersState {
     TResult Function()? loading,
     TResult Function(OrdersResponseModel orderResponseModel)? success,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$OrdersState {
     required TResult Function(FetchOrdersLoading value) loading,
     required TResult Function(FetchOrdersSuccess value) success,
     required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$OrdersState {
     TResult? Function(FetchOrdersLoading value)? loading,
     TResult? Function(FetchOrdersSuccess value)? success,
     TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$OrdersState {
     TResult Function(FetchOrdersLoading value)? loading,
     TResult Function(FetchOrdersSuccess value)? success,
     TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +140,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(OrdersResponseModel orderResponseModel) success,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
   }) {
     return initial();
   }
@@ -145,6 +152,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(OrdersResponseModel orderResponseModel)? success,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
   }) {
     return initial?.call();
   }
@@ -156,6 +164,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(OrdersResponseModel orderResponseModel)? success,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +180,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(FetchOrdersLoading value) loading,
     required TResult Function(FetchOrdersSuccess value) success,
     required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
   }) {
     return initial(this);
   }
@@ -182,6 +192,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(FetchOrdersLoading value)? loading,
     TResult? Function(FetchOrdersSuccess value)? success,
     TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +204,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(FetchOrdersLoading value)? loading,
     TResult Function(FetchOrdersSuccess value)? success,
     TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +263,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     required TResult Function() loading,
     required TResult Function(OrdersResponseModel orderResponseModel) success,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
   }) {
     return loading();
   }
@@ -262,6 +275,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     TResult? Function()? loading,
     TResult? Function(OrdersResponseModel orderResponseModel)? success,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
   }) {
     return loading?.call();
   }
@@ -273,6 +287,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     TResult Function()? loading,
     TResult Function(OrdersResponseModel orderResponseModel)? success,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -288,6 +303,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     required TResult Function(FetchOrdersLoading value) loading,
     required TResult Function(FetchOrdersSuccess value) success,
     required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
   }) {
     return loading(this);
   }
@@ -299,6 +315,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     TResult? Function(FetchOrdersLoading value)? loading,
     TResult? Function(FetchOrdersSuccess value)? success,
     TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
   }) {
     return loading?.call(this);
   }
@@ -310,6 +327,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
     TResult Function(FetchOrdersLoading value)? loading,
     TResult Function(FetchOrdersSuccess value)? success,
     TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -397,6 +415,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     required TResult Function() loading,
     required TResult Function(OrdersResponseModel orderResponseModel) success,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
   }) {
     return success(orderResponseModel);
   }
@@ -408,6 +427,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     TResult? Function()? loading,
     TResult? Function(OrdersResponseModel orderResponseModel)? success,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
   }) {
     return success?.call(orderResponseModel);
   }
@@ -419,6 +439,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     TResult Function()? loading,
     TResult Function(OrdersResponseModel orderResponseModel)? success,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -434,6 +455,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     required TResult Function(FetchOrdersLoading value) loading,
     required TResult Function(FetchOrdersSuccess value) success,
     required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
   }) {
     return success(this);
   }
@@ -445,6 +467,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     TResult? Function(FetchOrdersLoading value)? loading,
     TResult? Function(FetchOrdersSuccess value)? success,
     TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
   }) {
     return success?.call(this);
   }
@@ -456,6 +479,7 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     TResult Function(FetchOrdersLoading value)? loading,
     TResult Function(FetchOrdersSuccess value)? success,
     TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -551,6 +575,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     required TResult Function() loading,
     required TResult Function(OrdersResponseModel orderResponseModel) success,
     required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
   }) {
     return error(this.error);
   }
@@ -562,6 +587,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     TResult? Function()? loading,
     TResult? Function(OrdersResponseModel orderResponseModel)? success,
     TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
   }) {
     return error?.call(this.error);
   }
@@ -573,6 +599,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     TResult Function()? loading,
     TResult Function(OrdersResponseModel orderResponseModel)? success,
     TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -588,6 +615,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     required TResult Function(FetchOrdersLoading value) loading,
     required TResult Function(FetchOrdersSuccess value) success,
     required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
   }) {
     return error(this);
   }
@@ -599,6 +627,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     TResult? Function(FetchOrdersLoading value)? loading,
     TResult? Function(FetchOrdersSuccess value)? success,
     TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
   }) {
     return error?.call(this);
   }
@@ -610,6 +639,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
     TResult Function(FetchOrdersLoading value)? loading,
     TResult Function(FetchOrdersSuccess value)? success,
     TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -629,5 +659,166 @@ abstract class FetchOrdersError implements OrdersState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchOrdersErrorImplCopyWith<_$FetchOrdersErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchOrdersByStatusImplCopyWith<$Res> {
+  factory _$$FetchOrdersByStatusImplCopyWith(_$FetchOrdersByStatusImpl value,
+          $Res Function(_$FetchOrdersByStatusImpl) then) =
+      __$$FetchOrdersByStatusImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? statusIndex});
+}
+
+/// @nodoc
+class __$$FetchOrdersByStatusImplCopyWithImpl<$Res>
+    extends _$OrdersStateCopyWithImpl<$Res, _$FetchOrdersByStatusImpl>
+    implements _$$FetchOrdersByStatusImplCopyWith<$Res> {
+  __$$FetchOrdersByStatusImplCopyWithImpl(_$FetchOrdersByStatusImpl _value,
+      $Res Function(_$FetchOrdersByStatusImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? statusIndex = freezed,
+  }) {
+    return _then(_$FetchOrdersByStatusImpl(
+      freezed == statusIndex
+          ? _value.statusIndex
+          : statusIndex // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchOrdersByStatusImpl implements FetchOrdersByStatus {
+  const _$FetchOrdersByStatusImpl(this.statusIndex);
+
+  @override
+  final int? statusIndex;
+
+  @override
+  String toString() {
+    return 'OrdersState.statusChanged(statusIndex: $statusIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchOrdersByStatusImpl &&
+            (identical(other.statusIndex, statusIndex) ||
+                other.statusIndex == statusIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, statusIndex);
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchOrdersByStatusImplCopyWith<_$FetchOrdersByStatusImpl> get copyWith =>
+      __$$FetchOrdersByStatusImplCopyWithImpl<_$FetchOrdersByStatusImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(ApiErrorModel error) error,
+    required TResult Function(int? statusIndex) statusChanged,
+  }) {
+    return statusChanged(statusIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(ApiErrorModel error)? error,
+    TResult? Function(int? statusIndex)? statusChanged,
+  }) {
+    return statusChanged?.call(statusIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(ApiErrorModel error)? error,
+    TResult Function(int? statusIndex)? statusChanged,
+    required TResult orElse(),
+  }) {
+    if (statusChanged != null) {
+      return statusChanged(statusIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(FetchOrdersLoading value) loading,
+    required TResult Function(FetchOrdersSuccess value) success,
+    required TResult Function(FetchOrdersError value) error,
+    required TResult Function(FetchOrdersByStatus value) statusChanged,
+  }) {
+    return statusChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(FetchOrdersLoading value)? loading,
+    TResult? Function(FetchOrdersSuccess value)? success,
+    TResult? Function(FetchOrdersError value)? error,
+    TResult? Function(FetchOrdersByStatus value)? statusChanged,
+  }) {
+    return statusChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(FetchOrdersLoading value)? loading,
+    TResult Function(FetchOrdersSuccess value)? success,
+    TResult Function(FetchOrdersError value)? error,
+    TResult Function(FetchOrdersByStatus value)? statusChanged,
+    required TResult orElse(),
+  }) {
+    if (statusChanged != null) {
+      return statusChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchOrdersByStatus implements OrdersState {
+  const factory FetchOrdersByStatus(final int? statusIndex) =
+      _$FetchOrdersByStatusImpl;
+
+  int? get statusIndex;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchOrdersByStatusImplCopyWith<_$FetchOrdersByStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

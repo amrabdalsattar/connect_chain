@@ -4,8 +4,12 @@ class OrderWidgetFirstRow extends StatelessWidget {
   const OrderWidgetFirstRow({
     super.key,
     required this.orderStatus,
+    required this.orderDate,
+    required this.orderId,
   });
   final OrderStatus orderStatus;
+  final String orderDate;
+  final String orderId;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +23,12 @@ class OrderWidgetFirstRow extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '#123456B4324D',
+              '#$orderId',
               style: AppTextStyles.cairoWhiteBold12
                   .copyWith(color: ColorsHelper.gray),
             ),
             Text(
-              '10 jan 2025',
+              orderDate,
               style: AppTextStyles.carioGrayRegular10,
             )
           ],
