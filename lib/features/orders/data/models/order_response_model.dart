@@ -1,5 +1,13 @@
 import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/features/orders/ui/orders_tab.dart';
+
+// Order Status Enum
+enum OrderStatus {
+  pending, // قيد التنفيذ
+  accepted, // مقبولة
+  rejected, // مرفوضة
+  completed, // مكتملة
+  canceled, // ملغية
+}
 
 class OrderModel {
   final int id;

@@ -1,6 +1,6 @@
 import 'package:connect_chain/core/helpers/app_images.dart';
 import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/orders/ui/orders_tab.dart';
+import 'package:connect_chain/features/orders/data/models/order_response_model.dart';
 import 'package:flutter/material.dart';
 
 extension Navigation on BuildContext {
@@ -52,6 +52,21 @@ extension MapExtension<K, V> on Map<K, V>? {
 }
 
 extension OrderStatusX on OrderStatus {
+  int get index {
+    switch (this) {
+      case OrderStatus.pending:
+        return 0;
+      case OrderStatus.accepted:
+        return 1;
+      case OrderStatus.rejected:
+        return 2;
+      case OrderStatus.completed:
+        return 3;
+      case OrderStatus.canceled:
+        return 0;
+    }
+  }
+
   String get label {
     switch (this) {
       case OrderStatus.pending:
@@ -60,6 +75,10 @@ extension OrderStatusX on OrderStatus {
         return 'مكتملة';
       case OrderStatus.rejected:
         return 'مرفوضة';
+      case OrderStatus.accepted:
+        return 'مقبولة';
+      case OrderStatus.canceled:
+        return 'ملغية';
     }
   }
 
@@ -70,6 +89,11 @@ extension OrderStatusX on OrderStatus {
       case OrderStatus.completed:
         return ColorsHelper.completedOrderBackGroundColor;
       case OrderStatus.rejected:
+        return ColorsHelper.rejectedOrderBackGroundColor;
+      case OrderStatus.accepted:
+        return ColorsHelper.completedOrderBackGroundColor;
+
+      case OrderStatus.canceled:
         return ColorsHelper.rejectedOrderBackGroundColor;
     }
   }
@@ -82,6 +106,13 @@ extension OrderStatusX on OrderStatus {
         return AppImages.completedOrderIcon;
       case OrderStatus.rejected:
         return AppImages.rejectedOrderIcon;
+      case OrderStatus.accepted:
+        // needs to change
+        return AppImages.completedOrderIcon;
+
+      case OrderStatus.canceled:
+        // needs to change
+        return AppImages.rejectedOrderIcon;
     }
   }
 }
@@ -89,7 +120,7 @@ extension OrderStatusX on OrderStatus {
 extension OrderStatusMapper on String {
   OrderStatus toOrderStatus() {
     switch (toLowerCase()) {
-      case 'accepted':
+      case 'pending':
       case 'قيد التنفيذ':
         return OrderStatus.pending;
       case 'completed':
@@ -98,6 +129,12 @@ extension OrderStatusMapper on String {
       case 'rejected':
       case 'مرفوضة':
         return OrderStatus.rejected;
+      case 'accepted':
+      case 'مقبولة':
+        return OrderStatus.accepted;
+      case 'canceled':
+      case 'ملغية':
+        return OrderStatus.canceled;
       default:
         throw Exception('Unknown order status: $this');
     }

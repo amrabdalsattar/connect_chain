@@ -14,7 +14,7 @@ class Orderslist extends StatelessWidget {
       itemCount: orders.length,
       separatorBuilder: (_, __) => verticalSpace(24),
       itemBuilder: (context, index) {
-        return OrderWidget(orderStatus: orders[index].orderStatus);
+        return OrderWidget(order: orders[index]);
       },
     );
   }

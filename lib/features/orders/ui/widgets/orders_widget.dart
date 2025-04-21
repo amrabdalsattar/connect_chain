@@ -1,9 +1,9 @@
 part of '../orders_tab.dart';
 
 class OrderWidget extends StatelessWidget {
-  const OrderWidget({super.key, required this.orderStatus});
+  const OrderWidget({super.key, required this.order});
 
-  final OrderStatus orderStatus;
+  final OrderModel order;
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +18,22 @@ class OrderWidget extends StatelessWidget {
         children: [
           // First Row Starter
           OrderWidgetFirstRow(
-            orderStatus: orderStatus,
+            orderStatus: order.orderStatus,
+            orderDate: order.orderDate,
+            orderId: order.orderNumber ?? order.id.toString(),
           ),
           verticalSpace(16),
 
           // Second Raw Starter
-          const OrderWidgetText(
+          OrderWidgetText(
             fieldText: 'اسم العميل',
-            valueText: 'محمد علاء',
+            valueText: order.customerName,
           ),
           verticalSpace(8),
-          const OrderWidgetText(
+          OrderWidgetText(
             fieldText: 'المنتجات',
-            valueText: 'sunglasses , camera',
+            // Needs to be refactored
+            valueText: order.products.join(''),
           ),
           verticalSpace(16),
 
@@ -39,7 +42,7 @@ class OrderWidget extends StatelessWidget {
             alignment: Alignment.center,
             child: OrderWidgetText(
               fieldText: 'السعر الاجمالي',
-              valueText: '2000 EGP',
+              valueText: '${order.totalAmount} EGP',
               valueTextStyle: AppTextStyles.carioRedBold12,
             ),
           ),
@@ -48,7 +51,10 @@ class OrderWidget extends StatelessWidget {
           // Button Row
 
           OrderWigetButton(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.orderDetailsScreenRoute,
+                  arguments: order.id);
+            },
           ),
         ],
       ),

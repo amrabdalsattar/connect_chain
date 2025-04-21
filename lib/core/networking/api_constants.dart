@@ -27,6 +27,7 @@ class ApiConstants {
   // Orders endpoints
 
   static const String getSpplierOrders = 'Order/GetSupplierOrders';
+  static const String getOrderDetails = 'Order/GetOrderDetails';
 
   static const Duration timeOut = Duration(seconds: 20);
 
@@ -35,4 +36,6 @@ class ApiConstants {
   static const String productId = 'productId';
   static const String imgUrl = 'imageUrl';
   static const String supplierId = 'SupplierId';
+  static const String orderStatus = 'OrderStatus';
+  static const String orderId = 'orderId';
 }

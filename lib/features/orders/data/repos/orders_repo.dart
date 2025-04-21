@@ -8,10 +8,11 @@ class OrdersRepo {
 
   OrdersRepo(this._ordersDatasource);
 
-  Future<ApiResult<OrdersResponseModel>> fetchSupplierOrders(
-      String supplierId) async {
+  Future<ApiResult<OrdersResponseModel>> fetchSupplierOrders(String supplierId,
+      {int? orderStatusIndex}) async {
     try {
-      final result = await _ordersDatasource.fetchSupplierOrders(supplierId);
+      final result = await _ordersDatasource.fetchSupplierOrders(supplierId,
+          orderStatusIndex: orderStatusIndex);
 
       return ApiResult.success(result);
     } catch (error) {
