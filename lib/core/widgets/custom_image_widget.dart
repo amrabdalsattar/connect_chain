@@ -27,22 +27,27 @@ class CustomImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius.r),
-        child: CachedNetworkImage(
-          imageUrl: imageUrl,
-          placeholder: (_, __) =>
-              placeholder ??
-              Padding(
-                  padding: EdgeInsets.all(16.r),
-                  child: const CustomLoadingIndicator()),
-          errorWidget: (_, __, ___) =>
-              errorWidget ?? const Icon(Icons.broken_image),
-          height: height.h,
-          width: width.w,
-          fit: fit,
+    return Material(
+      child: InkWell(
+        onTap: onTap,
+        child: Hero(
+          tag: imageUrl,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(borderRadius.r),
+            child: CachedNetworkImage(
+              imageUrl: imageUrl,
+              placeholder: (_, __) =>
+                  placeholder ??
+                  Padding(
+                      padding: EdgeInsets.all(16.r),
+                      child: const CustomLoadingIndicator()),
+              errorWidget: (_, __, ___) =>
+                  errorWidget ?? const Icon(Icons.broken_image),
+              height: height.h,
+              width: width.w,
+              fit: fit,
+            ),
+          ),
         ),
       ),
     );

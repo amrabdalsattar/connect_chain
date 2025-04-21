@@ -13,7 +13,7 @@ class ColorsHelper {
   static Color fadedPurple = const Color(0xFF5B47BC).withValues(alpha: 0.3);
   static Color liteBlue = const Color(0xFF6B7280);
 
-  // statistics data icons background colors
+  // statistics data icons background colors 
   static const Color dollarIconBackGroundColor = Color(0xFF28A745);
   static const Color bagIconBackGroundColor = Color(0xFF17A2B8);
   static const Color statisticsIconBackGroundColor = Color(0xFF9C27B0);
