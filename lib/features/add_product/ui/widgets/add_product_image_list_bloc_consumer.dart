@@ -29,7 +29,12 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
           current is AddProductImageErrorState,
       listener: (context, state) {
         if (state is AddProductImageErrorState) {
-          DialogsHelper.showErrorDialog(context, state.error);
+          DialogsHelper.showToastificationMessage(
+            context: context,
+            title: 'خطأ',
+            description: state.error,
+            type: ToastificationType.error,
+          );
         }
       },
     );

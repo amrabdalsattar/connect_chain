@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +10,12 @@ class LoadingIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: CircularProgressIndicator(
-        color: color ?? ColorsHelper.primaryColor,
+      child: SizedBox(
+        width: 25.w,
+        height: 25.h,
+        child: CircularProgressIndicator(
+          color: color ?? ColorsHelper.primaryColor,
+        ),
       ),
     );
   }

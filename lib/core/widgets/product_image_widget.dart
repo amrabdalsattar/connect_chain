@@ -38,7 +38,10 @@ class ProductImageWidget extends StatelessWidget {
                     ? ColorsHelper.primaryColor
                     : ColorsHelper.borderGray,
               ),
-              image: DecorationImage(fit: BoxFit.cover, image: imageProvider),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: imageProvider,
+              ),
             ),
           ),
         ),

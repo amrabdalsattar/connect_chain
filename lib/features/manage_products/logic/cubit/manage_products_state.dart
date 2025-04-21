@@ -12,7 +12,6 @@ class ManageProductsState with _$ManageProductsState {
   const factory ManageProductsState.emptyProductsList(String errorMessage) =
       EmptyProductsList;
 
-  const factory ManageProductsState.refreshProducts() = RefreshProductsState;
   const factory ManageProductsState.toggleRefreshButtonVisibility(
       bool isVisible) = ToggleRefreshButtonVisibilityState;
 
