@@ -44,8 +44,10 @@ class ProductDetailsImagesSection extends StatelessWidget {
                     child: CustomImageWidget(
                       key: ValueKey(imageUrl),
                       onTap: () {
-                        context.pushNamed(Routes.heroImageView,
-                            arguments: imageUrl);
+                        context.pushNamed(
+                          Routes.heroImageView,
+                          arguments: imageUrl,
+                        );
                       },
                       imageUrl: imageUrl,
                       height: 230.h,

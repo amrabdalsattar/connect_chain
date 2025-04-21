@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import '../../../../core/networking/api_error_handler/api_error_model.dart';
-import '../../../../core/utils/image_picker_helper.dart';
-import '../../data/model/edit_product_request_model.dart';
-import '../../data/repos/edit_product_repo.dart';
+import 'package:bloc/bloc.dart';
+import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
+import 'package:connect_chain/core/utils/image_picker_helper.dart';
+import 'package:connect_chain/features/edit_product/data/model/edit_product_request_model.dart';
+import 'package:connect_chain/features/edit_product/data/repos/edit_product_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'edit_product_state.dart';
@@ -28,10 +28,10 @@ class EditProductCubit extends Cubit<EditProductState> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   final List<dynamic> productImages = [];
-  final List<String> _imagesIds = [];
+  final List<String> _imgaesIds = [];
   final List<String> _deletedImagesIndexes = [];
   final List<File> _newImages = [];
-  int _productId = 0;
+  int _prodcutId = 0;
 
   List<File> get newImages => _newImages;
 
@@ -46,7 +46,7 @@ class EditProductCubit extends Cubit<EditProductState> {
         categoryId: 2,
         supplierId: '20044e2f-7c63-4ea5-a458-c39729d93e62',
         newImages: _newImages,
-        productId: _productId));
+        productId: _prodcutId));
 
     // Deleting The images
     if (_deletedImagesIndexes.isNotEmpty) {
@@ -62,7 +62,7 @@ class EditProductCubit extends Cubit<EditProductState> {
     });
   }
 
-  Future<void> fetchProductDataForEdit(int productId) async {
+  Future<void> fetchProductDataforEdit(int productId) async {
     emit(const EditProductState.loading());
     final result = await editProductRepo.getProductForUpdate(productId);
     result.when(success: (data) {
@@ -73,9 +73,9 @@ class EditProductCubit extends Cubit<EditProductState> {
       descriptionController.text = product.description;
       minimumStockController.text = product.minimumStock.toString();
       productImages.addAll(List.from(product.imageUrls?.values ?? []));
-      _imagesIds.addAll(List.from(product.imageUrls?.keys ?? []));
+      _imgaesIds.addAll(List.from(product.imageUrls?.keys ?? []));
       categoryId = product.categoryId;
-      _productId = productId;
+      _prodcutId = productId;
       // No Response for SKU in the model
       // skuController.text = product.;
       emit(EditProductState.getProductSuccess(product));
@@ -103,7 +103,7 @@ class EditProductCubit extends Cubit<EditProductState> {
   void removeImage(int imageIndex) {
     if (productImages.isNotEmpty) {
       emit(const EditProductState.imageLoading());
-      _deletedImagesIndexes.add(_imagesIds[imageIndex]);
+      _deletedImagesIndexes.add(_imgaesIds[imageIndex]);
       productImages.removeAt(imageIndex);
       emit(const EditProductState.imageDeleted());
     }

@@ -80,6 +80,6 @@ class CustomAnimationsBuilder {
     return PageRouteBuilder(
       settings: settings,
       pageBuilder: (context, animation, secondaryAnimation) => screen,
-    );  
+    );
   }
 }

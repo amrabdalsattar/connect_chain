@@ -11,42 +11,37 @@ class ManageProductsBlocConsumer extends StatelessWidget {
       buildWhen: (previous, current) {
         return current is ManageProductsLoadingState ||
             current is ManageProductsSuccessState ||
-            current is ManageProductsErrorState ||
-            current is EmptyProductsList ||
-            current is UpdatedProductsListState;
+            current is MangeProductsOperationSuccessState ||
+            current is ManageProductsErrorState;
       },
       builder: (context, state) {
-        if (state is ManageProductsSuccessState) {
-          return ManageProductsList(
-            products: state.products,
-          );
-        } else if (state is UpdatedProductsListState) {
-          return ManageProductsList(
-            products: state.products,
-          );
-        } else if (state is ManageProductsLoadingState) {
-          return ShimmerLoadingList(
-            itemCount: 4,
-            listHeight: MediaQuery.of(context).size.height,
-            containerHeight: 80,
-            containerWidth: 100,
-            scrollDirection: Axis.vertical,
-          );
-        } else if (state is EmptyProductsList) {
-          return const Center(
-            child: Text('No Products Was found'),
-          );
-        } else {
-          return const Center(
-            child: Text('No Products Was found'),
-          );
-        }
+        return state.mapOrNull(
+                loading: (_) => const CustomLoadingIndicator(),
+                error: (errorState) => CustomErrorWidget(
+                    errorMessage:
+                        errorState.error.getErrorMessages() ?? "Unkown Error"),
+                success: (succssState) {
+                  if (succssState.products.isEmpty) {
+                    return const CustomEmptyWidget(
+                        message: 'لم يتم العثور علي منتجات');
+                  }
+                  // Show Data if Not Emtpy
+                  return ManageProductsList(
+                    products: succssState.products,
+                  );
+                }) ??
+            const CustomErrorWidget(errorMessage: 'Unkown Error');
       },
       listenWhen: (previous, current) =>
           current is MangeProductsOperationSuccessState ||
           current is MangeProductsOperationFailedState,
       listener: (_, state) {
         state.whenOrNull(
+          operationFailed: (errorMessage) => DialogsHelper.showSnackBar(
+            context,
+            errorMessage,
+            backgroundColor: ColorsHelper.rejectedOrderBackGroundColor,
+          ),
           operationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
         );

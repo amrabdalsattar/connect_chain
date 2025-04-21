@@ -93,6 +93,11 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.bold,
   );
 
+  static TextStyle carioGrayRegular10 = TextStyle(
+    fontSize: 10.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.regular,
+  );
   static TextStyle cairoBlackBold18 = TextStyle(
     fontSize: 18.sp,
     color: ColorsHelper.black,
@@ -132,6 +137,21 @@ class AppTextStyles {
     fontSize: 12.sp,
     color: ColorsHelper.black.withValues(alpha: 0.65),
     fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle carioGaryRegular12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle carioGrayBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle carioRedBold12 = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsHelper.red,
+    fontWeight: FontWeightHelper.bold,
   );
 
   // Tajawal font

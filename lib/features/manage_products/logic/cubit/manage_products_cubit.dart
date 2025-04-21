@@ -51,10 +51,12 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
     final result = await _manageProductsRepo.deleteProduct(productId);
     result.when(success: (message) {
       emit(ManageProductsState.operationSuccess(message));
+      // getSupplierProducts();
     }, failure: (error) {
       productsLocalList.add(product);
       emit(ManageProductsState.operationFailed(
           error.message ?? "unknown error"));
+      // getSupplierProducts();
     });
   }
 }
