@@ -11,7 +11,9 @@ class ManageProductsDatasource {
   Future<ManageSupplierProductsResponseModel> getSupplierProducts() async {
     final result = await _apiHelper.get(const ApiRequestModel(
         endPoint: ApiConstants.getSupplierProductsEP,
-        queries: {"supplierId": "20044e2f-7c63-4ea5-a458-c39729d93e62"}));
+        queries: {
+          ApiConstants.supplierId: "20044e2f-7c63-4ea5-a458-c39729d93e62"
+        }));
     ManageSupplierProductsResponseModel products =
         ManageSupplierProductsResponseModel.fromJson(result);
     return products;

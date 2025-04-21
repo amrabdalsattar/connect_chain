@@ -38,6 +38,8 @@ class AppImages {
   static const String outOfStockChartIcon = "assets/svgs/up_chart_icon.svg";
   static const String downChartIcon = "assets/svgs/down_chart_icon.svg";
   static const String documentIcon = "assets/svgs/document_icon.svg";
+
+  static const String pendingOrderIcon = 'assets/svgs/pending_order_icon.svg';
   static const String rejectedOrderIcon = "assets/svgs/rejected_order_icon.svg";
   static const String completedOrderIcon =
       "assets/svgs/completed_order_icon.svg";

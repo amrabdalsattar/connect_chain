@@ -104,6 +104,30 @@ class DialogsHelper {
     );
   }
 
+  static Future<bool?> showPopDialog({
+    required BuildContext context,
+    required String message,
+  }) {
+    return showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: const Text('لا'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context)..pop(true),
+              child: const Text('نعم'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   static void showConfirmationDialog({
     required BuildContext context,
     required String message,
@@ -115,14 +139,14 @@ class DialogsHelper {
       builder: (context) => AlertDialog(
         content: Text(
           message,
-          style: AppTextStyles.cairoPrimaryBold16,
+          style: AppTextStyles.cairoBlackBold14,
         ),
         actions: [
           TextButton(
             child: Text(
               'إلغاء',
               style: AppTextStyles.cairoPrimaryBold16.copyWith(
-                color: ColorsHelper.red,
+                color: ColorsHelper.rejectedOrderBackGroundColor,
               ),
             ),
             onPressed: () {
@@ -132,7 +156,7 @@ class DialogsHelper {
           ),
           TextButton(
             child: Text(
-              'متابعة',
+              'نعم',
               style: AppTextStyles.cairoPrimaryBold16.copyWith(
                 color: ColorsHelper.green,
               ),

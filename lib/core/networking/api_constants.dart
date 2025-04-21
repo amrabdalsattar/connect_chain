@@ -24,10 +24,15 @@ class ApiConstants {
   static const String ordersSummaryEP = 'Dashboard/GetOrdersSummary';
   static const String productsSummaryEP = 'Dashboard/GetProductsSummary';
 
+  // Orders endpoints
+
+  static const String getSpplierOrders = 'Order/GetSupplierOrders';
+
   static const Duration timeOut = Duration(seconds: 20);
 
 // Api query params
 
   static const String productId = 'productId';
   static const String imgUrl = 'imageUrl';
+  static const String supplierId = 'SupplierId';
 }

@@ -38,8 +38,17 @@ class EditProductScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: CustomButton(
           onTap: () {
-            final EditProductCubit cubit = context.read<EditProductCubit>();
-            cubit.saveProductUpdates();
+            DialogsHelper.showConfirmationDialog(
+              context: context,
+              message: 'هل تريد حفظ التغيرات ؟',
+              onContinue: () async {
+                // To save the Changes to the product
+                final EditProductCubit cubit = context.read<EditProductCubit>();
+                await cubit.saveProductUpdates();
+              },
+              // Continue to Edit
+              onCancel: () {},
+            );
           },
           title: 'حفظ',
           width: 340.w,

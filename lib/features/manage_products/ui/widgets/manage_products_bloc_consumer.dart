@@ -21,13 +21,13 @@ class ManageProductsBlocConsumer extends StatelessWidget {
                     errorMessage:
                         errorState.error.getErrorMessages() ?? "Unkown Error"),
                 success: (succssState) {
-                  if (succssState.products.data.isEmpty) {
+                  if (succssState.products.isEmpty) {
                     return const CustomEmptyWidget(
-                      message: 'لم يتم العثور علي منتجات');
+                        message: 'لم يتم العثور علي منتجات');
                   }
                   // Show Data if Not Emtpy
                   return ManageProductsList(
-                    products: succssState.products.data,
+                    products: succssState.products,
                   );
                 }) ??
             const CustomErrorWidget(errorMessage: 'Unkown Error');
