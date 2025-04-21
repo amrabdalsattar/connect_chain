@@ -20,6 +20,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../logic/cubit/manage_products_cubit.dart';
 import 'widgets/custom_search_text_form_field.dart';
+import 'widgets/refresh_button.dart';
 
 // parts of this Widget
 
@@ -51,10 +52,11 @@ class ManageProductsScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Center(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     verticalSpace(24),
                     const CustomSearchTextFormField(),
-                    verticalSpace(33),
+                    const RefreshButton(),
                     const ManageProductsBlocConsumer(),
                   ],
                 ),

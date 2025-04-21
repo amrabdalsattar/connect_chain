@@ -16,6 +16,14 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
 
   List<ProductDataModel> productsLocalList = [];
 
+  bool isRefreshButtonVisible = false;
+
+  toggleRefreshButtonVisibility(bool newVisibility) {
+    isRefreshButtonVisible = newVisibility;
+    emit(ManageProductsState.toggleRefreshButtonVisibility(
+        isRefreshButtonVisible));
+  }
+
   void getSupplierProducts() async {
     emit(const ManageProductsState.loading());
     final result = await _manageProductsRepo.getSupplierProducts();

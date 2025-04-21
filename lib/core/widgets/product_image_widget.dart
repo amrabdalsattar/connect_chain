@@ -50,8 +50,8 @@ class ProductImageWidget extends StatelessWidget {
               onTap: onDelete,
               child: SvgPicture.asset(
                 AppImages.deleteIcon,
-                width: 10.w,
-                height: 10.h,
+                width: 16.w,
+                height: 16.h,
               ),
             ),
           ),

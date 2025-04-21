@@ -28,10 +28,10 @@ class MonthlyStatsResponseModel {
 }
 
 class MonthlyStatsDataModel {
-  int topSoldProductId;
-  String topSoldProductName;
-  num averageOrderTotal;
-  num totalRevenues;
+  int? topSoldProductId;
+  String? topSoldProductName;
+  num? averageOrderTotal;
+  num? totalRevenues;
 
   MonthlyStatsDataModel({
     required this.topSoldProductId,

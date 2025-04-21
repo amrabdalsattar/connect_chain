@@ -46,8 +46,13 @@ class AddProductCubit extends Cubit<AddProductState> {
   }
 
   void deleteImage(int imageIndex) {
-    productImages.removeAt(imageIndex);
-    emit(const AddProductState.imageDeleted());
+    if (productImages.isNotEmpty) {
+      print("Image deleted");
+      productImages.removeAt(imageIndex);
+
+      emit(const AddProductState.imageDeleted());
+      emit(AddProductState.imagesList(productImages));
+    }
   }
 
   // Product Functions

@@ -1,3 +1,6 @@
+import 'package:connect_chain/features/manage_products/logic/cubit/manage_products_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/extensions.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -29,8 +32,12 @@ class CustomAddProductButton extends StatelessWidget {
           shadowColor: ColorsHelper.boxShadow,
           elevation: 4,
         ),
-        onPressed: () {
-          context.pushNamed(Routes.addProductScreenRoute);
+        onPressed: () async {
+          await context.pushNamed(Routes.addProductScreenRoute);
+          if (!context.mounted) return;
+          context
+              .read<ManageProductsCubit>()
+              .toggleRefreshButtonVisibility(true);
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

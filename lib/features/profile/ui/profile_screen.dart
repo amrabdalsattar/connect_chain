@@ -25,8 +25,9 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                verticalSpace(18),
                 const CustomBackButton(),
-                verticalSpace(5),
+                verticalSpace(24),
                 const Center(child: ProfileHeader()),
                 verticalSpace(32),
                 ProfileDetailsSection(
