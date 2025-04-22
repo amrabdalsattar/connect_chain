@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/core/utils/image_picker_helper.dart';
-import 'package:connect_chain/features/edit_product/data/model/edit_product_request_model.dart';
-import 'package:connect_chain/features/edit_product/data/repos/edit_product_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/utils/image_picker_helper.dart';
+import '../../data/model/edit_product_request_model.dart';
+import '../../data/repos/edit_product_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

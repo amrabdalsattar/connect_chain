@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../helpers/app_images.dart';
 import 'custom_icon_button.dart';
 import 'custom_text_form_field.dart';
-import 'package:flutter/material.dart';
 
 class EditableTextFormField extends StatefulWidget {
   final String hintText;

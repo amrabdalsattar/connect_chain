@@ -38,7 +38,7 @@ class _OrdersStatusListState extends State<OrdersStatusList> {
                         // To Deselect the stat2us type
                         selectedIndex = null;
                       } else {
-                        // to selecte the status type
+                        // to select the status type
                         selectedIndex = index;
                       }
                       context

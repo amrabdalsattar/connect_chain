@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../core/theming/colors_helper.dart';
@@ -38,7 +40,8 @@ class ProfileHeader extends StatelessWidget {
               ),
               verticalSpace(3),
               Text(
-                'Mohamed Alaa',
+                SharedPreferencesHelper.getString(
+                    SharedPreferencesKeys.userName),
                 style: AppTextStyles.cairoWhiteBold16,
               ),
             ],

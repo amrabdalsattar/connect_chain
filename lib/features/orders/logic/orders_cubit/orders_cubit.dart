@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/features/orders/data/models/order_response_model.dart';
-import 'package:connect_chain/features/orders/data/repos/orders_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/order_response_model.dart';
+import '../../data/repos/orders_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

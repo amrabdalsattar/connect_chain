@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/widgets/double_clicked_pop_scope.dart';
+import '../../../core/widgets/double_clicked_pop_scope.dart';
 
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/helpers/extensions.dart';

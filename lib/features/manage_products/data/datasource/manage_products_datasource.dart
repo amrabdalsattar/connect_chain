@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/cache/shared_preferences_helper.dart';
-import 'package:connect_chain/core/helpers/cache/shared_preferences_keys.dart';
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';

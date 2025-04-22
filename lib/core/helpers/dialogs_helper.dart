@@ -1,15 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:toastification/toastification.dart';
 
-import 'spacing.dart';
-import '../widgets/custom_button.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../theming/app_text_styles.dart';
 import '../theming/colors_helper.dart';
+import '../widgets/custom_button.dart';
 import '../widgets/loading_indicator.dart';
 import 'extensions.dart';
+import 'spacing.dart';
 
 class DialogsHelper {
   static void showLoading(BuildContext context) {

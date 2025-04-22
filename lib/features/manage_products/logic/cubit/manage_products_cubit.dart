@@ -1,13 +1,13 @@
-import '../../../../core/helpers/extensions.dart';
-
-import '../../../../core/networking/api_error_handler/api_error_model.dart';
-import '../../data/models/manage_supplier_products_request_model.dart';
-import '../../data/repos/manage_products_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'manage_products_state.dart';
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/manage_supplier_products_request_model.dart';
+import '../../data/repos/manage_products_repo.dart';
+
 part 'manage_products_cubit.freezed.dart';
+part 'manage_products_state.dart';
 
 class ManageProductsCubit extends Cubit<ManageProductsState> {
   final ManageProductsRepo _manageProductsRepo;

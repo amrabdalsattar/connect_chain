@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/manage_products/logic/cubit/manage_products_cubit.dart';
+import '../../logic/cubit/manage_products_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/app_images.dart';

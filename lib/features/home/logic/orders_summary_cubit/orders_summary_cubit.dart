@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/cache/shared_preferences_helper.dart';
-import 'package:connect_chain/core/helpers/cache/shared_preferences_keys.dart';
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/repos/orders_summary_repo.dart';

@@ -1,13 +1,13 @@
 import 'dart:io';
 
-import '../../../../core/helpers/cache/shared_preferences_helper.dart';
-import '../../../../core/helpers/cache/shared_preferences_keys.dart';
-import '../../../../core/utils/image_picker_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/utils/image_picker_helper.dart';
 import '../../data/models/add_product_model.dart';
 import '../../data/repos/add_product_repo.dart';
 

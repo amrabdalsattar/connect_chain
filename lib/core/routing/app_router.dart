@@ -1,5 +1,6 @@
-import 'package:connect_chain/features/orders/logic/cubit/order_details_cubit.dart';
-import 'package:connect_chain/features/orders/ui/order_details_screen.dart';
+import '../../features/orders/logic/cubit/order_details_cubit.dart';
+import '../../features/orders/ui/order_details_screen.dart';
+import '../../features/profile/logic/supplier_profile_cubit.dart';
 
 import '../widgets/hero_image_view.dart';
 import '../../features/edit_product/logic/cubit/edit_product_cubit.dart';
@@ -68,7 +69,11 @@ class AppRouter {
         );
       case Routes.profileScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
-          screen: const ProfileScreen(),
+          screen: BlocProvider(
+            create: (context) =>
+                SupplierProfileCubit(getIt())..getSupplierProfileData(),
+            child: const ProfileScreen(),
+          ),
           settings: settings,
         );
 

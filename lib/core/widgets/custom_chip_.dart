@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../theming/app_text_styles.dart';
+import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,11 +28,13 @@ class CustomChip extends StatelessWidget {
             if (isSelected)
               BoxShadow(
                 color: ColorsHelper.boxShadow,
-                offset: const Offset(0, 2),
+                offset: const Offset(0, 4),
                 blurRadius: 4,
               ),
           ],
-          color: isSelected ? ColorsHelper.primaryColor : ColorsHelper.liteGray,
+          color: isSelected
+              ? ColorsHelper.primaryColor
+              : ColorsHelper.orderChipBackGroundColor,
           borderRadius: BorderRadius.circular(12.r),
         ),
         child: AnimatedDefaultTextStyle(

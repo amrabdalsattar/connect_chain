@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/dialogs_helper.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
+import '../helpers/dialogs_helper.dart';
+import '../helpers/extensions.dart';
 import 'package:flutter/material.dart';
 
 class DoubleClickedPopScope extends StatefulWidget {

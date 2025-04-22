@@ -29,13 +29,16 @@ class ApiConstants {
   static const String getSupplierOrders = 'Order/GetSupplierOrders';
   static const String getOrderDetails = 'Order/GetOrderDetails';
 
-  static const Duration timeOut = Duration(seconds: 20);
+  // Profile endpoints
+  static const String supplierProfile = 'Supplier/getProfile';
+  static const String updateSupplierProfile = 'Order/Supplier/getProfile';
 
 // Api query params
-
   static const String productId = 'productId';
   static const String imgUrl = 'imageUrl';
   static const String supplierId = 'SupplierId';
   static const String orderStatus = 'OrderStatus';
   static const String orderId = 'orderId';
+
+  static const Duration timeOut = Duration(seconds: 20);
 }

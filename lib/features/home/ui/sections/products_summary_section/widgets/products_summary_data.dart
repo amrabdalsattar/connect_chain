@@ -1,9 +1,9 @@
-import '../../../../data/models/response_models/products_summary_response_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/helpers/app_images.dart';
 import '../../../../../../core/helpers/spacing.dart';
 import '../../../../../../core/theming/colors_helper.dart';
+import '../../../../data/models/response_models/products_summary_response_model.dart';
 import '../../../widgets/statistics_data_item.dart';
 
 class ProductsSummaryData extends StatelessWidget {
