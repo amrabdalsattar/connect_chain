@@ -178,6 +178,7 @@ class DialogsHelper {
     required String title,
     required String description,
     required ToastificationType type,
+    required Alignment alignment,
   }) {
     toastification.show(
       context: context,
@@ -186,7 +187,7 @@ class DialogsHelper {
       autoCloseDuration: const Duration(seconds: 4),
       title: Text(title),
       description: RichText(text: TextSpan(text: description)),
-      alignment: Alignment.bottomCenter,
+      alignment: alignment,
       animationDuration: const Duration(milliseconds: 300),
       animationBuilder: (context, animation, alignment, child) {
         return FadeTransition(

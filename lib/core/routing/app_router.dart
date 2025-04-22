@@ -113,7 +113,7 @@ class AppRouter {
 
       case Routes.productDetailsScreenRoute:
         final productId = arguments as int;
-        return CustomAnimationsBuilder.slideFromLeft(
+        return CustomAnimationsBuilder.buildFadeTransition(
           screen: BlocProvider(
               create: (context) => ProductDetailsCubit(getIt())
                 ..emitProductDetailsState(productId),

@@ -52,6 +52,7 @@ class AddProductImagesSection extends StatelessWidget {
                 title: 'خطأ',
                 description: state.error,
                 type: ToastificationType.error,
+                alignment: Alignment.topCenter,
               );
             }
           },

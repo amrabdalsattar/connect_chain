@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../helpers/token_helper.dart';
 import 'api_constants.dart';
 
 class DioFactory {
@@ -17,15 +16,8 @@ class DioFactory {
       ..options.receiveTimeout = ApiConstants.timeOut;
 
     addDioInterceptors();
-    addDioHeaders();
 
     return _dio!;
-  }
-
-  static void addDioHeaders() async {
-    _dio?.options.headers = {
-      'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
-    };
   }
 
   static void addDioInterceptors() {

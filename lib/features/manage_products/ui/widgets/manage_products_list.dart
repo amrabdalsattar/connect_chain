@@ -31,6 +31,9 @@ class ManageProductsList extends StatelessWidget {
           onEdit: () {
             context.pushNamed(Routes.editProductScreenRoute,
                 arguments: products[index].id);
+            context
+                .read<ManageProductsCubit>()
+                .toggleRefreshButtonVisibility(true);
           },
           productDataModel: products[index],
         );

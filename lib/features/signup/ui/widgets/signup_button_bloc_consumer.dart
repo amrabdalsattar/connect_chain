@@ -21,6 +21,7 @@ class SignupButtonBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           error: (apiErrorModel) => DialogsHelper.showToastificationMessage(
+            alignment: Alignment.topCenter,
             context: context,
             title: 'خطأ',
             description: apiErrorModel.getErrorMessages()!,
@@ -29,6 +30,7 @@ class SignupButtonBlocConsumer extends StatelessWidget {
           success: (confirmationMessage) {
             Navigator.of(context).pop();
             DialogsHelper.showToastificationMessage(
+              alignment: Alignment.bottomCenter,
               context: context,
               title: 'تمت العملية بنجاح',
               description: "تم ارسال رابط التأكيد الى بريدك الإلكتروني",

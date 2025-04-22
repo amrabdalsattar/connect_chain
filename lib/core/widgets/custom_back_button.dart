@@ -5,7 +5,8 @@ import '../helpers/extensions.dart';
 import '../theming/colors_helper.dart';
 
 class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({super.key});
+  final bool? isToLeftArrow;
+  const CustomBackButton({super.key, this.isToLeftArrow = true});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,8 @@ class CustomBackButton extends StatelessWidget {
           color: ColorsHelper.black,
           borderRadius: BorderRadius.circular(4),
         ),
-        child: const Icon(
-          Icons.arrow_back,
+        child: Icon(
+          isToLeftArrow! ? Icons.arrow_forward : Icons.arrow_back,
           size: 24,
           color: ColorsHelper.white,
         ),

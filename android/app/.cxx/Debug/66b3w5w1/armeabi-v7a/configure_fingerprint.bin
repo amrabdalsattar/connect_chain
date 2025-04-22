@@ -2,54 +2,27 @@ C/C++ Structured Logc
 a
 _C:\Users\user1\fvm\versions\3.29.2\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
-<<<<<<< HEAD
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ãÁµîå2§ Ò˜ÑÈà2]
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	‘†Äïå2§ Ò˜ÑÈà2]
 [
-YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\additional_project_files.txt	ãÁµîå2 ™øµÄá2Z
+YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\additional_project_files.txt	‘†Äïå2 †áóîå2Z
 X
-VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build.json	ãÁµîå2¦ øµÄá2_
+VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build.json	‘†Äïå2¦ ˆáóîå2_
 ]
-[D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build_mini.json	ãÁµîå2 ÊøµÄá2L
+[D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build_mini.json	‘†Äïå2 áóîå2L
 J
-HD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja	ãÁµîå2²Õ ÓõµÄá2P
+HD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja	‘†Äïå2²Õ ¯àóîå2P
 N
-LD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja.txt	ãÁµîå2U
+LD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja.txt	‘†Äïå2U
 S
-QD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build_file_index.txt	ãÁµîå2_ ÑøµÄá2V
+QD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build_file_index.txt	‘†Äïå2_ áóîå2V
 T
-RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json	ãÁµîå2	Z
+RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json	‘†Äïå2	Z
 X
-VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json.bin	ãÁµîå2
+VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json.bin	‘†Äïå2
 `
 ^
-\D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\metadata_generation_command.txt	ãÁµîå2± ÎøµÄá2S
+\D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\metadata_generation_command.txt	‘†Äïå2± áóîå2S
 Q
-OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\prefab_config.json	ãÁµîå2( ĞøµÄá2X
+OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\prefab_config.json	‘†Äïå2( áóîå2X
 V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\symbol_folder_index.txt	ãÁµîå2K ÑøµÄá2
-=======
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	„ò‘Ùå2§ Ò˜ÑÈà2]
-[
-YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\additional_project_files.txt	‡ò‘Ùå2 ™øµÄá2Z
-X
-VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build.json	‡ò‘Ùå2¦ øµÄá2_
-]
-[D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\android_gradle_build_mini.json	‡ò‘Ùå2 ÊøµÄá2L
-J
-HD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja	‡ò‘Ùå2²Õ ÓõµÄá2P
-N
-LD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build.ninja.txt	‡ò‘Ùå2U
-S
-QD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\build_file_index.txt	‡ò‘Ùå2_ ÑøµÄá2V
-T
-RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json	‡ò‘Ùå2	Z
-X
-VD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\compile_commands.json.bin	‡ò‘Ùå2
-`
-^
-\D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\metadata_generation_command.txt	‡ò‘Ùå2± ÎøµÄá2S
-Q
-OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\prefab_config.json	‡ò‘Ùå2( ĞøµÄá2X
-V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\symbol_folder_index.txt	‡ò‘Ùå2K ÑøµÄá2
->>>>>>> e823cfbcacf741ff44bd8a5f7e750191758ee79a
+TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\armeabi-v7a\symbol_folder_index.txt	‘†Äïå2K áóîå2

@@ -1,3 +1,4 @@
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -13,6 +14,9 @@ class AddProductDatasource {
     await _apiHelper.post(
       ApiRequestModel(
         endPoint: ApiConstants.addProductEP,
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
+        },
         formData: formData,
       ),
     );

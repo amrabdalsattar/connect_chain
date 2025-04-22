@@ -2,54 +2,27 @@ C/C++ Structured Logc
 a
 _C:\Users\user1\fvm\versions\3.29.2\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
-<<<<<<< HEAD
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	¸Àµîå2§ Ò˜ÑÈà2[
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	”…Äïå2§ Ò˜ÑÈà2[
 Y
-WD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\additional_project_files.txt	¸Àµîå2 òËµÄá2X
+WD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\additional_project_files.txt	”…Äïå2 ­Óóîå2X
 V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build.json	¸Àµîå2¢ ÷ËµÄá2]
+TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build.json	”…Äïå2¢ ·Óóîå2]
 [
-YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build_mini.json	¸Àµîå2ı ‘ÌµÄá2J
+YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build_mini.json	”…Äïå2ı ÑÓóîå2J
 H
-FD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja	¸Àµîå2¨Õ ÉÊµÄá2N
+FD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja	”…Äïå2¨Õ ÿÑóîå2N
 L
-JD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja.txt	¸Àµîå2S
+JD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja.txt	”…Äïå2S
 Q
-OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build_file_index.txt	¸Àµîå2_ –ÌµÄá2T
+OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build_file_index.txt	”…Äïå2_ ÚÓóîå2T
 R
-PD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json	¸Àµîå2	X
+PD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json	”…Äïå2	X
 V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json.bin	¸Àµîå2
+TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json.bin	”…Äïå2
 ^
 \
-ZD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\metadata_generation_command.txt	¸Àµîå2§ ”ÌµÄá2Q
+ZD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\metadata_generation_command.txt	”…Äïå2§ ÙÓóîå2Q
 O
-MD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\prefab_config.json	¸Àµîå2( •ÌµÄá2V
+MD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\prefab_config.json	”…Äïå2( ÙÓóîå2V
 T
-RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\symbol_folder_index.txt	¸Àµîå2I •ÌµÄá2
-=======
-?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	Óğ‘Ùå2§ Ò˜ÑÈà2[
-Y
-WD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\additional_project_files.txt	Óğ‘Ùå2 òËµÄá2X
-V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build.json	Óğ‘Ùå2¢ ÷ËµÄá2]
-[
-YD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\android_gradle_build_mini.json	Óğ‘Ùå2ı ‘ÌµÄá2J
-H
-FD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja	Óğ‘Ùå2¨Õ ÉÊµÄá2N
-L
-JD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build.ninja.txt	Óğ‘Ùå2S
-Q
-OD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\build_file_index.txt	Óğ‘Ùå2_ –ÌµÄá2T
-R
-PD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json	Óğ‘Ùå2	X
-V
-TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\compile_commands.json.bin	Ôğ‘Ùå2
-^
-\
-ZD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\metadata_generation_command.txt	Ôğ‘Ùå2§ ”ÌµÄá2Q
-O
-MD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\prefab_config.json	Ôğ‘Ùå2( •ÌµÄá2V
-T
-RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\symbol_folder_index.txt	Ôğ‘Ùå2I •ÌµÄá2
->>>>>>> e823cfbcacf741ff44bd8a5f7e750191758ee79a
+RD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\arm64-v8a\symbol_folder_index.txt	”…Äïå2I ÚÓóîå2

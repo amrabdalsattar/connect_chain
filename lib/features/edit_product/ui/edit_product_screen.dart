@@ -1,3 +1,5 @@
+import 'package:connect_chain/features/manage_products/logic/cubit/manage_products_cubit.dart';
+
 import '../../../core/widgets/double_clicked_pop_scope.dart';
 
 import '../../../core/helpers/dialogs_helper.dart';

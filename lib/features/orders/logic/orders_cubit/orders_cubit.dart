@@ -27,10 +27,14 @@ class OrdersCubit extends Cubit<OrdersState> {
 
     result.when(
       success: (orderResponseModel) {
-        emit(FetchOrdersSuccess(orderResponseModel));
+        if (!isClosed) {
+          emit(FetchOrdersSuccess(orderResponseModel));
+        }
       },
       failure: (error) {
-        emit(FetchOrdersError(error));
+        if (!isClosed) {
+          emit(FetchOrdersError(error));
+        }
       },
     );
   }

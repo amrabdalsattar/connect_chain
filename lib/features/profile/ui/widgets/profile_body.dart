@@ -11,7 +11,9 @@ class ProfileBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           verticalSpace(18),
-          const CustomBackButton(),
+          const CustomBackButton(
+            isToLeftArrow: false,
+          ),
           verticalSpace(24),
           const Center(child: ProfileHeader()),
           verticalSpace(32),

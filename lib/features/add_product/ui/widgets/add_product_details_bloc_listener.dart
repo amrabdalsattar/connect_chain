@@ -21,6 +21,7 @@ class AddProductDetailsBlocListener extends StatelessWidget {
             context.pop();
             DialogsHelper.showToastificationMessage(
                 context: context,
+                alignment: Alignment.bottomCenter,
                 title: 'Error',
                 description: apiErrorModel.getErrorMessages()!,
                 type: ToastificationType.error);

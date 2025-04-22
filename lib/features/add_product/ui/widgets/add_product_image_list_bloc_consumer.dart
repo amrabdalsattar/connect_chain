@@ -31,6 +31,7 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
         if (state is AddProductImageErrorState) {
           DialogsHelper.showToastificationMessage(
             context: context,
+            alignment: Alignment.topCenter,
             title: 'خطأ',
             description: state.error,
             type: ToastificationType.error,
