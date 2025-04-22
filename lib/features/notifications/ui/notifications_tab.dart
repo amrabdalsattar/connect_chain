@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/core/widgets/imaged_error.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,8 +15,9 @@ class NotificationsTab extends StatelessWidget {
       onPopInvokedWithResult: (didPop, result) =>
           context.read<MainCubit>().toggleCurrentTabIndex = 0,
       child: const Scaffold(
-        body: Center(
-          child: Text('Notifications Tab'),
+        body: ImagedError(
+          errorMessage: "ليس لديك أي إشعارات حالياً",
+          imagePath: AppImages.notificationErrorImage,
         ),
       ),
     );

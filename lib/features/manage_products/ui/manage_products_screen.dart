@@ -1,3 +1,6 @@
+import 'package:connect_chain/core/helpers/app_images.dart';
+import 'package:connect_chain/core/widgets/imaged_error.dart';
+
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/helpers/extensions.dart';
@@ -6,8 +9,6 @@ import '../../../core/helpers/spacing.dart';
 import '../../../core/routing/routes.dart';
 import '../../../core/theming/colors_helper.dart';
 import '../../../core/widgets/custom_app_bar.dart';
-import '../../../core/widgets/custom_empty_widget.dart';
-import '../../../core/widgets/custom_error_widget.dart';
 import '../../../core/widgets/shimmer_loading_list.dart';
 import '../../main/logic/cubit/main_cubit.dart';
 import '../data/models/manage_supplier_products_request_model.dart';
@@ -52,7 +53,7 @@ class ManageProductsScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     verticalSpace(24),
                     const CustomSearchTextFormField(),

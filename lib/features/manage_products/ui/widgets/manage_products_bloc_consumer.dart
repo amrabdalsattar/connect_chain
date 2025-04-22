@@ -21,20 +21,23 @@ class ManageProductsBlocConsumer extends StatelessWidget {
                     containerHeight: 80.h,
                     scrollDirection: Axis.vertical,
                     listHeight: 300),
-                error: (errorState) => CustomErrorWidget(
-                    errorMessage:
-                        errorState.getErrorMessages() ?? "Unkown Error"),
+                error: (errorState) => ImagedError(
+                      errorMessage: errorState.getErrorMessages()!,
+                      imagePath: AppImages.emptyErrorImage,
+                    ),
                 success: (succssState) {
                   if (succssState.isEmpty) {
-                    return const CustomEmptyWidget(
-                        message: 'لم يتم العثور علي منتجات');
+                    return const ImagedError(
+                      errorMessage: 'لم يتم العثور علي منتجات',
+                      imagePath: AppImages.emptyErrorImage,
+                    );
                   }
                   // Show Data if Not Emtpy
                   return ManageProductsList(
                     products: succssState,
                   );
                 }) ??
-            const CustomErrorWidget(errorMessage: 'Unkown Error');
+            const ImagedError(errorMessage: 'Unkown Error');
       },
       listenWhen: (previous, current) =>
           current is MangeProductsOperationSuccessState ||

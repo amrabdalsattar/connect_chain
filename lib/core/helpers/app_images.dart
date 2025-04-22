@@ -51,4 +51,10 @@ class AppImages {
   static const String clockIcon = "assets/svgs/timer.svg";
   static const String categoryIcon = "assets/svgs/Category.svg";
   static const String refreshIcon = "assets/svgs/refresh_icon.svg";
+
+  // SVG Illustrations
+  static const String generalErrorImage = "assets/svgs/error_image.svg";
+  static const String notificationErrorImage =
+      "assets/svgs/notification_error.svg";
+  static const String emptyErrorImage = "assets/svgs/empty_error.svg";
 }

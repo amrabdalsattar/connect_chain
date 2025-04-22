@@ -36,6 +36,16 @@ class _HomeTabState extends State<HomeTab> {
   late final OrdersSummaryCubit ordersSummaryCubit;
   late final TopSoldProductsCubit topSoldProductsCubit;
 
+  Future<void> _fetchHomeData() async {
+    Future.wait<void>([
+      monthlyStatisticsCubit.getMonthlyStats(),
+      revenueChartCubit.getRevenueChartData(),
+      productsSummaryCubit.getProductsSummary(),
+      ordersSummaryCubit.getOrdersSummary(),
+      topSoldProductsCubit.getTopSoldProducts(),
+    ]);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -47,13 +57,7 @@ class _HomeTabState extends State<HomeTab> {
     topSoldProductsCubit = TopSoldProductsCubit(getIt<TopSoldProductsRepo>());
 
     // Fetching data
-    Future.wait<void>([
-      monthlyStatisticsCubit.getMonthlyStats(),
-      revenueChartCubit.getRevenueChartData(),
-      productsSummaryCubit.getProductsSummary(),
-      ordersSummaryCubit.getOrdersSummary(),
-      topSoldProductsCubit.getTopSoldProducts(),
-    ]);
+    _fetchHomeData();
   }
 
   @override
@@ -72,48 +76,53 @@ class _HomeTabState extends State<HomeTab> {
         appBar: const HomeTabAppBar(),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 23.w),
-          child: CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-              SliverToBoxAdapter(
-                child: Container(
-                  padding: EdgeInsets.all(16.r),
-                  margin: EdgeInsets.only(top: 25.h),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    color: ColorsHelper.white,
-                  ),
-                  child: Column(
-                    children: [
-                      const MonthlyStatisticsSection(),
-                      verticalSpace(24),
-                      const RevenueChart(),
-                    ],
+          child: RefreshIndicator(
+            onRefresh: () => _fetchHomeData(),
+            color: ColorsHelper.primaryColor,
+            displacement: 10,
+            child: CustomScrollView(
+              physics: const BouncingScrollPhysics(),
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Container(
+                    padding: EdgeInsets.all(16.r),
+                    margin: EdgeInsets.only(top: 25.h),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: ColorsHelper.white,
+                    ),
+                    child: Column(
+                      children: [
+                        const MonthlyStatisticsSection(),
+                        verticalSpace(24),
+                        const RevenueChart(),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              SliverToBoxAdapter(
-                child: verticalSpace(24),
-              ),
-              const SliverToBoxAdapter(
-                child: MostSellingSection(),
-              ),
-              SliverToBoxAdapter(
-                child: verticalSpace(24),
-              ),
-              const SliverToBoxAdapter(
-                child: OrdersSection(),
-              ),
-              SliverToBoxAdapter(
-                child: verticalSpace(24),
-              ),
-              const SliverToBoxAdapter(
-                child: ProductsSummarySection(),
-              ),
-              SliverToBoxAdapter(
-                child: verticalSpace(24),
-              ),
-            ],
+                SliverToBoxAdapter(
+                  child: verticalSpace(24),
+                ),
+                const SliverToBoxAdapter(
+                  child: MostSellingSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: verticalSpace(24),
+                ),
+                const SliverToBoxAdapter(
+                  child: OrdersSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: verticalSpace(24),
+                ),
+                const SliverToBoxAdapter(
+                  child: ProductsSummarySection(),
+                ),
+                SliverToBoxAdapter(
+                  child: verticalSpace(24),
+                ),
+              ],
+            ),
           ),
         ),
       ),
