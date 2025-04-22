@@ -1,3 +1,5 @@
+import 'package:toastification/toastification.dart';
+
 import '../../../../core/widgets/product_image_list.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +47,12 @@ class AddProductImagesSection extends StatelessWidget {
           },
           listener: (context, state) {
             if (state is AddProductImageErrorState) {
-              DialogsHelper.showErrorDialog(context, state.error);
+              DialogsHelper.showToastificationMessage(
+                context: context,
+                title: 'خطأ',
+                description: state.error,
+                type: ToastificationType.error,
+              );
             }
           },
         ),

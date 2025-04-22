@@ -19,8 +19,11 @@ class AddProductDetailsBlocListener extends StatelessWidget {
           error: (apiErrorModel) {
             // Close the loading dialog
             context.pop();
-            DialogsHelper.showErrorDialog(
-                context, apiErrorModel.getErrorMessages()!);
+            DialogsHelper.showToastificationMessage(
+                context: context,
+                title: 'Error',
+                description: apiErrorModel.getErrorMessages()!,
+                type: ToastificationType.error);
           },
           success: () {
             // Close the loading dialog

@@ -15,6 +15,7 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
           current is AddProductImageUploadSuccessState ||
           current is AddProductImageErrorState ||
           current is AddProductLoadingState ||
+          current is AddProductImageListState ||
           current is AddProductImageInitial,
       builder: (context, state) {
         return ProductImageList(
@@ -23,9 +24,17 @@ class AddProductImagesListBlocConsumer extends StatelessWidget {
           onDeleteTap: (image) => addProductCubit.deleteImage(image),
         );
       },
+      listenWhen: (previous, current) =>
+          current is AddProductImageDeleted ||
+          current is AddProductImageErrorState,
       listener: (context, state) {
         if (state is AddProductImageErrorState) {
-          DialogsHelper.showErrorDialog(context, state.error);
+          DialogsHelper.showToastificationMessage(
+            context: context,
+            title: 'خطأ',
+            description: state.error,
+            type: ToastificationType.error,
+          );
         }
       },
     );

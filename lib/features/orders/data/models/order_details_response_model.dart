@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/features/orders/data/models/order_response_model.dart';
+import '../../../../core/helpers/extensions.dart';
+import 'order_response_model.dart';
 
 class OrderDetailsResponseModel {
   final int orderNumber;

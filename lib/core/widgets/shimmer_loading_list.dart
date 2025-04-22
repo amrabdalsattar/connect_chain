@@ -1,8 +1,9 @@
-import '../helpers/spacing.dart';
-import '../theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../helpers/spacing.dart';
+import '../theming/colors_helper.dart';
 
 class ShimmerLoadingList extends StatelessWidget {
   final int itemCount;

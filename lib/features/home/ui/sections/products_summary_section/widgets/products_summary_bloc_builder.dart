@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../../../core/widgets/shimmer_loading_list.dart';
 import '../../../../logic/products_summary_cubit/products_summary_cubit.dart';
 import '../../../../logic/products_summary_cubit/products_summary_states.dart';
 import 'products_summary_data.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductsSummaryBlocBuilder extends StatelessWidget {
   const ProductsSummaryBlocBuilder({super.key});

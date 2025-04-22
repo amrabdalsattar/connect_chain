@@ -1,10 +1,10 @@
-import '../theming/colors_helper.dart';
-import 'logo.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_text_styles.dart';
+import '../theming/colors_helper.dart';
 import 'custom_back_button.dart';
-import 'package:flutter/material.dart';
+import 'logo.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar(

@@ -50,4 +50,5 @@ class AppImages {
   static const String starIcon = "assets/svgs/star.svg";
   static const String clockIcon = "assets/svgs/timer.svg";
   static const String categoryIcon = "assets/svgs/Category.svg";
+  static const String refreshIcon = "assets/svgs/refresh_icon.svg";
 }

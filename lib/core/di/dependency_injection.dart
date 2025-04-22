@@ -1,7 +1,9 @@
-import 'package:connect_chain/features/orders/data/datasource/order_deatils_datasource.dart';
-import 'package:connect_chain/features/orders/data/datasource/orders_datasource.dart';
-import 'package:connect_chain/features/orders/data/repos/order_details_repo.dart';
-import 'package:connect_chain/features/orders/data/repos/orders_repo.dart';
+import '../../features/orders/data/datasource/order_deatils_datasource.dart';
+import '../../features/orders/data/datasource/orders_datasource.dart';
+import '../../features/orders/data/repos/order_details_repo.dart';
+import '../../features/orders/data/repos/orders_repo.dart';
+import '../../features/profile/data/datasource/supplier_profile_datasource.dart';
+import '../../features/profile/data/repos/supplier_profile_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -98,4 +100,11 @@ Future<void> setUpGetIt() async {
       () => TopSoldProductsDatasource(getIt()));
   getIt.registerLazySingleton<TopSoldProductsRepo>(
       () => TopSoldProductsRepo(getIt()));
+
+  // Profile DI
+
+  getIt.registerLazySingleton<SupplierProfileDatasource>(
+      () => SupplierProfileDatasource(getIt()));
+  getIt.registerLazySingleton<SupplierProfileRepo>(
+      () => SupplierProfileRepo(getIt()));
 }

@@ -1,7 +1,9 @@
-import 'revenue_chart_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../data/repos/revenue_chart_repo.dart';
+import 'revenue_chart_states.dart';
 
 class RevenueChartCubit extends Cubit<RevenueChartState> {
   final RevenueChartRepo _repo;
@@ -9,7 +11,8 @@ class RevenueChartCubit extends Cubit<RevenueChartState> {
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
-  final String supplierId = '20044e2f-7c63-4ea5-a458-c39729d93e62';
+  final String supplierId =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userId);
 
   Future<void> getRevenueChartData() async {
     emit(const RevenueChartLoadingState());

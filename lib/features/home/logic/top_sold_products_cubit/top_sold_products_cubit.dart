@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../data/models/request_models/dashboard_request_model.dart';
 import '../../data/repos/top_sold_products_repo.dart';
 import 'top_sold_products_states.dart';
@@ -10,7 +12,8 @@ class TopSoldProductsCubit extends Cubit<TopSoldProductsState> {
 
   final int currentYear = DateTime.now().year;
   final int currentMonth = DateTime.now().month;
-  final String supplierId = '20044e2f-7c63-4ea5-a458-c39729d93e62';
+  final String supplierId =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userId);
 
   Future<void> getTopSoldProducts() async {
     emit(const TopSoldProductsLoadingState());

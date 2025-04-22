@@ -1,7 +1,7 @@
-import '../../../../../core/helpers/spacing.dart';
-import '../../../../../core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/app_text_styles.dart';
 import 'widgets/monthly_statistics_bloc_builder.dart';
 
 class MonthlyStatisticsSection extends StatelessWidget {

@@ -24,7 +24,9 @@ dependencies:
   shimmer: ^3.0.0            
   smooth_page_indicator: ^1.2.1 
   dotted_border: ^2.1.0      
-  fl_chart: ^0.70.2          
+  fl_chart: ^0.70.2
+  fluttertoast: ^8.2.12
+  toastification: ^3.0.2    
 
   # Networking
   dio: ^5.8.0+1              
@@ -56,7 +58,15 @@ dependencies:
 dev_dependencies:
   # Code Generation
   build_runner: ^2.4.13      
-  freezed: ^2.5.7            
+  freezed: ^2.5.7
+  # Launcher
+  flutter_launcher_icons: ^0.14.3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  adaptive_icon_background: "#f28D23"
 
   # Testing & Quality
   flutter_test:

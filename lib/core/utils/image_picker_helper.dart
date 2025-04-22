@@ -10,7 +10,7 @@ class ImagePickerHelper {
     required Function(String) onError,
   }) async {
     if (currentImages.length >= maxImages) {
-      onError('You can add $maxImages images only');
+      onError('لا يمكن إضافة اكثر من $maxImages صور');
       return;
     }
 

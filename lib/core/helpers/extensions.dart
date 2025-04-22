@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/orders/data/models/order_response_model.dart';
+import 'app_images.dart';
+import '../theming/colors_helper.dart';
+import '../../features/orders/data/models/order_response_model.dart';
 import 'package:flutter/material.dart';
 
 extension Navigation on BuildContext {

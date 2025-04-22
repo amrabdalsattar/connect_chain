@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -45,7 +46,7 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeOut,
       );
-    } 
+    }
   }
 
   @override
@@ -75,7 +76,9 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
                       showDeleteButton: widget.showDeleteButton ?? false,
                       isSelected: widget.selectedIndex == index,
                       onTap: () => widget.onImageTap?.call(index),
-                      imageProvider: NetworkImage(widget.imagePaths[index]),
+                      imageProvider: CachedNetworkImageProvider(
+                        widget.imagePaths[index],
+                      ),
                     ),
                   );
                 }),

@@ -1,7 +1,7 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
-import 'package:connect_chain/core/networking/api_result.dart';
-import 'package:connect_chain/features/orders/data/datasource/order_deatils_datasource.dart';
-import 'package:connect_chain/features/orders/data/models/order_details_response_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../datasource/order_deatils_datasource.dart';
+import '../models/order_details_response_model.dart';
 
 class OrderDetailsRepo {
   final OrderDeatilsDatasource _orderDeatilsDatasource;

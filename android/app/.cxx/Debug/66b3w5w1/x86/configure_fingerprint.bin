@@ -2,6 +2,7 @@ C/C++ Structured Logc
 a
 _C:\Users\user1\fvm\versions\3.29.2\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ÔÂµîå2§ Ò˜ÑÈà2U
 S
 QD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\additional_project_files.txt	ÔÂµîå2 æ©¶Äá2R
@@ -26,3 +27,29 @@ I
 GD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\prefab_config.json	ÔÂµîå2( þ©¶Äá2P
 N
 LD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\symbol_folder_index.txt	ÔÂµîå2C ÿ©¶Äá2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ñõ‘Ùå2§ Ò˜ÑÈà2U
+S
+QD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\additional_project_files.txt	ñõ‘Ùå2 æ©¶Äá2R
+P
+ND:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\android_gradle_build.json	ñõ‘Ùå2– è©¶Äá2W
+U
+SD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\android_gradle_build_mini.json	ñõ‘Ùå2ñ û©¶Äá2D
+B
+@D:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\build.ninja	ñõ‘Ùå2ŠÕ ±¨¶Äá2H
+F
+DD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\build.ninja.txt	ñõ‘Ùå2M
+K
+ID:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\build_file_index.txt	ñõ‘Ùå2_ €ª¶Äá2N
+L
+JD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\compile_commands.json	ñõ‘Ùå2	R
+P
+ND:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\compile_commands.json.bin	ñõ‘Ùå2
+X
+V
+TD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\metadata_generation_command.txt	ñõ‘Ùå2‰ ý©¶Äá2K
+I
+GD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\prefab_config.json	ñõ‘Ùå2( þ©¶Äá2P
+N
+LD:\connect_chain\android\app\.cxx\Debug\66b3w5w1\x86\symbol_folder_index.txt	ñõ‘Ùå2C ÿ©¶Äá2
+>>>>>>> e823cfbcacf741ff44bd8a5f7e750191758ee79a
