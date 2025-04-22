@@ -92,8 +92,12 @@ class AddProductCubit extends Cubit<AddProductState> {
       ),
     );
     result.when(
-      success: (data) => emit(const AddProductState.success()),
-      failure: (error) => emit(AddProductState.error(error)),
+      success: (data) {
+        if (!isClosed) emit(const AddProductState.success());
+      },
+      failure: (error) {
+        if (!isClosed) emit(AddProductState.error(error));
+      },
     );
   }
 

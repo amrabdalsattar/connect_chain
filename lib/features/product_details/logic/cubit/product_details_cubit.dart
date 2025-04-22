@@ -27,9 +27,9 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
     productId = id;
 
     result.when(success: (product) {
-      emit(ProductDetailsState.success(product));
+      if (!isClosed) emit(ProductDetailsState.success(product));
     }, failure: (error) {
-      emit(ProductDetailsState.failed(error));
+      if (!isClosed) emit(ProductDetailsState.failed(error));
     });
   }
 }

@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/widgets/imaged_error.dart';
+
 import '../../../core/helpers/cache/shared_preferences_helper.dart';
 import '../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../../core/helpers/constant_string.dart';
@@ -41,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
                 case SupplierProfileLoadingState():
                   return CustomLoadingIndicator();
                 case SupplierProfileErrorState():
-                  return CustomErrorWidget(
+                  return ImagedError(
                       errorMessage: state.apiErrorModel.getErrorMessages()!);
                 case SupplierProfileSuccessState():
                   return ProfileBody(

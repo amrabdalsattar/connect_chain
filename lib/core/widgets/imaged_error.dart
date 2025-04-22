@@ -20,7 +20,7 @@ class ImagedError extends StatelessWidget {
         children: [
           SvgPicture.asset(
             imagePath!,
-            height: MediaQuery.of(context).size.height * 0.3,
+            height: MediaQuery.of(context).size.height * 0.25,
           ),
           verticalSpace(40),
           Text(
