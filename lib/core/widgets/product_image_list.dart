@@ -1,8 +1,9 @@
 import 'dart:io';
 
-import 'product_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'product_image_widget.dart';
 
 class ProductImageList extends StatelessWidget {
   const ProductImageList({

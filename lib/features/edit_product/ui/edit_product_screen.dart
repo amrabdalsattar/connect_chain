@@ -1,3 +1,5 @@
+import '../../../core/widgets/double_clicked_pop_scope.dart';
+
 import '../../../core/helpers/dialogs_helper.dart';
 import '../../../core/helpers/extensions.dart';
 import '../../../core/helpers/spacing.dart';
@@ -32,30 +34,33 @@ class EditProductScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(title: 'تعديل المنتج'),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(24),
-        child: CustomButton(
-          onTap: () {
-            DialogsHelper.showConfirmationDialog(
-              context: context,
-              message: 'هل تريد حفظ التغيرات ؟',
-              onContinue: () async {
-                // To save the Changes to the product
-                final EditProductCubit cubit = context.read<EditProductCubit>();
-                await cubit.saveProductUpdates();
-              },
-              // Continue to Edit
-              onCancel: () {},
-            );
-          },
-          title: 'حفظ',
-          width: 340.w,
+    return DoubleClickedPopScope(
+      child: Scaffold(
+        appBar: const CustomAppBar(title: 'تعديل المنتج'),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(24),
+          child: CustomButton(
+            onTap: () {
+              DialogsHelper.showConfirmationDialog(
+                context: context,
+                message: 'هل تريد حفظ التغيرات ؟',
+                onContinue: () async {
+                  // To save the Changes to the product
+                  final EditProductCubit cubit =
+                      context.read<EditProductCubit>();
+                  await cubit.saveProductUpdates();
+                },
+                // Continue to Edit
+                onCancel: () {},
+              );
+            },
+            title: 'حفظ',
+            width: 340.w,
+          ),
         ),
+        body: EditProductScreenBody(
+            editProductCubit: editProductCubit, product: product),
       ),
-      body: EditProductScreenBody(
-          editProductCubit: editProductCubit, product: product),
     );
   }
 }

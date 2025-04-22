@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/features/orders/data/models/order_details_response_model.dart';
-import 'package:connect_chain/features/orders/data/repos/order_details_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/order_details_response_model.dart';
+import '../../data/repos/order_details_repo.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'order_details_state.dart';

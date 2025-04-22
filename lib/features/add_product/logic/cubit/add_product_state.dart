@@ -16,4 +16,6 @@ class AddProductState with _$AddProductState {
   const factory AddProductState.imageLoading() = AddProductImageLoadingState;
   const factory AddProductState.addProductInitial() = AddProductImageInitial;
   const factory AddProductState.imageDeleted() = AddProductImageDeleted;
+  const factory AddProductState.imagesList(List imagesList) =
+      AddProductImageListState;
 }

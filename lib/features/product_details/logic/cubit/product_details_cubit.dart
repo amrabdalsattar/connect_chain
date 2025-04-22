@@ -1,12 +1,13 @@
-import '../../../../core/networking/api_error_handler/api_error_model.dart';
-import '../../data/models/product_details_response_model.dart';
-import '../../data/repos/product_details_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'product_details_state.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../data/models/product_details_response_model.dart';
+import '../../data/repos/product_details_repo.dart';
+
 part 'product_details_cubit.freezed.dart';
+part 'product_details_state.dart';
 
 class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   final ProductDetailsRepo productDetailsRepo;

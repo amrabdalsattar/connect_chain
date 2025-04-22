@@ -1,6 +1,8 @@
 import 'dart:io';
-import '../../../../core/utils/convert_image_to_multipart_file.dart';
+
 import 'package:dio/dio.dart';
+
+import '../../../../core/utils/convert_image_to_multipart_file.dart';
 
 class AddProductRequestModel {
   final String name;

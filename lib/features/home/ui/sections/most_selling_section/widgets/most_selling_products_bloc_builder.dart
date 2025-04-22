@@ -1,10 +1,10 @@
-import '../../../../../../core/widgets/shimmer_loading_list.dart';
-import '../../../../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
-import 'most_selling_products_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../../core/widgets/shimmer_loading_list.dart';
+import '../../../../logic/top_sold_products_cubit/top_sold_products_cubit.dart';
 import '../../../../logic/top_sold_products_cubit/top_sold_products_states.dart';
+import 'most_selling_products_list_view.dart';
 
 class MostSellingProductsBlocBuilder extends StatelessWidget {
   const MostSellingProductsBlocBuilder({super.key});

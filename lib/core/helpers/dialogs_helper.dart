@@ -1,12 +1,14 @@
-import 'spacing.dart';
-import '../widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toastification/toastification.dart';
 
 import '../theming/app_text_styles.dart';
 import '../theming/colors_helper.dart';
+import '../widgets/custom_button.dart';
 import '../widgets/loading_indicator.dart';
 import 'extensions.dart';
+import 'spacing.dart';
 
 class DialogsHelper {
   static void showLoading(BuildContext context) {
@@ -169,5 +171,51 @@ class DialogsHelper {
         ],
       ),
     );
+  }
+
+  static void showToastificationMessage({
+    required BuildContext context,
+    required String title,
+    required String description,
+    required ToastificationType type,
+  }) {
+    toastification.show(
+      context: context,
+      type: type,
+      style: ToastificationStyle.fillColored,
+      autoCloseDuration: const Duration(seconds: 4),
+      title: Text(title),
+      description: RichText(text: TextSpan(text: description)),
+      alignment: Alignment.bottomCenter,
+      animationDuration: const Duration(milliseconds: 300),
+      animationBuilder: (context, animation, alignment, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      },
+      showIcon: true,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      borderRadius: BorderRadius.circular(12),
+      showProgressBar: true,
+      closeButton: ToastCloseButton(
+        showType: CloseButtonShowType.onHover,
+        buttonBuilder: (context, onClose) {
+          return OutlinedButton.icon(
+            onPressed: onClose,
+            icon: const Icon(Icons.close, size: 20),
+            label: const Text('Close'),
+          );
+        },
+      ),
+      closeOnClick: false,
+      pauseOnHover: true,
+      dragToClose: true,
+    );
+  }
+
+  static showBasicToast(String message) {
+    Fluttertoast.showToast(msg: message);
   }
 }

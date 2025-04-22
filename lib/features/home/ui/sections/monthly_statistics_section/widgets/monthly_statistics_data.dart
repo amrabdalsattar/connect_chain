@@ -23,7 +23,7 @@ class MonthlyStatisticsData extends StatelessWidget {
           title: 'إجمالي الايرادات',
           imagePath: AppImages.dollarIcon,
           iconBackGroundColor: ColorsHelper.dollarIconBackGroundColor,
-          value: priceFormat(monthlyStatsDataModel.totalRevenues),
+          value: priceFormat(monthlyStatsDataModel.totalRevenues ?? 0),
           isMonetaryValue: true,
         ),
         horizontalSpace(4),
@@ -31,14 +31,16 @@ class MonthlyStatisticsData extends StatelessWidget {
           title: 'متوسط الطلبات',
           imagePath: AppImages.bagIcon,
           iconBackGroundColor: ColorsHelper.bagIconBackGroundColor,
-          value: monthlyStatsDataModel.averageOrderTotal.toInt().toString(),
+          value:
+              (monthlyStatsDataModel.averageOrderTotal ?? 0).toInt().toString(),
         ),
         horizontalSpace(4),
         StatisticsDataItem(
           title: 'الأعلى مبيعًا',
           imagePath: AppImages.statisticsIcon,
           iconBackGroundColor: ColorsHelper.statisticsIconBackGroundColor,
-          value: monthlyStatsDataModel.topSoldProductName,
+          value:
+              monthlyStatsDataModel.topSoldProductName ?? 'Not Specified yet',
         ),
       ],
     );

@@ -1,12 +1,15 @@
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
-import 'package:connect_chain/core/utils/image_picker_helper.dart';
-import 'package:connect_chain/features/edit_product/data/model/edit_product_request_model.dart';
-import 'package:connect_chain/features/edit_product/data/repos/edit_product_repo.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/utils/image_picker_helper.dart';
+import '../../data/model/edit_product_request_model.dart';
+import '../../data/repos/edit_product_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 
 part 'edit_product_state.dart';
 part 'edit_product_cubit.freezed.dart';
@@ -35,6 +38,9 @@ class EditProductCubit extends Cubit<EditProductState> {
 
   List<File> get newImages => _newImages;
 
+  String supplierId =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userId);
+
   Future<void> saveProductUpdates() async {
     emit(const EditProductState.loading());
     final result = await editProductRepo.updateProduct(EditProductRequestModel(
@@ -44,7 +50,7 @@ class EditProductCubit extends Cubit<EditProductState> {
         stock: int.parse(minimumStockController.text),
         minimumStock: int.parse(minimumStockController.text),
         categoryId: 2,
-        supplierId: '20044e2f-7c63-4ea5-a458-c39729d93e62',
+        supplierId: supplierId,
         newImages: _newImages,
         productId: _prodcutId));
 
@@ -62,7 +68,7 @@ class EditProductCubit extends Cubit<EditProductState> {
     });
   }
 
-  Future<void> fetchProductDataforEdit(int productId) async {
+  Future<void> fetchProductDataForEdit(int productId) async {
     emit(const EditProductState.loading());
     final result = await editProductRepo.getProductForUpdate(productId);
     result.when(success: (data) {

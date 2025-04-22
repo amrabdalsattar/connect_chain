@@ -35,6 +35,7 @@ class ColorsHelper {
   static const Color secondaryGray = Color(0xFF888888);
   static Color semiGray = Colors.black.withValues(alpha: 0.5);
   static const Color liteGray = Color(0xFFEEEEEE);
+  static const Color orderChipBackGroundColor = Color(0xFFF3F3F3);
   static const Color borderGray = Color(0xFFD1D1D1);
   static Color dividerGray = const Color(0xFF999999).withValues(alpha: 0.60);
 

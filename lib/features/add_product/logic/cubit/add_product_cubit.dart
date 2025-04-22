@@ -1,11 +1,13 @@
 import 'dart:io';
 
-import '../../../../core/utils/image_picker_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/utils/image_picker_helper.dart';
 import '../../data/models/add_product_model.dart';
 import '../../data/repos/add_product_repo.dart';
 
@@ -44,8 +46,13 @@ class AddProductCubit extends Cubit<AddProductState> {
   }
 
   void deleteImage(int imageIndex) {
-    productImages.removeAt(imageIndex);
-    emit(const AddProductState.imageDeleted());
+    if (productImages.isNotEmpty) {
+      print("Image deleted");
+      productImages.removeAt(imageIndex);
+
+      emit(const AddProductState.imageDeleted());
+      emit(AddProductState.imagesList(productImages));
+    }
   }
 
   // Product Functions
@@ -80,7 +87,7 @@ class AddProductCubit extends Cubit<AddProductState> {
         images: productImages,
         stock: int.parse(quantityController.text),
         supplierId:
-            '20044e2f-7c63-4ea5-a458-c39729d93e62', // Replace with actual supplier ID
+            SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
         categoryId: 1,
       ),
     );

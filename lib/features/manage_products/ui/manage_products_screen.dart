@@ -1,25 +1,26 @@
-import 'package:connect_chain/core/di/dependency_injection.dart';
-import 'package:connect_chain/core/helpers/dialogs_helper.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
+import '../../../core/di/dependency_injection.dart';
+import '../../../core/helpers/dialogs_helper.dart';
+import '../../../core/helpers/extensions.dart';
+import '../../../core/helpers/spacing.dart';
 
-import 'package:connect_chain/core/routing/routes.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/widgets/custom_app_bar.dart';
-import 'package:connect_chain/core/widgets/custom_empty_widget.dart';
-import 'package:connect_chain/core/widgets/custom_error_widget.dart';
-import 'package:connect_chain/core/widgets/shimmer_loading_list.dart';
-import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
-import 'package:connect_chain/features/manage_products/data/models/manage_supplier_products_request_model.dart';
-import 'package:connect_chain/features/manage_products/data/repos/manage_products_repo.dart';
-import 'package:connect_chain/features/manage_products/ui/widgets/custom_add_product_button.dart';
-import 'package:connect_chain/features/manage_products/ui/widgets/manage_product_tile.dart';
+import '../../../core/routing/routes.dart';
+import '../../../core/theming/colors_helper.dart';
+import '../../../core/widgets/custom_app_bar.dart';
+import '../../../core/widgets/custom_empty_widget.dart';
+import '../../../core/widgets/custom_error_widget.dart';
+import '../../../core/widgets/shimmer_loading_list.dart';
+import '../../main/logic/cubit/main_cubit.dart';
+import '../data/models/manage_supplier_products_request_model.dart';
+import '../data/repos/manage_products_repo.dart';
+import 'widgets/custom_add_product_button.dart';
+import 'widgets/manage_product_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../logic/cubit/manage_products_cubit.dart';
 import 'widgets/custom_search_text_form_field.dart';
+import 'widgets/refresh_button.dart';
 
 // parts of this Widget
 
@@ -51,10 +52,11 @@ class ManageProductsScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Center(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     verticalSpace(24),
                     const CustomSearchTextFormField(),
-                    verticalSpace(33),
+                    const RefreshButton(),
                     const ManageProductsBlocConsumer(),
                   ],
                 ),
