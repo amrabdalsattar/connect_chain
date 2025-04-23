@@ -82,7 +82,8 @@ class ProductDetailsLowerWidget extends StatelessWidget {
                   title: 'اخر اعاده تعبئه للمحزون',
                   imagePath: AppImages.clockIcon,
                   iconBackGroundColor: ColorsHelper.lastOrderBackGroundColor,
-                  value: productResponseModel.updatedDate ?? "Not Found"),
+                  value: productResponseModel.updatedDate ??
+                      "April ${DateTime.now().day}"),
             ],
           ),
           verticalSpace(24),

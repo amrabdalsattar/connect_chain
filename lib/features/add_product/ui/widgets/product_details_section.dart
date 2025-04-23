@@ -38,16 +38,12 @@ class ProductDetailsSection extends StatelessWidget {
                   addProductCubit.setCategory(value ?? '');
                 },
                 value: null,
-                items: const [
-                  DropdownMenuItem(
-                    value: 'value1',
-                    child: Text('value1'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'value2',
-                    child: Text('value2'),
-                  ),
-                ],
+                items: List.generate(
+                    categories.length,
+                    (index) => DropdownMenuItem(
+                          value: categories[index],
+                          child: Text(categories[index]),
+                        )),
                 hintText: 'نوع المنتج',
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -126,3 +122,10 @@ class ProductDetailsSection extends StatelessWidget {
     );
   }
 }
+
+List<String> categories = [
+  'الإلكترونيات',
+  'الأزياء',
+  'المواد الغذائية',
+  'أخرى'
+];
