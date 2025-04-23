@@ -1,3 +1,5 @@
+import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
+
 import '../../../../core/networking/api_result.dart';
 import '../datasource/product_details_datasource.dart';
 import '../models/product_details_response_model.dart';
@@ -13,7 +15,7 @@ class ProductDetailsRepo {
 
       return ApiResult.success(result);
     } catch (error) {
-      throw Exception('Failed to fetch product details: $error');
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
 }
