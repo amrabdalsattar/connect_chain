@@ -17,9 +17,10 @@ class NotificationTile extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 16.r,
-            child: CustomImageWidget(imageUrl: ''),
+          Image.asset(
+            AppImages.notificationsIcon,
+            height: 20.r,
+            color: ColorsHelper.primaryColor,
           ),
           horizontalSpace(14.5),
           Expanded(
