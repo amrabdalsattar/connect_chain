@@ -73,7 +73,7 @@ Future<void> setUpGetIt() async {
   getIt.registerLazySingleton(() => OrdersDatasource(getIt()));
 
   getIt.registerLazySingleton(() => OrderDetailsRepo(getIt()));
-  getIt.registerLazySingleton(() => OrderDeatilsDatasource(getIt()));
+  getIt.registerLazySingleton(() => OrderDetailsDatasource(getIt()));
 
   // Dashboard DI
   getIt.registerLazySingleton<MonthlyStatsDataSource>(

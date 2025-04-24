@@ -4,7 +4,7 @@ import '../datasource/order_deatils_datasource.dart';
 import '../models/order_details_response_model.dart';
 
 class OrderDetailsRepo {
-  final OrderDeatilsDatasource _orderDeatilsDatasource;
+  final OrderDetailsDatasource _orderDeatilsDatasource;
 
   OrderDetailsRepo(this._orderDeatilsDatasource);
 
