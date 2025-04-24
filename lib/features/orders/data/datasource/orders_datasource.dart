@@ -1,3 +1,4 @@
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -10,12 +11,17 @@ class OrdersDatasource {
 
   Future<OrdersResponseModel> fetchSupplierOrders(String supplierId,
       {int? orderStatusIndex}) async {
-    final result = await _apiHelper.get(ApiRequestModel(
+    final result = await _apiHelper.get(
+      ApiRequestModel(
         endPoint: ApiConstants.getSupplierOrders,
         queries: {
           ApiConstants.orderStatus: orderStatusIndex,
-          ApiConstants.supplierId: supplierId
-        }));
+        },
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
+        },
+      ),
+    );
 
     OrdersResponseModel ordersResponseModel =
         OrdersResponseModel.fromJson(result);

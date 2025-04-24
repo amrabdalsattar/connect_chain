@@ -1,3 +1,4 @@
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -13,8 +14,10 @@ class RevenueChartDataSource {
       ApiRequestModel(
         endPoint: ApiConstants.revenueChartEP,
         queries: {
-          'supplierId': supplierId,
           'year': year,
+        },
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
         },
       ),
     );

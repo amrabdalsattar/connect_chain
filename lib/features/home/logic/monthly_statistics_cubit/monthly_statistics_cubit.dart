@@ -17,8 +17,8 @@ class MonthlyStatisticsCubit extends Cubit<MonthlyStatisticsState> {
 
   Future<void> getMonthlyStats() async {
     emit(const MonthlyStatisticsLoadingState());
-    final result = await _repo.getMonthlyStats(DashboardRequestModel(
-        supplierId: supplierId, year: currentYear, month: currentMonth));
+    final result = await _repo.getMonthlyStats(
+        DashboardRequestModel(year: currentYear, month: currentMonth));
     result.when(success: (monthlyStatsDataModel) {
       if (!isClosed) {
         emit(MonthlyStatisticsSuccessState(monthlyStatsDataModel));
