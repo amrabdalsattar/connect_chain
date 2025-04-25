@@ -31,10 +31,10 @@ class EditProductCubit extends Cubit<EditProductState> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   final List<dynamic> productImages = [];
-  final List<String> _imgaesIds = [];
+  final List<String> _imagesIds = [];
   final List<String> _deletedImagesIndexes = [];
   final List<File> _newImages = [];
-  int _prodcutId = 0;
+  int _productId = 0;
 
   List<File> get newImages => _newImages;
 
@@ -50,9 +50,8 @@ class EditProductCubit extends Cubit<EditProductState> {
         stock: int.parse(minimumStockController.text),
         minimumStock: int.parse(minimumStockController.text),
         categoryId: 2,
-        supplierId: supplierId,
         newImages: _newImages,
-        productId: _prodcutId));
+        productId: _productId));
 
     // Deleting The images
     if (_deletedImagesIndexes.isNotEmpty) {
@@ -79,11 +78,10 @@ class EditProductCubit extends Cubit<EditProductState> {
       descriptionController.text = product.description;
       minimumStockController.text = product.minimumStock.toString();
       productImages.addAll(List.from(product.imageUrls?.values ?? []));
-      _imgaesIds.addAll(List.from(product.imageUrls?.keys ?? []));
+      _imagesIds.addAll(List.from(product.imageUrls?.keys ?? []));
       categoryId = product.categoryId;
-      _prodcutId = productId;
-      // No Response for SKU in the model
-      // skuController.text = product.;
+      _productId = productId;
+
       emit(EditProductState.getProductSuccess(product));
     }, failure: (error) {
       emit(EditProductState.error(error));
@@ -109,7 +107,7 @@ class EditProductCubit extends Cubit<EditProductState> {
   void removeImage(int imageIndex) {
     if (productImages.isNotEmpty) {
       emit(const EditProductState.imageLoading());
-      _deletedImagesIndexes.add(_imgaesIds[imageIndex]);
+      _deletedImagesIndexes.add(_imagesIds[imageIndex]);
       productImages.removeAt(imageIndex);
       emit(const EditProductState.imageDeleted());
     }

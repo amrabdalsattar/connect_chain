@@ -1,3 +1,4 @@
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -10,8 +11,8 @@ class OrdersSummaryDatasource {
   Future<OrdersSummaryDataModel> getOrdersSummary(String supplierId) async {
     final response = await _apiHelper.get(ApiRequestModel(
       endPoint: ApiConstants.ordersSummaryEP,
-      queries: {
-        'supplierId': supplierId,
+      headers: {
+        'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
       },
     ));
     OrdersSummaryResponseModel ordersSummaryResponseModel =

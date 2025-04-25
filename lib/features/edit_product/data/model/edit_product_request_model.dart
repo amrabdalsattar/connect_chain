@@ -11,7 +11,6 @@ class EditProductRequestModel {
   final Map<String, dynamic>? imageUrls;
   final int minimumStock;
   final int categoryId;
-  final String? supplierId;
   int? productId;
   List<File>? newImages;
 
@@ -24,7 +23,6 @@ class EditProductRequestModel {
       required this.minimumStock,
       required this.categoryId,
       this.newImages,
-      this.supplierId,
       this.productId});
 
   factory EditProductRequestModel.fromJson(Map<String, dynamic> json) {
@@ -36,7 +34,6 @@ class EditProductRequestModel {
       imageUrls: json['imageUrls'],
       minimumStock: json['minimumStock'],
       categoryId: json['categoryId'],
-      supplierId: json['supplierId'],
     );
   }
 
@@ -58,7 +55,6 @@ class EditProductRequestModel {
       'imageUrls': imageUrls,
       'minimumStock': minimumStock,
       'categoryId': categoryId,
-      'supplierId': supplierId,
       'Images': images
     };
 

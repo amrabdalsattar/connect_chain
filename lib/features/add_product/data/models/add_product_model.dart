@@ -10,7 +10,7 @@ class AddProductRequestModel {
   final double price;
   final int minimumStock;
   final int stock;
-  final String supplierId;
+
   final int categoryId;
   final List<File> images;
 
@@ -20,7 +20,6 @@ class AddProductRequestModel {
     required this.price,
     required this.minimumStock,
     required this.stock,
-    required this.supplierId,
     required this.categoryId,
     required this.images,
   });
@@ -39,7 +38,6 @@ class AddProductRequestModel {
         'Price': price,
         'MinimumStock': minimumStock,
         'Stock': stock,
-        'SupplierId': supplierId,
         'CategoryId': categoryId,
         'Images': multipartImages.whereType<MultipartFile>().toList(),
       });

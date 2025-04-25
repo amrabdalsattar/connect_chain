@@ -1,3 +1,4 @@
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -12,8 +13,12 @@ class TopSoldProductsDatasource {
       DashboardRequestModel requestModel) async {
     final response = await _apiHelper.get(
       ApiRequestModel(
-          endPoint: ApiConstants.topSoldProductsEP,
-          queries: requestModel.paginatedToJson()),
+        endPoint: ApiConstants.topSoldProductsEP,
+        queries: requestModel.paginatedToJson(),
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
+        },
+      ),
     );
     TopSoldProductsResponseModel responseModel =
         TopSoldProductsResponseModel.fromJson(response);
