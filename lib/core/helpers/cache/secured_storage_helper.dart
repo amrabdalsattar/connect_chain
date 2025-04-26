@@ -24,4 +24,5 @@ class SecuredStorageHelper {
 
 AndroidOptions getAndroidOptions() => const AndroidOptions(
       encryptedSharedPreferences: true,
+      resetOnError: true,
     );

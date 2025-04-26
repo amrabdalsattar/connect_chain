@@ -20,7 +20,7 @@ class OrderDetailsText extends StatelessWidget {
       children: [
         Text(
           '$fieldText :',
-          style: fieldTextStyle ?? AppTextStyles.cairoBlackBold14,
+          style: fieldTextStyle ?? AppTextStyles.cairoBlackBold15,
           overflow: TextOverflow.ellipsis,
         ),
         const Spacer(),

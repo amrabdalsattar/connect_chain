@@ -50,7 +50,7 @@ class ProductDetailsLowerWidget extends StatelessWidget {
               ),
               horizontalSpace(8),
               Text(productResponseModel.categoryName,
-                  style: AppTextStyles.cairoBlackBold14),
+                  style: AppTextStyles.cairoBlackBold15),
             ],
           ),
           verticalSpace(24),

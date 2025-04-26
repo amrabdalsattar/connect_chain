@@ -37,13 +37,13 @@ class _HomeTabState extends State<HomeTab> {
   late final TopSoldProductsCubit topSoldProductsCubit;
 
   Future<void> _fetchHomeData() async {
-    Future.wait<void>([
-      monthlyStatisticsCubit.getMonthlyStats(),
-      revenueChartCubit.getRevenueChartData(),
-      productsSummaryCubit.getProductsSummary(),
-      ordersSummaryCubit.getOrdersSummary(),
-      topSoldProductsCubit.getTopSoldProducts(),
-    ]);
+    Future.microtask(() => [
+          monthlyStatisticsCubit.getMonthlyStats(),
+          revenueChartCubit.getRevenueChartData(),
+          productsSummaryCubit.getProductsSummary(),
+          ordersSummaryCubit.getOrdersSummary(),
+          topSoldProductsCubit.getTopSoldProducts(),
+        ]);
   }
 
   @override

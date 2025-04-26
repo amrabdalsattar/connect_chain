@@ -141,7 +141,7 @@ class DialogsHelper {
       builder: (context) => AlertDialog(
         content: Text(
           message,
-          style: AppTextStyles.cairoBlackBold14,
+          style: AppTextStyles.cairoBlackBold15,
         ),
         actions: [
           TextButton(

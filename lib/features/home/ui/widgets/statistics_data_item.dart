@@ -49,11 +49,11 @@ class StatisticsDataItem extends StatelessWidget {
                       child: RichText(
                         textDirection: TextDirection.ltr,
                         text: TextSpan(
-                          style: AppTextStyles.cairoBlackBold14,
+                          style: AppTextStyles.cairoBlackBold15,
                           children: [
                             TextSpan(
                                 text: '${value.toString()} ',
-                                style: AppTextStyles.cairoBlackBold14),
+                                style: AppTextStyles.cairoBlackBold15),
                             TextSpan(
                               text: 'EGP',
                               style: AppTextStyles.cairoSemiGreyRegular12
@@ -67,7 +67,7 @@ class StatisticsDataItem extends StatelessWidget {
                       fit: BoxFit.scaleDown,
                       child: Text(
                         value,
-                        style: AppTextStyles.cairoBlackBold14,
+                        style: AppTextStyles.cairoBlackBold15,
                       ),
                     ),
               FittedBox(
