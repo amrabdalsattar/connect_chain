@@ -22,7 +22,10 @@ class NotificationsTab extends StatelessWidget {
     final sortedDates = grouped.keys.toList()..sort((a, b) => b.compareTo(a));
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'الإشعارات'),
+      appBar: CustomAppBar(
+        title: 'الإشعارات',
+        hideBackButton: true,
+      ),
       body: ListView.builder(
         itemCount: sortedDates.length,
         itemBuilder: (context, index) {

@@ -1,20 +1,19 @@
+import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/helpers/app_images.dart';
-import '../../../../core/helpers/extensions.dart';
-import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors_helper.dart';
 
-class ProfileIcon extends StatelessWidget {
-  const ProfileIcon({super.key});
+class NotificationCardIcon extends StatelessWidget {
+  const NotificationCardIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushNamed(Routes.profileScreenRoute);
+        context.read<MainCubit>().toggleCurrentTabIndex = 1;
       },
       child: Container(
         width: 40.w,
@@ -24,14 +23,11 @@ class ProfileIcon extends StatelessWidget {
           border: Border.all(width: 1),
         ),
         child: Center(
-          child: SvgPicture.asset(
-            width: 17.w,
-            height: 17.h,
-            AppImages.personIcon,
-            colorFilter: const ColorFilter.mode(
-              ColorsHelper.black,
-              BlendMode.srcIn,
-            ),
+          child: Image.asset(
+            width: 24.w,
+            height: 24.h,
+            AppImages.notificationsIcon,
+            color: ColorsHelper.black,
           ),
         ),
       ),

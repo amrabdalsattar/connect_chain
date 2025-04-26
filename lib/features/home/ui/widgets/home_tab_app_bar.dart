@@ -20,12 +20,12 @@ class HomeTabAppBar extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: ColorsHelper.homeScaffoldColor,
         toolbarHeight: preferredSize.height,
         title: Text(
-          'اهلا بك ${context.read<MainCubit>().userData[SharedPreferencesKeys.userName]}  👋 ',
+          'اهلاً بك ${context.read<MainCubit>().userData[SharedPreferencesKeys.userName]}  👋 ',
           style: AppTextStyles.cairoBlackBold18,
         ),
         actionsPadding: EdgeInsetsDirectional.only(end: 24.w),
         actions: const [
-          ProfileIcon(),
+          NotificationCardIcon(),
         ],
       ),
     );
