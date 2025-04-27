@@ -1,6 +1,7 @@
 import '../../../../core/helpers/cache/shared_preferences_helper.dart';
 import '../../../../core/helpers/cache/shared_preferences_keys.dart';
 
+import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
 import '../../../../core/networking/api_request_model.dart';
@@ -23,7 +24,9 @@ class ManageProductsDatasource {
 
   Future<void> deleteProduct(int productId) async {
     await _apiHelper.delete(ApiRequestModel(
-      endPoint: '${ApiConstants.deleteProductEP}/$productId',
-    ));
+        endPoint: '${ApiConstants.deleteProductEP}/$productId',
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
+        }));
   }
 }
