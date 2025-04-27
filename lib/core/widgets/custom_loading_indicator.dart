@@ -3,20 +3,22 @@ import 'package:flutter/material.dart';
 import '../helpers/app_images.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
+  final String title;
   const CustomLoadingIndicator({
     super.key,
+    this.title = 'تحميل...',
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SpinningLogo(),
         SizedBox(height: 16),
         Text(
-          'تحميل...',
+          title,
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,

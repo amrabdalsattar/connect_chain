@@ -36,6 +36,7 @@ class ApiConstants {
   // Notifications Endpoints
   static const String getNotificationsEP =
       'Notification/GetSupplierNotifications';
+  static const String updateFCMTokenEP = 'Supplier/UpdateFcmToken';
   // Api query params
   static const String productId = 'productId';
   static const String imgUrl = 'imageUrl';

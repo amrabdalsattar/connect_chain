@@ -1,3 +1,6 @@
+import 'package:connect_chain/features/pre_login/logic/cubit/pre_login_cubit.dart';
+import 'package:connect_chain/features/pre_login/ui/pre_login_screen.dart';
+
 import '../../features/orders/logic/cubit/order_details_cubit.dart';
 import '../../features/orders/ui/order_details_screen.dart';
 import '../../features/profile/logic/supplier_profile_cubit.dart';
@@ -46,6 +49,15 @@ class AppRouter {
           screen: BlocProvider(
             create: (context) => LoginCubit(getIt()),
             child: const LoginScreen(),
+          ),
+          settings: settings,
+        );
+
+      case Routes.preLoginScreenRoute:
+        return CustomAnimationsBuilder.buildSlideRoute(
+          screen: BlocProvider(
+            create: (context) => PreLoginCubit(getIt()),
+            child: const PreLoginScreen(),
           ),
           settings: settings,
         );
