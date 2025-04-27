@@ -9,10 +9,7 @@ class LocalNotificationService {
   static StreamController<NotificationResponse> streamController =
       StreamController();
   static onTap(NotificationResponse notificationResponse) {
-    // log(notificationResponse.id!.toString());
-    // log(notificationResponse.payload!.toString());
     streamController.add(notificationResponse);
-    // Navigator.push(context, route);
   }
 
   static Future init() async {

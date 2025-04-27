@@ -6,9 +6,9 @@ class PreLoginRepo {
   final PreLoginDatasource _datasource;
   const PreLoginRepo(this._datasource);
 
-  Future<ApiResult<void>> updateFCMToken() async {
+  Future<ApiResult<void>> updateFCMToken(String fcmToken) async {
     try {
-      await _datasource.updateFCMToken();
+      await _datasource.updateFCMToken(fcmToken);
       return ApiResult.success(());
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
