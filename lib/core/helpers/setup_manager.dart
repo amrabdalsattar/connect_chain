@@ -23,16 +23,16 @@ class SetupManager {
     await _initFirebase();
     await SharedPreferencesHelper.init();
 
-    Future.wait([
-      LocalNotificationService.init(),
-      PushNotificationService.init(),
-    ]);
-
     await Future.wait<void>([
       setUpGetIt(),
       EasyLocalization.ensureInitialized(),
       TokenHelper.checkIfUserIsLoggedIn(),
       ScreenUtil.ensureScreenSize(),
+    ]);
+
+    Future.wait([
+      LocalNotificationService.init(),
+      PushNotificationService.init(),
     ]);
 
     Bloc.observer = AppBlocObserver();

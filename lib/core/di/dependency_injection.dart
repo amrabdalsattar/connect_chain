@@ -1,3 +1,8 @@
+import 'package:connect_chain/features/notifications/data/repos/notifications_repo.dart';
+import 'package:connect_chain/features/pre_login/data/datasources/pre_login_datasource.dart';
+import 'package:connect_chain/features/pre_login/data/repos/pre_login_repo.dart';
+
+import '../../features/notifications/datasources/notifications_datasource.dart';
 import '../../features/orders/data/datasource/order_deatils_datasource.dart';
 import '../../features/orders/data/datasource/orders_datasource.dart';
 import '../../features/orders/data/repos/order_details_repo.dart';
@@ -52,6 +57,9 @@ Future<void> setUpGetIt() async {
       () => ResetPasswordDataSource(getIt()));
   getIt.registerLazySingleton<ResetPasswordRepo>(
       () => ResetPasswordRepo(getIt()));
+  getIt.registerLazySingleton<PreLoginDatasource>(
+      () => PreLoginDatasource(getIt()));
+  getIt.registerLazySingleton<PreLoginRepo>(() => PreLoginRepo(getIt()));
 
   // Product DI
   getIt.registerLazySingleton<AddProductRepo>(() => AddProductRepo(getIt()));
@@ -102,9 +110,14 @@ Future<void> setUpGetIt() async {
       () => TopSoldProductsRepo(getIt()));
 
   // Profile DI
-
   getIt.registerLazySingleton<SupplierProfileDatasource>(
       () => SupplierProfileDatasource(getIt()));
   getIt.registerLazySingleton<SupplierProfileRepo>(
       () => SupplierProfileRepo(getIt()));
+
+  // Notifications DI
+  getIt.registerLazySingleton<NotificationsDatasource>(
+      () => NotificationsDatasource(getIt()));
+  getIt.registerLazySingleton<NotificationsRepo>(
+      () => NotificationsRepo(getIt()));
 }
