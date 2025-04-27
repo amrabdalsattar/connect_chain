@@ -33,7 +33,10 @@ class ApiConstants {
   static const String supplierProfile = 'Supplier/getProfile';
   static const String updateSupplierProfile = 'Order/Supplier/getProfile';
 
-// Api query params
+  // Notifications Endpoints
+  static const String getNotificationsEP =
+      'Notification/GetSupplierNotifications';
+  // Api query params
   static const String productId = 'productId';
   static const String imgUrl = 'imageUrl';
   static const String supplierId = 'SupplierId';

@@ -1,4 +1,3 @@
-import 'package:connect_chain/features/notifications/data/models/notification_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,7 +22,7 @@ class MainCubit extends Cubit<dynamic> {
 
   List<Widget> mainTabs = [
     const HomeTab(),
-    NotificationsTab(notifications: dmmyData),
+    NotificationsTab(),
     const ManageProductsScreen(),
     const OrdersTab(),
     const SettingsTab(),

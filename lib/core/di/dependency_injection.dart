@@ -1,3 +1,6 @@
+import 'package:connect_chain/features/notifications/data/repos/notifications_repo.dart';
+
+import '../../features/notifications/datasources/notifications_datasource.dart';
 import '../../features/orders/data/datasource/order_deatils_datasource.dart';
 import '../../features/orders/data/datasource/orders_datasource.dart';
 import '../../features/orders/data/repos/order_details_repo.dart';
@@ -102,9 +105,14 @@ Future<void> setUpGetIt() async {
       () => TopSoldProductsRepo(getIt()));
 
   // Profile DI
-
   getIt.registerLazySingleton<SupplierProfileDatasource>(
       () => SupplierProfileDatasource(getIt()));
   getIt.registerLazySingleton<SupplierProfileRepo>(
       () => SupplierProfileRepo(getIt()));
+
+  // Notifications DI
+  getIt.registerLazySingleton<NotificationsDatasource>(
+      () => NotificationsDatasource(getIt()));
+  getIt.registerLazySingleton<NotificationsRepo>(
+      () => NotificationsRepo(getIt()));
 }
