@@ -33,7 +33,7 @@ class OrderWidget extends StatelessWidget {
           OrderWidgetText(
             fieldText: 'المنتجات',
             // Needs to be refactored
-            valueText: order.products.join(''),
+            valueText: order.products.join(' - '),
           ),
           verticalSpace(16),
 
@@ -42,15 +42,14 @@ class OrderWidget extends StatelessWidget {
             alignment: Alignment.center,
             child: OrderWidgetText(
               fieldText: 'السعر الاجمالي',
-              valueText: '${order.totalAmount} EGP',
-              valueTextStyle: AppTextStyles.carioRedBold12,
+              valueText: '${order.totalAmount} ج.م',
+              valueTextStyle: AppTextStyles.cairoRedBold12,
             ),
           ),
           verticalSpace(16),
 
           // Button Row
-
-          OrderWigetButton(
+          OrderWidgetButton(
             onTap: () {
               context.pushNamed(Routes.orderDetailsScreenRoute,
                   arguments: order.id);

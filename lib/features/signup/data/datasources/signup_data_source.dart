@@ -7,10 +7,13 @@ class SignupDataSource {
   final ApiHelper _apiHelper;
   const SignupDataSource(this._apiHelper);
 
-  Future<void> signup(SignupRequestModel signupRequestModel) async {
+  Future<void> signup(
+      SignupRequestModel signupRequestModel, String fcmToken) async {
     await _apiHelper.post(ApiRequestModel(
-      endPoint: ApiConstants.signUpEP,
-      body: signupRequestModel.toJson(),
-    ));
+        endPoint: ApiConstants.signUpEP,
+        body: signupRequestModel.toJson(),
+        headers: {
+          'fcmToken': fcmToken,
+        }));
   }
 }

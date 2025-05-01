@@ -8,7 +8,7 @@ class OrdersRepo {
 
   OrdersRepo(this._ordersDatasource);
 
-  Future<ApiResult<OrdersResponseModel>> fetchSupplierOrders(String supplierId,
+  Future<ApiResult<List<OrderModel>>> fetchSupplierOrders(String supplierId,
       {int? orderStatusIndex}) async {
     try {
       final result = await _ordersDatasource.fetchSupplierOrders(supplierId,

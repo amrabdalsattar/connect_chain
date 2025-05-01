@@ -217,6 +217,8 @@ class DialogsHelper {
   }
 
   static showBasicToast(String message) {
-    Fluttertoast.showToast(msg: message);
+    Fluttertoast.showToast(
+      msg: message,
+    );
   }
 }

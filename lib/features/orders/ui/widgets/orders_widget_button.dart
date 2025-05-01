@@ -1,7 +1,7 @@
 part of '../orders_tab.dart';
 
-class OrderWigetButton extends StatelessWidget {
-  const OrderWigetButton({
+class OrderWidgetButton extends StatelessWidget {
+  const OrderWidgetButton({
     super.key,
     required this.onTap,
   });

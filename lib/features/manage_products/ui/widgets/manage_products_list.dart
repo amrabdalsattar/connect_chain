@@ -28,8 +28,8 @@ class ManageProductsList extends StatelessWidget {
           onDelete: () {
             manageProductsCubit.deleteProduct(products[index].id);
           },
-          onEdit: () {
-            context.pushNamed(Routes.editProductScreenRoute,
+          onEdit: () async {
+            await context.pushNamed(Routes.editProductScreenRoute,
                 arguments: products[index].id);
             context
                 .read<ManageProductsCubit>()

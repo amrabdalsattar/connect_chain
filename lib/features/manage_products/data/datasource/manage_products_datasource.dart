@@ -1,6 +1,5 @@
 import '../../../../core/helpers/cache/shared_preferences_helper.dart';
 import '../../../../core/helpers/cache/shared_preferences_keys.dart';
-
 import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
 import '../../../../core/networking/api_helper.dart';
@@ -13,10 +12,17 @@ class ManageProductsDatasource {
 
   Future<ManageSupplierProductsResponseModel> getSupplierProducts() async {
     final result = await _apiHelper.get(
-        ApiRequestModel(endPoint: ApiConstants.getSupplierProductsEP, queries: {
-      ApiConstants.supplierId:
-          SharedPreferencesHelper.getString(SharedPreferencesKeys.userId)
-    }));
+      ApiRequestModel(
+        endPoint: ApiConstants.getSupplierProductsEP,
+        queries: {
+          ApiConstants.supplierId:
+              SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
+        },
+        headers: {
+          'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}'
+        },
+      ),
+    );
     ManageSupplierProductsResponseModel products =
         ManageSupplierProductsResponseModel.fromJson(result);
     return products;

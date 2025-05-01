@@ -9,9 +9,9 @@ class SignupRepo {
   const SignupRepo(this._signupDataSource);
 
   Future<ApiResult<String>> signup(
-      SignupRequestModel signupRequestModel) async {
+      SignupRequestModel signupRequestModel, String fcmToken) async {
     try {
-      await _signupDataSource.signup(signupRequestModel);
+      await _signupDataSource.signup(signupRequestModel, fcmToken);
       return const ApiResult.success(
           ConstantString.emailConfirmationSuccessMessage);
     } catch (error) {

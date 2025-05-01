@@ -70,10 +70,10 @@ class OrderDetailsBody extends StatelessWidget {
             child: OrderDetailsText(
               fieldText: 'الاجمالي',
               fieldTextStyle:
-                  AppTextStyles.carioRedBold12.copyWith(fontSize: 20),
+                  AppTextStyles.cairoRedBold12.copyWith(fontSize: 20),
               valueText: '${orderDetailsModel.totalAmount} EGP',
               valueTextStyle:
-                  AppTextStyles.carioRedBold12.copyWith(fontSize: 20),
+                  AppTextStyles.cairoRedBold12.copyWith(fontSize: 20),
             ),
           ),
           _buildCustomDvider(),

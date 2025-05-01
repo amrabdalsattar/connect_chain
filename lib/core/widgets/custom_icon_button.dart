@@ -1,3 +1,4 @@
+import 'package:connect_chain/core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,14 +20,21 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: SizedBox(
-        width: width ?? 18.w,
-        height: height ?? 18.h,
-        child: SvgPicture.asset(
-          iconPath,
-          fit: fit ?? BoxFit.cover,
+    return Material(
+      color: ColorsHelper.transparent,
+      borderRadius: BorderRadius.circular(12.r),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(30.r),
+        highlightColor: ColorsHelper.primaryColor.withValues(alpha: 0.2),
+        splashColor: ColorsHelper.primaryColor.withValues(alpha: 0.2),
+        onTap: onTap,
+        child: SizedBox(
+          width: width ?? 18.w,
+          height: height ?? 18.h,
+          child: SvgPicture.asset(
+            iconPath,
+            fit: fit ?? BoxFit.cover,
+          ),
         ),
       ),
     );

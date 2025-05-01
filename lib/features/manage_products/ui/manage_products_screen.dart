@@ -33,9 +33,10 @@ class ManageProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ManageProductsCubit manageProductsCubit =
+        ManageProductsCubit(getIt<ManageProductsRepo>());
     return BlocProvider(
-      create: (_) => ManageProductsCubit(getIt<ManageProductsRepo>())
-        ..getSupplierProducts(),
+      create: (_) => manageProductsCubit..getSupplierProducts(),
       child: PopScope(
         canPop: false,
         onPopInvokedWithResult: (didPop, result) =>
@@ -56,7 +57,9 @@ class ManageProductsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     verticalSpace(24),
-                    const CustomSearchTextFormField(),
+                    CustomSearchTextFormField(
+                      onChanged: manageProductsCubit.debounceSearch,
+                    ),
                     const RefreshButton(),
                     const ManageProductsBlocConsumer(),
                   ],

@@ -82,9 +82,9 @@ class EditProductCubit extends Cubit<EditProductState> {
       categoryId = product.categoryId;
       _productId = productId;
 
-      emit(EditProductState.getProductSuccess(product));
+      if (!isClosed) emit(EditProductState.getProductSuccess(product));
     }, failure: (error) {
-      emit(EditProductState.error(error));
+      if (!isClosed) emit(EditProductState.error(error));
     });
   }
 
@@ -96,21 +96,22 @@ class EditProductCubit extends Cubit<EditProductState> {
       onImagePicked: (imageFile) {
         _newImages.add(imageFile);
         productImages.add(imageFile);
-        emit((EditProductState.imageUploadSuccess(imageFile)));
+        if (!isClosed) emit((EditProductState.imageUploadSuccess(imageFile)));
       },
       onError: (message) {
-        emit(EditProductState.error(ApiErrorModel(message: message)));
+        if (!isClosed)
+          emit(EditProductState.error(ApiErrorModel(message: message)));
       },
     );
   }
 
   void removeImage(int imageIndex) {
     if (productImages.isNotEmpty) {
-      emit(const EditProductState.imageLoading());
+      if (!isClosed) emit(const EditProductState.imageLoading());
       _deletedImagesIndexes.add(_imagesIds[imageIndex]);
       productImages.removeAt(imageIndex);
-      emit(const EditProductState.imageDeleted());
+      if (!isClosed) emit(const EditProductState.imageDeleted());
     }
-    emit(const EditProductState.initial());
+    if (!isClosed) emit(const EditProductState.initial());
   }
 }

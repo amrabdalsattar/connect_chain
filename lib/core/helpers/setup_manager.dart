@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/notifications/data/services/local_notification_service.dart';
-import 'package:connect_chain/features/notifications/data/services/push_notification_service.dart';
+import 'package:connect_chain/features/notifications/logic/services/local_notification_service.dart';
+import 'package:connect_chain/features/notifications/logic/services/push_notification_service.dart';
 import 'package:connect_chain/firebase_options.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
