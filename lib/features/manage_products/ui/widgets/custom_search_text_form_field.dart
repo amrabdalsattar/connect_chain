@@ -5,13 +5,13 @@ import '../../../../core/theming/colors_helper.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 
 class CustomSearchTextFormField extends StatelessWidget {
-  const CustomSearchTextFormField({
-    super.key,
-  });
+  final Function(String)? onChanged;
+  const CustomSearchTextFormField({super.key, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
+      onChanged: onChanged,
       filled: false,
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(32),

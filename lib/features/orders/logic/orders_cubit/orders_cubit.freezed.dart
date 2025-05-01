@@ -20,7 +20,7 @@ mixin _$OrdersState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) =>
@@ -29,7 +29,7 @@ mixin _$OrdersState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) =>
@@ -38,7 +38,7 @@ mixin _$OrdersState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
@@ -138,7 +138,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) {
@@ -150,7 +150,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) {
@@ -162,7 +162,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
@@ -261,7 +261,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) {
@@ -273,7 +273,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) {
@@ -285,7 +285,7 @@ class _$FetchOrdersLoadingImpl implements FetchOrdersLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
@@ -347,7 +347,7 @@ abstract class _$$FetchOrdersSuccessImplCopyWith<$Res> {
           $Res Function(_$FetchOrdersSuccessImpl) then) =
       __$$FetchOrdersSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({OrdersResponseModel orderResponseModel});
+  $Res call({List<OrderModel> orders});
 }
 
 /// @nodoc
@@ -363,13 +363,13 @@ class __$$FetchOrdersSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? orderResponseModel = null,
+    Object? orders = null,
   }) {
     return _then(_$FetchOrdersSuccessImpl(
-      null == orderResponseModel
-          ? _value.orderResponseModel
-          : orderResponseModel // ignore: cast_nullable_to_non_nullable
-              as OrdersResponseModel,
+      null == orders
+          ? _value._orders
+          : orders // ignore: cast_nullable_to_non_nullable
+              as List<OrderModel>,
     ));
   }
 }
@@ -377,14 +377,20 @@ class __$$FetchOrdersSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
-  const _$FetchOrdersSuccessImpl(this.orderResponseModel);
+  const _$FetchOrdersSuccessImpl(final List<OrderModel> orders)
+      : _orders = orders;
 
+  final List<OrderModel> _orders;
   @override
-  final OrdersResponseModel orderResponseModel;
+  List<OrderModel> get orders {
+    if (_orders is EqualUnmodifiableListView) return _orders;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_orders);
+  }
 
   @override
   String toString() {
-    return 'OrdersState.success(orderResponseModel: $orderResponseModel)';
+    return 'OrdersState.success(orders: $orders)';
   }
 
   @override
@@ -392,12 +398,12 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FetchOrdersSuccessImpl &&
-            (identical(other.orderResponseModel, orderResponseModel) ||
-                other.orderResponseModel == orderResponseModel));
+            const DeepCollectionEquality().equals(other._orders, _orders));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, orderResponseModel);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_orders));
 
   /// Create a copy of OrdersState
   /// with the given fields replaced by the non-null parameter values.
@@ -413,11 +419,11 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) {
-    return success(orderResponseModel);
+    return success(orders);
   }
 
   @override
@@ -425,11 +431,11 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) {
-    return success?.call(orderResponseModel);
+    return success?.call(orders);
   }
 
   @override
@@ -437,13 +443,13 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(orderResponseModel);
+      return success(orders);
     }
     return orElse();
   }
@@ -490,10 +496,10 @@ class _$FetchOrdersSuccessImpl implements FetchOrdersSuccess {
 }
 
 abstract class FetchOrdersSuccess implements OrdersState {
-  const factory FetchOrdersSuccess(
-      final OrdersResponseModel orderResponseModel) = _$FetchOrdersSuccessImpl;
+  const factory FetchOrdersSuccess(final List<OrderModel> orders) =
+      _$FetchOrdersSuccessImpl;
 
-  OrdersResponseModel get orderResponseModel;
+  List<OrderModel> get orders;
 
   /// Create a copy of OrdersState
   /// with the given fields replaced by the non-null parameter values.
@@ -573,7 +579,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) {
@@ -585,7 +591,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) {
@@ -597,7 +603,7 @@ class _$FetchOrdersErrorImpl implements FetchOrdersError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),
@@ -734,7 +740,7 @@ class _$FetchOrdersByStatusImpl implements FetchOrdersByStatus {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(OrdersResponseModel orderResponseModel) success,
+    required TResult Function(List<OrderModel> orders) success,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(int? statusIndex) statusChanged,
   }) {
@@ -746,7 +752,7 @@ class _$FetchOrdersByStatusImpl implements FetchOrdersByStatus {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(OrdersResponseModel orderResponseModel)? success,
+    TResult? Function(List<OrderModel> orders)? success,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(int? statusIndex)? statusChanged,
   }) {
@@ -758,7 +764,7 @@ class _$FetchOrdersByStatusImpl implements FetchOrdersByStatus {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(OrdersResponseModel orderResponseModel)? success,
+    TResult Function(List<OrderModel> orders)? success,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(int? statusIndex)? statusChanged,
     required TResult orElse(),

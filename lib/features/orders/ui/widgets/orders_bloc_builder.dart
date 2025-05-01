@@ -22,7 +22,7 @@ class OrdersList extends StatelessWidget {
             error: (error) => CustomErrorWidget(
               errorMessage: error.getErrorMessages() ?? 'حدث خطأ غير متوقع',
             ),
-            success: (response) => _buildOrdersList(response.data),
+            success: (response) => _buildOrdersList(response),
           ),
         ),
       ),

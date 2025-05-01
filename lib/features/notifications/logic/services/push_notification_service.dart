@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:connect_chain/features/notifications/data/services/local_notification_service.dart';
+import 'package:connect_chain/features/notifications/logic/services/local_notification_service.dart';
 import 'package:connect_chain/features/pre_login/data/datasources/pre_login_datasource.dart';
 import 'package:connect_chain/features/pre_login/data/repos/pre_login_repo.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -29,8 +29,8 @@ class PushNotificationService {
       // Background
       FirebaseMessaging.onBackgroundMessage(_handleBackgroundMessage);
 
-      _firebaseMessaging.onTokenRefresh.listen((token) async {
-        await _preLoginRepo.updateFCMToken(token);
+      _firebaseMessaging.onTokenRefresh.listen((newToken) async {
+        await _preLoginRepo.updateFCMToken(token ?? 'null token');
       });
 
       // Foreground

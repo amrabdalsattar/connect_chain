@@ -23,7 +23,6 @@ mixin _$ManageProductsState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -40,7 +39,6 @@ mixin _$ManageProductsState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -56,7 +54,6 @@ mixin _$ManageProductsState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -73,7 +70,6 @@ mixin _$ManageProductsState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -93,7 +89,6 @@ mixin _$ManageProductsState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -111,7 +106,6 @@ mixin _$ManageProductsState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -192,7 +186,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -212,7 +205,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -231,7 +223,6 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -254,7 +245,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -277,7 +267,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -298,7 +287,6 @@ class _$InitialImpl implements _Initial {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -404,7 +392,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -424,7 +411,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -443,7 +429,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -466,7 +451,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -489,7 +473,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -510,7 +493,6 @@ class _$ManageProductsSuccessStateImpl implements ManageProductsSuccessState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -591,7 +573,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -611,7 +592,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -630,7 +610,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -653,7 +632,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -676,7 +654,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -697,7 +674,6 @@ class _$ManageProductsLoadingStateImpl implements ManageProductsLoadingState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -796,7 +772,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -816,7 +791,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -835,7 +809,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -858,7 +831,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -881,7 +853,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -902,7 +873,6 @@ class _$ManageProductsErrorStateImpl implements ManageProductsErrorState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -1008,7 +978,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -1028,7 +997,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -1047,7 +1015,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -1070,7 +1037,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -1093,7 +1059,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -1114,7 +1079,6 @@ class _$EmptyProductsListImpl implements EmptyProductsList {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -1143,181 +1107,6 @@ abstract class EmptyProductsList implements ManageProductsState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmptyProductsListImplCopyWith<_$EmptyProductsListImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$RefreshProductsStateImplCopyWith<$Res> {
-  factory _$$RefreshProductsStateImplCopyWith(_$RefreshProductsStateImpl value,
-          $Res Function(_$RefreshProductsStateImpl) then) =
-      __$$RefreshProductsStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$RefreshProductsStateImplCopyWithImpl<$Res>
-    extends _$ManageProductsStateCopyWithImpl<$Res, _$RefreshProductsStateImpl>
-    implements _$$RefreshProductsStateImplCopyWith<$Res> {
-  __$$RefreshProductsStateImplCopyWithImpl(_$RefreshProductsStateImpl _value,
-      $Res Function(_$RefreshProductsStateImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ManageProductsState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$RefreshProductsStateImpl implements RefreshProductsState {
-  const _$RefreshProductsStateImpl();
-
-  @override
-  String toString() {
-    return 'ManageProductsState.refreshProducts()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RefreshProductsStateImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(List<ProductDataModel> products) success,
-    required TResult Function() loading,
-    required TResult Function(ApiErrorModel error) error,
-    required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
-    required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
-    required TResult Function() delete,
-    required TResult Function(ProductDataModel product) edit,
-    required TResult Function(String message) operationSuccess,
-    required TResult Function(String message) operationFailed,
-    required TResult Function(List<ProductDataModel> products)
-        updatedProductsList,
-  }) {
-    return refreshProducts();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(List<ProductDataModel> products)? success,
-    TResult? Function()? loading,
-    TResult? Function(ApiErrorModel error)? error,
-    TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
-    TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
-    TResult? Function()? delete,
-    TResult? Function(ProductDataModel product)? edit,
-    TResult? Function(String message)? operationSuccess,
-    TResult? Function(String message)? operationFailed,
-    TResult? Function(List<ProductDataModel> products)? updatedProductsList,
-  }) {
-    return refreshProducts?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<ProductDataModel> products)? success,
-    TResult Function()? loading,
-    TResult Function(ApiErrorModel error)? error,
-    TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
-    TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
-    TResult Function()? delete,
-    TResult Function(ProductDataModel product)? edit,
-    TResult Function(String message)? operationSuccess,
-    TResult Function(String message)? operationFailed,
-    TResult Function(List<ProductDataModel> products)? updatedProductsList,
-    required TResult orElse(),
-  }) {
-    if (refreshProducts != null) {
-      return refreshProducts();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(ManageProductsSuccessState value) success,
-    required TResult Function(ManageProductsLoadingState value) loading,
-    required TResult Function(ManageProductsErrorState value) error,
-    required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
-    required TResult Function(ToggleRefreshButtonVisibilityState value)
-        toggleRefreshButtonVisibility,
-    required TResult Function(ManageProductsDeleteState value) delete,
-    required TResult Function(ManageEditsDeleteState value) edit,
-    required TResult Function(MangeProductsOperationSuccessState value)
-        operationSuccess,
-    required TResult Function(MangeProductsOperationFailedState value)
-        operationFailed,
-    required TResult Function(UpdatedProductsListState value)
-        updatedProductsList,
-  }) {
-    return refreshProducts(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(ManageProductsSuccessState value)? success,
-    TResult? Function(ManageProductsLoadingState value)? loading,
-    TResult? Function(ManageProductsErrorState value)? error,
-    TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
-    TResult? Function(ToggleRefreshButtonVisibilityState value)?
-        toggleRefreshButtonVisibility,
-    TResult? Function(ManageProductsDeleteState value)? delete,
-    TResult? Function(ManageEditsDeleteState value)? edit,
-    TResult? Function(MangeProductsOperationSuccessState value)?
-        operationSuccess,
-    TResult? Function(MangeProductsOperationFailedState value)? operationFailed,
-    TResult? Function(UpdatedProductsListState value)? updatedProductsList,
-  }) {
-    return refreshProducts?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(ManageProductsSuccessState value)? success,
-    TResult Function(ManageProductsLoadingState value)? loading,
-    TResult Function(ManageProductsErrorState value)? error,
-    TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
-    TResult Function(ToggleRefreshButtonVisibilityState value)?
-        toggleRefreshButtonVisibility,
-    TResult Function(ManageProductsDeleteState value)? delete,
-    TResult Function(ManageEditsDeleteState value)? edit,
-    TResult Function(MangeProductsOperationSuccessState value)?
-        operationSuccess,
-    TResult Function(MangeProductsOperationFailedState value)? operationFailed,
-    TResult Function(UpdatedProductsListState value)? updatedProductsList,
-    required TResult orElse(),
-  }) {
-    if (refreshProducts != null) {
-      return refreshProducts(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RefreshProductsState implements ManageProductsState {
-  const factory RefreshProductsState() = _$RefreshProductsStateImpl;
 }
 
 /// @nodoc
@@ -1400,7 +1189,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -1420,7 +1208,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -1439,7 +1226,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -1462,7 +1248,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -1485,7 +1270,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -1506,7 +1290,6 @@ class _$ToggleRefreshButtonVisibilityStateImpl
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -1589,7 +1372,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -1609,7 +1391,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -1628,7 +1409,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -1651,7 +1431,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -1674,7 +1453,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -1695,7 +1473,6 @@ class _$ManageProductsDeleteStateImpl implements ManageProductsDeleteState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -1794,7 +1571,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -1814,7 +1590,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -1833,7 +1608,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -1856,7 +1630,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -1879,7 +1652,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -1900,7 +1672,6 @@ class _$ManageEditsDeleteStateImpl implements ManageEditsDeleteState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -2010,7 +1781,6 @@ class _$MangeProductsOperationSuccessStateImpl
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -2030,7 +1800,6 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -2049,7 +1818,6 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -2072,7 +1840,6 @@ class _$MangeProductsOperationSuccessStateImpl
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -2095,7 +1862,6 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -2116,7 +1882,6 @@ class _$MangeProductsOperationSuccessStateImpl
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -2228,7 +1993,6 @@ class _$MangeProductsOperationFailedStateImpl
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -2248,7 +2012,6 @@ class _$MangeProductsOperationFailedStateImpl
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -2267,7 +2030,6 @@ class _$MangeProductsOperationFailedStateImpl
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -2290,7 +2052,6 @@ class _$MangeProductsOperationFailedStateImpl
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -2313,7 +2074,6 @@ class _$MangeProductsOperationFailedStateImpl
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -2334,7 +2094,6 @@ class _$MangeProductsOperationFailedStateImpl
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,
@@ -2451,7 +2210,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     required TResult Function() loading,
     required TResult Function(ApiErrorModel error) error,
     required TResult Function(String errorMessage) emptyProductsList,
-    required TResult Function() refreshProducts,
     required TResult Function(bool isVisible) toggleRefreshButtonVisibility,
     required TResult Function() delete,
     required TResult Function(ProductDataModel product) edit,
@@ -2471,7 +2229,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     TResult? Function()? loading,
     TResult? Function(ApiErrorModel error)? error,
     TResult? Function(String errorMessage)? emptyProductsList,
-    TResult? Function()? refreshProducts,
     TResult? Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult? Function()? delete,
     TResult? Function(ProductDataModel product)? edit,
@@ -2490,7 +2247,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     TResult Function()? loading,
     TResult Function(ApiErrorModel error)? error,
     TResult Function(String errorMessage)? emptyProductsList,
-    TResult Function()? refreshProducts,
     TResult Function(bool isVisible)? toggleRefreshButtonVisibility,
     TResult Function()? delete,
     TResult Function(ProductDataModel product)? edit,
@@ -2513,7 +2269,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     required TResult Function(ManageProductsLoadingState value) loading,
     required TResult Function(ManageProductsErrorState value) error,
     required TResult Function(EmptyProductsList value) emptyProductsList,
-    required TResult Function(RefreshProductsState value) refreshProducts,
     required TResult Function(ToggleRefreshButtonVisibilityState value)
         toggleRefreshButtonVisibility,
     required TResult Function(ManageProductsDeleteState value) delete,
@@ -2536,7 +2291,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     TResult? Function(ManageProductsLoadingState value)? loading,
     TResult? Function(ManageProductsErrorState value)? error,
     TResult? Function(EmptyProductsList value)? emptyProductsList,
-    TResult? Function(RefreshProductsState value)? refreshProducts,
     TResult? Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult? Function(ManageProductsDeleteState value)? delete,
@@ -2557,7 +2311,6 @@ class _$UpdatedProductsListStateImpl implements UpdatedProductsListState {
     TResult Function(ManageProductsLoadingState value)? loading,
     TResult Function(ManageProductsErrorState value)? error,
     TResult Function(EmptyProductsList value)? emptyProductsList,
-    TResult Function(RefreshProductsState value)? refreshProducts,
     TResult Function(ToggleRefreshButtonVisibilityState value)?
         toggleRefreshButtonVisibility,
     TResult Function(ManageProductsDeleteState value)? delete,

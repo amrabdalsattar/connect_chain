@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,10 +19,10 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController addressController = TextEditingController();
 
   List<String> get businessTypesList => [
-        "Clothes",
-        "Food",
-        "Beverages",
-        "Other",
+        'الإلكترونيات',
+        'الأزياء',
+        'المواد الغذائية',
+        'أخرى',
       ];
   String businessType = '';
 
@@ -33,17 +34,17 @@ class SignupCubit extends Cubit<SignupState> {
     if (formKey.currentState!.validate()) {
       emit(const SignupState.loading());
       final result = await _signupRepo.signup(
-        SignupRequestModel(
-          name: nameController.text,
-          phoneNumber: phoneNumberController.text,
-          email: emailController.text,
-          password: passwordController.text,
-          address: addressController.text,
-          businessType: businessType,
-          confirmPassword: confirmPasswordController.text,
-          role: 2,
-        ),
-      );
+          SignupRequestModel(
+            name: nameController.text,
+            phoneNumber: phoneNumberController.text,
+            email: emailController.text,
+            password: passwordController.text,
+            address: addressController.text,
+            businessType: businessType,
+            confirmPassword: confirmPasswordController.text,
+            role: 2,
+          ),
+          await FirebaseMessaging.instance.getToken() ?? '');
       result.when(
         success: (confirmationMessage) {
           emit(SignupState.success(confirmationMessage));

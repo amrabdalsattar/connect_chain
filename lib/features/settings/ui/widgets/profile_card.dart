@@ -20,32 +20,39 @@ class ProfileCard extends StatelessWidget {
         color: ColorsHelper.white,
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: GestureDetector(
-        onTap: () => context.pushNamed(Routes.profileScreenRoute),
-        child: ListTile(
-          leading: CircleAvatar(
-            radius: 20.r,
-            backgroundColor: ColorsHelper.homeScaffoldColor,
-            child: Text(
-              "${getInitialLetters(fullName)}",
-              style: AppTextStyles.cairoBlackBold18,
+      child: Material(
+        color: ColorsHelper.transparent,
+        borderRadius: BorderRadius.circular(12.r),
+        child: InkWell(
+          onTap: () => context.pushNamed(Routes.profileScreenRoute),
+          borderRadius: BorderRadius.circular(12.r),
+          splashColor: ColorsHelper.liteBlue.withValues(alpha: 0.2),
+          child: ListTile(
+            leading: CircleAvatar(
+              radius: 20.r,
+              backgroundColor: ColorsHelper.homeScaffoldColor,
+              child: Text(
+                "${getInitialLetters(fullName)}",
+                style: AppTextStyles.cairoBlackBold18,
+              ),
             ),
-          ),
-          title: RichText(
-            text: TextSpan(children: [
-              TextSpan(
-                  text: 'أهلاً ',
-                  style: AppTextStyles.cairoBlackBold15
-                      .copyWith(color: ColorsHelper.primaryColor)),
-              TextSpan(
-                text: '${getFirstName(fullName)}',
-                style: AppTextStyles.cairoBlackBold15,
-              )
-            ]),
-          ),
-          subtitle: Text(
-            SharedPreferencesHelper.getString(SharedPreferencesKeys.userEmail),
-            style: AppTextStyles.cairoGrayMedium12,
+            title: RichText(
+              text: TextSpan(children: [
+                TextSpan(
+                    text: 'أهلاً ',
+                    style: AppTextStyles.cairoBlackBold15
+                        .copyWith(color: ColorsHelper.primaryColor)),
+                TextSpan(
+                  text: '${getFirstName(fullName)}',
+                  style: AppTextStyles.cairoBlackBold15,
+                )
+              ]),
+            ),
+            subtitle: Text(
+              SharedPreferencesHelper.getString(
+                  SharedPreferencesKeys.userEmail),
+              style: AppTextStyles.cairoGrayMedium12,
+            ),
           ),
         ),
       ),

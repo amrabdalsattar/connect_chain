@@ -18,22 +18,25 @@ class LogoutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 20.h),
-      padding: EdgeInsets.all(16.r),
-      decoration: BoxDecoration(
-        color: ColorsHelper.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: InkWell(
-        onTap: () {
+      child: ElevatedButton(
+        onPressed: () {
           Future.wait<void>([
             UserDataOperator.clearUserData(),
             SecuredStorageHelper.removeSecuredData()
           ]);
           context.pushReplacementNamed(Routes.loginRoute);
         },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: ColorsHelper.white,
+          foregroundColor: ColorsHelper.red,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.r),
+          ),
+          padding: EdgeInsets.all(16.r),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'تسجيل الخروج',

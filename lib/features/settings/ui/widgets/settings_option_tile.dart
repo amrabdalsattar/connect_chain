@@ -15,22 +15,25 @@ class SettingsOptionTile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        InkWell(
-          onTap: () => showAboutDialog(
-              context: context,
-              applicationVersion: '1.0.6',
-              applicationIcon: Image.asset(
-                AppImages.connectChainLogo,
-                width: 30.w,
-                height: 30.h,
-              )),
-          child: ListTile(
-            contentPadding: EdgeInsets.symmetric(horizontal: 10),
-            minVerticalPadding: 0,
-            titleTextStyle:
-                AppTextStyles.cairoBlackBold15.copyWith(fontSize: 12.sp),
-            title: Text(title),
-            trailing: Icon(Icons.arrow_right),
+        Material(
+          child: InkWell(
+            onTap: () => showAboutDialog(
+                context: context,
+                applicationVersion: '1.0.6',
+                applicationIcon: Image.asset(
+                  AppImages.connectChainLogo,
+                  width: 30.w,
+                  height: 30.h,
+                )),
+            borderRadius: BorderRadius.circular(12.r),
+            child: ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 10),
+              minVerticalPadding: 0,
+              titleTextStyle:
+                  AppTextStyles.cairoBlackBold15.copyWith(fontSize: 12.sp),
+              title: Text(title),
+              trailing: Icon(Icons.arrow_right),
+            ),
           ),
         ),
         Visibility(

@@ -38,9 +38,10 @@ class EditProductTileTrailingSection extends StatelessWidget {
           FittedBox(
             fit: BoxFit.scaleDown,
             child: Text(
-              textDirection: TextDirection.ltr,
-              '${priceFormat(price)} EGP',
+              textDirection: TextDirection.rtl,
+              '${priceFormat(price)} ج.م',
               style: AppTextStyles.cairoBlackSemiBold16
+                  .copyWith(fontSize: 14.sp)
                   .copyWith(fontWeight: FontWeight.w600),
             ),
           )

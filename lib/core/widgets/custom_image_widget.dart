@@ -28,6 +28,7 @@ class CustomImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      borderRadius: BorderRadius.circular(borderRadius.r),
       child: InkWell(
         onTap: onTap,
         child: Hero(

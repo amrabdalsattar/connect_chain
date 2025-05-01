@@ -21,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final Color? fillColor;
   final bool? filled;
   final bool? isReadOnly;
+  final Function(String)? onChanged;
 
   const CustomTextFormField({
     super.key,
@@ -38,11 +39,13 @@ class CustomTextFormField extends StatelessWidget {
     this.focusedBorder,
     this.suffix,
     this.isReadOnly,
+    this.onChanged,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChanged,
       readOnly: isReadOnly ?? false,
       canRequestFocus: isReadOnly != null ? !isReadOnly! : true,
       controller: controller,

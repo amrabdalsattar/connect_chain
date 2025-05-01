@@ -9,10 +9,10 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
   void getSupplierProfileData() async {
     final result = await _repo.getSupplierProfile();
 
-    result.when(
-        success: (supplierData) =>
-            emit(SupplierProfileSuccessState(supplierData)),
-        failure: (apiErrorModel) =>
-            emit(SupplierProfileErrorState(apiErrorModel)));
+    result.when(success: (supplierData) {
+      if (!isClosed) emit(SupplierProfileSuccessState(supplierData));
+    }, failure: (apiErrorModel) {
+      if (!isClosed) emit(SupplierProfileErrorState(apiErrorModel));
+    });
   }
 }

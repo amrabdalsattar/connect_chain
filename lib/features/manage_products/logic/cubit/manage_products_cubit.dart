@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -15,6 +17,29 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
       : super(const ManageProductsState.initial());
 
   List<ProductDataModel> productsLocalList = [];
+
+  String query = '';
+  void _productsSearch() async {
+    if (query.isNullOrEmpty()) {
+      if (!isClosed) emit(ManageProductsState.success(productsLocalList));
+    }
+
+    final filterProducts = productsLocalList.where((product) {
+      return product.name.toLowerCase().contains(query.toLowerCase());
+    }).toList();
+
+    if (!isClosed) emit(ManageProductsState.success(filterProducts));
+  }
+
+  Timer? _searchDebounce;
+
+  void debounceSearch(String searchQuery) {
+    _searchDebounce?.cancel();
+    _searchDebounce = Timer(const Duration(milliseconds: 300), () {
+      query = searchQuery;
+      _productsSearch();
+    });
+  }
 
   bool isRefreshButtonVisible = false;
 

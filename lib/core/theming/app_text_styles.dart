@@ -155,7 +155,7 @@ class AppTextStyles {
     color: ColorsHelper.gray,
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle carioRedBold12 = TextStyle(
+  static TextStyle cairoRedBold12 = TextStyle(
     fontSize: 12.sp,
     color: ColorsHelper.red,
     fontWeight: FontWeightHelper.bold,

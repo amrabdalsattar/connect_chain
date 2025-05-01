@@ -11,14 +11,14 @@ class UserDataOperator {
           SharedPreferencesHelper.getString(SharedPreferencesKeys.userName),
       SharedPreferencesKeys.userId:
           SharedPreferencesHelper.getString(SharedPreferencesKeys.userId),
-      SharedPreferencesKeys.userAddress:
-          SharedPreferencesHelper.getString(SharedPreferencesKeys.userAddress),
       SharedPreferencesKeys.userEmail:
           SharedPreferencesHelper.getString(SharedPreferencesKeys.userEmail),
-      SharedPreferencesKeys.userBusinessType: SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userBusinessType),
-      SharedPreferencesKeys.userPhoneNumber: SharedPreferencesHelper.getString(
-          SharedPreferencesKeys.userPhoneNumber),
+      // SharedPreferencesKeys.userAddress:
+      //     SharedPreferencesHelper.getString(SharedPreferencesKeys.userAddress),
+      // SharedPreferencesKeys.userBusinessType: SharedPreferencesHelper.getString(
+      //     SharedPreferencesKeys.userBusinessType),
+      // SharedPreferencesKeys.userPhoneNumber: SharedPreferencesHelper.getString(
+      //     SharedPreferencesKeys.userPhoneNumber),
     };
   }
 
@@ -28,25 +28,27 @@ class UserDataOperator {
     await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userId, userData.id);
     await SharedPreferencesHelper.setData(
-        SharedPreferencesKeys.userBusinessType, userData.businessType);
-
-    await SharedPreferencesHelper.setData(
-        SharedPreferencesKeys.userAddress, userData.address);
-    await SharedPreferencesHelper.setData(
         SharedPreferencesKeys.userEmail, userData.email);
-    await SharedPreferencesHelper.setData(
-        SharedPreferencesKeys.userPhoneNumber, userData.phone);
+
+    // await SharedPreferencesHelper.setData(
+    //     SharedPreferencesKeys.userBusinessType, userData.businessType);
+
+    // await SharedPreferencesHelper.setData(
+    //     SharedPreferencesKeys.userAddress, userData.address);
+
+    // await SharedPreferencesHelper.setData(
+    //     SharedPreferencesKeys.userPhoneNumber, userData.phone);
   }
 
   static Future<void> clearUserData() async {
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userName);
-    await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userAddress);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userEmail);
     await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userId);
-    await SharedPreferencesHelper.removeData(
-        SharedPreferencesKeys.userPhoneNumber);
-    await SharedPreferencesHelper.removeData(
-        SharedPreferencesKeys.userBusinessType);
+    // await SharedPreferencesHelper.removeData(SharedPreferencesKeys.userAddress);
+    // await SharedPreferencesHelper.removeData(
+    //     SharedPreferencesKeys.userPhoneNumber);
+    // await SharedPreferencesHelper.removeData(
+    //     SharedPreferencesKeys.userBusinessType);
   }
 
   static setViewOnBoardingBool() async {

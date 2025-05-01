@@ -9,7 +9,7 @@ class OrdersDatasource {
 
   OrdersDatasource(this._apiHelper);
 
-  Future<OrdersResponseModel> fetchSupplierOrders(String supplierId,
+  Future<List<OrderModel>> fetchSupplierOrders(String supplierId,
       {int? orderStatusIndex}) async {
     final result = await _apiHelper.get(
       ApiRequestModel(
@@ -26,6 +26,6 @@ class OrdersDatasource {
     OrdersResponseModel ordersResponseModel =
         OrdersResponseModel.fromJson(result);
 
-    return ordersResponseModel;
+    return ordersResponseModel.data;
   }
 }

@@ -37,8 +37,9 @@ class OrdersTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    OrdersCubit ordersCubit = OrdersCubit(getIt());
     return BlocProvider(
-      create: (context) => OrdersCubit(getIt())..fetchSupplierOrders(),
+      create: (context) => ordersCubit..fetchSupplierOrders(),
       child: PopScope(
         canPop: false,
         onPopInvokedWithResult: (didPop, result) =>
@@ -53,7 +54,9 @@ class OrdersTab extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Column(
                 children: [
-                  const CustomSearchTextFormField(),
+                  CustomSearchTextFormField(
+                    onChanged: ordersCubit.debounceOrdersSearch,
+                  ),
                   verticalSpace(23),
                   const OrdersStatusList(),
                   verticalSpace(24),

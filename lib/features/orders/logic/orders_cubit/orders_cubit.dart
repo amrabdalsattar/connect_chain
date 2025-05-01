@@ -1,3 +1,7 @@
+import 'dart:async';
+
+import 'package:connect_chain/core/helpers/extensions.dart';
+
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import '../../data/models/order_response_model.dart';
 import '../../data/repos/orders_repo.dart';
@@ -18,6 +22,29 @@ class OrdersCubit extends Cubit<OrdersState> {
   final String supplierId =
       SharedPreferencesHelper.getString(SharedPreferencesKeys.userId);
 
+  List<OrderModel> localOrdersData = [];
+
+  Timer? _searchDebounce;
+
+  void _ordersSearch(String query) {
+    if (query.isNullOrEmpty()) {
+      emit(FetchOrdersSuccess(localOrdersData));
+      return;
+    }
+    final filteredOrders = localOrdersData.where((order) {
+      return order.customerName.toLowerCase().contains(query.toLowerCase());
+    }).toList();
+    emit(FetchOrdersSuccess(filteredOrders));
+  }
+
+  void debounceOrdersSearch(String query) {
+    _searchDebounce?.cancel();
+
+    _searchDebounce = Timer(const Duration(milliseconds: 300), () {
+      _ordersSearch(query);
+    });
+  }
+
   Future<void> fetchSupplierOrders({int? orderStatusIndex}) async {
     emit(const FetchOrdersLoading());
     final result = await _ordersRepo.fetchSupplierOrders(
@@ -26,9 +53,10 @@ class OrdersCubit extends Cubit<OrdersState> {
     );
 
     result.when(
-      success: (orderResponseModel) {
+      success: (orders) {
         if (!isClosed) {
-          emit(FetchOrdersSuccess(orderResponseModel));
+          localOrdersData = orders;
+          emit(FetchOrdersSuccess(localOrdersData));
         }
       },
       failure: (error) {
