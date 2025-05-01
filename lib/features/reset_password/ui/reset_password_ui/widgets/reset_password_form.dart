@@ -45,7 +45,22 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return ConstantString.enterPassword;
+                  return 'يرجى إدخال كلمة مرور صالحة';
+                }
+                if (value.length < 8) {
+                  return 'كلمة المرور يجب أن تكون أطول من 8 خانات';
+                }
+                if (!AppRegex.hasUpperCase(value)) {
+                  return 'كلمة المرور يجب أن تحتوي على حرف كبير';
+                }
+                if (!AppRegex.hasSpecialCharacter(value)) {
+                  return 'كلمة المرور يجب أن تحتوي على حرف خاص';
+                }
+                if (!AppRegex.hasNumber(value)) {
+                  return 'كلمة المرور يجب أن تحتوي على رقم';
+                }
+                if (!AppRegex.hasLowerCase(value)) {
+                  return 'كلمة المرور يجب أن تحتوي على حرف صغير';
                 }
               },
             ),

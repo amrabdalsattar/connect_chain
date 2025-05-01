@@ -11,13 +11,22 @@ class CustomButton extends StatelessWidget {
   final double width;
   final double elevation;
   final bool isLoading;
+  final Color? color;
+  final TextStyle? textStyle;
+  final Color? borderColor;
+  final double? radius;
+
   const CustomButton({
     super.key,
     required this.title,
-    this.onTap,
     required this.width,
+    this.onTap,
     this.elevation = 0,
     this.isLoading = false,
+    this.color,
+    this.textStyle,
+    this.borderColor,
+    this.radius,
   });
 
   @override
@@ -28,11 +37,15 @@ class CustomButton extends StatelessWidget {
         height: 50.h,
         width: width,
         decoration: BoxDecoration(
-          color: ColorsHelper.primaryColor,
-          borderRadius: BorderRadius.circular(8.r),
+          color: color ?? ColorsHelper.primaryColor,
+          borderRadius: BorderRadius.circular(radius?.r ?? 8.r),
+          border: Border.all(
+            color: borderColor ?? ColorsHelper.borderGray,
+            width: 1.5,
+          ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(elevation == 0 ? 0 : 0.25),
+              color: Colors.black.withValues(alpha: elevation == 0 ? 0 : 0.25),
               blurRadius: elevation,
               spreadRadius: 1,
               offset: Offset(0, elevation / 2),
@@ -40,17 +53,13 @@ class CustomButton extends StatelessWidget {
           ],
         ),
         child: isLoading
-            ? SizedBox(
-                height: 30.h,
-                width: 30.w,
-                child: const LoadingIndicator(
-                  color: ColorsHelper.white,
-                ),
+            ? const LoadingIndicator(
+                color: ColorsHelper.white,
               )
             : Center(
                 child: Text(
                   title,
-                  style: AppTextStyles.cairoWhiteBold16,
+                  style: textStyle ?? AppTextStyles.cairoWhiteBold16,
                 ),
               ),
       ),

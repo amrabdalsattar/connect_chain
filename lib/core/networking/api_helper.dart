@@ -19,7 +19,9 @@ class DioHelper implements ApiHelper {
       apiRequestModel.endPoint,
       queryParameters: apiRequestModel.queries,
       data: apiRequestModel.body,
-      options: Options(headers: apiRequestModel.headers),
+      options: Options(
+        headers: apiRequestModel.headers,
+      ),
     );
 
     return response.data;
@@ -30,8 +32,12 @@ class DioHelper implements ApiHelper {
     final response = await _dio.post(
       apiRequestModel.endPoint,
       queryParameters: apiRequestModel.queries,
-      data: apiRequestModel.body,
-      options: Options(headers: apiRequestModel.headers),
+      data: apiRequestModel.body ?? apiRequestModel.formData,
+      options: Options(
+          headers: apiRequestModel.headers,
+          contentType: apiRequestModel.formData != null
+              ? 'multipart/form-data'
+              : 'application/json'),
     );
 
     return response.data;
@@ -43,7 +49,9 @@ class DioHelper implements ApiHelper {
       apiRequestModel.endPoint,
       queryParameters: apiRequestModel.queries,
       data: apiRequestModel.body,
-      options: Options(headers: apiRequestModel.headers),
+      options: Options(
+        headers: apiRequestModel.headers,
+      ),
     );
 
     return response.data;
@@ -54,7 +62,8 @@ class DioHelper implements ApiHelper {
     final response = await _dio.put(
       apiRequestModel.endPoint,
       queryParameters: apiRequestModel.queries,
-      data: apiRequestModel.body,
+      data: apiRequestModel.formData ??
+          apiRequestModel.body, // Use formData if provided
       options: Options(headers: apiRequestModel.headers),
     );
 

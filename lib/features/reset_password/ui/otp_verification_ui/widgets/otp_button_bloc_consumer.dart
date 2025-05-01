@@ -1,12 +1,12 @@
-import '../../../../../core/helpers/dialogs_helper.dart';
-import '../../../../../core/helpers/extensions.dart';
-import '../../../../../core/routing/routes.dart';
-import '../../../logic/cubit/reset_password_cubit.dart';
-import '../../../logic/cubit/reset_password_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/helpers/dialogs_helper.dart';
+import '../../../../../core/helpers/extensions.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/widgets/custom_button.dart';
+import '../../../logic/cubit/reset_password_cubit.dart';
+import '../../../logic/cubit/reset_password_state.dart';
 
 class OtpButtonBlocConsumer extends StatelessWidget {
   const OtpButtonBlocConsumer({super.key});
@@ -21,7 +21,7 @@ class OtpButtonBlocConsumer extends StatelessWidget {
           current is OtpVerificationErrorState,
       listener: (context, state) {
         state.whenOrNull(
-          resendOtpVerficationSuccess: (message) =>
+          resendOtpVerificationSuccess: (message) =>
               DialogsHelper.showSnackBar(context, message),
           otpVerificationError: (apiErrorModel) =>
               DialogsHelper.showErrorDialog(
@@ -31,7 +31,7 @@ class OtpButtonBlocConsumer extends StatelessWidget {
             context.pushNamed(
               Routes.resetPasswordScreenRoute,
               arguments: context.read<ResetPasswordCubit>(),
-            );  
+            );
           },
         );
       },

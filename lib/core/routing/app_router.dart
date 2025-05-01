@@ -1,5 +1,26 @@
+import 'package:connect_chain/features/pre_login/logic/cubit/pre_login_cubit.dart';
+import 'package:connect_chain/features/pre_login/ui/pre_login_screen.dart';
+
+import '../../features/orders/logic/cubit/order_details_cubit.dart';
+import '../../features/orders/ui/order_details_screen.dart';
+import '../../features/profile/logic/supplier_profile_cubit.dart';
+
+import '../widgets/hero_image_view.dart';
+import '../../features/edit_product/logic/cubit/edit_product_cubit.dart';
+import '../../features/edit_product/ui/edit_product_screen.dart';
+import '../../features/product_details/logic/cubit/product_details_cubit.dart';
+import '../../features/product_details/ui/widgets/product_details_bloc_consumer.dart';
+
+import '../../features/add_product/logic/cubit/add_product_cubit.dart';
+import '../../features/manage_products/ui/manage_products_screen.dart';
+
+import '../../features/add_product/ui/add_product_screen.dart';
+import '../../features/main/logic/cubit/main_cubit.dart';
+
+import '../../features/profile/ui/profile_screen.dart';
+
 import '../../features/reset_password/logic/cubit/reset_password_cubit.dart';
-import '../../features/reset_password/ui/forgot_password_ui/forget_passowrd_screen.dart';
+import '../../features/reset_password/ui/forgot_password_ui/forget_password_screen.dart';
 import '../../features/reset_password/ui/otp_verification_ui/otp_screen.dart';
 import '../../features/reset_password/ui/reset_password_ui/reset_password_screen.dart';
 import '../../features/signup/ui/signup_screen.dart';
@@ -7,7 +28,7 @@ import '../../features/signup/ui/signup_screen.dart';
 import '../../features/signup/logic/cubit/signup_cubit.dart';
 import '../di/dependency_injection.dart';
 import '../helpers/animations/custom_animations_builder.dart';
-import '../../features/home/ui/home_screen.dart';
+import '../../features/main/ui/main_screen.dart';
 import '../../features/login/logic/login_cubit.dart';
 import '../../features/onboarding/logic/cubit/onboarding_cubit.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
@@ -32,6 +53,15 @@ class AppRouter {
           settings: settings,
         );
 
+      case Routes.preLoginScreenRoute:
+        return CustomAnimationsBuilder.buildSlideRoute(
+          screen: BlocProvider(
+            create: (context) => PreLoginCubit(getIt()),
+            child: const PreLoginScreen(),
+          ),
+          settings: settings,
+        );
+
       case Routes.onboardingRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
           screen: BlocProvider(
@@ -41,9 +71,73 @@ class AppRouter {
           settings: settings,
         );
 
-      case Routes.homeRoute:
+      case Routes.mainScreenRoute:
         return CustomAnimationsBuilder.buildFadeTransition(
-          screen: const HomeScreen(),
+          screen: BlocProvider(
+            create: (context) => MainCubit(),
+            child: const MainScreen(),
+          ),
+          settings: settings,
+        );
+      case Routes.profileScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) =>
+                SupplierProfileCubit(getIt())..getSupplierProfileData(),
+            child: const ProfileScreen(),
+          ),
+          settings: settings,
+        );
+
+      case Routes.heroImageView:
+        final imageUrl = arguments as String;
+        return CustomAnimationsBuilder.buildWidget(
+          screen: HeroImageView(imageUrl: imageUrl),
+          settings: settings,
+        );
+
+      case Routes.editProductScreenRoute:
+        final productId = arguments as int;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) =>
+                EditProductCubit(getIt())..fetchProductDataForEdit(productId),
+            child: const EditProductBlocConsumer(),
+          ),
+          settings: settings,
+        );
+      case Routes.manageProductsScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const ManageProductsScreen(),
+          settings: settings,
+        );
+
+      case Routes.orderDetailsScreenRoute:
+        final orderId = arguments as int;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (_) =>
+                OrderDetailsCubit(getIt())..fetchOrderDetails(orderId),
+            child: const OrderDetailsScreen(),
+          ),
+          settings: settings,
+        );
+
+      case Routes.productDetailsScreenRoute:
+        final productId = arguments as int;
+        return CustomAnimationsBuilder.buildFadeTransition(
+          screen: BlocProvider(
+              create: (context) => ProductDetailsCubit(getIt())
+                ..emitProductDetailsState(productId),
+              child: ProductDetailsBlocConsumer(productId: productId)),
+          settings: settings,
+        );
+      case Routes.addProductScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider(
+            create: (context) => AddProductCubit(getIt()),
+            child: const AddProductScreen(),
+          ),
           settings: settings,
         );
       case Routes.signUpRoute:

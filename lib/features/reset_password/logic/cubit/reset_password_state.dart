@@ -1,5 +1,6 @@
-import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
 
 part 'reset_password_state.freezed.dart';
 
@@ -24,8 +25,8 @@ class ResetPasswordState with _$ResetPasswordState {
       ApiErrorModel apiErrorModel) = OtpVerificationErrorState;
 
   // Additional OTP States
-  const factory ResetPasswordState.resendOtpVerficationSuccess(String message) =
-      ResendOtpVerficationSuccess;
+  const factory ResetPasswordState.resendOtpVerificationSuccess(
+      String message) = ResendOtpVerficationSuccess;
 
   const factory ResetPasswordState.otpTimerRunning({
     required String remainingSeconds,

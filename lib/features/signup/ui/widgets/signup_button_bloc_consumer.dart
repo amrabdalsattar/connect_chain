@@ -1,9 +1,10 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:toastification/toastification.dart';
+
 import '../../../../core/helpers/dialogs_helper.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../logic/cubit/signup_cubit.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../logic/cubit/signup_state.dart';
 
 class SignupButtonBlocConsumer extends StatelessWidget {
@@ -19,13 +20,22 @@ class SignupButtonBlocConsumer extends StatelessWidget {
           current is SignupErrorState,
       listener: (context, state) {
         state.whenOrNull(
-          error: (apiErrorModel) => DialogsHelper.showErrorDialog(
-            context,
-            apiErrorModel.getErrorMessages()!,
+          error: (apiErrorModel) => DialogsHelper.showToastificationMessage(
+            alignment: Alignment.topCenter,
+            context: context,
+            title: 'خطأ',
+            description: apiErrorModel.getErrorMessages()!,
+            type: ToastificationType.error,
           ),
           success: (confirmationMessage) {
             Navigator.of(context).pop();
-            DialogsHelper.showSnackBar(context, confirmationMessage);
+            DialogsHelper.showToastificationMessage(
+              alignment: Alignment.bottomCenter,
+              context: context,
+              title: 'تمت العملية بنجاح',
+              description: "تم ارسال رابط التأكيد الى بريدك الإلكتروني",
+              type: ToastificationType.success,
+            );
           },
         );
       },

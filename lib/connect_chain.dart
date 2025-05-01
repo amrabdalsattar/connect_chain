@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/helpers/cache/user_data_operator.dart';
 import 'core/routing/app_router.dart';
-import 'core/routing/routes.dart';
 import 'core/theming/themes_helper.dart';
 
 class ConnectChainApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class ConnectChainApp extends StatelessWidget {
         title: 'ConnectChain',
         theme: ThemesHelper.lightTheme,
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: Routes.onboardingRoute,
+        initialRoute: UserDataOperator.getInitialRoute(),
       ),
     );
   }

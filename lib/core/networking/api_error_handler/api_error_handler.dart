@@ -1,6 +1,6 @@
-import '../../helpers/constant_string.dart';
 import 'package:dio/dio.dart';
 
+import '../../helpers/constant_string.dart';
 import 'api_error_model.dart';
 
 class ApiErrorHandler {
@@ -24,6 +24,9 @@ class ApiErrorHandler {
         default:
           return ApiErrorModel(message: 'Something went wrong');
       }
+    } else if (error is FormatException) {
+      // JSON parsing failed
+      return ApiErrorModel(message: error.message);
     } else {
       return ApiErrorModel(message: 'Unexpected error occurred');
     }

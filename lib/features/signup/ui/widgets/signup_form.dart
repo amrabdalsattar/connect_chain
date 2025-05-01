@@ -1,13 +1,14 @@
-import '../../../../core/helpers/app_images.dart';
-import '../../../../core/helpers/constant_string.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors_helper.dart';
-import '../../logic/cubit/signup_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/constant_string.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/colors_helper.dart';
+import '../../../../core/widgets/custom_dropdown_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
+import '../../logic/cubit/signup_cubit.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
@@ -19,27 +20,25 @@ class SignupForm extends StatefulWidget {
 class _SignUpFormState extends State<SignupForm> {
   bool isPassObscure = true;
   bool isRepassObscure = true;
+
+  late final SignupCubit signupCubit;
+
+  @override
+  void initState() {
+    signupCubit = context.read<SignupCubit>();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<SignupCubit>().formKey,
+      key: signupCubit.formKey,
       child: Column(
         children: [
-          CustomTextFormField(
-            hintText: 'الاسم الأول',
-            controller: context.read<SignupCubit>().firstNameController,
-            validator: (value) {
-              if (value == null || value.isEmpty || AppRegex.hasNumber(value)) {
-                return 'لا يمكن ان يحتوي علي رموز او ارقام';
-              }
-            },
-            prefixIconPath: AppImages.personIcon,
-            keyboardType: TextInputType.name,
-          ),
           verticalSpace(24),
           CustomTextFormField(
-            hintText: 'الاسم الأخير',
-            controller: context.read<SignupCubit>().lastNameController,
+            hintText: 'الإسم',
+            controller: signupCubit.nameController,
             validator: (value) {
               if (value == null || value.isEmpty || AppRegex.hasNumber(value)) {
                 return 'لا يمكن ان يحتوي علي رموز او ارقام';
@@ -51,7 +50,7 @@ class _SignUpFormState extends State<SignupForm> {
           verticalSpace(24),
           CustomTextFormField(
             hintText: ConstantString.email,
-            controller: context.read<SignupCubit>().emailController,
+            controller: signupCubit.emailController,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -65,7 +64,7 @@ class _SignUpFormState extends State<SignupForm> {
           verticalSpace(24),
           CustomTextFormField(
             hintText: 'رقم الهاتف',
-            controller: context.read<SignupCubit>().phoneNumberController,
+            controller: signupCubit.phoneNumberController,
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -77,9 +76,26 @@ class _SignUpFormState extends State<SignupForm> {
             keyboardType: TextInputType.phone,
           ),
           verticalSpace(24),
+          CustomDropdownButton(
+            onChanged: (value) {
+              signupCubit.changeBusinessType(value ?? '');
+            },
+            value: null,
+            items: signupCubit.businessTypesList
+                .map((value) =>
+                    DropdownMenuItem<String>(value: value, child: Text(value)))
+                .toList(),
+            hintText: 'نوع المنتج',
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'الرجاء إدخال نوع المنتج';
+              }
+            },
+          ),
+          verticalSpace(24),
           CustomTextFormField(
             hintText: 'العنوان',
-            controller: context.read<SignupCubit>().addressController,
+            controller: signupCubit.addressController,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'هذه الخانة مطلوبة';
@@ -89,7 +105,7 @@ class _SignUpFormState extends State<SignupForm> {
           ),
           verticalSpace(24),
           CustomTextFormField(
-            controller: context.read<SignupCubit>().passwordController,
+            controller: signupCubit.passwordController,
             hintText: ConstantString.password,
             prefixIconPath: AppImages.lockIcon,
             isObscure: isPassObscure,
@@ -107,14 +123,29 @@ class _SignUpFormState extends State<SignupForm> {
                   : const Icon(Icons.visibility, color: ColorsHelper.darkBlue),
             ),
             validator: (value) {
-              if (value == null || value.isEmpty || value.length < 8) {
+              if (value == null || value.isEmpty) {
                 return 'يرجى إدخال كلمة مرور صالحة';
+              }
+              if (value.length < 8) {
+                return 'كلمة المرور يجب أن تكون أطول من 8 خانات';
+              }
+              if (!AppRegex.hasUpperCase(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف كبير';
+              }
+              if (!AppRegex.hasSpecialCharacter(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف خاص';
+              }
+              if (!AppRegex.hasNumber(value)) {
+                return 'كلمة المرور يجب أن تحتوي على رقم';
+              }
+              if (!AppRegex.hasLowerCase(value)) {
+                return 'كلمة المرور يجب أن تحتوي على حرف صغير';
               }
             },
           ),
           verticalSpace(24),
           CustomTextFormField(
-            controller: context.read<SignupCubit>().confirmPasswordController,
+            controller: signupCubit.confirmPasswordController,
             hintText: ConstantString.confirmPassword,
             prefixIconPath: AppImages.lockIcon,
             isObscure: isRepassObscure,

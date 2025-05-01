@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,26 +14,37 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
-  TextEditingController firstNameController = TextEditingController();
-  TextEditingController lastNameController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+
+  List<String> get businessTypesList => [
+        'الإلكترونيات',
+        'الأزياء',
+        'المواد الغذائية',
+        'أخرى',
+      ];
+  String businessType = '';
+
+  void changeBusinessType(String value) {
+    businessType = value;
+  }
 
   void emitSignupStates() async {
     if (formKey.currentState!.validate()) {
       emit(const SignupState.loading());
       final result = await _signupRepo.signup(
-        SignupRequestModel(
-            firstName: firstNameController.text,
-            lastName: lastNameController.text,
+          SignupRequestModel(
+            name: nameController.text,
             phoneNumber: phoneNumberController.text,
             email: emailController.text,
             password: passwordController.text,
             address: addressController.text,
-            country: 'Egypt',
+            businessType: businessType,
             confirmPassword: confirmPasswordController.text,
-            role: 2),
-      );
+            role: 2,
+          ),
+          await FirebaseMessaging.instance.getToken() ?? '');
       result.when(
         success: (confirmationMessage) {
           emit(SignupState.success(confirmationMessage));
@@ -49,8 +61,7 @@ class SignupCubit extends Cubit<SignupState> {
     emailController.dispose();
     passwordController.dispose();
     confirmPasswordController.dispose();
-    firstNameController.dispose();
-    lastNameController.dispose();
+    nameController.dispose();
     phoneNumberController.dispose();
     addressController.dispose();
     return super.close();
