@@ -67,6 +67,9 @@ dev_dependencies:
   # Launcher
   flutter_launcher_icons: ^0.14.3
 
+  # Lints
+  flutter_lints: ^4.0.0 
+
 flutter_icons:
   android: true
   ios: true
@@ -75,8 +78,7 @@ flutter_icons:
 
   # Testing & Quality
   flutter_test:
-    sdk: flutter
-  flutter_lints: ^4.0.0      
+    sdk: flutter  
 
   # Build Process
   flutter_native_splash: ^2.4.4

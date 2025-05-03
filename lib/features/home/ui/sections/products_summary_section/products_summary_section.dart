@@ -31,7 +31,7 @@ class ProductsSummarySection extends StatelessWidget {
               const AddProductButton()
             ],
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           const ProductsSummaryBlocBuilder()
         ],
       ),

@@ -22,7 +22,7 @@ class OrderDetailsProductTile extends StatelessWidget {
                 height: 70.h,
                 imageUrl: showImage,
               )),
-          horizontalSpace(15),
+          const HorizontalSpace(width: 15),
           Expanded(
             flex: 3,
             child: Column(
@@ -42,7 +42,7 @@ class OrderDetailsProductTile extends StatelessWidget {
               ],
             ),
           ),
-          horizontalSpace(14),
+          const HorizontalSpace(width: 14),
           Text(
             '${product.quantity} * ${product.unitPrice}',
             overflow: TextOverflow.ellipsis,

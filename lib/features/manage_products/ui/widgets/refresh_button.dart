@@ -30,7 +30,7 @@ class RefreshButton extends StatelessWidget {
             child: Row(
               children: [
                 SvgPicture.asset(AppImages.refreshIcon),
-                horizontalSpace(6),
+                const HorizontalSpace(width: 6),
                 Text(
                   'أعد تحميل المنتجات',
                   style: AppTextStyles.cairoPrimaryBold12,

@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/data/models/update_profile_request_model.dart';
+import '../models/update_profile_request_model.dart';
 
 import '../../../../core/helpers/token_helper.dart';
 import '../../../../core/networking/api_constants.dart';
@@ -18,7 +18,7 @@ class SupplierProfileDatasource {
         'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
       },
     ));
-    SupplierProfileResponse supplierProfileResponse =
+    final SupplierProfileResponse supplierProfileResponse =
         SupplierProfileResponse.fromJson(response);
     return supplierProfileResponse.supplierData!;
   }

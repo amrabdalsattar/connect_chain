@@ -16,7 +16,7 @@ class LegalAndPoliciesSection extends StatelessWidget {
         color: ColorsHelper.white,
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: Column(
+      child: const Column(
         children: [
           SettingsOptionTile(title: 'الشروط والأحكام'),
           SettingsOptionTile(title: 'سياسة الخصوصية'),

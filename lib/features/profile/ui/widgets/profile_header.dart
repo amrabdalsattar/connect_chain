@@ -21,7 +21,7 @@ class ProfileHeader extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          horizontalSpace(24),
+          const HorizontalSpace(width: 24),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class ProfileHeader extends StatelessWidget {
                 ' اهلاً بك ',
                 style: AppTextStyles.cairoWhiteBold12,
               ),
-              verticalSpace(3),
+              const VerticalSpace(height: 3),
               Text(
                 SharedPreferencesHelper.getString(
                     SharedPreferencesKeys.userName),

@@ -52,11 +52,11 @@ class AddProductScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(32),
+                const VerticalSpace(height: 32),
                 const AddProductImagesSection(),
-                verticalSpace(32),
+                const VerticalSpace(height: 32),
                 AddProductDetailsBlocListener(addProductCubit: addProductCubit),
-                verticalSpace(24),
+                const VerticalSpace(height: 24),
               ],
             ),
           ),

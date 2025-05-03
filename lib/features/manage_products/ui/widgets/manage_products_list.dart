@@ -11,7 +11,7 @@ class ManageProductsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Instance of The ManageProductsCubit
-    ManageProductsCubit manageProductsCubit =
+    final ManageProductsCubit manageProductsCubit =
         context.read<ManageProductsCubit>();
 
     return ListView.separated(
@@ -31,6 +31,7 @@ class ManageProductsList extends StatelessWidget {
           onEdit: () async {
             await context.pushNamed(Routes.editProductScreenRoute,
                 arguments: products[index].id);
+            if (!context.mounted) return;
             context
                 .read<ManageProductsCubit>()
                 .toggleRefreshButtonVisibility(true);
@@ -39,7 +40,7 @@ class ManageProductsList extends StatelessWidget {
         );
       },
       separatorBuilder: (context, index) {
-        return verticalSpace(24);
+        return const VerticalSpace(height: 24);
       },
     );
   }

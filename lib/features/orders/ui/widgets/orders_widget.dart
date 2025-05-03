@@ -22,20 +22,20 @@ class OrderWidget extends StatelessWidget {
             orderDate: order.orderDate,
             orderId: order.orderNumber ?? order.id.toString(),
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
 
           // Second Raw Starter
           OrderWidgetText(
             fieldText: 'اسم العميل',
             valueText: order.customerName,
           ),
-          verticalSpace(8),
+          const VerticalSpace(height: 8),
           OrderWidgetText(
             fieldText: 'المنتجات',
             // Needs to be refactored
             valueText: order.products.join(' - '),
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
 
           // Price Section
           Align(
@@ -46,7 +46,7 @@ class OrderWidget extends StatelessWidget {
               valueTextStyle: AppTextStyles.cairoRedBold12,
             ),
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
 
           // Button Row
           OrderWidgetButton(

@@ -1,7 +1,7 @@
 part of '../orders_tab.dart';
 
-class OrderWigetIcon extends StatelessWidget {
-  const OrderWigetIcon({
+class OrderWidgetIcon extends StatelessWidget {
+  const OrderWidgetIcon({
     super.key,
     required this.orderStatus,
   });

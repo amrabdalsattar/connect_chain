@@ -99,7 +99,7 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.medium,
   );
 
-  static TextStyle carioGrayRegular10 = TextStyle(
+  static TextStyle cairoGrayRegular10 = TextStyle(
     fontSize: 10.sp,
     color: ColorsHelper.gray,
     fontWeight: FontWeightHelper.regular,

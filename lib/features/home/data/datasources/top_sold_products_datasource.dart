@@ -20,7 +20,7 @@ class TopSoldProductsDatasource {
         },
       ),
     );
-    TopSoldProductsResponseModel responseModel =
+    final TopSoldProductsResponseModel responseModel =
         TopSoldProductsResponseModel.fromJson(response);
     return responseModel.topSoldProducts;
   }

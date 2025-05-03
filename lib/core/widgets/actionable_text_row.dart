@@ -24,7 +24,7 @@ class ActionableTextRow extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-                text: "$text ",
+                text: '$text ',
                 style: AppTextStyles.cairoSemiOpacityBlackRegular16),
             TextSpan(
               text: actionText,

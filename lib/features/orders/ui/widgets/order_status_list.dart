@@ -49,7 +49,7 @@ class _OrdersStatusListState extends State<OrdersStatusList> {
                 );
               },
               separatorBuilder: (context, index) {
-                return horizontalSpace(24);
+                return const HorizontalSpace(width: 24);
               },
               itemCount: OrderStatus.values.length,
             ));

@@ -1,3 +1,4 @@
+import '../../../core/widgets/custom_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,9 +28,16 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            children: [ProfileHeader()],
+          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomBackButton(
+                isToLeftArrow: false,
+              ),
+              VerticalSpace(height: 16),
+              ProfileHeader(),
+            ],
           ),
         ),
       ),

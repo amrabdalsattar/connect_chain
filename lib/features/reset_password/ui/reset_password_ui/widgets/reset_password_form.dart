@@ -20,7 +20,7 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
             // First Textfield
             Text(ConstantString.password,
                 style: AppTextStyles.cairoDarkGrayBold16),
-            verticalSpace(8),
+            const VerticalSpace(height: 24),
             CustomTextFormField(
               controller:
                   context.read<ResetPasswordCubit>().newPasswordController,
@@ -64,11 +64,11 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
                 }
               },
             ),
-            verticalSpace(24),
+            const VerticalSpace(height: 24),
             // Second Textfield
             Text(ConstantString.password,
                 style: AppTextStyles.cairoDarkGrayBold16),
-            verticalSpace(8),
+            const VerticalSpace(height: 8),
             CustomTextFormField(
               controller: context
                   .read<ResetPasswordCubit>()

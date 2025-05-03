@@ -23,12 +23,12 @@ class OrderDetailsBody extends StatelessWidget {
                   fieldText: 'رقم الطلب',
                   valueText: '${orderDetailsModel.orderNumber}',
                 ),
-                verticalSpace(8),
+                const VerticalSpace(height: 8),
                 OrderDetailsText(
                   fieldText: 'التاريخ',
                   valueText: orderDetailsModel.orderDate,
                 ),
-                verticalSpace(8),
+                const VerticalSpace(height: 8),
                 OrderDetailsText(
                   fieldText: 'حاله الطلب',
                   valueText: orderDetailsModel.orderStatus.label,
@@ -36,12 +36,12 @@ class OrderDetailsBody extends StatelessWidget {
               ],
             ),
           ),
-          _buildCustomDvider(),
+          _buildCustomDivider(),
 
           // Order Products Details
           OrderProductsDetailsSection(prodcuts: orderDetailsModel.pordcuts),
 
-          _buildCustomDvider(),
+          _buildCustomDivider(),
 
           // Order Payment Details
           Padding(
@@ -51,11 +51,11 @@ class OrderDetailsBody extends StatelessWidget {
                 OrderDetailsText(
                     fieldText: 'المجموع الفرعي',
                     valueText: '${orderDetailsModel.subTotal} EGP'),
-                verticalSpace(8),
+                const VerticalSpace(height: 8),
                 OrderDetailsText(
                     fieldText: 'الخصم(code123) ',
                     valueText: '${orderDetailsModel.discount} EGP'),
-                verticalSpace(8),
+                const VerticalSpace(height: 8),
                 OrderDetailsText(
                     fieldText: 'خدمه التوصيل ',
                     valueText: '${orderDetailsModel.deliveryFees} EGP'),
@@ -63,7 +63,7 @@ class OrderDetailsBody extends StatelessWidget {
             ),
           ),
 
-          _buildCustomDvider(),
+          _buildCustomDivider(),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -76,27 +76,27 @@ class OrderDetailsBody extends StatelessWidget {
                   AppTextStyles.cairoRedBold12.copyWith(fontSize: 20),
             ),
           ),
-          _buildCustomDvider(),
+          _buildCustomDivider(),
 
           // Customer Details Section
           OrderDetailsCustomerDetailsSection(
               orderDetailsModel: orderDetailsModel),
-          verticalSpace(38)
+          const VerticalSpace(height: 38),
         ],
       ),
     );
   }
 }
 
-Widget _buildCustomDvider() {
+Widget _buildCustomDivider() {
   return Column(
     children: [
-      verticalSpace(24),
+      const VerticalSpace(height: 24),
       Divider(
         color: ColorsHelper.liteGray,
         thickness: 6.h,
       ),
-      verticalSpace(24),
+      const VerticalSpace(height: 24),
     ],
   );
 }

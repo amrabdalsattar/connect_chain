@@ -12,7 +12,7 @@ class ResetPasswordDataSource {
       ApiRequestModel(
         endPoint: ApiConstants.forgetPasswordEP,
         queries: {
-          "email": email,
+          'email': email,
         },
       ),
     );
@@ -22,8 +22,8 @@ class ResetPasswordDataSource {
     await _apiHelper.post(ApiRequestModel(
       endPoint: ApiConstants.otpVerificationEP,
       body: {
-        "email": email,
-        "otp": otp,
+        'email': email,
+        'otp': otp,
       },
     ));
   }

@@ -12,14 +12,14 @@ class ProductDetailsDatasource {
     final result = await _apiHelper.get(
       ApiRequestModel(
         endPoint: ApiConstants.getProductDetailsEP,
-        queries: {"productId": id},
+        queries: {'productId': id},
         headers: {
           'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
         },
       ),
     );
 
-    ProductDetailsResponseModel productDetailsModel =
+    final ProductDetailsResponseModel productDetailsModel =
         ProductDetailsResponseModel.fromJson(result['data']);
 
     return productDetailsModel;

@@ -21,17 +21,17 @@ class OtpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              verticalSpace(27),
+              const VerticalSpace(height: 27),
               Image.asset(AppImages.otpImage),
               const ScreenLabel(
                   title: 'إدخال رمز التحقق',
                   subTitle:
                       'أدخل رمز التحقق الذى أرسلناه للتو إلي عنوان بريدك الإلكترونى'),
-              verticalSpace(24),
+              const VerticalSpace(height: 24),
               const OtpForm(),
-              verticalSpace(14),
-              const ResendOtpRow(), 
-              verticalSpace(32),
+              const VerticalSpace(height: 14),
+              const ResendOtpRow(),
+              const VerticalSpace(height: 32),
               const OtpButtonBlocConsumer()
             ],
           ),

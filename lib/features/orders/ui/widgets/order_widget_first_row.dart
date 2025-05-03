@@ -15,10 +15,10 @@ class OrderWidgetFirstRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        OrderWigetIcon(
+        OrderWidgetIcon(
           orderStatus: orderStatus,
         ),
-        horizontalSpace(8),
+        const HorizontalSpace(width: 8),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -29,7 +29,7 @@ class OrderWidgetFirstRow extends StatelessWidget {
             ),
             Text(
               orderDate,
-              style: AppTextStyles.carioGrayRegular10,
+              style: AppTextStyles.cairoGrayRegular10,
             )
           ],
         ),

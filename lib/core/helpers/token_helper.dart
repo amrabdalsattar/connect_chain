@@ -20,7 +20,7 @@ abstract class TokenHelper {
   }
 
   static checkIfUserIsLoggedIn() async {
-    String? userToken = await getSecuredUserToken();
+    final String? userToken = await getSecuredUserToken();
 
     if (!userToken.isNullOrEmpty()) {
       isLoggedIn = true;

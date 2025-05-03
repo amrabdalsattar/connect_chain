@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/data/models/update_profile_request_model.dart';
+import '../data/models/update_profile_request_model.dart';
 import 'package:flutter/material.dart';
 
 import '../data/repos/supplier_profile_repo.dart';
@@ -27,7 +27,7 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
 
   void startUpdatingProfile() {
     isEditModeOn = true;
-    emit(ProfileUpdateInitialState());
+    emit(const ProfileUpdateInitialState());
   }
 
   void updateSupplierProfile() async {
@@ -43,7 +43,7 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
 
     result.when(success: (success) {
       if (!isClosed) {
-        emit(ProfileUpdatedSuccess());
+        emit(const ProfileUpdatedSuccess());
         getSupplierProfileData();
       }
     }, failure: (apiErrorModel) {

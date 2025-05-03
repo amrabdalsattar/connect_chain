@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/pre_login/data/repos/pre_login_repo.dart';
+import '../../data/repos/pre_login_repo.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +15,7 @@ class PreLoginCubit extends Cubit<PreLoginState> {
         .updateFCMToken(await FirebaseMessaging.instance.getToken() ?? '');
     result.when(
       success: (success) {
-        if (!isClosed) emit(PreLoginSuccessState());
+        if (!isClosed) emit(const PreLoginSuccessState());
       },
       failure: (apiErrorModel) {
         if (!isClosed) emit(PreLoginErrorState(apiErrorModel));

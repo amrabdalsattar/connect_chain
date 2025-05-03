@@ -70,7 +70,7 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
   }
 
   void deleteProduct(int productId) async {
-    ProductDataModel product =
+    final ProductDataModel product =
         productsLocalList.firstWhere((product) => product.id == productId);
     productsLocalList.removeWhere((product) => product.id == productId);
 
@@ -89,7 +89,7 @@ class ManageProductsCubit extends Cubit<ManageProductsState> {
       productsLocalList.add(product);
       emit(ManageProductsState.success(productsLocalList));
       emit(ManageProductsState.operationFailed(
-          error.message ?? "unknown error"));
+          error.message ?? 'unknown error'));
     });
   }
 }

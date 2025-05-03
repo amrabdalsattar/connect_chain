@@ -8,7 +8,7 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MainCubit mainCubit = context.read<MainCubit>();
+    final MainCubit mainCubit = context.read<MainCubit>();
 
     return BlocBuilder<MainCubit, dynamic>(
       bloc: mainCubit,

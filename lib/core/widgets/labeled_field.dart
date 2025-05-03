@@ -35,7 +35,7 @@ class LabeledField extends StatelessWidget {
                 : const SizedBox(),
           ],
         ),
-        verticalSpace(8),
+        const VerticalSpace(height: 8),
         field,
       ],
     );

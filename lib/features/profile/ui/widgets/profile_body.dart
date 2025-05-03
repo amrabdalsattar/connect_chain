@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/data/models/profile_response_model.dart';
+import '../../data/models/profile_response_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileBody extends StatelessWidget {

@@ -5,7 +5,7 @@ import 'notifications_state.dart';
 
 class NotificationsCubit extends Cubit<NotificationsState> {
   final NotificationsRepo _repo;
-  NotificationsCubit(this._repo) : super(NotificationsLoadingState()) {
+  NotificationsCubit(this._repo) : super(const NotificationsLoadingState()) {
     getNotifications();
   }
 

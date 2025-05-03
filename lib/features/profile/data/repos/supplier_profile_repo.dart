@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/profile/data/models/update_profile_request_model.dart';
+import '../models/update_profile_request_model.dart';
 
 import '../../../../core/networking/api_error_handler/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';

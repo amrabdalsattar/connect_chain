@@ -13,7 +13,7 @@ class ProfileBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         switch (state) {
           case SupplierProfileLoadingState():
-            return CustomLoadingIndicator();
+            return const CustomLoadingIndicator();
           case SupplierProfileErrorState():
             return ImagedError(
                 errorMessage: state.apiErrorModel.getErrorMessages()!);
@@ -22,7 +22,8 @@ class ProfileBlocBuilder extends StatelessWidget {
               supplierData: state.supplierData,
             );
           default:
-            return CustomErrorWidget(errorMessage: ConstantString.unknownError);
+            return const CustomErrorWidget(
+                errorMessage: ConstantString.unknownError);
         }
       },
     );

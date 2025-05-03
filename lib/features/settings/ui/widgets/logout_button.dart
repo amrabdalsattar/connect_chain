@@ -1,10 +1,10 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/cache/secured_storage_helper.dart';
-import 'package:connect_chain/core/helpers/cache/user_data_operator.dart';
-import 'package:connect_chain/core/helpers/extensions.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/routing/routes.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/cache/secured_storage_helper.dart';
+import '../../../../core/helpers/cache/user_data_operator.dart';
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -43,11 +43,11 @@ class LogoutButton extends StatelessWidget {
               style: AppTextStyles.cairoBlackBold13
                   .copyWith(color: ColorsHelper.red),
             ),
-            horizontalSpace(10.w),
+            const HorizontalSpace(width: 10),
             SvgPicture.asset(
               width: 20.w,
               height: 20.h,
-              colorFilter: ColorFilter.mode(
+              colorFilter: const ColorFilter.mode(
                 ColorsHelper.red,
                 BlendMode.srcIn,
               ),

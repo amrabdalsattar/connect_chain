@@ -42,7 +42,7 @@ class OrdersSection extends StatelessWidget {
               )
             ],
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           const OrdersSummaryBlocBuilder()
         ],
       ),
