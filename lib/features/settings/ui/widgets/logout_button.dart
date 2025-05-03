@@ -47,7 +47,10 @@ class LogoutButton extends StatelessWidget {
             SvgPicture.asset(
               width: 20.w,
               height: 20.h,
-              colorFilter: ColorFilter.mode(ColorsHelper.red, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(
+                ColorsHelper.red,
+                BlendMode.srcIn,
+              ),
               AppImages.logoutIcon,
             ),
           ],

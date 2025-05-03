@@ -20,11 +20,14 @@ class SupplierProfileErrorState extends SupplierProfileState {
   const SupplierProfileErrorState(this.apiErrorModel);
 }
 
-class SupplierProfileUpdatingState extends SupplierProfileState {}
+class ProfileUpdateInitialState extends SupplierProfileState {
+  const ProfileUpdateInitialState();
+}
 
-class SupplierProfileUpdatedState extends SupplierProfileState {}
+class ProfileUpdatedSuccess extends SupplierProfileState {
+  const ProfileUpdatedSuccess();
+}
 
-class SupplierProfileUpdateErrorState extends SupplierProfileState {
-  final ApiErrorModel apiErrorModel;
-  const SupplierProfileUpdateErrorState(this.apiErrorModel);
+class ProfileUpdateLoading extends SupplierProfileState {
+  const ProfileUpdateLoading();
 }

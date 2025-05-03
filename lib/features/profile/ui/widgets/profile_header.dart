@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/helpers/app_images.dart';
-import '../../../../core/helpers/cache/shared_preferences_helper.dart';
-import '../../../../core/helpers/cache/shared_preferences_keys.dart';
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/app_text_styles.dart';
-import '../../../../core/theming/colors_helper.dart';
+part of '../profile_screen.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({super.key});
@@ -35,7 +27,7 @@ class ProfileHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                ' اهلا بك ',
+                ' اهلاً بك ',
                 style: AppTextStyles.cairoWhiteBold12,
               ),
               verticalSpace(3),
