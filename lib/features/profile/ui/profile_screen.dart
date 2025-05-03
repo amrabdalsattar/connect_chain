@@ -15,7 +15,7 @@ import '../../../core/widgets/custom_loading_indicator.dart';
 import '../../../core/widgets/imaged_error.dart';
 import '../logic/supplier_profile_cubit.dart';
 import '../logic/supplier_profile_state.dart';
-import 'widgets/edit_profile_button.dart';
+import 'widgets/edit_profile_button_bloc_consumer.dart';
 import 'widgets/profile_body.dart';
 
 part 'widgets/profile_header.dart';
@@ -36,13 +36,14 @@ class ProfileScreen extends StatelessWidget {
               child: const CustomScrollView(
                 slivers: [
                   SliverProfileHeader(),
-                  SliverToBoxAdapter(
+                  SliverFillRemaining(
+                    hasScrollBody: true,
                     child: ProfileBlocBuilder(),
                   ),
                 ],
               ),
             ),
-            const EditProfileButton(),
+            const EditProfileButtonBlocConsumer(),
           ],
         ),
       ),
