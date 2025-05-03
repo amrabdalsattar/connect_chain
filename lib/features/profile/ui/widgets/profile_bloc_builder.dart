@@ -5,27 +5,27 @@ class ProfileBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SupplierProfileCubit, SupplierProfileState>(
-      buildWhen: (previous, current) =>
-          current is SupplierProfileErrorState ||
-          current is SupplierProfileLoadingState ||
-          current is SupplierProfileSuccessState,
-      builder: (context, state) {
-        switch (state) {
-          case SupplierProfileLoadingState():
-            return const CustomLoadingIndicator();
-          case SupplierProfileErrorState():
-            return ImagedError(
-                errorMessage: state.apiErrorModel.getErrorMessages()!);
-          case SupplierProfileSuccessState():
-            return ProfileBody(
-              supplierData: state.supplierData,
-            );
-          default:
-            return const CustomErrorWidget(
-                errorMessage: ConstantString.unknownError);
-        }
-      },
+    return Center(
+      child: BlocBuilder<SupplierProfileCubit, SupplierProfileState>(
+        buildWhen: (previous, current) =>
+            current is SupplierProfileErrorState ||
+            current is SupplierProfileLoadingState ||
+            current is SupplierProfileSuccessState,
+        builder: (context, state) {
+          switch (state) {
+            case SupplierProfileLoadingState():
+              return const CustomLoadingIndicator();
+            case SupplierProfileErrorState():
+              return ImagedError(
+                  errorMessage: state.apiErrorModel.getErrorMessages()!);
+            case SupplierProfileSuccessState():
+              return const ProfileBody();
+            default:
+              return const CustomErrorWidget(
+                  errorMessage: ConstantString.unknownError);
+          }
+        },
+      ),
     );
   }
 }

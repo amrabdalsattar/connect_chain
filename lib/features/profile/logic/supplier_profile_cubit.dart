@@ -1,3 +1,6 @@
+import '../../../core/helpers/cache/shared_preferences_helper.dart';
+import '../../../core/helpers/cache/shared_preferences_keys.dart';
+import '../data/models/profile_response_model.dart';
 import '../data/models/update_profile_request_model.dart';
 import 'package:flutter/material.dart';
 
@@ -9,21 +12,34 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
   final SupplierProfileRepo _repo;
   SupplierProfileCubit(this._repo) : super(const SupplierProfileLoadingState());
 
+  bool isEditModeOn = false;
+
+  String supplierName =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userName);
+  String supplierEmail =
+      SharedPreferencesHelper.getString(SharedPreferencesKeys.userEmail);
+
+  final formKey = GlobalKey<FormState>();
+  TextEditingController name = TextEditingController();
+  TextEditingController phoneNumber = TextEditingController();
+  TextEditingController address = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController companyName = TextEditingController();
+  TextEditingController companyPhoneNumber = TextEditingController();
+  TextEditingController companyAddress = TextEditingController();
+
   void getSupplierProfileData() async {
     final result = await _repo.getSupplierProfile();
 
-    result.when(success: (supplierData) {
-      if (!isClosed) emit(SupplierProfileSuccessState(supplierData));
+    result.when(success: (supplierData) async {
+      if (!isClosed) {
+        await assignSupplierData(supplierData);
+        emit(SupplierProfileSuccessState(supplierData));
+      }
     }, failure: (apiErrorModel) {
       if (!isClosed) emit(SupplierProfileErrorState(apiErrorModel));
     });
   }
-
-  bool isEditModeOn = false;
-
-  TextEditingController name = TextEditingController();
-  TextEditingController phoneNumber = TextEditingController();
-  TextEditingController address = TextEditingController();
 
   void startUpdatingProfile() {
     isEditModeOn = true;
@@ -31,6 +47,7 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
   }
 
   void updateSupplierProfile() async {
+    emit(const ProfileUpdateLoading());
     final result = await _repo.updateSupplierProfile(
       UpdateProfileRequestModel(
         name: name.text,
@@ -47,7 +64,29 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
         getSupplierProfileData();
       }
     }, failure: (apiErrorModel) {
-      if (!isClosed) emit(SupplierProfileErrorState(apiErrorModel));
+      if (!isClosed) emit(ProfileUpdatedFailure(apiErrorModel));
     });
+  }
+
+  Future<void> assignSupplierData(SupplierData supplierData) async {
+    name.text = supplierData.name ?? '';
+    phoneNumber.text = supplierData.phoneNumber;
+    address.text = supplierData.address;
+    email.text = supplierData.email;
+    companyName.text = 'ConnectChain';
+    companyPhoneNumber.text = supplierData.phoneNumber;
+    companyAddress.text = supplierData.address;
+  }
+
+  @override
+  Future<void> close() {
+    email.dispose();
+    name.dispose();
+    phoneNumber.dispose();
+    address.dispose();
+    companyAddress.dispose();
+    companyName.dispose();
+    companyPhoneNumber.dispose();
+    return super.close();
   }
 }

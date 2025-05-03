@@ -28,6 +28,11 @@ class ProfileUpdatedSuccess extends SupplierProfileState {
   const ProfileUpdatedSuccess();
 }
 
+class ProfileUpdatedFailure extends SupplierProfileState {
+  final ApiErrorModel apiErrorModel;
+  const ProfileUpdatedFailure(this.apiErrorModel);
+}
+
 class ProfileUpdateLoading extends SupplierProfileState {
   const ProfileUpdateLoading();
 }
