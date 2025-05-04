@@ -21,17 +21,18 @@ class EditProfileButtonBlocConsumer extends StatelessWidget {
         listenWhen: (previous, current) =>
             current is ProfileUpdateInitialState ||
             current is ProfileUpdateLoading ||
-            current is ProfileUpdatedSuccess ||
-            current is ProfileUpdatedFailure,
+            current is ProfileUpdateSuccess ||
+            current is ProfileUpdateFailure,
         listener: (context, state) {
           switch (state) {
-            case ProfileUpdatedFailure():
+            case ProfileUpdateFailure():
               DialogsHelper.showToastificationMessage(
                   context: context,
                   title: 'خطأ',
                   description: state.apiErrorModel.getErrorMessages()!,
                   type: ToastificationType.error,
                   alignment: Alignment.topCenter);
+
             default:
               return;
           }

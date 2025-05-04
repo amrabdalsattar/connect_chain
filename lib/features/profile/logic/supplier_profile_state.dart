@@ -24,13 +24,13 @@ class ProfileUpdateInitialState extends SupplierProfileState {
   const ProfileUpdateInitialState();
 }
 
-class ProfileUpdatedSuccess extends SupplierProfileState {
-  const ProfileUpdatedSuccess();
+class ProfileUpdateSuccess extends SupplierProfileState {
+  const ProfileUpdateSuccess();
 }
 
-class ProfileUpdatedFailure extends SupplierProfileState {
+class ProfileUpdateFailure extends SupplierProfileState {
   final ApiErrorModel apiErrorModel;
-  const ProfileUpdatedFailure(this.apiErrorModel);
+  const ProfileUpdateFailure(this.apiErrorModel);
 }
 
 class ProfileUpdateLoading extends SupplierProfileState {

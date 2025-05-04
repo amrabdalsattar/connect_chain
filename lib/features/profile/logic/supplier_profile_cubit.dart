@@ -60,11 +60,12 @@ class SupplierProfileCubit extends Cubit<SupplierProfileState> {
 
     result.when(success: (success) {
       if (!isClosed) {
-        emit(const ProfileUpdatedSuccess());
+        isEditModeOn = false;
+        emit(const ProfileUpdateSuccess());
         getSupplierProfileData();
       }
     }, failure: (apiErrorModel) {
-      if (!isClosed) emit(ProfileUpdatedFailure(apiErrorModel));
+      if (!isClosed) emit(ProfileUpdateFailure(apiErrorModel));
     });
   }
 

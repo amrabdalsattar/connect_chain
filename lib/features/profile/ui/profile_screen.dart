@@ -36,8 +36,7 @@ class ProfileScreen extends StatelessWidget {
               child: const CustomScrollView(
                 slivers: [
                   SliverProfileHeader(),
-                  SliverFillRemaining(
-                    hasScrollBody: true,
+                  SliverToBoxAdapter(
                     child: ProfileBlocBuilder(),
                   ),
                 ],

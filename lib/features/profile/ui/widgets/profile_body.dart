@@ -50,6 +50,7 @@ class ProfileBody extends StatelessWidget {
             labelText: 'العنوان',
             controller: profileCubit.companyAddress,
           ),
+          const VerticalSpace(height: 100),
         ],
       ),
     );
