@@ -3,7 +3,7 @@ description: "Bulk-Buying B2B Platform"
 publish_to: "none"  # Remove if publishing to pub.dev
 
 # Versioning (major.minor.patch+build)
-version: 1.0.6+1
+version: 1.0.7+1
 
 environment:
   sdk: ^3.6.0-149.3.beta  
