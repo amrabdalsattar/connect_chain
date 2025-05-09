@@ -24,7 +24,7 @@ class MostSellingSection extends StatelessWidget {
             'الاكثر مبيعا',
             style: AppTextStyles.cairoBlackSemiBold16,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           const MostSellingProductsBlocBuilder()
         ],
       ),

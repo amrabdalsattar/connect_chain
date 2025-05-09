@@ -24,9 +24,9 @@ class ThemesHelper {
         color: ColorsHelper.white,
       ),
       scaffoldBackgroundColor: ColorsHelper.white,
-      primaryColor: ColorsHelper.primaryColor,
       canvasColor: Colors.white,
       splashColor: ColorsHelper.transparent,
+      colorSchemeSeed: ColorsHelper.primaryColor,
       textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
               textStyle: WidgetStatePropertyAll(AppTextStyles.cairoBlackBold13

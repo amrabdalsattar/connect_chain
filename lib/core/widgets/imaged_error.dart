@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/helpers/spacing.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
+import '../helpers/app_images.dart';
+import '../helpers/spacing.dart';
+import '../theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,7 +22,7 @@ class ImagedError extends StatelessWidget {
             imagePath!,
             height: MediaQuery.of(context).size.height * 0.25,
           ),
-          verticalSpace(40),
+          const VerticalSpace(height: 40),
           Text(
             errorMessage,
             style: AppTextStyles.cairoBlackSemiBold16,

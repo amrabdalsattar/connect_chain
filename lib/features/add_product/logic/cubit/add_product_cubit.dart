@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class AddProductCubit extends Cubit<AddProductState> {
 
   void deleteImage(int imageIndex) {
     if (productImages.isNotEmpty) {
-      print("Image deleted");
+      log('Image deleted');
       productImages.removeAt(imageIndex);
 
       emit(const AddProductState.imageDeleted());

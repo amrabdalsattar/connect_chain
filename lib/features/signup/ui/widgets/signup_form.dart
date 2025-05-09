@@ -35,7 +35,7 @@ class _SignUpFormState extends State<SignupForm> {
       key: signupCubit.formKey,
       child: Column(
         children: [
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             hintText: 'الإسم',
             controller: signupCubit.nameController,
@@ -47,7 +47,7 @@ class _SignUpFormState extends State<SignupForm> {
             prefixIconPath: AppImages.personIcon,
             keyboardType: TextInputType.name,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             hintText: ConstantString.email,
             controller: signupCubit.emailController,
@@ -61,7 +61,7 @@ class _SignUpFormState extends State<SignupForm> {
             prefixIconPath: AppImages.emailIcon,
             keyboardType: TextInputType.emailAddress,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             hintText: 'رقم الهاتف',
             controller: signupCubit.phoneNumberController,
@@ -75,7 +75,7 @@ class _SignUpFormState extends State<SignupForm> {
             prefixIconPath: AppImages.phoneIcon,
             keyboardType: TextInputType.phone,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomDropdownButton(
             onChanged: (value) {
               signupCubit.changeBusinessType(value ?? '');
@@ -92,7 +92,7 @@ class _SignUpFormState extends State<SignupForm> {
               }
             },
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             hintText: 'العنوان',
             controller: signupCubit.addressController,
@@ -103,7 +103,7 @@ class _SignUpFormState extends State<SignupForm> {
             },
             prefixIconPath: AppImages.addressIcon,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             controller: signupCubit.passwordController,
             hintText: ConstantString.password,
@@ -143,7 +143,7 @@ class _SignUpFormState extends State<SignupForm> {
               }
             },
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             controller: signupCubit.confirmPasswordController,
             hintText: ConstantString.confirmPassword,

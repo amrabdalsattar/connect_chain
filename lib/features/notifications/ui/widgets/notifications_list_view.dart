@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/notifications/data/models/notifications_response_model.dart';
-import 'package:connect_chain/features/notifications/ui/notifications_tab.dart';
+import '../../data/models/notifications_response_model.dart';
+import '../notifications_tab.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsListView extends StatelessWidget {

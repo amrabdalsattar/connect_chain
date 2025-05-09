@@ -1,76 +1,58 @@
-part of '../profile_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../logic/supplier_profile_cubit.dart';
+import 'profile_section_title.dart';
+import 'user_data_text_field.dart';
 
 class ProfileBody extends StatelessWidget {
-  final SupplierData supplierData;
-  const ProfileBody({super.key, required this.supplierData});
+  const ProfileBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    final SupplierProfileCubit profileCubit =
+        context.read<SupplierProfileCubit>();
+    return Form(
+      key: profileCubit.formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          verticalSpace(18),
-          const CustomBackButton(
-            isToLeftArrow: false,
+          const ProfileSectionTitle(title: 'معلومات الحساب'),
+          UserDataTextField(
+            labelText: 'الإسم بالكامل',
+            controller: profileCubit.name,
           ),
-          verticalSpace(24),
-          const Center(child: ProfileHeader()),
-          verticalSpace(32),
-          ProfileDetailsSection(
-            profileSectionModel: ProfileSectionModel(
-                title: 'معلومات الحساب ',
-                profileItemModel: List.generate(
-                  getAccountData(supplierData).length,
-                  (index) => ProfileItemModel(
-                      title: getAccountData(supplierData)[index].keys.first,
-                      subtitle:
-                          getAccountData(supplierData)[index].values.first),
-                )),
+          UserDataTextField(
+            labelText: 'البريد الاليكتروني',
+            enabled: false,
+            controller: profileCubit.email,
           ),
-          verticalSpace(32),
-          // Second Section
-          ProfileDetailsSection(
-            profileSectionModel: ProfileSectionModel(
-                title: 'معلومات الشركة ',
-                profileItemModel: List.generate(
-                  getCompanyData(supplierData).length,
-                  (index) => ProfileItemModel(
-                      title: getCompanyData(supplierData)[index].keys.first,
-                      subtitle:
-                          getCompanyData(supplierData)[index].values.first),
-                )),
+          UserDataTextField(
+            labelText: 'رقم الهاتف',
+            controller: profileCubit.phoneNumber,
           ),
+          UserDataTextField(
+            labelText: 'العنوان',
+            controller: profileCubit.address,
+          ),
+          const VerticalSpace(height: 24),
+          const ProfileSectionTitle(title: 'معلومات الشركة'),
+          UserDataTextField(
+            labelText: 'اسم الشركة',
+            controller: profileCubit.companyName,
+          ),
+          UserDataTextField(
+            labelText: 'رقم الهاتف',
+            controller: profileCubit.companyPhoneNumber,
+          ),
+          UserDataTextField(
+            labelText: 'العنوان',
+            controller: profileCubit.companyAddress,
+          ),
+          const VerticalSpace(height: 100),
         ],
       ),
     );
   }
 }
-
-List<Map<String, dynamic>> getAccountData(SupplierData supplierData) => [
-      {
-        'الاسم بالكامل':
-            SharedPreferencesHelper.getString(SharedPreferencesKeys.userName),
-      },
-      {
-        'البريد الإلكتروني': supplierData.email,
-      },
-      {
-        'رقم الهاتف': supplierData.phoneNumber,
-      },
-      {
-        'العنوان': supplierData.address,
-      }
-    ];
-
-List<Map<String, dynamic>> getCompanyData(SupplierData supplierData) => [
-      {
-        'اسم الشركة': 'ConnectChain',
-      },
-      {
-        'رقم الهاتف': supplierData.phoneNumber,
-      },
-      {
-        'العنوان': supplierData.address,
-      }
-    ];

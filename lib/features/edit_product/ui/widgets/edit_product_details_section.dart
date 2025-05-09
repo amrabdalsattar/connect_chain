@@ -23,7 +23,7 @@ class EditProductDetailsSection extends StatelessWidget {
                   return null;
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'فئة المنتج',
               field: CustomDropdownButton(
@@ -33,7 +33,7 @@ class EditProductDetailsSection extends StatelessWidget {
                 hintText: 'فئة المنتج',
                 validator: (p0) {},
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'الكمية',
               field: EditableTextFormField(
@@ -43,7 +43,7 @@ class EditProductDetailsSection extends StatelessWidget {
                   return null;
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'السعر',
               field: EditableTextFormField(
@@ -53,7 +53,7 @@ class EditProductDetailsSection extends StatelessWidget {
                   return null;
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'SKU',
               field: EditableTextFormField(
@@ -63,7 +63,7 @@ class EditProductDetailsSection extends StatelessWidget {
                   return null;
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'الحد الأدنى للمخزون',
               field: EditableTextFormField(
@@ -73,7 +73,7 @@ class EditProductDetailsSection extends StatelessWidget {
                   return null;
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledField(
               label: 'الوصف',
               field: EditableTextFormField(

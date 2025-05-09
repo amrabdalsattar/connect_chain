@@ -16,7 +16,7 @@ class MonthlyStatisticsSection extends StatelessWidget {
           'إحصائيات الشهر',
           style: AppTextStyles.cairoBlackBold18,
         ),
-        verticalSpace(24),
+        const VerticalSpace(height: 24),
         const MonthlyStatisticsBlocBuilder(),
       ],
     );

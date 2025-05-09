@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:connect_chain/features/notifications/logic/services/local_notification_service.dart';
-import 'package:connect_chain/features/pre_login/data/datasources/pre_login_datasource.dart';
-import 'package:connect_chain/features/pre_login/data/repos/pre_login_repo.dart';
+import 'local_notification_service.dart';
+import '../../../pre_login/data/datasources/pre_login_datasource.dart';
+import '../../../pre_login/data/repos/pre_login_repo.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
@@ -20,7 +20,7 @@ class PushNotificationService {
       _firebaseMessaging.setAutoInitEnabled(true);
 
       await _firebaseMessaging.requestPermission();
-      String? token = await _firebaseMessaging.getToken();
+      final String? token = await _firebaseMessaging.getToken();
 
       log(token ?? 'null token');
 

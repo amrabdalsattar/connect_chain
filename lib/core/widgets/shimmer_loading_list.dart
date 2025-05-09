@@ -40,8 +40,8 @@ class ShimmerLoadingList extends StatelessWidget {
           ),
         ),
         separatorBuilder: (_, index) => scrollDirection == Axis.horizontal
-            ? horizontalSpace(4)
-            : verticalSpace(16),
+            ? const HorizontalSpace(width: 4)
+            : const VerticalSpace(height: 16),
       ),
     );
   }

@@ -1,7 +1,5 @@
 part of '../order_details_screen.dart';
 
-
-
 class OrderDetailsCustomerDetailsSection extends StatelessWidget {
   const OrderDetailsCustomerDetailsSection({
     super.key,
@@ -21,14 +19,14 @@ class OrderDetailsCustomerDetailsSection extends StatelessWidget {
             'تفاصيل العميل',
             style: AppTextStyles.cairoPrimaryBold20,
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           OrderDetailsText(
               fieldText: 'الاسم', valueText: orderDetailsModel.customerName),
-          verticalSpace(8),
+          const VerticalSpace(height: 8),
           OrderDetailsText(
               fieldText: 'العنوان',
               valueText: orderDetailsModel.customerAddress),
-          verticalSpace(8),
+          const VerticalSpace(height: 24),
           OrderDetailsText(
               fieldText: 'ريقة الدفع',
               valueText: orderDetailsModel.paymentMethod),

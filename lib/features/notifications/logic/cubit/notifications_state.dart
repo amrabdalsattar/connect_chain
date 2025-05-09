@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_model.dart';
+import '../../../../core/networking/api_error_handler/api_error_model.dart';
 
 import '../../data/models/notifications_response_model.dart';
 

@@ -1,4 +1,4 @@
-import 'package:connect_chain/core/networking/api_error_handler/api_error_handler.dart';
+import '../../../../core/networking/api_error_handler/api_error_handler.dart';
 
 import '../../../../core/networking/api_result.dart';
 import '../datasource/product_details_datasource.dart';

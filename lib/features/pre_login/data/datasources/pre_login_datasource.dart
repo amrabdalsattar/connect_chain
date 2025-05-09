@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/networking/api_constants.dart';
-import 'package:connect_chain/core/networking/api_helper.dart';
-import 'package:connect_chain/core/networking/api_request_model.dart';
+import '../../../../core/networking/api_constants.dart';
+import '../../../../core/networking/api_helper.dart';
+import '../../../../core/networking/api_request_model.dart';
 
 import '../../../../core/helpers/token_helper.dart';
 

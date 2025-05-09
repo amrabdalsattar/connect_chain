@@ -22,7 +22,7 @@ class RevenueChartDataSource {
       ),
     );
 
-    RevenueChartResponseModel revenueChartResponseModel =
+    final RevenueChartResponseModel revenueChartResponseModel =
         RevenueChartResponseModel.fromJson(response);
     return revenueChartResponseModel.chartData;
   }

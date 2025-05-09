@@ -29,7 +29,7 @@ class ProductDetailsLowerWidget extends StatelessWidget {
                 width: 20.w,
                 height: 20.h,
               ),
-              horizontalSpace(8),
+              const HorizontalSpace(width: 8),
               Text(
                 '0.0',
                 style: AppTextStyles.cairoBlackBold20,
@@ -38,28 +38,28 @@ class ProductDetailsLowerWidget extends StatelessWidget {
               ),
             ],
           ),
-          verticalSpace(12),
+          const VerticalSpace(height: 12),
           // Category Row
           Row(
             children: [
-              horizontalSpace(16),
+              const HorizontalSpace(width: 16),
               SvgPicture.asset(
                 AppImages.categoryIcon,
                 width: 16.w,
                 height: 16.h,
               ),
-              horizontalSpace(8),
+              const HorizontalSpace(width: 8),
               Text(productResponseModel.categoryName,
                   style: AppTextStyles.cairoBlackBold15),
             ],
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           // Inventory Info Section
           Text(
             'معلومات المخزون',
             style: AppTextStyles.cairoBlackSemiBold16,
           ),
-          verticalSpace(8),
+          const VerticalSpace(height: 8),
 
           // Statistics Data Row
           Row(
@@ -70,29 +70,29 @@ class ProductDetailsLowerWidget extends StatelessWidget {
                   iconBackGroundColor:
                       ColorsHelper.grossProductsBackGroundColor,
                   value: '${productResponseModel.stock}'),
-              horizontalSpace(16),
+              const HorizontalSpace(width: 16),
               StatisticsDataItem(
                   title: 'حد التنبيه لنفاذ المخزون',
                   imagePath: AppImages.downChartIcon,
                   iconBackGroundColor:
                       ColorsHelper.rejectedOrderBackGroundColor,
                   value: '${productResponseModel.minimumStock}'),
-              horizontalSpace(16),
+              const HorizontalSpace(width: 16),
               StatisticsDataItem(
                   title: 'اخر اعاده تعبئه للمحزون',
                   imagePath: AppImages.clockIcon,
                   iconBackGroundColor: ColorsHelper.lastOrderBackGroundColor,
                   value: productResponseModel.updatedDate ??
-                      "April ${DateTime.now().day}"),
+                      'April ${DateTime.now().day}'),
             ],
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           // Description Section
           Text(
             'الوصف',
             style: AppTextStyles.cairoBlackSemiBold16,
           ),
-          verticalSpace(8),
+          const VerticalSpace(height: 8),
 
           Text(productResponseModel.description,
               style: AppTextStyles.cairoSemiGreyRegular12)

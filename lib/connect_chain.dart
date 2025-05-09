@@ -16,7 +16,7 @@ class ConnectChainApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
-        locale: const Locale("ar"),
+        locale: const Locale('ar'),
         debugShowCheckedModeBanner: false,
         title: 'ConnectChain',
         theme: ThemesHelper.lightTheme,

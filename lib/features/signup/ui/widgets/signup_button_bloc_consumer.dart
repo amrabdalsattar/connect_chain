@@ -33,7 +33,7 @@ class SignupButtonBlocConsumer extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               context: context,
               title: 'تمت العملية بنجاح',
-              description: "تم ارسال رابط التأكيد الى بريدك الإلكتروني",
+              description: 'تم ارسال رابط التأكيد الى بريدك الإلكتروني',
               type: ToastificationType.success,
             );
           },

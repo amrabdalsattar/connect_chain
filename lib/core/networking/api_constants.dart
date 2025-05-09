@@ -31,7 +31,7 @@ class ApiConstants {
 
   // Profile endpoints
   static const String supplierProfile = 'Supplier/getProfile';
-  static const String updateSupplierProfile = 'Order/Supplier/getProfile';
+  static const String updateSupplierProfile = 'Supplier/updateProfile';
 
   // Notifications Endpoints
   static const String getNotificationsEP =

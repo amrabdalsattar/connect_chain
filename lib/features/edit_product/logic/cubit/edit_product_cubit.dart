@@ -99,8 +99,9 @@ class EditProductCubit extends Cubit<EditProductState> {
         if (!isClosed) emit((EditProductState.imageUploadSuccess(imageFile)));
       },
       onError: (message) {
-        if (!isClosed)
+        if (!isClosed) {
           emit(EditProductState.error(ApiErrorModel(message: message)));
+        }
       },
     );
   }

@@ -29,7 +29,7 @@ class MonthlyStatisticsBlocBuilder extends StatelessWidget {
             );
           case MonthlyStatisticsErrorState():
             return Text(
-                state.apiErrorModel.getErrorMessages() ?? "Unknown Error");
+                state.apiErrorModel.getErrorMessages() ?? 'Unknown Error');
           case MonthlyStatisticsSuccessState():
             return MonthlyStatisticsData(
                 monthlyStatsDataModel: state.monthlyStatsDataModel);

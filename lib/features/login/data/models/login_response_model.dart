@@ -9,8 +9,8 @@ class LoginResponseModel {
 
   factory LoginResponseModel.fromJson(Map<String, dynamic> json) =>
       LoginResponseModel(
-        userData: UserData.fromJson(json["data"]),
-        message: json["message"],
+        userData: UserData.fromJson(json['data']),
+        message: json['message'],
       );
 }
 
@@ -34,22 +34,22 @@ class UserData {
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) => UserData(
-        id: json["id"],
-        name: json["name"],
-        email: json["email"],
-        address: json["address"],
-        token: json["token"],
-        phone: json["phone"],
-        businessType: json["businessType"],
+        id: json['id'],
+        name: json['name'],
+        email: json['email'],
+        address: json['address'],
+        token: json['token'],
+        phone: json['phone'],
+        businessType: json['businessType'],
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "email": email,
-        "address": address,
-        "token": token,
-        "phone": phone,
-        "businessType": businessType,
+        'id': id,
+        'name': name,
+        'email': email,
+        'address': address,
+        'token': token,
+        'phone': phone,
+        'businessType': businessType,
       };
 }

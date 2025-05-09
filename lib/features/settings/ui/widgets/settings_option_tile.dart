@@ -1,6 +1,6 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
+import '../../../../core/helpers/app_images.dart';
+import '../../../../core/theming/app_text_styles.dart';
+import '../../../../core/theming/colors_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,12 +27,12 @@ class SettingsOptionTile extends StatelessWidget {
                 )),
             borderRadius: BorderRadius.circular(12.r),
             child: ListTile(
-              contentPadding: EdgeInsets.symmetric(horizontal: 10),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               minVerticalPadding: 0,
               titleTextStyle:
                   AppTextStyles.cairoBlackBold15.copyWith(fontSize: 12.sp),
               title: Text(title),
-              trailing: Icon(Icons.arrow_right),
+              trailing: const Icon(Icons.arrow_right),
             ),
           ),
         ),
@@ -40,7 +40,7 @@ class SettingsOptionTile extends StatelessWidget {
           visible: !isLastItem,
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
-            child: Divider(
+            child: const Divider(
               color: ColorsHelper.homeScaffoldColor,
               thickness: 2,
             ),

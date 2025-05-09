@@ -29,16 +29,16 @@ class ResetPasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              verticalSpace(27),
+              const VerticalSpace(height: 27),
               Logo(width: 51.w, height: 61.h),
-              verticalSpace(16),
+              const VerticalSpace(height: 16),
               const ScreenLabel(
                   title: 'إنشاء كلمة مرور جديدة',
                   subTitle:
                       'قم بإدخال كلمة مرور جديدة لحسابك . تأكد من أن كلمة المرور قوية وسهلة التذكر'),
-              verticalSpace(33),
+              const VerticalSpace(height: 33),
               const ResetPasswordForm(),
-              verticalSpace(40),
+              const VerticalSpace(height: 40),
               const ResetPasswordBlocConsumerButton()
             ],
           ),

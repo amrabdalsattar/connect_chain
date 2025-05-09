@@ -23,7 +23,7 @@ class OrdersDatasource {
       ),
     );
 
-    OrdersResponseModel ordersResponseModel =
+    final OrdersResponseModel ordersResponseModel =
         OrdersResponseModel.fromJson(result);
 
     return ordersResponseModel.data;

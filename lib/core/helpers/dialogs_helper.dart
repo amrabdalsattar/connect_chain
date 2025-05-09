@@ -75,7 +75,7 @@ class DialogsHelper {
                     .copyWith(fontWeight: FontWeight.w400),
                 textAlign: TextAlign.center,
               ),
-              verticalSpace(12),
+              const VerticalSpace(height: 12),
               CustomButton(
                 title: 'إغلاق',
                 width: 324.w,

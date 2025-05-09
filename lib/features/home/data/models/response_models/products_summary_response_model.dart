@@ -13,17 +13,17 @@ class ProductsSummaryResponseModel {
 
   factory ProductsSummaryResponseModel.fromJson(Map<String, dynamic> json) =>
       ProductsSummaryResponseModel(
-        productsSummaryData: ProductsSummaryDataModel.fromJson(json["data"]),
-        isSuccess: json["isSuccess"],
-        errorCode: json["errorCode"],
-        message: json["message"],
+        productsSummaryData: ProductsSummaryDataModel.fromJson(json['data']),
+        isSuccess: json['isSuccess'],
+        errorCode: json['errorCode'],
+        message: json['message'],
       );
 
   Map<String, dynamic> toJson() => {
-        "data": productsSummaryData.toJson(),
-        "isSuccess": isSuccess,
-        "errorCode": errorCode,
-        "message": message,
+        'data': productsSummaryData.toJson(),
+        'isSuccess': isSuccess,
+        'errorCode': errorCode,
+        'message': message,
       };
 }
 
@@ -40,14 +40,14 @@ class ProductsSummaryDataModel {
 
   factory ProductsSummaryDataModel.fromJson(Map<String, dynamic> json) =>
       ProductsSummaryDataModel(
-        totalProducts: json["totalProducts"],
-        lowStockProducts: json["lowStockProducts"],
-        outOfStockProducts: json["outOfStockProducts"],
+        totalProducts: json['totalProducts'],
+        lowStockProducts: json['lowStockProducts'],
+        outOfStockProducts: json['outOfStockProducts'],
       );
 
   Map<String, dynamic> toJson() => {
-        "totalProducts": totalProducts,
-        "lowStockProducts": lowStockProducts,
-        "outOfStockProducts": outOfStockProducts,
+        'totalProducts': totalProducts,
+        'lowStockProducts': lowStockProducts,
+        'outOfStockProducts': outOfStockProducts,
       };
 }

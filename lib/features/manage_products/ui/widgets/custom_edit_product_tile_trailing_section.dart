@@ -26,14 +26,14 @@ class EditProductTileTrailingSection extends StatelessWidget {
                 iconPath: AppImages.editIcon,
                 onTap: onEdit,
               ),
-              horizontalSpace(22),
+              const HorizontalSpace(width: 22),
               CustomIconButton(
                 iconPath: AppImages.deleteIcon,
                 onTap: onDelete,
               ),
             ],
           ),
-          verticalSpace(10),
+          const VerticalSpace(height: 10),
           // Price Section
           FittedBox(
             fit: BoxFit.scaleDown,

@@ -10,12 +10,12 @@ class DashboardRequestModel {
   });
 
   Map<String, dynamic> toJson() => {
-        "year": year,
-        "month": month,
+        'year': year,
+        'month': month,
       };
   Map<String, dynamic> paginatedToJson() => {
-        "year": year,
-        "month": month,
-        "limit": limit,
+        'year': year,
+        'month': month,
+        'limit': limit,
       };
 }
