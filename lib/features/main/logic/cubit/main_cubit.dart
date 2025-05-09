@@ -22,7 +22,7 @@ class MainCubit extends Cubit<dynamic> {
 
   List<Widget> mainTabs = [
     const HomeTab(),
-    NotificationsTab(),
+    const NotificationsTab(),
     const ManageProductsScreen(),
     const OrdersTab(),
     const SettingsTab(),

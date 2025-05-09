@@ -1,5 +1,5 @@
-import 'package:connect_chain/features/pre_login/logic/cubit/pre_login_cubit.dart';
-import 'package:connect_chain/features/pre_login/ui/pre_login_screen.dart';
+import '../../features/pre_login/logic/cubit/pre_login_cubit.dart';
+import '../../features/pre_login/ui/pre_login_screen.dart';
 
 import '../../features/orders/logic/cubit/order_details_cubit.dart';
 import '../../features/orders/ui/order_details_screen.dart';

@@ -61,7 +61,7 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
             ProductDetailsLowerWidget(
                 productResponseModel: productResponseModel),
-            verticalSpace(33)
+            const VerticalSpace(height: 33),
           ],
         ),
       ),

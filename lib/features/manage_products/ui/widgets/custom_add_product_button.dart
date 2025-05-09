@@ -47,7 +47,7 @@ class CustomAddProductButton extends StatelessWidget {
               width: 16.w,
               height: 16.h,
             ),
-            horizontalSpace(8),
+            const HorizontalSpace(width: 8),
             Text('اضافه منتج', style: AppTextStyles.cairoWhiteBold14),
           ],
         ),

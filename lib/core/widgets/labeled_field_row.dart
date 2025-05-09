@@ -14,7 +14,7 @@ class LabeledFieldRow extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: left),
-        horizontalSpace(16),
+        const HorizontalSpace(width: 16),
         Expanded(child: right),
       ],
     );

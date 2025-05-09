@@ -21,7 +21,7 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            verticalSpace(60),
+            const VerticalSpace(height: 60),
             Expanded(
               child: PageView.builder(
                 controller: cubit.pageController,

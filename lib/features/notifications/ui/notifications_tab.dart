@@ -1,10 +1,10 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/theming/app_text_styles.dart';
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/core/widgets/custom_app_bar.dart';
-import 'package:connect_chain/features/notifications/data/models/notifications_response_model.dart';
-import 'package:connect_chain/features/notifications/data/repos/notifications_repo.dart';
-import 'package:connect_chain/features/notifications/logic/cubit/notifications_cubit.dart';
+import '../../../core/helpers/app_images.dart';
+import '../../../core/theming/app_text_styles.dart';
+import '../../../core/theming/colors_helper.dart';
+import '../../../core/widgets/custom_app_bar.dart';
+import '../data/models/notifications_response_model.dart';
+import '../data/repos/notifications_repo.dart';
+import '../logic/cubit/notifications_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +21,7 @@ class NotificationsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: 'الإشعارات',
         hideBackButton: true,
       ),
@@ -29,7 +29,7 @@ class NotificationsTab extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 22.w),
         child: BlocProvider<NotificationsCubit>(
           create: (context) => NotificationsCubit(getIt<NotificationsRepo>()),
-          child: NotificationsBlocBuilder(),
+          child: const NotificationsBlocBuilder(),
         ),
       ),
     );

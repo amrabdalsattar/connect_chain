@@ -22,19 +22,19 @@ class ForgetPasswordScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(27),
+                const VerticalSpace(height: 27),
                 Image.asset(AppImages.forgetPassword),
                 const ScreenLabel(
                   title: ConstantString.forgetPassword,
                   subTitle:
                       'لا تقلق! فقط ادخل عنوان بريدك الإلكتروني أدناه وسنرسل لك رمز التحقق لإعادة تعيين كلمة المرور',
                 ),
-                verticalSpace(24),
+                const VerticalSpace(height: 24),
                 Text(ConstantString.email,
                     style: AppTextStyles.cairoDarkGrayBold16),
-                verticalSpace(8),
+                const VerticalSpace(height: 8),
                 const ForgetPasswordForm(),
-                verticalSpace(32),
+                const VerticalSpace(height: 32),
                 const ForgetPasswordButtonBlocConsumer()
               ],
             ),

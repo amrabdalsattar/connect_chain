@@ -14,7 +14,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 33),
       child: Column(
         children: [
-          verticalSpace(12),
+          const VerticalSpace(height: 12),
           // SKU Section
           Align(
             alignment: Alignment.topLeft,
@@ -24,7 +24,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
             ),
           ),
           // Product Image with Fade Animation
-          verticalSpace(8),
+          const VerticalSpace(height: 8),
           BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
             buildWhen: (previous, current) =>
                 current is ProductDetailsImageChangedState ||
@@ -55,7 +55,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
                     ),
                   ),
 
-                  verticalSpace(16),
+                  const VerticalSpace(height: 16),
                   // Image Carousel Section
                   CustomImageSlider(
                     imagePaths: product.imageUrls,
@@ -70,7 +70,7 @@ class ProductDetailsImagesSection extends StatelessWidget {
               );
             },
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
         ],
       ),
     );

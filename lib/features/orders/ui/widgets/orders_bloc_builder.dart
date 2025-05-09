@@ -35,6 +35,6 @@ class OrdersList extends StatelessWidget {
       return const CustomEmptyWidget(message: 'لم يتم العثور علي طلبات');
     }
 
-    return Orderslist(orders: orders);
+    return SupplierOrdersList(orders: orders);
   }
 }

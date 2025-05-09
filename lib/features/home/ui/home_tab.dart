@@ -91,35 +91,35 @@ class _HomeTabState extends State<HomeTab> {
                       borderRadius: BorderRadius.circular(12.r),
                       color: ColorsHelper.white,
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
-                        const MonthlyStatisticsSection(),
-                        verticalSpace(24),
-                        const RevenueChart(),
+                        MonthlyStatisticsSection(),
+                        VerticalSpace(height: 24),
+                        RevenueChart(),
                       ],
                     ),
                   ),
                 ),
-                SliverToBoxAdapter(
-                  child: verticalSpace(24),
+                const SliverToBoxAdapter(
+                  child: VerticalSpace(height: 24),
                 ),
                 const SliverToBoxAdapter(
                   child: MostSellingSection(),
                 ),
-                SliverToBoxAdapter(
-                  child: verticalSpace(24),
+                const SliverToBoxAdapter(
+                  child: VerticalSpace(height: 24),
                 ),
                 const SliverToBoxAdapter(
                   child: OrdersSection(),
                 ),
-                SliverToBoxAdapter(
-                  child: verticalSpace(24),
+                const SliverToBoxAdapter(
+                  child: VerticalSpace(height: 24),
                 ),
                 const SliverToBoxAdapter(
                   child: ProductsSummarySection(),
                 ),
-                SliverToBoxAdapter(
-                  child: verticalSpace(24),
+                const SliverToBoxAdapter(
+                  child: VerticalSpace(height: 24),
                 ),
               ],
             ),

@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/theming/colors_helper.dart';
-import 'package:connect_chain/features/settings/ui/widgets/profile_card.dart';
+import '../../../core/theming/colors_helper.dart';
+import 'widgets/profile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,7 +23,7 @@ class SettingsTab extends StatelessWidget {
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 16.w),
-            child: CustomScrollView(
+            child: const CustomScrollView(
               slivers: [
                 SliverToBoxAdapter(
                   child: ProfileCard(),

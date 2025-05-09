@@ -1,4 +1,4 @@
-import 'package:connect_chain/features/main/logic/cubit/main_cubit.dart';
+import '../../../../../main/logic/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,14 +25,14 @@ class ProductsSummaryData extends StatelessWidget {
             iconBackGroundColor: ColorsHelper.grossProductsBackGroundColor,
             value: '${productsSummaryDataModel.totalProducts}',
           ),
-          horizontalSpace(4),
+          const HorizontalSpace(width: 4),
           StatisticsDataItem(
             title: 'مخزون منخفض',
             imagePath: AppImages.downChartIcon,
             iconBackGroundColor: ColorsHelper.lowStockBackGroundColor,
             value: '${productsSummaryDataModel.lowStockProducts}',
           ),
-          horizontalSpace(4),
+          const HorizontalSpace(width: 4),
           StatisticsDataItem(
             title: 'نفد من المخزون',
             imagePath: AppImages.outOfStockChartIcon,

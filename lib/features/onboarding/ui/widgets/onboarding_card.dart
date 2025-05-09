@@ -16,19 +16,19 @@ class OnboardingCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(onboardingPageModel.imagePath),
-        verticalSpace(35),
+        const VerticalSpace(height: 35),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Logo(width: 32, height: 32),
-            horizontalSpace(18),
+            const HorizontalSpace(width: 18),
             Text(
               onboardingPageModel.title,
               style: AppTextStyles.cairoPrimaryBold20,
             )
           ],
         ),
-        verticalSpace(18),
+        const VerticalSpace(height: 18),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 32.w),
           child: Text(

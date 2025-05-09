@@ -25,13 +25,13 @@ class AddProductImagesSection extends StatelessWidget {
           style:
               AppTextStyles.cairoBlackSemiBold16.copyWith(color: Colors.black),
         ),
-        verticalSpace(18),
+        const VerticalSpace(height: 18),
         UploadImageWidget(
           onTap: () async {
             await addProductCubit.pickImage();
           },
         ),
-        verticalSpace(24),
+        const VerticalSpace(height: 24),
         BlocConsumer<AddProductCubit, AddProductState>(
           buildWhen: (previous, current) =>
               current is AddProductImageUploadSuccessState ||

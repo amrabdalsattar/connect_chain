@@ -1,6 +1,6 @@
-import 'package:connect_chain/features/notifications/logic/services/local_notification_service.dart';
-import 'package:connect_chain/features/notifications/logic/services/push_notification_service.dart';
-import 'package:connect_chain/firebase_options.dart';
+import '../../features/notifications/logic/services/local_notification_service.dart';
+import '../../features/notifications/logic/services/push_notification_service.dart';
+import '../../firebase_options.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -44,7 +44,7 @@ class SetupManager {
     try {
       final app = await Firebase.initializeApp(options: options);
 
-      debugPrint("App Name${app.name}");
+      debugPrint('App Name${app.name}');
     } catch (e) {
       if (kDebugMode) {
         print(e);

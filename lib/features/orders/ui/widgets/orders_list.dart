@@ -1,7 +1,7 @@
 part of '../orders_tab.dart';
 
-class Orderslist extends StatelessWidget {
-  const Orderslist({
+class SupplierOrdersList extends StatelessWidget {
+  const SupplierOrdersList({
     super.key,
     required this.orders,
   });
@@ -12,7 +12,7 @@ class Orderslist extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       itemCount: orders.length,
-      separatorBuilder: (_, __) => verticalSpace(24),
+      separatorBuilder: (_, __) => const VerticalSpace(height: 24),
       itemBuilder: (context, index) {
         return OrderWidget(order: orders[index]);
       },

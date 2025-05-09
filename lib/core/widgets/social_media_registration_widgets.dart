@@ -35,7 +35,7 @@ class SocialMediaRegistrationWidgets extends StatelessWidget {
             )),
           ],
         ),
-        verticalSpace(24),
+        const VerticalSpace(height: 24),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

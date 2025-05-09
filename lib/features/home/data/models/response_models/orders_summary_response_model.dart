@@ -13,17 +13,17 @@ class OrdersSummaryResponseModel {
 
   factory OrdersSummaryResponseModel.fromJson(Map<String, dynamic> json) =>
       OrdersSummaryResponseModel(
-        ordersSummaryDataModel: OrdersSummaryDataModel.fromJson(json["data"]),
-        isSuccess: json["isSuccess"],
-        errorCode: json["errorCode"],
-        message: json["message"],
+        ordersSummaryDataModel: OrdersSummaryDataModel.fromJson(json['data']),
+        isSuccess: json['isSuccess'],
+        errorCode: json['errorCode'],
+        message: json['message'],
       );
 
   Map<String, dynamic> toJson() => {
-        "data": ordersSummaryDataModel.toJson(),
-        "isSuccess": isSuccess,
-        "errorCode": errorCode,
-        "message": message,
+        'data': ordersSummaryDataModel.toJson(),
+        'isSuccess': isSuccess,
+        'errorCode': errorCode,
+        'message': message,
       };
 }
 
@@ -40,14 +40,14 @@ class OrdersSummaryDataModel {
 
   factory OrdersSummaryDataModel.fromJson(Map<String, dynamic> json) =>
       OrdersSummaryDataModel(
-        completedOrders: json["completedOrders"],
-        pendingOrders: json["pendingOrders"],
-        rejectedOrders: json["rejectedOrders"],
+        completedOrders: json['completedOrders'],
+        pendingOrders: json['pendingOrders'],
+        rejectedOrders: json['rejectedOrders'],
       );
 
   Map<String, dynamic> toJson() => {
-        "completedOrders": completedOrders,
-        "pendingOrders": pendingOrders,
-        "rejectedOrders": rejectedOrders,
+        'completedOrders': completedOrders,
+        'pendingOrders': pendingOrders,
+        'rejectedOrders': rejectedOrders,
       };
 }

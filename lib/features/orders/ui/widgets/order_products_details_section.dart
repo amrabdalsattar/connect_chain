@@ -19,12 +19,13 @@ class OrderProductsDetailsSection extends StatelessWidget {
             ' تفاصيل المنتجات',
             style: AppTextStyles.cairoPrimaryBold20,
           ),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           ListView.separated(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: prodcuts.length,
-            separatorBuilder: (context, index) => verticalSpace(16),
+            separatorBuilder: (context, index) =>
+                const VerticalSpace(height: 16),
             itemBuilder: (context, index) => OrderDetailsProductTile(
               product: prodcuts[index],
             ),

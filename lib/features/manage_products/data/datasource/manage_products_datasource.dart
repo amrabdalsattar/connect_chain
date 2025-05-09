@@ -23,7 +23,7 @@ class ManageProductsDatasource {
         },
       ),
     );
-    ManageSupplierProductsResponseModel products =
+    final ManageSupplierProductsResponseModel products =
         ManageSupplierProductsResponseModel.fromJson(result);
     return products;
   }

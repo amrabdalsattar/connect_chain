@@ -37,7 +37,7 @@ class EditProductDatasource {
     await _apiHelper.delete(
       ApiRequestModel(
           endPoint: ApiConstants.deleteProductImageEP,
-          queries: {"id": imageId}),
+          queries: {'id': imageId}),
     );
   }
 }

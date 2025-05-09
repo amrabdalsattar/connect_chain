@@ -20,14 +20,14 @@ class OrdersSectionData extends StatelessWidget {
           iconBackGroundColor: ColorsHelper.completedOrderBackGroundColor,
           value: '${ordersSummaryDataModel.completedOrders}',
         ),
-        horizontalSpace(4),
+        const HorizontalSpace(width: 4),
         StatisticsDataItem(
           title: 'طلب معلق',
           imagePath: AppImages.pinnedOrderIcon,
           iconBackGroundColor: ColorsHelper.pinnedOrderBackGroundColor,
           value: '${ordersSummaryDataModel.pendingOrders}',
         ),
-        horizontalSpace(4),
+        const HorizontalSpace(width: 4),
         StatisticsDataItem(
           title: 'طلب مرفوض',
           imagePath: AppImages.rejectedOrderIcon,

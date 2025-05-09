@@ -39,7 +39,7 @@ class _LoginFormState extends State<LoginForm> {
             prefixIconPath: AppImages.emailIcon,
             keyboardType: TextInputType.emailAddress,
           ),
-          verticalSpace(24),
+          const VerticalSpace(height: 24),
           CustomTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             hintText: ConstantString.password,

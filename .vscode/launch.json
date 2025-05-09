@@ -24,6 +24,19 @@
                 "--target",
                 "lib/main_production.dart"
             ]
+        },
+        {
+            "name": "profile ConnectChain",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "production",
+                "--target",
+                "lib/main_production.dart"
+            ]
         }
     ],
     "compounds": []

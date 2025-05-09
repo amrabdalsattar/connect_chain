@@ -28,7 +28,7 @@ class RevenueChart extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text('مخطط الإيرادات', style: AppTextStyles.cairoBlackBold13),
-          verticalSpace(40),
+          const VerticalSpace(height: 40),
           const RevenueChartBlocBuilder(),
         ],
       ),

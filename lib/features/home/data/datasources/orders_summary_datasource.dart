@@ -15,7 +15,7 @@ class OrdersSummaryDatasource {
         'Authorization': 'Bearer ${await TokenHelper.getSecuredUserToken()}',
       },
     ));
-    OrdersSummaryResponseModel ordersSummaryResponseModel =
+    final OrdersSummaryResponseModel ordersSummaryResponseModel =
         OrdersSummaryResponseModel.fromJson(response);
 
     return ordersSummaryResponseModel.ordersSummaryDataModel;

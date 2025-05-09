@@ -19,20 +19,20 @@ class EditProductScreenBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              verticalSpace(32),
+              const VerticalSpace(height: 32),
               UploadImageWidget(
                 onTap: () async {
                   await editProductCubit.addImage();
                 },
               ),
-              verticalSpace(24),
+              const VerticalSpace(height: 24),
               //  Image Section
               EditProductImageBlocBuilder(
                   product: product, editProductCubit: editProductCubit),
-              verticalSpace(24),
+              const VerticalSpace(height: 24),
               // ProductDetailsSection
               EditProductDetailsSection(editProductCubit: editProductCubit),
-              verticalSpace(16),
+              const VerticalSpace(height: 24),
             ],
           ),
         ),

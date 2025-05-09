@@ -1,5 +1,5 @@
-import 'package:connect_chain/core/helpers/app_images.dart';
-import 'package:connect_chain/core/widgets/imaged_error.dart';
+import '../../../core/helpers/app_images.dart';
+import '../../../core/widgets/imaged_error.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/helpers/dialogs_helper.dart';
@@ -33,7 +33,7 @@ class ManageProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ManageProductsCubit manageProductsCubit =
+    final ManageProductsCubit manageProductsCubit =
         ManageProductsCubit(getIt<ManageProductsRepo>());
     return BlocProvider(
       create: (_) => manageProductsCubit..getSupplierProducts(),
@@ -56,7 +56,7 @@ class ManageProductsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    verticalSpace(24),
+                    const VerticalSpace(height: 24),
                     CustomSearchTextFormField(
                       onChanged: manageProductsCubit.debounceSearch,
                     ),

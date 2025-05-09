@@ -17,7 +17,7 @@ class ProductDetailsSection extends StatelessWidget {
             style: AppTextStyles.cairoBlackSemiBold16,
           ),
           // Start of the First Row
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledFieldRow(
             left: LabeledField(
               label: 'أسم المنتج',
@@ -55,7 +55,7 @@ class ProductDetailsSection extends StatelessWidget {
           ),
 
           // Start of the Second Row
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           LabeledFieldRow(
             left: LabeledField(
               label: 'السعر',
@@ -85,7 +85,7 @@ class ProductDetailsSection extends StatelessWidget {
             ),
           ),
 
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
 
           LabeledField(
               label: 'الحد الاني للمخزون',
@@ -101,7 +101,7 @@ class ProductDetailsSection extends StatelessWidget {
                   }
                 },
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
           // Start of the Description Row
           LabeledField(
               label: 'الوصف',
@@ -116,7 +116,7 @@ class ProductDetailsSection extends StatelessWidget {
                 },
                 maxLines: 4,
               )),
-          verticalSpace(16),
+          const VerticalSpace(height: 16),
         ],
       ),
     );

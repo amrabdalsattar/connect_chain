@@ -25,7 +25,7 @@ class SignupScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                horizontalSpace(double.infinity),
+                const HorizontalSpace(width: double.infinity),
                 const Logo(
                   height: 61,
                   width: 51,
@@ -34,13 +34,13 @@ class SignupScreen extends StatelessWidget {
                   title: 'قم بانشاء حساب جديد',
                   subTitle: 'سجّل حسابك وابدأ إدارة طلباتك بكل سهولة  !',
                 ),
-                verticalSpace(48),
+                const VerticalSpace(height: 48),
                 const SignupForm(),
-                verticalSpace(40),
+                const VerticalSpace(height: 40),
                 const SignupButtonBlocConsumer(),
-                verticalSpace(24),
+                const VerticalSpace(height: 24),
                 const SocialMediaRegistrationWidgets(),
-                verticalSpace(24),
+                const VerticalSpace(height: 24),
                 ActionableTextRow(
                     onTap: () {
                       context.pop();

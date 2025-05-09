@@ -26,7 +26,7 @@ class MonthlyStatisticsData extends StatelessWidget {
           value: priceFormat(monthlyStatsDataModel.totalRevenues ?? 0),
           isMonetaryValue: true,
         ),
-        horizontalSpace(4),
+        const HorizontalSpace(width: 4),
         StatisticsDataItem(
           title: 'متوسط الطلبات',
           imagePath: AppImages.bagIcon,
@@ -34,7 +34,7 @@ class MonthlyStatisticsData extends StatelessWidget {
           value:
               (monthlyStatsDataModel.averageOrderTotal ?? 0).toInt().toString(),
         ),
-        horizontalSpace(4),
+        const HorizontalSpace(width: 4),
         StatisticsDataItem(
           title: 'الأعلى مبيعًا',
           imagePath: AppImages.statisticsIcon,

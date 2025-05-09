@@ -21,7 +21,7 @@ class MonthlyStatsDataSource {
       ),
     );
 
-    MonthlyStatsResponseModel monthlyStatsResponseModel =
+    final MonthlyStatsResponseModel monthlyStatsResponseModel =
         MonthlyStatsResponseModel.fromJson(response);
 
     return monthlyStatsResponseModel.monthlyStatsDataModel;
