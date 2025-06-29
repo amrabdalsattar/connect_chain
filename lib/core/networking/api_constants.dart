@@ -24,6 +24,10 @@ class ApiConstants {
   static const String ordersSummaryEP = 'Dashboard/GetOrdersSummary';
   static const String productsSummaryEP = 'Dashboard/GetProductsSummary';
 
+  // RFQ endpoints
+  static const String createQuotationEp = 'Quotation/Create';
+  static const String supplierRFQsEP = 'RFQ/Supplier';
+
   // Orders endpoints
 
   static const String getSupplierOrders = 'Order/GetSupplierOrders';

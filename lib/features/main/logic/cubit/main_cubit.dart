@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/cache/user_data_operator.dart';
+import '../../../RFQ_response/ui/screens/manage_rfqs_screen.dart';
 import '../../../home/ui/home_tab.dart';
 import '../../../manage_products/ui/manage_products_screen.dart';
-import '../../../notifications/ui/notifications_tab.dart';
 import '../../../orders/ui/orders_tab.dart';
 import '../../../settings/ui/settings_tab.dart';
 import '../../ui/widgets/bottom_nav_bar_item_switcher.dart';
@@ -22,7 +22,7 @@ class MainCubit extends Cubit<dynamic> {
 
   List<Widget> mainTabs = [
     const HomeTab(),
-    const NotificationsTab(),
+    const ManageRFQsScreen(),
     const ManageProductsScreen(),
     const OrdersTab(),
     const SettingsTab(),
@@ -35,8 +35,8 @@ class MainCubit extends Cubit<dynamic> {
           isSelected: currentTabIndex == 0,
         ),
         buildBottomNavItem(
-          assetPath: AppImages.notificationsIcon,
-          label: 'الإشعارات',
+          assetPath: AppImages.rfqIcon,
+          label: 'عروض الأسعار',
           isSelected: currentTabIndex == 1,
         ),
         buildBottomNavItem(

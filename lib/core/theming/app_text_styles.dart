@@ -104,6 +104,11 @@ class AppTextStyles {
     color: ColorsHelper.gray,
     fontWeight: FontWeightHelper.regular,
   );
+    static TextStyle cairoGrayRegular14 = TextStyle(
+    fontSize: 14.sp,
+    color: ColorsHelper.gray,
+    fontWeight: FontWeightHelper.regular,
+  );
   static TextStyle cairoBlackBold18 = TextStyle(
     fontSize: 18.sp,
     color: ColorsHelper.black,
