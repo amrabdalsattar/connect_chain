@@ -2,6 +2,8 @@ class Routes {
   static const String loginRoute = '/loginScreen';
   static const String onboardingRoute = '/onboarding';
   static const String mainScreenRoute = '/mainScreen';
+  static const String notificationScreenRoute = '/notifiationScreenRoute';
+
   static const String signUpRoute = '/signUpScreen';
   static const String forgetPasswordScreenRoute = '/forgetPassword';
   static const String otpScreenRoute = '/otpScreen';
@@ -14,4 +16,7 @@ class Routes {
   static const String heroImageView = '/heroImageView';
   static const String orderDetailsScreenRoute = '/orderDetailsScreenRoute';
   static const String preLoginScreenRoute = '/preLoginScreenRoute';
+  static const String rfqResponseScreenRoute = '/rfqResponseScreenRoute';
+  static const String manageRFQsScreenRoute = '/manageQuotatoinsScreenRoute';
+  static const String rfqDetailsScreenRoute = '/rfqDetailsScreenRoute';
 }

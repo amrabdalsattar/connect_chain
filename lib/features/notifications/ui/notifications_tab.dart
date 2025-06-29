@@ -18,12 +18,11 @@ part 'widgets/notification_tile.dart';
 class NotificationsTab extends StatelessWidget {
   const NotificationsTab({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
         title: 'الإشعارات',
-        hideBackButton: true,
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 22.w),

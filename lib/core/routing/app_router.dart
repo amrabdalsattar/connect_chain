@@ -1,3 +1,9 @@
+import '../../features/RFQ_response/data/models/supplier_quotations_request.dart';
+import '../../features/RFQ_response/logic/cubit/rfq_response_cubit.dart';
+import '../../features/RFQ_response/ui/screens/manage_rfqs_screen.dart';
+import '../../features/RFQ_response/ui/screens/rfq_details_screen.dart';
+import '../../features/RFQ_response/ui/screens/rfq_response_screen.dart';
+import '../../features/notifications/ui/notifications_tab.dart';
 import '../../features/pre_login/logic/cubit/pre_login_cubit.dart';
 import '../../features/pre_login/ui/pre_login_screen.dart';
 
@@ -95,6 +101,11 @@ class AppRouter {
           screen: HeroImageView(imageUrl: imageUrl),
           settings: settings,
         );
+      case Routes.notificationScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const NotificationsTab(),
+          settings: settings,
+        );
 
       case Routes.editProductScreenRoute:
         final productId = arguments as int;
@@ -109,6 +120,34 @@ class AppRouter {
       case Routes.manageProductsScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: const ManageProductsScreen(),
+          settings: settings,
+        );
+      case Routes.manageRFQsScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const ManageRFQsScreen(),
+          settings: settings,
+        );
+      case Routes.rfqResponseScreenRoute:
+        final args = settings.arguments as Map<String, dynamic>;
+
+        final rfqId = args['rfq'] as SupplierRFQ;
+        final cubit = args['cubit'] as RFQResponseCubit;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider.value(
+            value: cubit,
+            child: RFQResponseScreen(rfq: rfqId),
+          ),
+          settings: settings,
+        );
+      case Routes.rfqDetailsScreenRoute:
+        final args = settings.arguments as Map<String, dynamic>;
+        final cubit = args['cubit'] as RFQResponseCubit;
+        final rfq = args['rfq'] as SupplierRFQ;
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: BlocProvider.value(
+            value: cubit,
+            child: RFQDetailsScreen(rfq: rfq),
+          ),
           settings: settings,
         );
 
