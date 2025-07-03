@@ -9,3 +9,4 @@ abstract class ApiResult<T> with _$ApiResult {
   const factory ApiResult.success(T data) = Success<T>;
   const factory ApiResult.failure(ApiErrorModel apiErrorModel) = Failure<T>;
 }
+  

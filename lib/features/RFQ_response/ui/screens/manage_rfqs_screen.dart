@@ -26,6 +26,8 @@ class ManageRFQsScreen extends StatelessWidget {
         ),
         backgroundColor: ColorsHelper.homeScaffoldColor,
         body: BlocBuilder<RFQResponseCubit, RFQResponseState>(
+          buildWhen: (previous, current) =>
+              current.rfqState == RFQState.manageRFQState,
           builder: (context, state) {
             if (state.isLoading) {
               return const Center(child: CustomLoadingIndicator());

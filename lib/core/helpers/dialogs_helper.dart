@@ -6,18 +6,14 @@ import 'package:toastification/toastification.dart';
 import '../theming/app_text_styles.dart';
 import '../theming/colors_helper.dart';
 import '../widgets/custom_button.dart';
-import '../widgets/loading_indicator.dart';
+import '../widgets/custom_loading_indicator.dart';
 import 'extensions.dart';
 import 'spacing.dart';
 
 class DialogsHelper {
   static void showLoading(BuildContext context) {
     showDialog(
-      context: context,
-      builder: (context) => const LoadingIndicator(
-        color: ColorsHelper.white,
-      ),
-    );
+        context: context, builder: (context) => const CustomLoadingIndicator());
   }
 
   static void showErrorDialog(BuildContext context, String error) {

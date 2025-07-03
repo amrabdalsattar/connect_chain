@@ -12,7 +12,8 @@ class AddProductDetailsBlocListener extends StatelessWidget {
       listenWhen: (previous, current) =>
           current is AddProductLoadingState ||
           current is AddProductErrorState ||
-          current is AddProductSuccessState,
+          current is AddProductSuccessState ||
+          current is AddProductAutoFillSuccessState,
       listener: (context, state) {
         state.whenOrNull(
           loading: () => DialogsHelper.showLoading(context),
@@ -30,6 +31,9 @@ class AddProductDetailsBlocListener extends StatelessWidget {
             // Close the loading dialog
             context.pop();
             DialogsHelper.showSnackBar(context, 'تم إضافة المنتج بنجاح');
+            context.pop();
+          },
+          autoFillSucess: () {
             context.pop();
           },
         );
