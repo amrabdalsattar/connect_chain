@@ -39,30 +39,8 @@ class ProductDetailsSection extends StatelessWidget {
             ),
             right: LabeledField(
               label: 'فئة المنتج',
-              field: BlocBuilder<AddProductCubit, AddProductState>(
-                buildWhen: (previous, current) =>
-                    current is AddProductAutoFillSuccessState,
-                builder: (context, state) {
-                  return CustomDropdownButton(
-                    onChanged: (value) {
-                      addProductCubit.setCategory(value ?? '');
-                    },
-                    value: addProductCubit.categoryController,
-                    items: List.generate(
-                        categories.length,
-                        (index) => DropdownMenuItem(
-                              value: categories[index],
-                              child: Text(categories[index]),
-                            )),
-                    hintText: 'نوع المنتج',
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'الرجاء إدخال نوع المنتج';
-                      }
-                    },
-                  );
-                },
-              ),
+              field: AddProductCustomCategoriesDropDown(
+                  addProductCubit: addProductCubit),
             ),
           ),
 
@@ -131,29 +109,6 @@ class ProductDetailsSection extends StatelessWidget {
           const VerticalSpace(height: 16),
         ],
       ),
-    );
-  }
-}
-
-class AutoFillWithAiButton extends StatelessWidget {
-  const AutoFillWithAiButton({
-    super.key,
-    required this.addProductCubit,
-  });
-
-  final AddProductCubit addProductCubit;
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AddProductCubit, AddProductState>(
-      builder: (context, state) {
-        return IconButton(
-            tooltip: 'الملء التلقاي',
-            onPressed: () async {
-              await addProductCubit.fillWithAi();
-            },
-            icon: const Icon(Icons.auto_awesome));
-      },
     );
   }
 }

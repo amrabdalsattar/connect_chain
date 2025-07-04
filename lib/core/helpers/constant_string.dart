@@ -14,11 +14,6 @@ class ConstantString {
 
 
 }
- List<String> categories = [
-  'الإلكترونيات',
-  'الأزياء',
-  'المواد الغذائية',
-  'أخرى'
-];
+
 
 

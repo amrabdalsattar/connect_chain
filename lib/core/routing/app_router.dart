@@ -182,8 +182,8 @@ class AppRouter {
       case Routes.addProductScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: BlocProvider(
-            create: (context) => AddProductCubit(getIt()),
-            child: const AddProductScreen(),
+            create: (context) => AddProductCubit(getIt())..fetchCategories(),
+            child: const AddProductBlocBuilder(),
           ),
           settings: settings,
         );

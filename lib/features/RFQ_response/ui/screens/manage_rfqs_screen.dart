@@ -70,43 +70,9 @@ class RFQCard extends StatelessWidget {
   final int index;
   const RFQCard({super.key, required this.rfq, required this.index});
 
-  Color _getStatusColor(String status) {
-    switch (status.toLowerCase()) {
-      case 'pending':
-        return ColorsHelper.orderChipBackGroundColor;
-      case 'approved':
-        return ColorsHelper.completedOrderBackGroundColor;
-      case 'rejected':
-        return ColorsHelper.rejectedOrderBackGroundColor;
-      case 'active':
-        return ColorsHelper.pinnedOrderBackGroundColor;
-      case 'completed':
-        return ColorsHelper.purple;
-      default:
-        return ColorsHelper.secondaryGray;
-    }
-  }
-
-  String _getArabicStatus(String status) {
-    switch (status.toLowerCase()) {
-      case 'pending':
-        return 'قيد الانتظار';
-      case 'approved':
-        return 'مقبول';
-      case 'rejected':
-        return 'مرفوض';
-      case 'active':
-        return 'نشط';
-      case 'completed':
-        return 'مكتمل';
-      default:
-        return status;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    final statusColor = _getStatusColor(rfq.status);
+    final statusColor = rfq.getStatusColor(rfq.status);
 
     return InkWell(
       onTap: () {
@@ -177,7 +143,7 @@ class RFQCard extends StatelessWidget {
                           ),
                         ),
                         child: Text(
-                          _getArabicStatus(rfq.status),
+                          rfq.getArabicStatus(rfq.status),
                           style: AppTextStyles.cairoBlackBold20.copyWith(
                             color: statusColor,
                             fontSize: 12,

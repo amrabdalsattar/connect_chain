@@ -2,6 +2,7 @@ import '../../../../core/networking/api_error_handler/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../datasources/add_product_datasource.dart';
 import '../models/add_product_model.dart';
+import '../models/category_model.dart';
 
 class AddProductRepo {
   final AddProductDatasource _addProductDatasource;
@@ -12,6 +13,15 @@ class AddProductRepo {
     try {
       await _addProductDatasource.addProduct(addProductRequestModel);
       return const ApiResult.success(null);
+    } catch (error) {
+      return ApiResult.failure(ApiErrorHandler.handle(error));
+    }
+  }
+
+  Future<ApiResult<List<CategoryModel>>> getAllCategories() async {
+    try {
+      final response = await _addProductDatasource.getAllCategories();
+      return ApiResult.success(response);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }

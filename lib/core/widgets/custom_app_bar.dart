@@ -19,23 +19,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsDirectional.only(start: isLeadedByLogo ? 30.w : 0),
-      child: AppBar(
-        surfaceTintColor: ColorsHelper.white,
-        toolbarHeight: preferredSize.height,
-        leadingWidth: isLeadedByLogo ? 45.w : 0,
-        centerTitle: false,
-        title: Text(
-          title,
-          style: AppTextStyles.cairoBlackBold24,
+    return Container(
+      width: double.infinity,
+      color: Colors.white,
+      child: Padding(
+        padding: EdgeInsetsDirectional.only(start: isLeadedByLogo ? 30.w : 0),
+        child: AppBar(
+          surfaceTintColor: ColorsHelper.white,
+          toolbarHeight: preferredSize.height,
+          leadingWidth: isLeadedByLogo ? 45.w : 0,
+          centerTitle: false,
+          title: Text(
+            title,
+            style: AppTextStyles.cairoBlackBold24,
+          ),
+          actionsPadding: EdgeInsetsDirectional.only(end: 24.w),
+          actions: [
+            if (!hideBackButton) const CustomBackButton(),
+          ],
+          leading: isLeadedByLogo ? const Logo(width: 41, height: 51) : null,
+          automaticallyImplyLeading: false,
         ),
-        actionsPadding: EdgeInsetsDirectional.only(end: 24.w),
-        actions: [
-          if (!hideBackButton) const CustomBackButton(),
-        ],
-        leading: isLeadedByLogo ? const Logo(width: 41, height: 51) : null,
-        automaticallyImplyLeading: false,
       ),
     );
   }

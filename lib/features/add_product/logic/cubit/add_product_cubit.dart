@@ -7,11 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
-
-import '../../../../core/helpers/constant_string.dart';
 import '../../../../core/networking/api_error_handler/api_error_model.dart';
 import '../../../../core/utils/image_picker_helper.dart';
 import '../../data/models/add_product_model.dart';
+import '../../data/models/category_model.dart';
 import '../../data/repos/add_product_repo.dart';
 
 part 'add_product_cubit.freezed.dart';
@@ -32,6 +31,9 @@ class AddProductCubit extends Cubit<AddProductState> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   List<File> productImages = [];
+  late List<CategoryModel> _categories;
+
+  List<CategoryModel> get categories => _categories;
 
   Future<void> fillWithAi() async {
     if (nameController.text.trim().isEmpty && productImages.isEmpty) {
@@ -78,6 +80,8 @@ class AddProductCubit extends Cubit<AddProductState> {
 
       contentParts.add(DataPart(mimeType, imageBytes));
     }
+    final categories =
+        _categories.map((category) => category.name).toList().join(', ');
 
     // Final instruction for the AI
     contentParts.add(TextPart(
@@ -108,8 +112,6 @@ class AddProductCubit extends Cubit<AddProductState> {
           json['minimumStock']?.toString() ?? minimumStockController.text;
       categoryController = json['category'] ?? '';
       emit(const AddProductState.autoFillSucess());
-
-      print('The Ai response is $json');
     } catch (e) {
       emit(AddProductState.error(ApiErrorModel(message: 'Auto Fill Failed')));
     }
@@ -126,6 +128,23 @@ class AddProductCubit extends Cubit<AddProductState> {
     }
 
     return text.substring(startIndex, endIndex + 1);
+  }
+
+  Future<void> fetchCategories() async {
+    emit(const AddProductState.categoriesLoading());
+
+    final result = await _addProductRepo.getAllCategories();
+    result.when(
+      success: (cateogries) {
+        _categories = cateogries as List<CategoryModel>;
+        // emit success state
+        emit(const AddProductState.categoriesSucces());
+      },
+      failure: (error) {
+        // emit error state
+        emit(const AddProductState.categoriesError());
+      },
+    );
   }
 
 // Images Functions
@@ -184,7 +203,9 @@ class AddProductCubit extends Cubit<AddProductState> {
         minimumStock: int.parse(minimumStockController.text),
         images: productImages,
         stock: int.parse(quantityController.text),
-        categoryId: categories.indexOf(categoryController!),
+        categoryId: _categories
+            .firstWhere((category) => category.name == categoryController)
+            .id,
       ),
     );
     result.when(
@@ -196,6 +217,16 @@ class AddProductCubit extends Cubit<AddProductState> {
       },
     );
   }
+  void clearAllFields() {
+  nameController.clear();
+  priceController.clear();
+  quantityController.clear();
+  descriptionController.clear();
+  minimumStockController.clear();
+  categoryController = null;
+  productImages.clear();
+  emit(const AddProductState.initial());
+}
 
   @override
   Future<void> close() {
