@@ -7,8 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class SettingsOptionTile extends StatelessWidget {
   final bool isLastItem;
   final String title;
+  final void Function()? onTap;
   const SettingsOptionTile(
-      {super.key, this.isLastItem = false, required this.title});
+      {super.key, this.isLastItem = false, required this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,15 @@ class SettingsOptionTile extends StatelessWidget {
       children: [
         Material(
           child: InkWell(
-            onTap: () => showAboutDialog(
-                context: context,
-                applicationVersion: '1.0.6',
-                applicationIcon: Image.asset(
-                  AppImages.connectChainLogo,
-                  width: 30.w,
-                  height: 30.h,
-                )),
+            onTap: onTap ??
+                () => showAboutDialog(
+                    context: context,
+                    applicationVersion: '1.0.6',
+                    applicationIcon: Image.asset(
+                      AppImages.connectChainLogo,
+                      width: 30.w,
+                      height: 30.h,
+                    )),
             borderRadius: BorderRadius.circular(12.r),
             child: ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 10),

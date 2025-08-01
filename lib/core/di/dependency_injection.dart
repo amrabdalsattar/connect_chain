@@ -1,3 +1,5 @@
+import '../../features/RFQ_response/data/datasource/rfq_response_datasource.dart';
+import '../../features/RFQ_response/data/repo/rfq_response_repo.dart';
 import '../../features/notifications/data/repos/notifications_repo.dart';
 import '../../features/pre_login/data/datasources/pre_login_datasource.dart';
 import '../../features/pre_login/data/repos/pre_login_repo.dart';
@@ -52,6 +54,10 @@ Future<void> setUpGetIt() async {
   getIt
       .registerLazySingleton<SignupDataSource>(() => SignupDataSource(getIt()));
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
+
+  getIt.registerLazySingleton<RfqResponseDatasource>(
+      () => RfqResponseDatasource(getIt()));
+  getIt.registerLazySingleton<RfqResponseRepo>(() => RfqResponseRepo(getIt()));
 
   getIt.registerLazySingleton<ResetPasswordDataSource>(
       () => ResetPasswordDataSource(getIt()));

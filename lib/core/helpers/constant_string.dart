@@ -10,4 +10,10 @@ class ConstantString {
   static const otpVerified = 'تم التحقق من الرمز المؤقت بنجاح';
   static const otpSentMessage = 'تم إرسال الرمز المؤقت إلى بريدك الإلكتروني';
   static const passwordResetMessage = 'تم إعادة تعيين كلمة المرور بنجاح';
+
+
+
 }
+
+
+

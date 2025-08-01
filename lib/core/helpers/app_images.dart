@@ -21,9 +21,11 @@ class AppImages {
   static const String myProductsIcon = 'assets/images/my_products.png';
   static const String ordersIcon = 'assets/images/orders.png';
   static const String settingsIcon = 'assets/images/settings.png';
+  static const String rfqIcon = 'assets/images/rfq.png';
 
   // SVG
   static const String emailIcon = 'assets/svgs/email_icon.svg';
+
   static const String lockIcon = 'assets/svgs/lock.svg';
   static const String facebookLogo = 'assets/svgs/facebook.svg';
   static const String appleLogo = 'assets/svgs/apple.svg';

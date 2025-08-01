@@ -1,3 +1,4 @@
+import '../../features/chat/data/models/chat_service.dart';
 import '../../features/notifications/logic/services/local_notification_service.dart';
 import '../../features/notifications/logic/services/push_notification_service.dart';
 import '../../firebase_options.dart';
@@ -20,6 +21,7 @@ class SetupManager {
       statusBarColor: ColorsHelper.white,
       statusBarIconBrightness: Brightness.dark,
     ));
+    await ChatService.instance.initZIM();
     await _initFirebase();
     await SharedPreferencesHelper.init();
 

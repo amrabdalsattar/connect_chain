@@ -7,6 +7,16 @@ class AddProductState with _$AddProductState {
   const factory AddProductState.success() = AddProductSuccessState;
   const factory AddProductState.error(ApiErrorModel apiErrorModel) =
       AddProductErrorState;
+  // Ai State
+  const factory AddProductState.autoFillSucess() =
+      AddProductAutoFillSuccessState;
+  // Categories State
+  const factory AddProductState.categoriesLoading() =
+      AddProductCategoriesLoadingState;
+  const factory AddProductState.categoriesSucces() =
+      AddProductCategoriesSuccessState;
+  const factory AddProductState.categoriesError() =
+      AddProductCategoriesErrorState;
 
   // Image States
   const factory AddProductState.imageUploadSuccess(File image) =

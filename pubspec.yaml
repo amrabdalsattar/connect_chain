@@ -1,74 +1,59 @@
 name: connect_chain
 description: "Bulk-Buying B2B Platform"
-publish_to: "none"  # Remove if publishing to pub.dev
+publish_to: "none" # Remove if publishing to pub.dev
 
 # Versioning (major.minor.patch+build)
 version: 1.0.7+1
 
 environment:
-  sdk: ^3.6.0-149.3.beta  
+  sdk: ^3.6.0-149.3.beta
 
 dependencies:
-  # State Management
-  flutter_bloc: ^9.1.0       
-  provider: ^6.1.4
-
-  # DI
-  get_it: ^8.0.3    
-
-  # UI Components
-  cupertino_icons: ^1.0.8    
-  flutter_svg: ^2.0.17       
-  cached_network_image: ^3.4.1  
-  photo_view: ^0.15.0        
-  shimmer: ^3.0.0            
-  smooth_page_indicator: ^1.2.1 
-  dotted_border: ^2.1.0      
-  fl_chart: ^0.70.2
-  fluttertoast: ^8.2.12
-  toastification: 3.0.1    
-
-  # Networking
-  dio: ^5.8.0+1              
-  pretty_dio_logger: ^1.4.0  
-  http_parser: ^4.1.2        
-
-  # Localization
-  easy_localization: ^3.0.7+1 
-  intl: ^0.19.0             
-
-  # Storage
-  shared_preferences: ^2.5.3
-  flutter_secure_storage: ^9.2.4
-
-  # Firebase
+  cached_network_image: ^3.4.1
+  cupertino_icons: ^1.0.8
+  dio: ^5.8.0+1
+  dotted_border: ^2.1.0
+  easy_localization: ^3.0.7+1
+  easy_stepper: ^0.8.5+1
+  firebase_analytics: ^11.4.5
   firebase_core: ^3.12.1
   firebase_messaging: ^15.2.5
-  firebase_analytics: ^11.4.5
-
-  # Utilities
-  flutter_screenutil: ^5.9.3 
-  meta: ^1.9.1               
-  mime: ^2.0.0               
-  freezed_annotation: ^2.4.4 
-  image_picker: ^1.1.2
-
-  # Notification
-  flutter_local_notifications: ^19.1.0
-
-  # Core Flutter
+  fl_chart: ^0.70.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.0
+  flutter_local_notifications: ^19.1.0
+  flutter_screenutil: ^5.9.3
+  flutter_secure_storage: ^9.2.4
+  flutter_svg: ^2.0.17
+  fluttertoast: ^8.2.12
+  freezed_annotation: ^2.4.4
+  get_it: ^8.0.3
+  google_generative_ai: ^0.4.7
+  http_parser: ^4.1.2
+  image_picker: ^1.1.2
+  intl: ^0.20.0
+  meta: ^1.9.1
+  mime: ^2.0.0
+  photo_view: ^0.15.0
+  pretty_dio_logger: ^1.4.0
+  provider: ^6.1.4
+  shared_preferences: ^2.5.3
+  shimmer: ^3.0.0
+  smooth_page_indicator: ^1.2.1
+  toastification: 3.0.1
+  flutter_tawkto: ^0.0.5
+  zego_zim: ^2.20.0+2
+
 
 dev_dependencies:
-  # Code Generation
-  build_runner: ^2.4.13      
-  freezed: ^2.5.7
+  build_runner: ^2.4.13
   # Launcher
   flutter_launcher_icons: ^0.14.3
 
   # Lints
-  flutter_lints: ^4.0.0 
+  flutter_lints: ^4.0.0
+  freezed: ^2.5.7
 
 flutter_icons:
   android: true
@@ -78,19 +63,19 @@ flutter_icons:
 
   # Testing & Quality
   flutter_test:
-    sdk: flutter  
+    sdk: flutter
 
   # Build Process
   flutter_native_splash: ^2.4.4
 
 flutter:
-  uses-material-design: true  
+  uses-material-design: true
 
   # Asset management
   assets:
-    - assets/images/         
-    - assets/svgs/           
-    - assets/translations/   
+    - assets/images/
+    - assets/svgs/
+    - assets/translations/
 
   # Font configurations
   fonts:

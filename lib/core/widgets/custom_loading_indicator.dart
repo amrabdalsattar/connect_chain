@@ -4,9 +4,11 @@ import '../helpers/app_images.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
   final String title;
+  final Color? color;
   const CustomLoadingIndicator({
     super.key,
     this.title = 'تحميل...',
+    this.color,
   });
 
   @override
@@ -19,10 +21,10 @@ class CustomLoadingIndicator extends StatelessWidget {
         const SizedBox(height: 16),
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
-            color: Colors.black87,
+            color: color ?? Colors.black87,
           ),
         ),
       ],
