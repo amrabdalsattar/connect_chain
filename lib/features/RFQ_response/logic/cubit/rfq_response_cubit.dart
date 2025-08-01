@@ -115,14 +115,20 @@ class RFQResponseCubit extends Cubit<RFQResponseState> {
   }
 
   Future<void> getSupplierRFQs() async {
-    emit(state.copyWith(isLoading: true));
+    emit(state.copyWith(isLoading: true, rfqState: RFQState.manageRFQState));
     final result = await _rfqResponseRepo.getSupplierRFQs();
     result.when(
       success: (quotations) {
-        emit(state.copyWith(isLoading: false, currentSupplierRFQs: quotations));
+        emit(state.copyWith(
+            isLoading: false,
+            currentSupplierRFQs: quotations,
+            rfqState: RFQState.manageRFQState));
       },
       failure: (error) {
-        emit(state.copyWith(isLoading: false, errorMessage: error.message));
+        emit(state.copyWith(
+            isLoading: false,
+            errorMessage: error.message,
+            rfqState: RFQState.manageRFQState));
       },
     );
   }
@@ -271,11 +277,10 @@ class RFQResponseCubit extends Cubit<RFQResponseState> {
 
   @override
   Future<void> close() {
-
     // Dispose pricing and terms controllers
     deliveryTimeController.dispose();
     deliveryLocationController.dispose();
-    shippingCostController.dispose();  
+    shippingCostController.dispose();
     validityPeriodController.dispose();
     warrantyController.dispose();
     additionalTermsController.dispose();

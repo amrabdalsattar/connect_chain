@@ -3,6 +3,7 @@ import '../../features/RFQ_response/logic/cubit/rfq_response_cubit.dart';
 import '../../features/RFQ_response/ui/screens/manage_rfqs_screen.dart';
 import '../../features/RFQ_response/ui/screens/rfq_details_screen.dart';
 import '../../features/RFQ_response/ui/screens/rfq_response_screen.dart';
+import '../../features/settings/ui/custom_support_screen.dart';
 import '../../features/notifications/ui/notifications_tab.dart';
 import '../../features/pre_login/logic/cubit/pre_login_cubit.dart';
 import '../../features/pre_login/ui/pre_login_screen.dart';
@@ -127,6 +128,13 @@ class AppRouter {
           screen: const ManageRFQsScreen(),
           settings: settings,
         );
+
+      case Routes.customerSuppoerScreenRoute:
+        return CustomAnimationsBuilder.slideFromLeft(
+          screen: const CustomSupportScreen(),
+          settings: settings,
+        );
+
       case Routes.rfqResponseScreenRoute:
         final args = settings.arguments as Map<String, dynamic>;
 
@@ -174,8 +182,8 @@ class AppRouter {
       case Routes.addProductScreenRoute:
         return CustomAnimationsBuilder.slideFromLeft(
           screen: BlocProvider(
-            create: (context) => AddProductCubit(getIt()),
-            child: const AddProductScreen(),
+            create: (context) => AddProductCubit(getIt())..fetchCategories(),
+            child: const AddProductBlocBuilder(),
           ),
           settings: settings,
         );

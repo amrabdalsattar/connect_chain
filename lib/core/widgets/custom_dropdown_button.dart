@@ -5,9 +5,9 @@ import '../theming/app_text_styles.dart';
 import '../theming/colors_helper.dart';
 
 class CustomDropdownButton extends StatelessWidget {
-  final String? value;
+  final dynamic value;
   final List<DropdownMenuItem<String>> items;
-  final ValueChanged<String?>? onChanged;
+  final ValueChanged<dynamic>? onChanged;
   final String hintText;
   final Function(String?) validator;
 
@@ -22,11 +22,12 @@ class CustomDropdownButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DropdownButtonFormField<String>(
+    return DropdownButtonFormField<dynamic>(
       validator: (value) => validator(value),
       value: value,
       items: items,
       onChanged: onChanged,
+      isExpanded: true,
       decoration: InputDecoration(
         filled: true,
         fillColor: ColorsHelper.offWhite,

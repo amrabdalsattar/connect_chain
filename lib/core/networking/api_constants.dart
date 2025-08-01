@@ -28,8 +28,10 @@ class ApiConstants {
   static const String createQuotationEp = 'Quotation/Create';
   static const String supplierRFQsEP = 'RFQ/Supplier';
 
-  // Orders endpoints
+  // Categories Endpoints
+  static const getAllCategoriesEP = 'Category/GetAll';
 
+  // Orders endpoints
   static const String getSupplierOrders = 'Order/GetSupplierOrders';
   static const String getOrderDetails = 'Order/GetOrderDetails';
 

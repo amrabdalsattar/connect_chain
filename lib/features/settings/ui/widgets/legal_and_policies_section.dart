@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/helpers/extensions.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors_helper.dart';
 import 'settings_option_tile.dart';
 
@@ -16,12 +18,18 @@ class LegalAndPoliciesSection extends StatelessWidget {
         color: ColorsHelper.white,
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: const Column(
+      child: Column(
         children: [
-          SettingsOptionTile(title: 'الشروط والأحكام'),
-          SettingsOptionTile(title: 'سياسة الخصوصية'),
-          SettingsOptionTile(title: 'التراخيص'),
-          SettingsOptionTile(title: 'حول التطبيق', isLastItem: true),
+          const SettingsOptionTile(title: 'الشروط والأحكام'),
+          const SettingsOptionTile(title: 'سياسة الخصوصية'),
+          const SettingsOptionTile(title: 'التراخيص'),
+          SettingsOptionTile(
+            title: 'خدمة العملاء',
+            onTap: () {
+              context.pushNamed(Routes.customerSuppoerScreenRoute);
+            },
+          ),
+          const SettingsOptionTile(title: 'حول التطبيق', isLastItem: true),
         ],
       ),
     );

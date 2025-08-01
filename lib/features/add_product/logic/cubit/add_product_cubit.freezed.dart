@@ -22,6 +22,10 @@ mixin _$AddProductState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -36,6 +40,10 @@ mixin _$AddProductState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -50,6 +58,10 @@ mixin _$AddProductState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -65,6 +77,14 @@ mixin _$AddProductState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -80,6 +100,11 @@ mixin _$AddProductState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -95,6 +120,10 @@ mixin _$AddProductState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -173,6 +202,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -190,6 +223,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -207,6 +244,10 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -228,6 +269,14 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -246,6 +295,11 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -264,6 +318,10 @@ class _$InitialImpl implements _Initial {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -332,6 +390,10 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -349,6 +411,10 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -366,6 +432,10 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -387,6 +457,14 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -405,6 +483,11 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -423,6 +506,10 @@ class _$AddProductLoadingStateImpl implements AddProductLoadingState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -491,6 +578,10 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -508,6 +599,10 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -525,6 +620,10 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -546,6 +645,14 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -564,6 +671,11 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -582,6 +694,10 @@ class _$AddProductSuccessStateImpl implements AddProductSuccessState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -677,6 +793,10 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -694,6 +814,10 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -711,6 +835,10 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -732,6 +860,14 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -750,6 +886,11 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -768,6 +909,10 @@ class _$AddProductErrorStateImpl implements AddProductErrorState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -795,6 +940,770 @@ abstract class AddProductErrorState implements AddProductState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddProductErrorStateImplCopyWith<_$AddProductErrorStateImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddProductAutoFillSuccessStateImplCopyWith<$Res> {
+  factory _$$AddProductAutoFillSuccessStateImplCopyWith(
+          _$AddProductAutoFillSuccessStateImpl value,
+          $Res Function(_$AddProductAutoFillSuccessStateImpl) then) =
+      __$$AddProductAutoFillSuccessStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductAutoFillSuccessStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res,
+        _$AddProductAutoFillSuccessStateImpl>
+    implements _$$AddProductAutoFillSuccessStateImplCopyWith<$Res> {
+  __$$AddProductAutoFillSuccessStateImplCopyWithImpl(
+      _$AddProductAutoFillSuccessStateImpl _value,
+      $Res Function(_$AddProductAutoFillSuccessStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductAutoFillSuccessStateImpl
+    implements AddProductAutoFillSuccessState {
+  const _$AddProductAutoFillSuccessStateImpl();
+
+  @override
+  String toString() {
+    return 'AddProductState.autoFillSucess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductAutoFillSuccessStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
+    required TResult Function(File image) imageUploadSuccess,
+    required TResult Function(String error) imageError,
+    required TResult Function() imageLoading,
+    required TResult Function() addProductInitial,
+    required TResult Function() imageDeleted,
+    required TResult Function(List<dynamic> imagesList) imagesList,
+  }) {
+    return autoFillSucess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
+    TResult? Function(File image)? imageUploadSuccess,
+    TResult? Function(String error)? imageError,
+    TResult? Function()? imageLoading,
+    TResult? Function()? addProductInitial,
+    TResult? Function()? imageDeleted,
+    TResult? Function(List<dynamic> imagesList)? imagesList,
+  }) {
+    return autoFillSucess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
+    TResult Function(File image)? imageUploadSuccess,
+    TResult Function(String error)? imageError,
+    TResult Function()? imageLoading,
+    TResult Function()? addProductInitial,
+    TResult Function()? imageDeleted,
+    TResult Function(List<dynamic> imagesList)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (autoFillSucess != null) {
+      return autoFillSucess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
+    required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
+    required TResult Function(AddProductImageUploadSuccessState value)
+        imageUploadSuccess,
+    required TResult Function(AddProductImageErrorState value) imageError,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
+    required TResult Function(AddProductImageInitial value) addProductInitial,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageListState value) imagesList,
+  }) {
+    return autoFillSucess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
+    TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult? Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult? Function(AddProductImageErrorState value)? imageError,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
+    TResult? Function(AddProductImageInitial value)? addProductInitial,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageListState value)? imagesList,
+  }) {
+    return autoFillSucess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
+    TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult Function(AddProductImageErrorState value)? imageError,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
+    TResult Function(AddProductImageInitial value)? addProductInitial,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageListState value)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (autoFillSucess != null) {
+      return autoFillSucess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductAutoFillSuccessState implements AddProductState {
+  const factory AddProductAutoFillSuccessState() =
+      _$AddProductAutoFillSuccessStateImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductCategoriesLoadingStateImplCopyWith<$Res> {
+  factory _$$AddProductCategoriesLoadingStateImplCopyWith(
+          _$AddProductCategoriesLoadingStateImpl value,
+          $Res Function(_$AddProductCategoriesLoadingStateImpl) then) =
+      __$$AddProductCategoriesLoadingStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductCategoriesLoadingStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res,
+        _$AddProductCategoriesLoadingStateImpl>
+    implements _$$AddProductCategoriesLoadingStateImplCopyWith<$Res> {
+  __$$AddProductCategoriesLoadingStateImplCopyWithImpl(
+      _$AddProductCategoriesLoadingStateImpl _value,
+      $Res Function(_$AddProductCategoriesLoadingStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductCategoriesLoadingStateImpl
+    implements AddProductCategoriesLoadingState {
+  const _$AddProductCategoriesLoadingStateImpl();
+
+  @override
+  String toString() {
+    return 'AddProductState.categoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductCategoriesLoadingStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
+    required TResult Function(File image) imageUploadSuccess,
+    required TResult Function(String error) imageError,
+    required TResult Function() imageLoading,
+    required TResult Function() addProductInitial,
+    required TResult Function() imageDeleted,
+    required TResult Function(List<dynamic> imagesList) imagesList,
+  }) {
+    return categoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
+    TResult? Function(File image)? imageUploadSuccess,
+    TResult? Function(String error)? imageError,
+    TResult? Function()? imageLoading,
+    TResult? Function()? addProductInitial,
+    TResult? Function()? imageDeleted,
+    TResult? Function(List<dynamic> imagesList)? imagesList,
+  }) {
+    return categoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
+    TResult Function(File image)? imageUploadSuccess,
+    TResult Function(String error)? imageError,
+    TResult Function()? imageLoading,
+    TResult Function()? addProductInitial,
+    TResult Function()? imageDeleted,
+    TResult Function(List<dynamic> imagesList)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
+    required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
+    required TResult Function(AddProductImageUploadSuccessState value)
+        imageUploadSuccess,
+    required TResult Function(AddProductImageErrorState value) imageError,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
+    required TResult Function(AddProductImageInitial value) addProductInitial,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageListState value) imagesList,
+  }) {
+    return categoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
+    TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult? Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult? Function(AddProductImageErrorState value)? imageError,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
+    TResult? Function(AddProductImageInitial value)? addProductInitial,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageListState value)? imagesList,
+  }) {
+    return categoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
+    TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult Function(AddProductImageErrorState value)? imageError,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
+    TResult Function(AddProductImageInitial value)? addProductInitial,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageListState value)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductCategoriesLoadingState implements AddProductState {
+  const factory AddProductCategoriesLoadingState() =
+      _$AddProductCategoriesLoadingStateImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductCategoriesSuccessStateImplCopyWith<$Res> {
+  factory _$$AddProductCategoriesSuccessStateImplCopyWith(
+          _$AddProductCategoriesSuccessStateImpl value,
+          $Res Function(_$AddProductCategoriesSuccessStateImpl) then) =
+      __$$AddProductCategoriesSuccessStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductCategoriesSuccessStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res,
+        _$AddProductCategoriesSuccessStateImpl>
+    implements _$$AddProductCategoriesSuccessStateImplCopyWith<$Res> {
+  __$$AddProductCategoriesSuccessStateImplCopyWithImpl(
+      _$AddProductCategoriesSuccessStateImpl _value,
+      $Res Function(_$AddProductCategoriesSuccessStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductCategoriesSuccessStateImpl
+    implements AddProductCategoriesSuccessState {
+  const _$AddProductCategoriesSuccessStateImpl();
+
+  @override
+  String toString() {
+    return 'AddProductState.categoriesSucces()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductCategoriesSuccessStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
+    required TResult Function(File image) imageUploadSuccess,
+    required TResult Function(String error) imageError,
+    required TResult Function() imageLoading,
+    required TResult Function() addProductInitial,
+    required TResult Function() imageDeleted,
+    required TResult Function(List<dynamic> imagesList) imagesList,
+  }) {
+    return categoriesSucces();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
+    TResult? Function(File image)? imageUploadSuccess,
+    TResult? Function(String error)? imageError,
+    TResult? Function()? imageLoading,
+    TResult? Function()? addProductInitial,
+    TResult? Function()? imageDeleted,
+    TResult? Function(List<dynamic> imagesList)? imagesList,
+  }) {
+    return categoriesSucces?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
+    TResult Function(File image)? imageUploadSuccess,
+    TResult Function(String error)? imageError,
+    TResult Function()? imageLoading,
+    TResult Function()? addProductInitial,
+    TResult Function()? imageDeleted,
+    TResult Function(List<dynamic> imagesList)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesSucces != null) {
+      return categoriesSucces();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
+    required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
+    required TResult Function(AddProductImageUploadSuccessState value)
+        imageUploadSuccess,
+    required TResult Function(AddProductImageErrorState value) imageError,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
+    required TResult Function(AddProductImageInitial value) addProductInitial,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageListState value) imagesList,
+  }) {
+    return categoriesSucces(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
+    TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult? Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult? Function(AddProductImageErrorState value)? imageError,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
+    TResult? Function(AddProductImageInitial value)? addProductInitial,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageListState value)? imagesList,
+  }) {
+    return categoriesSucces?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
+    TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult Function(AddProductImageErrorState value)? imageError,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
+    TResult Function(AddProductImageInitial value)? addProductInitial,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageListState value)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesSucces != null) {
+      return categoriesSucces(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductCategoriesSuccessState implements AddProductState {
+  const factory AddProductCategoriesSuccessState() =
+      _$AddProductCategoriesSuccessStateImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductCategoriesErrorStateImplCopyWith<$Res> {
+  factory _$$AddProductCategoriesErrorStateImplCopyWith(
+          _$AddProductCategoriesErrorStateImpl value,
+          $Res Function(_$AddProductCategoriesErrorStateImpl) then) =
+      __$$AddProductCategoriesErrorStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductCategoriesErrorStateImplCopyWithImpl<$Res>
+    extends _$AddProductStateCopyWithImpl<$Res,
+        _$AddProductCategoriesErrorStateImpl>
+    implements _$$AddProductCategoriesErrorStateImplCopyWith<$Res> {
+  __$$AddProductCategoriesErrorStateImplCopyWithImpl(
+      _$AddProductCategoriesErrorStateImpl _value,
+      $Res Function(_$AddProductCategoriesErrorStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductCategoriesErrorStateImpl
+    implements AddProductCategoriesErrorState {
+  const _$AddProductCategoriesErrorStateImpl();
+
+  @override
+  String toString() {
+    return 'AddProductState.categoriesError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductCategoriesErrorStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
+    required TResult Function(File image) imageUploadSuccess,
+    required TResult Function(String error) imageError,
+    required TResult Function() imageLoading,
+    required TResult Function() addProductInitial,
+    required TResult Function() imageDeleted,
+    required TResult Function(List<dynamic> imagesList) imagesList,
+  }) {
+    return categoriesError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
+    TResult? Function(File image)? imageUploadSuccess,
+    TResult? Function(String error)? imageError,
+    TResult? Function()? imageLoading,
+    TResult? Function()? addProductInitial,
+    TResult? Function()? imageDeleted,
+    TResult? Function(List<dynamic> imagesList)? imagesList,
+  }) {
+    return categoriesError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
+    TResult Function(File image)? imageUploadSuccess,
+    TResult Function(String error)? imageError,
+    TResult Function()? imageLoading,
+    TResult Function()? addProductInitial,
+    TResult Function()? imageDeleted,
+    TResult Function(List<dynamic> imagesList)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesError != null) {
+      return categoriesError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AddProductLoadingState value) loading,
+    required TResult Function(AddProductSuccessState value) success,
+    required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
+    required TResult Function(AddProductImageUploadSuccessState value)
+        imageUploadSuccess,
+    required TResult Function(AddProductImageErrorState value) imageError,
+    required TResult Function(AddProductImageLoadingState value) imageLoading,
+    required TResult Function(AddProductImageInitial value) addProductInitial,
+    required TResult Function(AddProductImageDeleted value) imageDeleted,
+    required TResult Function(AddProductImageListState value) imagesList,
+  }) {
+    return categoriesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AddProductLoadingState value)? loading,
+    TResult? Function(AddProductSuccessState value)? success,
+    TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult? Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult? Function(AddProductImageErrorState value)? imageError,
+    TResult? Function(AddProductImageLoadingState value)? imageLoading,
+    TResult? Function(AddProductImageInitial value)? addProductInitial,
+    TResult? Function(AddProductImageDeleted value)? imageDeleted,
+    TResult? Function(AddProductImageListState value)? imagesList,
+  }) {
+    return categoriesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AddProductLoadingState value)? loading,
+    TResult Function(AddProductSuccessState value)? success,
+    TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
+    TResult Function(AddProductImageUploadSuccessState value)?
+        imageUploadSuccess,
+    TResult Function(AddProductImageErrorState value)? imageError,
+    TResult Function(AddProductImageLoadingState value)? imageLoading,
+    TResult Function(AddProductImageInitial value)? addProductInitial,
+    TResult Function(AddProductImageDeleted value)? imageDeleted,
+    TResult Function(AddProductImageListState value)? imagesList,
+    required TResult orElse(),
+  }) {
+    if (categoriesError != null) {
+      return categoriesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductCategoriesErrorState implements AddProductState {
+  const factory AddProductCategoriesErrorState() =
+      _$AddProductCategoriesErrorStateImpl;
 }
 
 /// @nodoc
@@ -875,6 +1784,10 @@ class _$AddProductImageUploadSuccessStateImpl
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -892,6 +1805,10 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -909,6 +1826,10 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -930,6 +1851,14 @@ class _$AddProductImageUploadSuccessStateImpl
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -948,6 +1877,11 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -966,6 +1900,10 @@ class _$AddProductImageUploadSuccessStateImpl
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -1071,6 +2009,10 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -1088,6 +2030,10 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -1105,6 +2051,10 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -1126,6 +2076,14 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -1144,6 +2102,11 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -1162,6 +2125,10 @@ class _$AddProductImageErrorStateImpl implements AddProductImageErrorState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -1240,6 +2207,10 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -1257,6 +2228,10 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -1274,6 +2249,10 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -1295,6 +2274,14 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -1313,6 +2300,11 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -1331,6 +2323,10 @@ class _$AddProductImageLoadingStateImpl implements AddProductImageLoadingState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -1400,6 +2396,10 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -1417,6 +2417,10 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -1434,6 +2438,10 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -1455,6 +2463,14 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -1473,6 +2489,11 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -1491,6 +2512,10 @@ class _$AddProductImageInitialImpl implements AddProductImageInitial {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -1559,6 +2584,10 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -1576,6 +2605,10 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -1593,6 +2626,10 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -1614,6 +2651,14 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -1632,6 +2677,11 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -1650,6 +2700,10 @@ class _$AddProductImageDeletedImpl implements AddProductImageDeleted {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,
@@ -1753,6 +2807,10 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(ApiErrorModel apiErrorModel) error,
+    required TResult Function() autoFillSucess,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSucces,
+    required TResult Function() categoriesError,
     required TResult Function(File image) imageUploadSuccess,
     required TResult Function(String error) imageError,
     required TResult Function() imageLoading,
@@ -1770,6 +2828,10 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(ApiErrorModel apiErrorModel)? error,
+    TResult? Function()? autoFillSucess,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSucces,
+    TResult? Function()? categoriesError,
     TResult? Function(File image)? imageUploadSuccess,
     TResult? Function(String error)? imageError,
     TResult? Function()? imageLoading,
@@ -1787,6 +2849,10 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(ApiErrorModel apiErrorModel)? error,
+    TResult Function()? autoFillSucess,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSucces,
+    TResult Function()? categoriesError,
     TResult Function(File image)? imageUploadSuccess,
     TResult Function(String error)? imageError,
     TResult Function()? imageLoading,
@@ -1808,6 +2874,14 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     required TResult Function(AddProductLoadingState value) loading,
     required TResult Function(AddProductSuccessState value) success,
     required TResult Function(AddProductErrorState value) error,
+    required TResult Function(AddProductAutoFillSuccessState value)
+        autoFillSucess,
+    required TResult Function(AddProductCategoriesLoadingState value)
+        categoriesLoading,
+    required TResult Function(AddProductCategoriesSuccessState value)
+        categoriesSucces,
+    required TResult Function(AddProductCategoriesErrorState value)
+        categoriesError,
     required TResult Function(AddProductImageUploadSuccessState value)
         imageUploadSuccess,
     required TResult Function(AddProductImageErrorState value) imageError,
@@ -1826,6 +2900,11 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     TResult? Function(AddProductLoadingState value)? loading,
     TResult? Function(AddProductSuccessState value)? success,
     TResult? Function(AddProductErrorState value)? error,
+    TResult? Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult? Function(AddProductCategoriesLoadingState value)?
+        categoriesLoading,
+    TResult? Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult? Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult? Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult? Function(AddProductImageErrorState value)? imageError,
@@ -1844,6 +2923,10 @@ class _$AddProductImageListStateImpl implements AddProductImageListState {
     TResult Function(AddProductLoadingState value)? loading,
     TResult Function(AddProductSuccessState value)? success,
     TResult Function(AddProductErrorState value)? error,
+    TResult Function(AddProductAutoFillSuccessState value)? autoFillSucess,
+    TResult Function(AddProductCategoriesLoadingState value)? categoriesLoading,
+    TResult Function(AddProductCategoriesSuccessState value)? categoriesSucces,
+    TResult Function(AddProductCategoriesErrorState value)? categoriesError,
     TResult Function(AddProductImageUploadSuccessState value)?
         imageUploadSuccess,
     TResult Function(AddProductImageErrorState value)? imageError,

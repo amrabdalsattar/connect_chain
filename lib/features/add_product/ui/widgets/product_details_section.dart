@@ -12,9 +12,15 @@ class ProductDetailsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'معلومات عن المنتج',
-            style: AppTextStyles.cairoBlackSemiBold16,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                'معلومات عن المنتج',
+                style: AppTextStyles.cairoBlackSemiBold16,
+              ),
+              AutoFillWithAiButton(addProductCubit: addProductCubit)
+            ],
           ),
           // Start of the First Row
           const VerticalSpace(height: 16),
@@ -33,24 +39,8 @@ class ProductDetailsSection extends StatelessWidget {
             ),
             right: LabeledField(
               label: 'فئة المنتج',
-              field: CustomDropdownButton(
-                onChanged: (value) {
-                  addProductCubit.setCategory(value ?? '');
-                },
-                value: null,
-                items: List.generate(
-                    categories.length,
-                    (index) => DropdownMenuItem(
-                          value: categories[index],
-                          child: Text(categories[index]),
-                        )),
-                hintText: 'نوع المنتج',
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'الرجاء إدخال نوع المنتج';
-                  }
-                },
-              ),
+              field: AddProductCustomCategoriesDropDown(
+                  addProductCubit: addProductCubit),
             ),
           ),
 
@@ -122,10 +112,3 @@ class ProductDetailsSection extends StatelessWidget {
     );
   }
 }
-
-List<String> categories = [
-  'الإلكترونيات',
-  'الأزياء',
-  'المواد الغذائية',
-  'أخرى'
-];

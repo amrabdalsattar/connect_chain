@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+
+import '../../../../core/theming/colors_helper.dart';
+
 class SupplierRFQsRequest {
   final List<SupplierRFQ> data;
   final bool isSuccess;
@@ -65,4 +69,39 @@ class SupplierRFQ {
       attachments: json['attachments'] as List<dynamic>,
     );
   }
+
+   Color getStatusColor(String status) {
+    switch (status.toLowerCase()) {
+      case 'pending':
+        return ColorsHelper.orderChipBackGroundColor;
+      case 'approved':
+        return ColorsHelper.completedOrderBackGroundColor;
+      case 'rejected':
+        return ColorsHelper.rejectedOrderBackGroundColor;
+      case 'active':
+        return ColorsHelper.pinnedOrderBackGroundColor;
+      case 'completed':
+        return ColorsHelper.purple;
+      default:
+        return ColorsHelper.secondaryGray;
+    }
+  }
+
+  String getArabicStatus(String status) {
+    switch (status.toLowerCase()) {
+      case 'pending':
+        return 'قيد الانتظار';
+      case 'approved':
+        return 'مقبول';
+      case 'rejected':
+        return 'مرفوض';
+      case 'active':
+        return 'نشط';
+      case 'completed':
+        return 'مكتمل';
+      default:
+        return status;
+    }
+  }
+
 }

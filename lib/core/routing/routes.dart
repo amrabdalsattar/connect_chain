@@ -19,4 +19,6 @@ class Routes {
   static const String rfqResponseScreenRoute = '/rfqResponseScreenRoute';
   static const String manageRFQsScreenRoute = '/manageQuotatoinsScreenRoute';
   static const String rfqDetailsScreenRoute = '/rfqDetailsScreenRoute';
+    static const String customerSuppoerScreenRoute = '/customerSupportScreenRoute';
+
 }
